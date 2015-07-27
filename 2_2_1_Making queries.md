@@ -1,5 +1,6 @@
 <!--
-  译者：Github@wizardforcel
+  译者：WrongWay [www.wrongway.me]
+  1.8更新：Github@wizardforcel
 -->
 
 # 执行查询 #
