@@ -1,0 +1,539 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Language" content="en-us" />
+
+		<title>Django | Model 实例参考 | Django 文档</title>
+
+		<meta name="ROBOTS" content="ALL" />
+		<meta http-equiv="imagetoolbar" content="no" />
+		<meta name="MSSmartTagsPreventParsing" content="true" />
+		<meta name="Copyright" content="This site's design and contents Copyright (c) 2005  Lawrence Journal-World." />
+
+		<meta name="keywords" content="Python, Django, framework, open-source" />
+		<meta name="description" content="Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design." />
+
+		<link href="http://media.djangoproject.com/css/base.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="http://media.djangoproject.com/css/print.css" rel="stylesheet" type="text/css" media="print" />
+      
+  
+  <style type="text/css" media="screen">
+    #docs-search {
+      color: #000;
+      float: right;
+    }
+    #docs-search form {
+      font-size: 92%;
+      margin: 0;
+      padding: 1em 1em 0;
+      white-space: nowrap;
+    }
+    form.search ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    form.search li {
+      display: inline;
+      padding-right: 1em;
+    }
+    form.search .query {
+      width: 18em;
+    }
+  </style>
+  <link rel="stylesheet" href="http://media.djangoproject.com/css/pygments.css" type="text/css" />
+
+	</head>
+
+	<body id="documentation" class="default">
+
+	<div id="container">
+		<div id="header">
+			<h1 id="logo"><a href="http://www.djangoproject.com/"><img src="http://media.djangoproject.com/img/site/hdr_logo.gif" alt="Django" /></a></h1>
+			<ul id="nav-global">
+				<li id="nav-homepage"><a href="http://www.djangoproject.com/">Home</a></li>
+				<li id="nav-download"><a href="http://www.djangoproject.com/download/">Download</a></li>
+				<li id="nav-documentation"><a href="http://docs.djangoproject.com/">Documentation</a></li>
+				<li id="nav-weblog"><a href="http://www.djangoproject.com/weblog/">Weblog</a></li>
+				<li id="nav-community"><a href="http://www.djangoproject.com/community/">Community</a></li>
+				<li id="nav-code"><a href="http://code.djangoproject.com/">Code</a></li>
+			</ul>
+		</div>
+		<!-- END Header -->
+		<div id="billboard">
+  <h2><a href="../../../index.html">Django documentation</a></h2>
+</div>
+		<div id="columnwrap">
+			
+		<div id="content-main">
+		
+
+
+  <h2 class="deck">
+  
+    当前文档仅适用于 Django SVN 版本，与上个版本有显著不同。上个版本文档请查阅：
+      <a href="http://docs.djangoproject.com/en/1.0/ref/models/instances/">Django 1.0</a>
+  
+  </h2>
+  <div class="section" id="s-model-instance-reference">
+<span id="s-ref-models-instances"></span><span id="model-instance-reference"></span><span id="ref-models-instances"></span><h1>Model 实例参考(Model instance reference)<a class="headerlink" href="index.html#model-instance-reference" title="Permalink to this headline">¶</a></h1>
+<p>该文档详细介绍 <tt class="docutils literal"><span class="pre">Model</span></tt> 的 API。它的知识点建立在 <a class="reference external" href="../../../topics/db/models/index.html#topics-db-models"><em>模型(model)</em></a> 和 <a class="reference external" href="../../../topics/db/queries/index.html#topics-db-queries"><em>数据库查询(database query)</em></a> 两篇文章的基础之上，所以建议您读该文档之前先阅读和理解上面两篇文章。</p>
+<p>整篇文档都将以 <a class="reference external" href="../../../topics/db/queries/index.html#topics-db-queries"><em>database query guide</em></a> 中列出的 <a class="reference external" href="../../../topics/db/queries/index.html#queryset-model-example"><em>example weblog models</em></a> 为例。</p>
+<div class="section" id="s-creating-objects">
+<span id="creating-objects"></span><h2>创建对象(Creating objects)<a class="headerlink" href="index.html#creating-objects" title="Permalink to this headline">¶</a></h2>
+<p>创建 model 的新实例和实例化其他的 Python 类一样：</p>
+<dl class="class">
+<dt id="django.db.models.Model">
+<!--[django.db.models.Model]-->class <tt class="descname">Model</tt>(<em>**kwargs</em>)<a class="headerlink" href="index.html#django.db.models.Model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>其中的关键字参数就是你在你的 model 中定义的字段的名称。要注意实例化一个 model 并不会操作数据库，要保存到数据库的话，你需要使用 <tt class="docutils literal"><span class="pre">save()</span></tt> 方法。</p>
+</div>
+<div class="section" id="s-saving-objects">
+<span id="saving-objects"></span><h2>保存对象(Saving objects)<a class="headerlink" href="index.html#saving-objects" title="Permalink to this headline">¶</a></h2>
+<p>要将对象保存至数据库，就调用 <tt class="docutils literal"><span class="pre">save()</span></tt>：</p>
+<dl class="method">
+<dt id="django.db.models.Model.save">
+<!--[django.db.models.Model.save]--><tt class="descclassname">Model.</tt><tt class="descname">save</tt>(<span class="optional">[</span><em>force_insert=False</em>, <em>force_update=False</em><span class="optional">]</span>)<a class="headerlink" href="index.html#django.db.models.Model.save" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>这个方法颇有些微妙之处，请查看下面几节。</p>
+<div class="versionadded">
+<span class="title">这部分是在 Django 1.0 中新增的：</span> <a class="reference external" href="../../../releases/1.0/index.html#releases-1-0"><em>请查看版本文档</em></a></div>
+<p> <tt class="docutils literal"><span class="pre">save()</span></tt> 方法的形式与之前的版本已经有所不同(加入了 <tt class="docutils literal"><span class="pre">force_insert</span></tt> 和 <tt class="docutils literal"><span class="pre">force_update</span></tt> 参数)。如果你要重写该方法，就要留意这两个参数。</p>
+<div class="section" id="s-auto-incrementing-primary-keys">
+<span id="auto-incrementing-primary-keys"></span><h3>自增主键(Auto-incrementing primary keys)<a class="headerlink" href="index.html#auto-incrementing-primary-keys" title="Permalink to this headline">¶</a></h3>
+<p>如果你的 model 有一个 <tt class="docutils literal"><span class="pre">AutoField</span></tt> 字段，它是一个自增主键，那么在你第一次调用 <tt class="docutils literal"><span class="pre">save()</span></tt> 方法时，就会计算得出这个自增主键的值，然后做为对象的一个属性保存起来：</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">b2</span> <span class="o">=</span> <span class="n">Blog</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">&#39;Cheddar Talk&#39;</span><span class="p">,</span> <span class="n">tagline</span><span class="o">=</span><span class="s">&#39;Thoughts on cheese.&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b2</span><span class="o">.</span><span class="n">id</span>     <span class="c"># Returns None, because b doesn&#39;t have an ID yet.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b2</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b2</span><span class="o">.</span><span class="n">id</span>     <span class="c"># Returns the ID of your new object.</span>
+</pre></div>
+</div>
+<p>在调用 <tt class="docutils literal"><span class="pre">save()</span></tt> 之前是拿不到 ID 值的，因为这个值是要靠数据库来计算得出的，而非 Django。</p>
+<p>(为使用方便，每个 model 默认都有一个 <tt class="docutils literal"><span class="pre">AutoField</span></tt> 自增字段，它的名称是 <tt class="docutils literal"><span class="pre">id</span></tt>。不过你可以在某个字段上指定 <tt class="docutils literal"><span class="pre">primary_key=True</span></tt>，从而将这个字段变成主键字段。详情请查看 <tt class="docutils literal"><span class="pre">AutoField</span></tt>。</p>
+<div class="section" id="s-the-pk-property">
+<span id="the-pk-property"></span><h4>pk 属性 (The <tt class="docutils literal"><span class="pre">pk</span></tt> property)<a class="headerlink" href="index.html#the-pk-property" title="Permalink to this headline">¶</a></h4>
+<div class="versionadded">
+<span class="title">这部分是在 Django 1.0 中新增的：</span> <a class="reference external" href="../../../releases/1.0/index.html#releases-1-0"><em>请查看版本文档</em></a></div>
+<dl class="attribute">
+<dt id="django.db.models.Model.pk">
+<!--[django.db.models.Model.pk]--><tt class="descclassname">Model.</tt><tt class="descname">pk</tt><a class="headerlink" href="index.html#django.db.models.Model.pk" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>无论是你自己定义了主键，还是使用 Django 默认提供的主键，每个 model 都有一个指向主键的属性，叫做 <tt class="docutils literal"><span class="pre">pk</span></tt>。它看上去只是是一个属性，其实它是主键字段的一个别名。你可以象使用其他属性一样，获取或是设置它的值，它会自动对主键字段的值进行更改。</p>
+</div>
+<div class="section" id="s-explicitly-specifying-auto-primary-key-values">
+<span id="explicitly-specifying-auto-primary-key-values"></span><h4>显式指定自增主键的值(Explicitly specifying auto-primary-key values)<a class="headerlink" href="index.html#explicitly-specifying-auto-primary-key-values" title="Permalink to this headline">¶</a></h4>
+<p>如果一个 model 中含有一个 <tt class="docutils literal"><span class="pre">AutoField</span></tt> 自增字段，但是你在保存对象，并不想使用自动分配的 ID 值，而想显示地定义新对象的 ID 值，那么只要在保存之时显式的定义即可：</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">b3</span> <span class="o">=</span> <span class="n">Blog</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mf">3</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;Cheddar Talk&#39;</span><span class="p">,</span> <span class="n">tagline</span><span class="o">=</span><span class="s">&#39;Thoughts on cheese.&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b3</span><span class="o">.</span><span class="n">id</span>     <span class="c"># Returns 3.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b3</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b3</span><span class="o">.</span><span class="n">id</span>     <span class="c"># Returns 3.</span>
+</pre></div>
+</div>
+<p>如果你手动指定了自增主键的值，请事先确认主键的值并未在数据库中出现过；否则，如果你创建新对象时，显式指定的自增主键的值，却已存在于数据库中，那么 Django 就不会认为你是想创建对象，而是认为你想更改某个已存在的记录。</p>
+<p>以上面所给的 <tt class="docutils literal"><span class="pre">'Cheddar</span> <span class="pre">Talk'</span></tt> 博客为例，下面的代码将覆盖数据库中原来的记录：</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">b4</span> <span class="o">=</span> <span class="n">Blog</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mf">3</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;Not Cheddar&#39;</span><span class="p">,</span> <span class="n">tagline</span><span class="o">=</span><span class="s">&#39;Anything but cheese.&#39;</span><span class="p">)</span>
+<span class="n">b4</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>  <span class="c"># Overrides the previous blog with ID=3!</span>
+</pre></div>
+</div>
+<p>要了解为什么会覆盖掉记录，请查看下面的 <a class="reference internal" href="index.html#how-django-knows-to-update-vs-insert">Django 如何判断是更新还是创建(How Django knows to UPDATE vs. INSERT)</a> 一节。</p>
+<p>如果你能确实主键值不发生冲突，那么对于大量保存对象而言，指定自增主键的值是非常有用的。</p>
+</div>
+</div>
+<div class="section" id="s-what-happens-when-you-save">
+<span id="what-happens-when-you-save"></span><h3>在保存对象时都发生了什么(What happens when you save?)<a class="headerlink" href="index.html#what-happens-when-you-save" title="Permalink to this headline">¶</a></h3>
+<p>在你保存对象时，Django 会执行下面的步骤：</p>
+<ol class="arabic">
+<li><p class="first"><strong>发出预保存信号(Emit a pre-save signal)。</strong> 发出 <a title="django.db.models.signals.pre_save" class="reference external" href="../../signals/index.html#django.db.models.signals.pre_save"><tt class="xref docutils literal"><span class="pre">django.db.models.signals.pre_save</span></tt></a> 信号(<a class="reference external" href="../../signals/index.html#ref-signals"><em>signal</em></a>)，然后监听该信号的函式就会执行某些定制操作。</p>
+</li>
+<li><p class="first"><strong>预处理数据(Pre-process the data)。</strong> 对角中的每个字段都根据字段所需的数据格式，对数据自动进行调整。</p>
+<p>大多数字段是<b>不需要</b>预处理数据的，它们保持不变，只有那些有特殊行为的字段才需要预处理数据。例如，如果你的 model 中含有一个 <tt class="docutils literal"><span class="pre">DateField</span></tt> 字段，并且它指定了 <tt class="docutils literal"><span class="pre">auto_now=True</span></tt>，在预处理数据这个阶段，就会修改该字段的数据，使其包含当前时间戳（我们的文档还没有将这些有“特殊行为”的字段完整地列出来）。</p>
+</li>
+<li><p class="first"><strong>根据数据库进行数据转换(Prepare the data for the database)。</strong> 每个字段都要根据当前数据库所要求的数据格式对当前值进行转换。</p>
+<p>大多数字段无须转换，它们多是简单的数据类型，比如整数，字符串，都是随时可写的 Python 对象。但是，有更多的复杂数据类型需要对数据进行转换和调整。</p>
+<p>例如，<tt class="docutils literal"><span class="pre">DateFields</span></tt> 字段使用的是一个 <tt class="docutils literal"><span class="pre">datetime</span></tt> 对象，这是一个 Python 类的实例，因为数据库并不直接保存 <tt class="docutils literal"><span class="pre">datetime</span></tt> 对象，所以字段值必须被转换成符合 ISO 标准的(ISO-compliant)的日期字符串，这样数据库才能识别。</p>
+</li>
+<li><p class="first"><strong>将数据添加到数据库中(Insert the data into the database)。</strong> 经过预处理和转换的数据被组合成一条用以插入数据的 SQL 语句，从而完成对数据的添加。</p>
+</li>
+<li><p class="first"><strong>发出已保存信号(Emit a post-save signal)。</strong> 发出 <a title="django.db.models.signals.post_save" class="reference external" href="../../signals/index.html#django.db.models.signals.post_save"><tt class="xref docutils literal"><span class="pre">django.db.models.signals.post_save</span></tt></a> 信号，监听该信号的函式们会执行某些既定的操作。</p>
+</li>
+</ol>
+</div>
+<div class="section" id="s-how-django-knows-to-update-vs-insert">
+<span id="how-django-knows-to-update-vs-insert"></span><h3>(Django 是如何判别更新还是创建的How Django knows to UPDATE vs. INSERT)<a class="headerlink" href="index.html#how-django-knows-to-update-vs-insert" title="Permalink to this headline">¶</a></h3>
+<p>你可能已注意到，Django 的数据对象无论是创建对象还是保存修改过的对象，都是使用同样的 <tt class="docutils literal"><span class="pre">save()</span></tt> 方法，因为 Django 已经对使用 <tt class="docutils literal"><span class="pre">INSERT</span></tt> 或
+ <tt class="docutils literal"><span class="pre">UPDATE</span></tt> SQL 语句的需求进行了抽象。因此，在你调用 <tt class="docutils literal"><span class="pre">save()</span></tt> 方法时，Django 会按照下列算法进行处理：</p>
+<ul class="simple">
+<li>如果对象的主键属性是被赋与一个真值(<tt class="xref docutils literal"><span class="pre">True</span></tt>)时，(例如，即不是 <tt class="xref docutils literal"><span class="pre">None</span></tt>，也不是空字符串)，Django 会执行一个 <tt class="docutils literal"><span class="pre">SELECT</span></tt> 查询以判定与主键相绑定的记录是否存在。</li>
+<li>如果该记录存在，Django 就会执行另一个 <tt class="docutils literal"><span class="pre">UPDATE</span></tt> 查询query。</li>
+<li>如果未设置对象的主键属性，或者如果虽然设置了主键，但是与其绑定的记录却不存在，那么 Django 不会执行一个 <tt class="docutils literal"><span class="pre">INSERT</span></tt> 操作。</li>
+</ul>
+<p>有一点要注意的是：如果你不能保证主键值并被用过，那么在保存新对象时，要注意不要显式指定主键的值。想在这个细节上有更多了解，请查看上面的 <a class="reference internal" href="index.html#explicitly-specifying-auto-primary-key-values">显示指定自增变量的值(Explicitly specifying auto-primary-key values)</a> 和下面的 <a class="reference internal" href="index.html#forcing-an-insert-or-update">强制添加或更新(Forcing an INSERT or UPDATE)</a> 。</p>
+<div class="section" id="s-forcing-an-insert-or-update">
+<span id="s-ref-models-force-insert"></span><span id="forcing-an-insert-or-update"></span><span id="ref-models-force-insert"></span><h4>强制新增或更新(Forcing an INSERT or UPDATE)<a class="headerlink" href="index.html#forcing-an-insert-or-update" title="Permalink to this headline">¶</a></h4>
+<div class="versionadded">
+<span class="title">这部分是在 Django 1.0 中新增的：</span> <a class="reference external" href="../../../releases/1.0/index.html#releases-1-0"><em>Please, see the release notes</em></a></div>
+<p>在一些少见的场合中，运行 <tt class="docutils literal"><span class="pre">save()</span></tt> 方法时要求强制运行一条 SQL <tt class="docutils literal"><span class="pre">INSERT</span></tt> 语句，而非 <tt class="docutils literal"><span class="pre">UPDATE</span></tt> 语句。同理在某些情况下又强迫 <b>UPDATE</b> 而非 <b>INSERT</b>。在这种情况下，你可以通过设置 <tt class="docutils literal"><span class="pre">force_insert=True</span></tt> 或 <tt class="docutils literal"><span class="pre">force_update=True</span></tt> 参数的方式运行 <tt class="docutils literal"><span class="pre">save()</span></tt> 方法。同时提供两个参数会抛开错误，因为 Django 不知道该 <b>INSERT</b> 还是 <b>UPDATE</b>。</p>
+<p>需要使用这两个参数的用例是很少见的。一般来说，Django 的默认操作大多是正确的，如果使用了这两个参数，如果出现错误，会使得调试跟踪变得困难，所以这个特性仅适用于高级应用。</p>
+</div>
+</div>
+<div class="section" id="s-updating-attributes-based-on-existing-fields">
+<span id="updating-attributes-based-on-existing-fields"></span><h3>根据已存在的字段更新属性(Updating attributes based on existing fields)<a class="headerlink" href="index.html#updating-attributes-based-on-existing-fields" title="Permalink to this headline">¶</a></h3>
+<p>有些时候，你需要对某个字段做简单的运算，比如对当前值递增或递减，可以用下面的方法达到这个目的：</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">product</span> <span class="o">=</span> <span class="n">Product</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">&#39;Venezuelan Beaver Cheese&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">product</span><span class="o">.</span><span class="n">number_sold</span> <span class="o">+=</span> <span class="mf">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">product</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>从数据库中得到旧的 <tt class="docutils literal"><span class="pre">number_sold</span></tt> 值是 <b>10</b>，然后再将 <b>11</b> 写回到数据库中。</p>
+<p>根据某个字段进行赋值，要好于直接地显式赋值。Django 提供了 <a class="reference external" href="../../../topics/db/queries/index.html#query-expressions"><em>F()表达式(F() expressions)</em></a> 来解决根据字段赋值的问题。使用 <tt class="docutils literal"><span class="pre">F()</span></tt> 可以将上面的例子改写为：</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">from</span> <span class="nn">django.db.models</span> <span class="k">import</span> <span class="n">F</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">product</span> <span class="o">=</span> <span class="n">Product</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">&#39;Venezuelan Beaver Cheese&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">product</span><span class="o">.</span><span class="n">number_sold</span> <span class="o">=</span> <span class="n">F</span><span class="p">(</span><span class="s">&#39;number_sold&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="mf">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">product</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>这种方式并不是一开始就从数据库中取出原始值，而是在执行 <>save()<> 操作的时候才根据取值字段从数据库中取出原始值。</p>
+<p>一旦对象被保存，你必须马上重新得到对象，这样才能得到你刚才得赋的字段值：</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">product</span> <span class="o">=</span> <span class="n">Products</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">pk</span><span class="o">=</span><span class="n">product</span><span class="o">.</span><span class="n">pk</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">product</span><span class="o">.</span><span class="n">number_sold</span>
+<span class="go">42</span>
+</pre></div>
+</div>
+<p>详情请查看 <a class="reference external" href="../../../topics/db/queries/index.html#topics-db-queries-update"><em>use in update queries</em></a> 文档中 <a class="reference external" href="../../../topics/db/queries/index.html#query-expressions"><em>F() expressions</em></a>这一节</p>
+</div>
+</div>
+<div class="section" id="s-deleting-objects">
+<span id="deleting-objects"></span><h2>对象删除(Deleting objects)<a class="headerlink" href="index.html#deleting-objects" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="django.db.models.Model.delete">
+<!--[django.db.models.Model.delete]--><tt class="descclassname">Model.</tt><tt class="descname">delete</tt>()<a class="headerlink" href="index.html#django.db.models.Model.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>对当前对象执行一条 <tt class="docutils literal"><span class="pre">DELETE</span></tt> SQL 语句。删除操作仅仅作用于数据库，Python 的实例对象依然存在，它所包含的字段同样也存在。.</p>
+<p>要了解更多细节，比如如何一次性删除多个对象，请查看 <a class="reference external" href="../../../topics/db/queries/index.html#topics-db-queries-delete"><em>对象删除(Deleting objects)</em></a>.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="s-other-model-instance-methods">
+<span id="s-model-instance-methods"></span><span id="other-model-instance-methods"></span><span id="model-instance-methods"></span><h2>其他的 model 实例方法(Other model instance methods)<a class="headerlink" href="index.html#other-model-instance-methods" title="Permalink to this headline">¶</a></h2>
+<p>有一部分方法有另外的特殊作用。</p>
+<div class="section" id="s-str">
+<span id="str"></span><h3><tt class="docutils literal"><span class="pre">__str__</span></tt><a class="headerlink" href="index.html#str" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="django.db.models.Model.__str__">
+<!--[django.db.models.Model.__str__]--><tt class="descclassname">Model.</tt><tt class="descname">__str__</tt>()<a class="headerlink" href="index.html#django.db.models.Model.__str__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p><tt class="docutils literal"><span class="pre">__str__()</span></tt> 是一个 Python 式的 <b>&quot;魔术方法&quot;</b> ，它定义了在你调用了对象的 <tt class="docutils literal"><span class="pre">str()</span></tt> 方法时，返回值的内容。Django 在很多场合使用 <tt class="docutils literal"><span class="pre">str(obj)</span></tt> (或是相关的其他的函式，比如下面提到的 <tt class="docutils literal"><span class="pre">unicode(obj)</span></tt> )，最常见的就是在 Django 管理后台中做为对象的显示值；或是用来在模板中显示对象。因此，你应该总是为 <tt class="docutils literal"><span class="pre">__str__</span></tt> 返回一个友好且易读的字符串。这样做虽然不是必须的，不过我们仍建议您这样做。不过在您到处狂写  <tt class="docutils literal"><span class="pre">__str__</span></tt> 之前，请继续阅读下面所讲的 <tt class="docutils literal"><span class="pre">__unicode__</span></tt> 方法。</p>
+<p>例如：</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">first_name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mf">50</span><span class="p">)</span>
+    <span class="n">last_name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mf">50</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c"># Note use of django.utils.encoding.smart_str() here because</span>
+        <span class="c"># first_name and last_name will be unicode strings.</span>
+        <span class="k">return</span> <span class="n">smart_str</span><span class="p">(</span><span class="s">&#39;</span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="s-unicode">
+<span id="unicode"></span><h3><tt class="docutils literal"><span class="pre">__unicode__</span></tt><a class="headerlink" href="index.html#unicode" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="django.db.models.Model.__unicode__">
+<!--[django.db.models.Model.__unicode__]--><tt class="descclassname">Model.</tt><tt class="descname">__unicode__</tt>()<a class="headerlink" href="index.html#django.db.models.Model.__unicode__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>在你使用对象的 <tt class="docutils literal"><span class="pre">unicode()</span></tt> 方法时，就会调用 <tt class="docutils literal"><span class="pre">__unicode__()</span></tt> 。因为你的 model 中的字段从数据库中得到的是 <b>Unicode</b> 字符串，所以一般情况下你要为你的 model 写一个 <tt class="docutils literal"><span class="pre">__unicode__()</span></tt> 方法。上面的例子可以简单地改写为：</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">first_name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mf">50</span><span class="p">)</span>
+    <span class="n">last_name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mf">50</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__unicode__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s">u&#39;</span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>如果你在 model 上只定义了 <tt class="docutils literal"><span class="pre">__unicode__()</span></tt> 方法却并没有定义 <tt class="docutils literal"><span class="pre">__str__()</span></tt> 方法，Django 将自动提供一个会在内部调用 <tt class="docutils literal"><span class="pre">__unicode__()</span></tt> 的 <tt class="docutils literal"><span class="pre">__str__()</span></tt> 方法，并且将返回值自动转换成 <b>UTF-8</b> 字符串。对此，在开发时有如下建议：只定义 <tt class="docutils literal"><span class="pre">__unicode__()</span></tt> 方法，让 Django 在必要时自动做字符串转换。</p>
+</div>
+<div class="section" id="s-get-absolute-url">
+<span id="get-absolute-url"></span><h3><tt class="docutils literal"><span class="pre">get_absolute_url</span></tt><a class="headerlink" href="index.html#get-absolute-url" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="django.db.models.Model.get_absolute_url">
+<!--[django.db.models.Model.get_absolute_url]--><tt class="descclassname">Model.</tt><tt class="descname">get_absolute_url</tt>()<a class="headerlink" href="index.html#django.db.models.Model.get_absolute_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>定义 <tt class="docutils literal"><span class="pre">get_absolute_url()</span></tt> 方法会让 Django 知道如何计算得到当前对象对应的网址 <b>URL</b>，例如：</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">get_absolute_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s">&quot;/people/</span><span class="si">%i</span><span class="s">/&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span>
+</pre></div>
+</div>
+<p>Django 在管理后台使用该方法。如果某个对象定义了 <tt class="docutils literal"><span class="pre">get_absolute_url()</span></tt> 方法，在它的对象修改页就会出现一个 <b>&quot;View on site&quot;</b> 链接，它会弹出一个与当前对象相关的网页，网站就是 <tt class="docutils literal"><span class="pre">get_absolute_url()</span></tt> 返回的 <b>URL</b>。</p>
+<p>此外，Django 有些其他部分，也用到了 <tt class="docutils literal"><span class="pre">get_absolute_url()</span></tt> ，比如 <a class="reference external" href="../../contrib/syndication/index.html#ref-contrib-syndication"><em>RSS种子(syndication feed framework)</em></a>。 <tt class="docutils literal"><span class="pre">get_absolute_url()</span></tt> 是一个对实际应用中很有用的快捷方法。</p>
+<p>在模板中使用 <tt class="docutils literal"><span class="pre">get_absolute_url()</span></tt> 比直接在拼合网址要更好。例如，这种模板代码就不是很好：</p>
+<div class="highlight-python"><pre>&lt;a href="/people/{{ object.id }}/"&gt;{{ object.name }}&lt;/a&gt;</pre>
+</div>
+<p>但这种写法就很好：</p>
+<div class="highlight-python"><pre>&lt;a href="{{ object.get_absolute_url }}"&gt;{{ object.name }}&lt;/a&gt;</pre>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">注意</p>
+<p class="last"> <tt class="docutils literal"><span class="pre">get_absolute_url()</span></tt> 返回的 <b>URL</b> 只能包含 <b>ASCII</b> 字符串 (这是 <b>URI</b> 的规则所要求的，详见 <a class="reference external" href="http://www.ietf.org/rfc/rfc2396.txt">RFC 2396</a>) ，所以在必要的时候，会进行重编码 <b>URL-encoded</b>，而在代码和模板中 <tt class="docutils literal"><span class="pre">get_absolute_url()</span></tt> 时，会直接输出结果而不会进行网址重编码。如果你有大量的 <b>Unicode</b> 网址要进行重编码，可以使用 <tt class="docutils literal"><span class="pre">django.utils.encoding.iri_to_uri()</span></tt> 函式来处理。</p>
+</div>
+<div class="section" id="s-the-permalink-decorator">
+<span id="the-permalink-decorator"></span><h4>permalink 装饰器(The <tt class="docutils literal"><span class="pre">permalink</span></tt> decorator)<a class="headerlink" href="index.html#the-permalink-decorator" title="Permalink to this headline">¶</a></h4>
+<p>使用 <tt class="docutils literal"><span class="pre">get_absolute_url()</span></tt> 来获取网址会带来这样一个问题：它违背了 <b>DRY</b> 原则： 对象的 <b>URL</b> 定义同时出现在 <b>URLConf</b> 配置文件(urls.py)和 model 定义中。</p>
+<p>你可以使用 <tt class="docutils literal"><span class="pre">permalink</span></tt> 装饰器将 model 与 URLConf 相剥离：</p>
+<dl class="function">
+<dt id="django.db.models.permalink">
+<!--[django.db.models.permalink]--><tt class="descname">permalink</tt>()<a class="headerlink" href="index.html#django.db.models.permalink" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>该装饰器需要一个视图函式，一个位置参数的列表以及一个命名参数的字典(这个是可选的)，然后 Django 就会根据 URLconf ，填入你传递的参数，从而得到完整的网址 <b>URL</b>。例如，你的 URLconf 有这么一行：</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">(</span><span class="s">r&#39;^people/(\d+)/$&#39;</span><span class="p">,</span> <span class="s">&#39;people.views.details&#39;</span><span class="p">),</span>
+</pre></div>
+</div>
+<p>...你 model 中的 <tt class="docutils literal"><span class="pre">get_absolute_url</span></tt> 方法如下：</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">from</span> <span class="nn">django.db</span> <span class="k">import</span> <span class="n">models</span>
+
+<span class="nd">@models</span><span class="o">.</span><span class="n">permalink</span>
+<span class="k">def</span> <span class="nf">get_absolute_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="s">&#39;people.views.details&#39;</span><span class="p">,</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">)])</span>
+</pre></div>
+</div>
+<p>再来一个例子，如果你的 URLconf 有这么一行：</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">(</span><span class="s">r&#39;/archive/(?P&lt;year&gt;\d{4})/(?P&lt;month&gt;\d{1,2})/(?P&lt;day&gt;\d{1,2})/$&#39;</span><span class="p">,</span> <span class="n">archive_view</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>...然后 <tt class="docutils literal"><span class="pre">permalink()</span></tt>如下：</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="nd">@models</span><span class="o">.</span><span class="n">permalink</span>
+<span class="k">def</span> <span class="nf">get_absolute_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="s">&#39;archive_view&#39;</span><span class="p">,</span> <span class="p">(),</span> <span class="p">{</span>
+        <span class="s">&#39;year&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">created</span><span class="o">.</span><span class="n">year</span><span class="p">,</span>
+        <span class="s">&#39;month&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">created</span><span class="o">.</span><span class="n">month</span><span class="p">,</span>
+        <span class="s">&#39;day&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">created</span><span class="o">.</span><span class="n">day</span><span class="p">})</span>
+</pre></div>
+</div>
+<p>注意上例中的第二个参数是一个空队列，因为我们只要传递关键字参数就行了，用不到位置参数。</p>
+<p>用这种方法，你就可以将对象的绝对网址与用到它的视图联系起来，就不用再重复定义 <b>URL</b> 信息了，仍然可以象往常一样在模板中 <tt class="docutils literal"><span class="pre">get_absolute_url</span></tt> 方法。</p>
+<p>在某些情况下，比如使用通用视图或是对多个 model 重用自定义视图，指定视图函式可能就会与反向 <b>URL</b> 匹配相冲突（因为多个匹配模式同时指向同一个视图）。</p>
+<p>为了解决这个问题，Django 提供了<strong>命名URL匹配模式(named URL patterns)</strong>。使用命名 URL 匹配时，我们可以给匹配模式命名，然后可以直接引用这个名称而不用使用视图函式。只要将模式元组变成一个 <tt class="docutils literal"><span class="pre">url</span></tt> 函式就能完成对命名匹配模式的定义：</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">from</span> <span class="nn">django.conf.urls.defaults</span> <span class="k">import</span> <span class="o">*</span>
+
+<span class="n">url</span><span class="p">(</span><span class="s">r&#39;^people/(\d+)/$&#39;</span><span class="p">,</span>
+    <span class="s">&#39;django.views.generic.list_detail.object_detail&#39;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s">&#39;people_view&#39;</span><span class="p">),</span>
+</pre></div>
+</div>
+<p>...接下来用模式的命名代替视图函式：</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">from</span> <span class="nn">django.db.models</span> <span class="k">import</span> <span class="n">permalink</span>
+
+<span class="k">def</span> <span class="nf">get_absolute_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="s">&#39;people_view&#39;</span><span class="p">,</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">)])</span>
+<span class="n">get_absolute_url</span> <span class="o">=</span> <span class="n">permalink</span><span class="p">(</span><span class="n">get_absolute_url</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>要了解命名 URL 匹配模式，请查看 <a class="reference external" href="../../../topics/http/urls/index.html#topics-http-urls"><em>URL 部分(URL dispatch documentation)</em></a>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="s-extra-instance-methods">
+<span id="extra-instance-methods"></span><h2>其他的实例方法(Extra instance methods)<a class="headerlink" href="index.html#extra-instance-methods" title="Permalink to this headline">¶</a></h2>
+<p>除了 <tt class="docutils literal"><span class="pre">save()</span></tt>, <tt class="docutils literal"><span class="pre">delete()</span></tt> 之外，一个 model 对象可能还有下列方法：</p>
+<dl class="method">
+<dt id="django.db.models.Model.get_FOO_display">
+<!--[django.db.models.Model.get_FOO_display]--><tt class="descclassname">Model.</tt><tt class="descname">get_FOO_display</tt>()<a class="headerlink" href="index.html#django.db.models.Model.get_FOO_display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>如果 model 有字段设置了 <tt class="docutils literal"><span class="pre">choices</span></tt> ，对象就会提供 <tt class="docutils literal"><span class="pre">get_FOO_display()</span></tt> 方法，这里的 <tt class="docutils literal"><span class="pre">FOO</span></tt> 就是字段的名称。这个方法返回给用户看的那个可读性好的值，例如：</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">GENDER_CHOICES</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="s">&#39;M&#39;</span><span class="p">,</span> <span class="s">&#39;Male&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s">&#39;F&#39;</span><span class="p">,</span> <span class="s">&#39;Female&#39;</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mf">20</span><span class="p">)</span>
+    <span class="n">gender</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mf">1</span><span class="p">,</span> <span class="n">choices</span><span class="o">=</span><span class="n">GENDER_CHOICES</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>...每个 <tt class="docutils literal"><span class="pre">Person</span></tt> 实例都有一个 <tt class="docutils literal"><span class="pre">get_gender_display()</span></tt> 方法。例如：</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">&#39;John&#39;</span><span class="p">,</span> <span class="n">gender</span><span class="o">=</span><span class="s">&#39;M&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">gender</span>
+<span class="go">&#39;M&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">get_gender_display</span><span class="p">()</span>
+<span class="go">&#39;Male&#39;</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="django.db.models.Model.get_next_by_FOO">
+<!--[django.db.models.Model.get_next_by_FOO]--><tt class="descclassname">Model.</tt><tt class="descname">get_next_by_FOO</tt>(<em>**kwargs</em>)<a class="headerlink" href="index.html#django.db.models.Model.get_next_by_FOO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="django.db.models.Model.get_previous_by_FOO">
+<!--[django.db.models.Model.get_previous_by_FOO]--><tt class="descclassname">Model.</tt><tt class="descname">get_previous_by_FOO</tt>(<em>**kwargs</em>)<a class="headerlink" href="index.html#django.db.models.Model.get_previous_by_FOO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>如果 model 中的 <tt class="docutils literal"><span class="pre">DateField</span></tt> 字段和 <tt class="docutils literal"><span class="pre">DateTimeField</span></tt> 字段没有设置 <tt class="docutils literal"><span class="pre">null=True</span></tt>，那么对象就会提供 <tt class="docutils literal"><span class="pre">get_next_by_FOO()</span></tt> 方法和 <tt class="docutils literal"><span class="pre">get_previous_by_FOO()</span></tt> 方法。这里的 <tt class="docutils literal"><span class="pre">FOO</span></tt> 就是时间字段的名称。它根据当时时间字段的值返回下一个或是前一个对象。如果没有找到就会抛开 <tt class="docutils literal"><span class="pre">DoesNotExist</span></tt> 异常。</p>
+<p>这两个方法的参数都是可选的，这些参数在 <a class="reference external" href="../querysets/index.html#field-lookups"><em>字段筛选条件(Field lookups)</em></a> 中有详细介绍。</p>
+<p>要注意：如果在使用这两个方法时遇到了相同的时间，那么它们就会将 ID 值做为第二条件，这样才能保证记录没有重复或遗漏。</p>
+</div>
+</div>
+
+
+
+<div id="content-secondary">
+  <h2 id="comments">Questions/Feedback</h2>
+  <p>Having trouble? We'd like to help!</p>
+  <ul>
+    <li>
+      Try the <a href="../../../faq/index.html">FAQ</a> — it's got answers to many common
+      questions.
+    </li>
+    <li>
+      Search for information in the <a
+      href="http://groups.google.com/group/django-users/">archives of the
+      django-users mailing list</a>, or <a
+      href="http://groups.google.com/group/django-users/">post a question</a>.
+    </li>
+    <li>
+      Ask a question in the <a href="irc://irc.freenode.net/">#django IRC
+      channel</a>, or search the <a href="http://oebfare.com/logger/django/">IRC
+      logs</a> to see if its been asked before.
+    </li>
+    <li>
+      If you notice errors with this documentation, please <a
+      href="http://code.djangoproject.com/simpleticket?component=Documentation">
+      open a ticket</a> and let us know! Please only use the ticket tracker for
+      criticisms and improvements on the docs. For tech support, use the
+      resources above.
+    </li>
+  </ul>
+</div>
+
+		</div>
+		<!-- END #content-main -->
+		<div id="content-related" class="sidebar">
+		
+  
+    <h2>Contents</h2>
+    
+      <ul>
+<li><a class="reference external" href="index.html">Model instance reference</a><ul>
+<li><a class="reference external" href="index.html#creating-objects">Creating objects</a></li>
+<li><a class="reference external" href="index.html#saving-objects">Saving objects</a><ul>
+<li><a class="reference external" href="index.html#auto-incrementing-primary-keys">Auto-incrementing primary keys</a><ul>
+<li><a class="reference external" href="index.html#the-pk-property">The <tt class="docutils literal"><span class="pre">pk</span></tt> property</a></li>
+<li><a class="reference external" href="index.html#explicitly-specifying-auto-primary-key-values">Explicitly specifying auto-primary-key values</a></li>
+</ul>
+</li>
+<li><a class="reference external" href="index.html#what-happens-when-you-save">What happens when you save?</a></li>
+<li><a class="reference external" href="index.html#how-django-knows-to-update-vs-insert">How Django knows to UPDATE vs. INSERT</a><ul>
+<li><a class="reference external" href="index.html#forcing-an-insert-or-update">Forcing an INSERT or UPDATE</a></li>
+</ul>
+</li>
+<li><a class="reference external" href="index.html#updating-attributes-based-on-existing-fields">Updating attributes based on existing fields</a></li>
+</ul>
+</li>
+<li><a class="reference external" href="index.html#deleting-objects">Deleting objects</a></li>
+<li><a class="reference external" href="index.html#other-model-instance-methods">Other model instance methods</a><ul>
+<li><a class="reference external" href="index.html#str"><tt class="docutils literal"><span class="pre">__str__</span></tt></a></li>
+<li><a class="reference external" href="index.html#unicode"><tt class="docutils literal"><span class="pre">__unicode__</span></tt></a></li>
+<li><a class="reference external" href="index.html#get-absolute-url"><tt class="docutils literal"><span class="pre">get_absolute_url</span></tt></a><ul>
+<li><a class="reference external" href="index.html#the-permalink-decorator">The <tt class="docutils literal"><span class="pre">permalink</span></tt> decorator</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference external" href="index.html#extra-instance-methods">Extra instance methods</a></li>
+</ul>
+</li>
+</ul>
+
+    
+  
+  
+  
+    <h2>Search</h2>
+    
+    <form action="../../../search/index.html" id="search" class="search">
+  <div>
+    <input type="hidden" name="cx" value="009763561546736975936:e88ek0eurf4" />
+    <input type="hidden" name="cof" value="FORID:11" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="hidden" name="hl" value="" />
+    <input id="id_search_q" type="text" class="query" name="q" />
+    <input type="submit" name="sa" class="submit" value="Search" />
+    <ul>
+<li><label for="id_search_as_q_0"><input checked="checked" type="radio" id="id_search_as_q_0" value="more:dev_docs" name="as_q" /> Latest</label></li>
+<li><label for="id_search_as_q_1"><input type="radio" id="id_search_as_q_1" value="more:1.0_docs" name="as_q" /> 1.0</label></li>
+<li><label for="id_search_as_q_2"><input type="radio" id="id_search_as_q_2" value="more:0.96_docs" name="as_q" /> 0.96</label></li>
+<li><label for="id_search_as_q_3"><input type="radio" id="id_search_as_q_3" value="more:all_docs" name="as_q" /> All</label></li>
+</ul>
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=search&amp;lang="></script>
+  
+  
+  
+    <h2>Browse</h2>
+    <ul>
+      
+        
+          <li>Prev: <a href="../options/index.html">Model <tt class="docutils literal"><span class="pre">Meta</span></tt> options</a></li>
+        
+        
+          <li>Next: <a href="../querysets/index.html">QuerySet API reference</a></li>
+        
+        <li><a href="../../../contents/index.html">Table of contents</a></li>
+        
+          <li><a href="../../../genindex/index.html">General Index</a></li>
+        
+          <li><a href="../../../modindex/index.html">Global Module Index</a></li>
+        
+      
+    </ul>
+  
+  
+  
+    <h2>You are here:</h2>
+    <ul>
+      
+        <li>
+          <a href="../../../index.html">Django dev documentation</a>
+          
+            <ul><li><a href="../../index.html">API Reference</a>
+          
+            <ul><li><a href="../index.html">Models</a>
+          
+          <ul><li>Model instance reference</li></ul>
+          </li></ul></li></ul>
+        </li>
+      
+    </ul>
+  
+  
+  
+    <h3>Last update:</h3>
+    <div>November 19, 2009, 4 p.m. (<a href="http://www.timeanddate.com/worldclock/city.html?n=64">CDT</a>)</div>
+  
+
+		</div>
+		<!-- END #content-related -->
+
+		</div>
+		<!-- END #content -->
+		<div id="footer">
+			<p>&copy; 2005-2009 <a href="http://www.djangoproject.com/foundation/">Django Software Foundation</a> unless otherwise noted. Django is a registered trademark of the Django Software Foundation. 
+			Hosting graciously provided by <a href="http://mediatemple.net/">
+			<img style="vertical-align: middle; position: relative; top: -1px;" src="http://media.djangoproject.com/img/site/mt.png" alt="media temple" /></a>
+			</p>
+		</div>
+		<!-- END #footer -->
+	</div>
+	<!-- END #container -->
+	</body>
+</html>
+

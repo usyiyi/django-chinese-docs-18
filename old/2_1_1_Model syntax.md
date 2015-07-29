@@ -1,6 +1,5 @@
 <!--
   译者：WrongWay [www.wrongway.me]
-  1.8更新：Github@wizardforcel
 -->
 
 # 模型 #
