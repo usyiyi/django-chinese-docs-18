@@ -1,78 +1,78 @@
 <!--
-  À´Ô´£ºhttp://python.usyiyi.cn/django/index.html
+  æ¥æºï¼šhttp://python.usyiyi.cn/django/index.html
 -->
 
-# ±àÐ´ÄãµÄµÚÒ»¸öDjangoÓ¦ÓÃ£¬µÚ5²¿·Ö #
+# ç¼–å†™ä½ çš„ç¬¬ä¸€ä¸ªDjangoåº”ç”¨ï¼Œç¬¬5éƒ¨åˆ† #
 
-±¾½Ì³ÌÉÏ½Ó½Ì³ÌµÚ4²¿·Ö¡£ ÎÒÃÇÒÑ¾­½¨Á¢Ò»¸öÍøÒ³Í¶Æ±Ó¦ÓÃ£¬ÏÖÔÚÎÒÃÇ½«ÎªËü´´½¨Ò»Ð©×Ô¶¯»¯²âÊÔ¡£
+æœ¬æ•™ç¨‹ä¸ŠæŽ¥æ•™ç¨‹ç¬¬4éƒ¨åˆ†ã€‚ æˆ‘ä»¬å·²ç»å»ºç«‹ä¸€ä¸ªç½‘é¡µæŠ•ç¥¨åº”ç”¨ï¼ŒçŽ°åœ¨æˆ‘ä»¬å°†ä¸ºå®ƒåˆ›å»ºä¸€äº›è‡ªåŠ¨åŒ–æµ‹è¯•ã€‚
 
-## ×Ô¶¯»¯²âÊÔ¼ò½é ##
+## è‡ªåŠ¨åŒ–æµ‹è¯•ç®€ä»‹ ##
 
-### Ê²Ã´ÊÇ×Ô¶¯»¯²âÊÔ£¿ ###
+### ä»€ä¹ˆæ˜¯è‡ªåŠ¨åŒ–æµ‹è¯•ï¼Ÿ ###
 
-²âÊÔÊÇ¼ì²éÄãµÄ´úÂëÊÇ·ñÕý³£ÔËÐÐµÄ¼òµ¥³ÌÐò¡£
+æµ‹è¯•æ˜¯æ£€æŸ¥ä½ çš„ä»£ç æ˜¯å¦æ­£å¸¸è¿è¡Œçš„ç®€å•ç¨‹åºã€‚
 
-²âÊÔ¿ÉÒÔ»®·ÖÎª²»Í¬µÄ¼¶±ð¡£ Ò»Ð©²âÊÔ¿ÉÄÜ×¨×¢ÓÚÐ¡Ï¸½Ú£¨Ä³Ò»¸öÄ£ÐÍµÄ·½·¨ÊÇ·ñ»á·µ»ØÔ¤ÆÚµÄÖµ£¿£©£¬ ÆäËûµÄ²âÊÔ¿ÉÄÜ»á¼ì²éÈí¼þµÄÕûÌåÔËÐÐÊÇ·ñÕý³££¨ÓÃ»§ÔÚ¶ÔÍøÕ¾½øÐÐÁËÒ»ÏµÁÐµÄ²Ù×÷ºó£¬ÊÇ·ñ·µ»ØÁËÕýÈ·µÄ½á¹û£¿£©¡£ÕâÐ©ÆäÊµºÍÄãÔçÇ°ÔÚ½Ì³Ì 1ÖÐ×öµÄ²î²»¶à£¬ Ê¹ÓÃshellÀ´¼ì²âÒ»¸ö·½·¨µÄÐÐÎª£¬»òÕßÔËÐÐ³ÌÐò²¢ÊäÈëÊý¾ÝÀ´¼ì²éËüµÄÐÐÎª·½Ê½¡£
+æµ‹è¯•å¯ä»¥åˆ’åˆ†ä¸ºä¸åŒçš„çº§åˆ«ã€‚ ä¸€äº›æµ‹è¯•å¯èƒ½ä¸“æ³¨äºŽå°ç»†èŠ‚ï¼ˆæŸä¸€ä¸ªæ¨¡åž‹çš„æ–¹æ³•æ˜¯å¦ä¼šè¿”å›žé¢„æœŸçš„å€¼ï¼Ÿï¼‰ï¼Œ å…¶ä»–çš„æµ‹è¯•å¯èƒ½ä¼šæ£€æŸ¥è½¯ä»¶çš„æ•´ä½“è¿è¡Œæ˜¯å¦æ­£å¸¸ï¼ˆç”¨æˆ·åœ¨å¯¹ç½‘ç«™è¿›è¡Œäº†ä¸€ç³»åˆ—çš„æ“ä½œåŽï¼Œæ˜¯å¦è¿”å›žäº†æ­£ç¡®çš„ç»“æžœï¼Ÿï¼‰ã€‚è¿™äº›å…¶å®žå’Œä½ æ—©å‰åœ¨æ•™ç¨‹ 1ä¸­åšçš„å·®ä¸å¤šï¼Œ ä½¿ç”¨shellæ¥æ£€æµ‹ä¸€ä¸ªæ–¹æ³•çš„è¡Œä¸ºï¼Œæˆ–è€…è¿è¡Œç¨‹åºå¹¶è¾“å…¥æ•°æ®æ¥æ£€æŸ¥å®ƒçš„è¡Œä¸ºæ–¹å¼ã€‚
 
-×Ô¶¯»¯²âÊÔµÄ²»Í¬Ö®´¦¾ÍÔÚÓÚÕâÐ©²âÊÔ»áÓÉÏµÍ³À´°ïÄãÍê³É¡£Äã´´½¨ÁËÒ»×é²âÊÔ³ÌÐò£¬µ±ÄãÐÞ¸ÄÁËÄãµÄÓ¦ÓÃ£¬Äã¾Í¿ÉÒÔÓÃÕâ×é²âÊÔ³ÌÐòÀ´¼ì²éÄãµÄ´úÂëÊÇ·ñÈÔÈ»Í¬Ô¤ÆÚµÄÄÇÑùÔËÐÐ£¬¶øÎÞÐèÖ´ÐÐºÄÊ±µÄÊÖ¶¯²âÊÔ¡£
+è‡ªåŠ¨åŒ–æµ‹è¯•çš„ä¸åŒä¹‹å¤„å°±åœ¨äºŽè¿™äº›æµ‹è¯•ä¼šç”±ç³»ç»Ÿæ¥å¸®ä½ å®Œæˆã€‚ä½ åˆ›å»ºäº†ä¸€ç»„æµ‹è¯•ç¨‹åºï¼Œå½“ä½ ä¿®æ”¹äº†ä½ çš„åº”ç”¨ï¼Œä½ å°±å¯ä»¥ç”¨è¿™ç»„æµ‹è¯•ç¨‹åºæ¥æ£€æŸ¥ä½ çš„ä»£ç æ˜¯å¦ä»ç„¶åŒé¢„æœŸçš„é‚£æ ·è¿è¡Œï¼Œè€Œæ— éœ€æ‰§è¡Œè€—æ—¶çš„æ‰‹åŠ¨æµ‹è¯•ã€‚
 
-### ÎªÊ²Ã´ÄãÐèÒª´´½¨²âÊÔ ###
+### ä¸ºä»€ä¹ˆä½ éœ€è¦åˆ›å»ºæµ‹è¯• ###
 
-ÄÇÃ´£¬ÎªÊ²Ã´Òª´´½¨²âÊÔ£¿¶øÇÒÎªÊ²Ã´ÊÇÏÖÔÚ£¿
+é‚£ä¹ˆï¼Œä¸ºä»€ä¹ˆè¦åˆ›å»ºæµ‹è¯•ï¼Ÿè€Œä¸”ä¸ºä»€ä¹ˆæ˜¯çŽ°åœ¨ï¼Ÿ
 
-Äã¿ÉÄÜ¸Ð¾õÑ§Ï°Python/DjangoÒÑ¾­×ã¹»£¬ÔÙÈ¥Ñ§Ï°ÆäËûµÄ¶«Î÷Ò²ÐíÐèÒª¸¶³ö¾Þ´óµÄÅ¬Á¦¶øÇÒÃ»ÓÐ±ØÒª¡£ ±Ï¾¹£¬ÎÒÃÇµÄÍ¶Æ±Ó¦ÓÃÒÑ¾­»î±ÄÂÒÌøÁË£» ½«Ê±¼äÔËÓÃÔÚ×Ô¶¯»¯²âÊÔÉÏ»¹²»ÈçÔËÓÃÔÚ¸Ä½øÎÒÃÇµÄÓ¦ÓÃÉÏ¡£ Èç¹ûÄãÑ§Ï°Django¾ÍÊÇÎªÁË´´½¨Ò»¸öÍ¶Æ±Ó¦ÓÃ£¬ÄÇÃ´´´½¨×Ô¶¯»¯²âÊÔÏÔÈ»Ã»ÓÐ±ØÒª¡£ µ«Èç¹û²»ÊÇÕâÑù£¬ÏÖÔÚÊÇÒ»¸öºÜºÃµÄÑ§Ï°»ú»á¡£
+ä½ å¯èƒ½æ„Ÿè§‰å­¦ä¹ Python/Djangoå·²ç»è¶³å¤Ÿï¼Œå†åŽ»å­¦ä¹ å…¶ä»–çš„ä¸œè¥¿ä¹Ÿè®¸éœ€è¦ä»˜å‡ºå·¨å¤§çš„åŠªåŠ›è€Œä¸”æ²¡æœ‰å¿…è¦ã€‚ æ¯•ç«Ÿï¼Œæˆ‘ä»¬çš„æŠ•ç¥¨åº”ç”¨å·²ç»æ´»è¹¦ä¹±è·³äº†ï¼› å°†æ—¶é—´è¿ç”¨åœ¨è‡ªåŠ¨åŒ–æµ‹è¯•ä¸Šè¿˜ä¸å¦‚è¿ç”¨åœ¨æ”¹è¿›æˆ‘ä»¬çš„åº”ç”¨ä¸Šã€‚ å¦‚æžœä½ å­¦ä¹ Djangoå°±æ˜¯ä¸ºäº†åˆ›å»ºä¸€ä¸ªæŠ•ç¥¨åº”ç”¨ï¼Œé‚£ä¹ˆåˆ›å»ºè‡ªåŠ¨åŒ–æµ‹è¯•æ˜¾ç„¶æ²¡æœ‰å¿…è¦ã€‚ ä½†å¦‚æžœä¸æ˜¯è¿™æ ·ï¼ŒçŽ°åœ¨æ˜¯ä¸€ä¸ªå¾ˆå¥½çš„å­¦ä¹ æœºä¼šã€‚
 
-#### ²âÊÔ½«½ÚÊ¡ÄãµÄÊ±¼ä ####
+#### æµ‹è¯•å°†èŠ‚çœä½ çš„æ—¶é—´ ####
 
-ÔÚÄ³ÖÖ³Ì¶ÈÉÏ£¬ ¡®¼ì²éÆðÀ´ËÆºõÕý³£¹¤×÷¡¯½«ÊÇÒ»ÖÖÁîÈËÂúÒâµÄ²âÊÔ¡£ ÔÚ¸ü¸´ÔÓµÄÓ¦ÓÃÖÐ£¬Äã¿ÉÄÜÓÐ¼¸Ê®ÖÖ×é¼þÖ®¼äµÄ¸´ÔÓµÄÏà»¥×÷ÓÃ¡£
+åœ¨æŸç§ç¨‹åº¦ä¸Šï¼Œ â€˜æ£€æŸ¥èµ·æ¥ä¼¼ä¹Žæ­£å¸¸å·¥ä½œâ€™å°†æ˜¯ä¸€ç§ä»¤äººæ»¡æ„çš„æµ‹è¯•ã€‚ åœ¨æ›´å¤æ‚çš„åº”ç”¨ä¸­ï¼Œä½ å¯èƒ½æœ‰å‡ åç§ç»„ä»¶ä¹‹é—´çš„å¤æ‚çš„ç›¸äº’ä½œç”¨ã€‚
 
-ÕâÐ©×é¼þµÄÈÎºÎÒ»¸öÐ¡µÄ±ä»¯£¬¶¼¿ÉÄÜ¶ÔÓ¦ÓÃµÄÐÐÎª²úÉúÒâÏë²»µ½µÄÓ°Ïì¡£ ¼ì²éÆðÀ´¡®ËÆºõÕý³£¹¤×÷¡¯¿ÉÄÜÒâÎ¶×ÅÄãÐèÒªÔËÓÃ¶þÊ®ÖÖ²»Í¬µÄ²âÊÔÊý¾ÝÀ´²âÊÔÄã´úÂëµÄ¹¦ÄÜ£¬½ö½öÊÇÎªÁËÈ·±£ÄãÃ»ÓÐ¸ãÔÒÄ³Ð©ÊÂ ¡ª¡ª Õâ²»ÊÇ¶ÔÊ±¼äµÄÓÐÐ§ÀûÓÃ¡£
+è¿™äº›ç»„ä»¶çš„ä»»ä½•ä¸€ä¸ªå°çš„å˜åŒ–ï¼Œéƒ½å¯èƒ½å¯¹åº”ç”¨çš„è¡Œä¸ºäº§ç”Ÿæ„æƒ³ä¸åˆ°çš„å½±å“ã€‚ æ£€æŸ¥èµ·æ¥â€˜ä¼¼ä¹Žæ­£å¸¸å·¥ä½œâ€™å¯èƒ½æ„å‘³ç€ä½ éœ€è¦è¿ç”¨äºŒåç§ä¸åŒçš„æµ‹è¯•æ•°æ®æ¥æµ‹è¯•ä½ ä»£ç çš„åŠŸèƒ½ï¼Œä»…ä»…æ˜¯ä¸ºäº†ç¡®ä¿ä½ æ²¡æœ‰æžç ¸æŸäº›äº‹ â€”â€” è¿™ä¸æ˜¯å¯¹æ—¶é—´çš„æœ‰æ•ˆåˆ©ç”¨ã€‚
 
-ÓÈÆäÊÇµ±×Ô¶¯»¯²âÊÔÖ»ÐèÒªÊýÃë¾Í¿ÉÒÔÍê³ÉÒÔÉÏµÄÈÎÎñÊ±¡£ Èç¹û³öÏÖÁË´íÎó£¬²âÊÔ³ÌÐò»¹ÄÜ¹»°ïÖúÕÒ³öÒý·¢Õâ¸öÒì³£ÐÐÎªµÄ´úÂë¡£
+å°¤å…¶æ˜¯å½“è‡ªåŠ¨åŒ–æµ‹è¯•åªéœ€è¦æ•°ç§’å°±å¯ä»¥å®Œæˆä»¥ä¸Šçš„ä»»åŠ¡æ—¶ã€‚ å¦‚æžœå‡ºçŽ°äº†é”™è¯¯ï¼Œæµ‹è¯•ç¨‹åºè¿˜èƒ½å¤Ÿå¸®åŠ©æ‰¾å‡ºå¼•å‘è¿™ä¸ªå¼‚å¸¸è¡Œä¸ºçš„ä»£ç ã€‚
 
-ÓÐÊ±ºòÄã¿ÉÄÜ»á¾õµÃ±àÐ´²âÊÔ³ÌÐò½«Äã´ÓÓÐ¼ÛÖµµÄ¡¢´´ÔìÐÔµÄ±à³Ì¹¤×÷Àï´ø³ö£¬´øµ½ÁËµ¥µ÷·¦Î¶¡¢ÎÞÈ¤µÄ±àÐ´²âÊÔÖÐ£¬ÓÈÆäÊÇµ±ÄãµÄ´úÂë¹¤×÷Õý³£Ê±¡£
+æœ‰æ—¶å€™ä½ å¯èƒ½ä¼šè§‰å¾—ç¼–å†™æµ‹è¯•ç¨‹åºå°†ä½ ä»Žæœ‰ä»·å€¼çš„ã€åˆ›é€ æ€§çš„ç¼–ç¨‹å·¥ä½œé‡Œå¸¦å‡ºï¼Œå¸¦åˆ°äº†å•è°ƒä¹å‘³ã€æ— è¶£çš„ç¼–å†™æµ‹è¯•ä¸­ï¼Œå°¤å…¶æ˜¯å½“ä½ çš„ä»£ç å·¥ä½œæ­£å¸¸æ—¶ã€‚
 
-È»¶ø£¬±ÈÆðÓÃ¼¸¸öÐ¡Ê±µÄÊ±¼äÀ´ÊÖ¶¯²âÊÔÄãµÄ³ÌÐò£¬»òÕßÊÔÍ¼ÕÒ³ö´úÂëÖÐÒ»¸öÐÂÒýÈëµÄÎÊÌâµÄÔ­Òò£¬±àÐ´²âÊÔ³ÌÐò»¹ÊÇÁîÈËã«ÒâµÄ¡£
+ç„¶è€Œï¼Œæ¯”èµ·ç”¨å‡ ä¸ªå°æ—¶çš„æ—¶é—´æ¥æ‰‹åŠ¨æµ‹è¯•ä½ çš„ç¨‹åºï¼Œæˆ–è€…è¯•å›¾æ‰¾å‡ºä»£ç ä¸­ä¸€ä¸ªæ–°å¼•å…¥çš„é—®é¢˜çš„åŽŸå› ï¼Œç¼–å†™æµ‹è¯•ç¨‹åºè¿˜æ˜¯ä»¤äººæƒ¬æ„çš„ã€‚
 
-#### ²âÊÔ²»½ö½ö¿ÉÒÔ·¢ÏÖÎÊÌâ£¬ËüÃÇ»¹ÄÜ·ÀÖ¹ÎÊÌâ ####
+#### æµ‹è¯•ä¸ä»…ä»…å¯ä»¥å‘çŽ°é—®é¢˜ï¼Œå®ƒä»¬è¿˜èƒ½é˜²æ­¢é—®é¢˜ ####
 
-½«²âÊÔ¿´×öÖ»ÊÇ¿ª·¢¹ý³ÌÖÐÏû¼«µÄÒ»ÃæÊÇ´íÎóµÄ¡£
+å°†æµ‹è¯•çœ‹åšåªæ˜¯å¼€å‘è¿‡ç¨‹ä¸­æ¶ˆæžçš„ä¸€é¢æ˜¯é”™è¯¯çš„ã€‚
 
-Ã»ÓÐ²âÊÔ£¬Ó¦ÓÃµÄÄ¿µÄºÍÒâÍ¼½«»á±äµÃÏàµ±Ä£ºý¡£ ÉõÖÁÔÚÄã²é¿´×Ô¼ºµÄ´úÂëÊ±£¬Ò²²»»á·¢ÏÖÕâÐ©´úÂëÕæÕý¸ÉÁËÐ©Ê²Ã´¡£
+æ²¡æœ‰æµ‹è¯•ï¼Œåº”ç”¨çš„ç›®çš„å’Œæ„å›¾å°†ä¼šå˜å¾—ç›¸å½“æ¨¡ç³Šã€‚ ç”šè‡³åœ¨ä½ æŸ¥çœ‹è‡ªå·±çš„ä»£ç æ—¶ï¼Œä¹Ÿä¸ä¼šå‘çŽ°è¿™äº›ä»£ç çœŸæ­£å¹²äº†äº›ä»€ä¹ˆã€‚
 
-²âÊÔ¸Ä±äÁËÕâÒ»ÇÐ£» ËüÃÇÊ¹ÄãµÄ´úÂëÄÚ²¿±äµÃÃ÷Îú£¬µ±´íÎó³öÏÖºó£¬ËüÃÇ»áÃ÷È·µØÖ¸³öÄÄ²¿·Ö´úÂë³öÁËÎÊÌâ ¡ª¡ª ÉõÖÁÄã×Ô¼º¶¼²»»áÁÏµ½ÎÊÌâ»á³öÏÖÔÚÄÇÀï¡£
+æµ‹è¯•æ”¹å˜äº†è¿™ä¸€åˆ‡ï¼› å®ƒä»¬ä½¿ä½ çš„ä»£ç å†…éƒ¨å˜å¾—æ˜Žæ™°ï¼Œå½“é”™è¯¯å‡ºçŽ°åŽï¼Œå®ƒä»¬ä¼šæ˜Žç¡®åœ°æŒ‡å‡ºå“ªéƒ¨åˆ†ä»£ç å‡ºäº†é—®é¢˜ â€”â€” ç”šè‡³ä½ è‡ªå·±éƒ½ä¸ä¼šæ–™åˆ°é—®é¢˜ä¼šå‡ºçŽ°åœ¨é‚£é‡Œã€‚
 
-#### ²âÊÔÊ¹ÄãµÄ´úÂë¸üÊÜ»¶Ó­ ####
+#### æµ‹è¯•ä½¿ä½ çš„ä»£ç æ›´å—æ¬¢è¿Ž ####
 
-Äã¿ÉÄÜÒÑ¾­´´½¨ÁËÒ»¸ö¿°³Æ»Ô»ÍµÄÈí¼þ£¬µ«ÊÇÄã»á·¢ÏÖÐí¶àÆäËûµÄ¿ª·¢Õß»áÓÉÓÚËüÈ±ÉÙ²âÊÔ³ÌÐò¶ø¾Ü¾ø²é¿´ËüÒ»ÑÛ£»Ã»ÓÐ²âÊÔ³ÌÐò£¬ËûÃÇ²»»áÐÅÈÎËü¡£ Jacob Kaplan-Moss£¬Django×î³õµÄ¼¸¸ö¿ª·¢ÕßÖ®Ò»£¬Ëµ¹ý¡°²»¾ßÓÐ²âÊÔ³ÌÐòµÄ´úÂëÊÇÉè¼ÆÉÏµÄ´íÎó¡£¡±
+ä½ å¯èƒ½å·²ç»åˆ›å»ºäº†ä¸€ä¸ªå ªç§°è¾‰ç…Œçš„è½¯ä»¶ï¼Œä½†æ˜¯ä½ ä¼šå‘çŽ°è®¸å¤šå…¶ä»–çš„å¼€å‘è€…ä¼šç”±äºŽå®ƒç¼ºå°‘æµ‹è¯•ç¨‹åºè€Œæ‹’ç»æŸ¥çœ‹å®ƒä¸€çœ¼ï¼›æ²¡æœ‰æµ‹è¯•ç¨‹åºï¼Œä»–ä»¬ä¸ä¼šä¿¡ä»»å®ƒã€‚ Jacob Kaplan-Mossï¼ŒDjangoæœ€åˆçš„å‡ ä¸ªå¼€å‘è€…ä¹‹ä¸€ï¼Œè¯´è¿‡â€œä¸å…·æœ‰æµ‹è¯•ç¨‹åºçš„ä»£ç æ˜¯è®¾è®¡ä¸Šçš„é”™è¯¯ã€‚â€
 
-ÄãÐèÒª¿ªÊ¼±àÐ´²âÊÔµÄÁíÒ»¸öÔ­Òò¾ÍÊÇÆäËûµÄ¿ª·¢ÕßÔÚËûÃÇÈÏÕæÑÐ¶ÁÄãµÄ´úÂëÇ°¿ÉÄÜÏëÒª²é¿´Ò»ÏÂËüÓÐÃ»ÓÐ²âÊÔ¡£
+ä½ éœ€è¦å¼€å§‹ç¼–å†™æµ‹è¯•çš„å¦ä¸€ä¸ªåŽŸå› å°±æ˜¯å…¶ä»–çš„å¼€å‘è€…åœ¨ä»–ä»¬è®¤çœŸç ”è¯»ä½ çš„ä»£ç å‰å¯èƒ½æƒ³è¦æŸ¥çœ‹ä¸€ä¸‹å®ƒæœ‰æ²¡æœ‰æµ‹è¯•ã€‚
 
-#### ²âÊÔÓÐÖúÓÚÍÅ¶ÓºÏ×÷ ####
+#### æµ‹è¯•æœ‰åŠ©äºŽå›¢é˜Ÿåˆä½œ ####
 
-Ö®Ç°µÄ¹ÛµãÊÇ´Óµ¥¸ö¿ª·¢ÈËÔ±À´Î¬»¤Ò»¸ö³ÌÐòÕâ¸ö·½ÏòÀ´²ûÊöµÄ¡£ ¸´ÔÓµÄÓ¦ÓÃ½«»á±»Ò»¸öÍÅ¶ÓÀ´Î¬»¤¡£ ²âÊÔÄÜ¹»¼õÉÙÍ¬ÊÂÔÚÎÞÒâ¼äÆÆ»µÄãµÄ´úÂëµÄ»ú»á£¨ºÍÄãÔÚ²»ÖªÇéµÄÇé¿öÏÂÆÆ»µ±ðÈËµÄ´úÂëµÄ»ú»á£©¡£ Èç¹ûÄãÏëÔÚÍÅ¶ÓÖÐ×öÒ»¸öºÃµÄDjango¿ª·¢Õß£¬Äã±ØÐëÉÃ³¤²âÊÔ£¡
+ä¹‹å‰çš„è§‚ç‚¹æ˜¯ä»Žå•ä¸ªå¼€å‘äººå‘˜æ¥ç»´æŠ¤ä¸€ä¸ªç¨‹åºè¿™ä¸ªæ–¹å‘æ¥é˜è¿°çš„ã€‚ å¤æ‚çš„åº”ç”¨å°†ä¼šè¢«ä¸€ä¸ªå›¢é˜Ÿæ¥ç»´æŠ¤ã€‚ æµ‹è¯•èƒ½å¤Ÿå‡å°‘åŒäº‹åœ¨æ— æ„é—´ç ´åä½ çš„ä»£ç çš„æœºä¼šï¼ˆå’Œä½ åœ¨ä¸çŸ¥æƒ…çš„æƒ…å†µä¸‹ç ´ååˆ«äººçš„ä»£ç çš„æœºä¼šï¼‰ã€‚ å¦‚æžœä½ æƒ³åœ¨å›¢é˜Ÿä¸­åšä¸€ä¸ªå¥½çš„Djangoå¼€å‘è€…ï¼Œä½ å¿…é¡»æ“…é•¿æµ‹è¯•ï¼
 
-## »ù±¾µÄ²âÊÔ²ßÂÔ ##
+## åŸºæœ¬çš„æµ‹è¯•ç­–ç•¥ ##
 
-±àÐ´²âÊÔÓÐºÜ¶àÖÖ·½·¨¡£
+ç¼–å†™æµ‹è¯•æœ‰å¾ˆå¤šç§æ–¹æ³•ã€‚
 
-Ò»Ð©¿ª·¢Õß×ñÑ­Ò»ÖÖ½Ð×ö¡°ÓÉ²âÊÔÇý¶¯µÄ¿ª·¢¡±µÄ¹æÔò£»ËûÃÇÔÚ±àÐ´´úÂëÇ°»áÏÈ±àºÃ²âÊÔ¡£ ÕâËÆºõÓëÖ±¾õ²»·û£¬¾¡¹ÜÕâÖÖ·½·¨Óë´ó¶àÊýÈË¾­³£µÄ×ö·¨ºÜÏàËÆ£ºÈËÃÇÏÈÃèÊöÒ»¸öÎÊÌâ£¬È»ºó´´½¨Ò»Ð©´úÂëÀ´½â¾öÕâ¸öÎÊÌâ¡£ ÓÉ²âÊÔÇý¶¯µÄ¿ª·¢¿ÉÒÔÓÃPython²âÊÔÓÃÀý½«Õâ¸öÎÊÌâ¼òµ¥µØÐÎÊ½»¯¡£
+ä¸€äº›å¼€å‘è€…éµå¾ªä¸€ç§å«åšâ€œç”±æµ‹è¯•é©±åŠ¨çš„å¼€å‘â€çš„è§„åˆ™ï¼›ä»–ä»¬åœ¨ç¼–å†™ä»£ç å‰ä¼šå…ˆç¼–å¥½æµ‹è¯•ã€‚ è¿™ä¼¼ä¹Žä¸Žç›´è§‰ä¸ç¬¦ï¼Œå°½ç®¡è¿™ç§æ–¹æ³•ä¸Žå¤§å¤šæ•°äººç»å¸¸çš„åšæ³•å¾ˆç›¸ä¼¼ï¼šäººä»¬å…ˆæè¿°ä¸€ä¸ªé—®é¢˜ï¼Œç„¶åŽåˆ›å»ºä¸€äº›ä»£ç æ¥è§£å†³è¿™ä¸ªé—®é¢˜ã€‚ ç”±æµ‹è¯•é©±åŠ¨çš„å¼€å‘å¯ä»¥ç”¨Pythonæµ‹è¯•ç”¨ä¾‹å°†è¿™ä¸ªé—®é¢˜ç®€å•åœ°å½¢å¼åŒ–ã€‚
 
-¸ü³£¼ûµÄÇé¿öÊÇ£¬¸Õ½Ó´¥²âÊÔµÄÈË»áÏÈ±àÐ´Ò»Ð©´úÂë£¬È»ºó²Å¾ö¶¨ÎªÕâÐ©´úÂë´´½¨Ò»Ð©²âÊÔ¡£ Ò²ÐíÔÚÖ®Ç°¾Í±àÐ´Ò»Ð©²âÊÔ»áºÃÒ»µã£¬µ«Ê²Ã´Ê±ºò¿ªÊ¼¶¼²»ËãÍí¡£
+æ›´å¸¸è§çš„æƒ…å†µæ˜¯ï¼ŒåˆšæŽ¥è§¦æµ‹è¯•çš„äººä¼šå…ˆç¼–å†™ä¸€äº›ä»£ç ï¼Œç„¶åŽæ‰å†³å®šä¸ºè¿™äº›ä»£ç åˆ›å»ºä¸€äº›æµ‹è¯•ã€‚ ä¹Ÿè®¸åœ¨ä¹‹å‰å°±ç¼–å†™ä¸€äº›æµ‹è¯•ä¼šå¥½ä¸€ç‚¹ï¼Œä½†ä»€ä¹ˆæ—¶å€™å¼€å§‹éƒ½ä¸ç®—æ™šã€‚
 
-ÓÐÊ±ºòºÜÄÑ½â¾ö´ÓÊ²Ã´µØ·½¿ªÊ¼±àÐ´²âÊÔ¡£ Èç¹ûÄãÒÑ¾­±àÐ´ÁËÊýÇ§ÐÐPython´úÂë£¬ÌôÑ¡ËüÃÇÖÐµÄÒ»Ð©À´½øÐÐ²âÊÔ²»»áÊÇÌ«ÈÝÒ×µÄ¡£ ÕâÖÖÇé¿öÏÂ£¬ÔÚÏÂ´ÎÄã¶Ô´úÂë½øÐÐ±ä¸ü£¬»òÕßÌí¼ÓÒ»¸öÐÂ¹¦ÄÜ»òÕßÐÞ¸´Ò»¸öbugÊ±£¬±àÐ´ÄãµÄµÚÒ»¸ö²âÊÔ£¬Ð§¹û»á·Ç³£ºÃ¡£
+æœ‰æ—¶å€™å¾ˆéš¾è§£å†³ä»Žä»€ä¹ˆåœ°æ–¹å¼€å§‹ç¼–å†™æµ‹è¯•ã€‚ å¦‚æžœä½ å·²ç»ç¼–å†™äº†æ•°åƒè¡ŒPythonä»£ç ï¼ŒæŒ‘é€‰å®ƒä»¬ä¸­çš„ä¸€äº›æ¥è¿›è¡Œæµ‹è¯•ä¸ä¼šæ˜¯å¤ªå®¹æ˜“çš„ã€‚ è¿™ç§æƒ…å†µä¸‹ï¼Œåœ¨ä¸‹æ¬¡ä½ å¯¹ä»£ç è¿›è¡Œå˜æ›´ï¼Œæˆ–è€…æ·»åŠ ä¸€ä¸ªæ–°åŠŸèƒ½æˆ–è€…ä¿®å¤ä¸€ä¸ªbugæ—¶ï¼Œç¼–å†™ä½ çš„ç¬¬ä¸€ä¸ªæµ‹è¯•ï¼Œæ•ˆæžœä¼šéžå¸¸å¥½ã€‚
 
-ÏÖÔÚ£¬ÈÃÎÒÃÇÂíÉÏÀ´±àÐ´Ò»¸ö²âÊÔ¡£
+çŽ°åœ¨ï¼Œè®©æˆ‘ä»¬é©¬ä¸Šæ¥ç¼–å†™ä¸€ä¸ªæµ‹è¯•ã€‚
 
-## ±àÐ´ÎÒÃÇµÄµÚÒ»¸ö²âÊÔ  ##
+## ç¼–å†™æˆ‘ä»¬çš„ç¬¬ä¸€ä¸ªæµ‹è¯•  ##
 
-### ÎÒÃÇÕÒ³öÒ»¸ö´íÎó ###
+### æˆ‘ä»¬æ‰¾å‡ºä¸€ä¸ªé”™è¯¯ ###
 
-ÐÒÔËµÄÊÇ£¬pollsÓ¦ÓÃÖÐÓÐÒ»¸öÐ¡´íÎóÈÃÎÒÃÇ¿ÉÒÔÂíÉÏÀ´ÐÞ¸´Ëü£ºÈç¹ûQuestionÔÚ×îºóÒ»¸öÌì·¢²¼£¬Question.was_published_recently() ·½·¨·µ»ØTrue£¨ÕâÊÇ¶ÔµÄ£©£¬µ«ÊÇÈç¹ûQuestionµÄpub_date ×Ö¶ÎÊÇÔÚÎ´À´£¬Ëü»¹·µ»ØTrue£¨Õâ¿Ï¶¨ÊÇ²»¶ÔµÄ£©¡£
+å¹¸è¿çš„æ˜¯ï¼Œpollsåº”ç”¨ä¸­æœ‰ä¸€ä¸ªå°é”™è¯¯è®©æˆ‘ä»¬å¯ä»¥é©¬ä¸Šæ¥ä¿®å¤å®ƒï¼šå¦‚æžœQuestionåœ¨æœ€åŽä¸€ä¸ªå¤©å‘å¸ƒï¼ŒQuestion.was_published_recently() æ–¹æ³•è¿”å›žTrueï¼ˆè¿™æ˜¯å¯¹çš„ï¼‰ï¼Œä½†æ˜¯å¦‚æžœQuestionçš„pub_date å­—æ®µæ˜¯åœ¨æœªæ¥ï¼Œå®ƒè¿˜è¿”å›žTrueï¼ˆè¿™è‚¯å®šæ˜¯ä¸å¯¹çš„ï¼‰ã€‚
 
-Äã¿ÉÒÔÔÚ¹ÜÀíÕ¾µãÖÐ¿´µ½ÕâÒ»µã£» ´´½¨Ò»¸ö·¢²¼Ê±¼äÔÚÎ´À´µÄÒ»¸öQuestion£» Äã¿ÉÒÔ¿´µ½Question µÄ±ä¸üÁÐ±íÉù³ÆËüÊÇ×î½ü·¢²¼µÄ¡£
+ä½ å¯ä»¥åœ¨ç®¡ç†ç«™ç‚¹ä¸­çœ‹åˆ°è¿™ä¸€ç‚¹ï¼› åˆ›å»ºä¸€ä¸ªå‘å¸ƒæ—¶é—´åœ¨æœªæ¥çš„ä¸€ä¸ªQuestionï¼› ä½ å¯ä»¥çœ‹åˆ°Question çš„å˜æ›´åˆ—è¡¨å£°ç§°å®ƒæ˜¯æœ€è¿‘å‘å¸ƒçš„ã€‚
 
-Äã»¹¿ÉÒÔÊ¹ÓÃshell¿´µ½Õâµã£º
+ä½ è¿˜å¯ä»¥ä½¿ç”¨shellçœ‹åˆ°è¿™ç‚¹ï¼š
 
 ```
 >>> import datetime
@@ -85,15 +85,15 @@
 True
 ```
 
-ÓÉÓÚ½«À´µÄÊÂÇé²¢²»ÄÜ³ÆÖ®Îª¡®×î½ü¡¯£¬ÕâÈ·ÊµÊÇÒ»¸ö´íÎó¡£
+ç”±äºŽå°†æ¥çš„äº‹æƒ…å¹¶ä¸èƒ½ç§°ä¹‹ä¸ºâ€˜æœ€è¿‘â€™ï¼Œè¿™ç¡®å®žæ˜¯ä¸€ä¸ªé”™è¯¯ã€‚
 
-### ´´½¨Ò»¸ö²âÊÔÀ´±©Â¶Õâ¸ö´íÎó ###
+### åˆ›å»ºä¸€ä¸ªæµ‹è¯•æ¥æš´éœ²è¿™ä¸ªé”™è¯¯ ###
 
-ÎÒÃÇÐèÒªÔÚ×Ô¶¯»¯²âÊÔÀï×öµÄºÍ¸Õ²ÅÔÚshellÀï×öµÄ²î²»¶à£¬ÈÃÎÒÃÇÀ´½«Ëü×ª»»³ÉÒ»¸ö×Ô¶¯»¯²âÊÔ¡£
+æˆ‘ä»¬éœ€è¦åœ¨è‡ªåŠ¨åŒ–æµ‹è¯•é‡Œåšçš„å’Œåˆšæ‰åœ¨shellé‡Œåšçš„å·®ä¸å¤šï¼Œè®©æˆ‘ä»¬æ¥å°†å®ƒè½¬æ¢æˆä¸€ä¸ªè‡ªåŠ¨åŒ–æµ‹è¯•ã€‚
 
-Ó¦ÓÃµÄ²âÊÔÓÃÀý°²×°¹ßÀýÒ»°ã·ÅÔÚ¸ÃÓ¦ÓÃµÄtests.pyÎÄ¼þÖÐ£»²âÊÔÏµÍ³½«×Ô¶¯ÔÚÈÎºÎÒÔtest¿ªÍ·µÄÎÄ¼þÖÐ²éÕÒ²âÊÔÓÃÀý¡£ 
+åº”ç”¨çš„æµ‹è¯•ç”¨ä¾‹å®‰è£…æƒ¯ä¾‹ä¸€èˆ¬æ”¾åœ¨è¯¥åº”ç”¨çš„tests.pyæ–‡ä»¶ä¸­ï¼›æµ‹è¯•ç³»ç»Ÿå°†è‡ªåŠ¨åœ¨ä»»ä½•ä»¥testå¼€å¤´çš„æ–‡ä»¶ä¸­æŸ¥æ‰¾æµ‹è¯•ç”¨ä¾‹ã€‚ 
 
-½«ÏÂÃæµÄ´úÂë·ÅÈëpollsÓ¦ÓÃÏÂµÄtests.pyÎÄ¼þÖÐ£º
+å°†ä¸‹é¢çš„ä»£ç æ”¾å…¥pollsåº”ç”¨ä¸‹çš„tests.pyæ–‡ä»¶ä¸­ï¼š
 
 ```
 polls/tests.py
@@ -117,17 +117,17 @@ class QuestionMethodTests(TestCase):
         self.assertEqual(future_question.was_published_recently(), False)
 ```
 
-ÎÒÃÇÔÚÕâÀï×öµÄÊÇ´´½¨Ò»¸ödjango.test.TestCase×ÓÀà£¬Ëü¾ßÓÐÒ»¸ö·½·¨¿ÉÒÔ´´½¨Ò»¸öpub_dateÔÚÎ´À´µÄQuestionÊµÀý¡£È»ºóÎÒÃÇ¼ì²éwas_published_recently()µÄÊä³ö ¡ª¡ª ËüÓ¦¸ÃÊÇ False.
+æˆ‘ä»¬åœ¨è¿™é‡Œåšçš„æ˜¯åˆ›å»ºä¸€ä¸ªdjango.test.TestCaseå­ç±»ï¼Œå®ƒå…·æœ‰ä¸€ä¸ªæ–¹æ³•å¯ä»¥åˆ›å»ºä¸€ä¸ªpub_dateåœ¨æœªæ¥çš„Questionå®žä¾‹ã€‚ç„¶åŽæˆ‘ä»¬æ£€æŸ¥was_published_recently()çš„è¾“å‡º â€”â€” å®ƒåº”è¯¥æ˜¯ False.
 
-### ÔËÐÐ²âÊÔ ###
+### è¿è¡Œæµ‹è¯• ###
 
-ÔÚÖÕ¶ËÖÐ£¬ÎÒÃÇ¿ÉÒÔÔËÐÐÎÒÃÇµÄ²âÊÔ£º
+åœ¨ç»ˆç«¯ä¸­ï¼Œæˆ‘ä»¬å¯ä»¥è¿è¡Œæˆ‘ä»¬çš„æµ‹è¯•ï¼š
 
 ```
 $ python manage.py test polls
 ```
 
-Äã½«¿´µ½ÀàËÆÏÂÃæµÄÊä³ö£º
+ä½ å°†çœ‹åˆ°ç±»ä¼¼ä¸‹é¢çš„è¾“å‡ºï¼š
 
 ```
 Creating test database for alias 'default'...
@@ -147,20 +147,20 @@ FAILED (failures=1)
 Destroying test database for alias 'default'...
 ```
 
-·¢ÉúÁËÈçÏÂÕâÐ©ÊÂ£º
+å‘ç”Ÿäº†å¦‚ä¸‹è¿™äº›äº‹ï¼š
 
-+ python manage.py test polls²éÕÒpolls Ó¦ÓÃÏÂµÄ²âÊÔÓÃÀý
-+ ËüÕÒµ½ django.test.TestCase ÀàµÄÒ»¸ö×ÓÀà
-+ ËüÎª²âÊÔ´´½¨ÁËÒ»¸öÌØ¶¨µÄÊý¾Ý¿â
-+ Ëü²éÕÒÓÃÓÚ²âÊÔµÄ·½·¨ ¡ª¡ª Ãû×ÖÒÔtest¿ªÊ¼
-+ ËüÔËÐÐtest_was_published_recently_with_future_question´´½¨Ò»¸öpub_dateÎªÎ´À´30ÌìµÄ QuestionÊµÀý
-+ ... È»ºóÀûÓÃassertEqual()·½·¨£¬Ëü·¢ÏÖwas_published_recently() ·µ»ØTrue£¬¾¡¹ÜÎÒÃÇÏ£ÍûËü·µ»ØFalse
++ python manage.py test pollsæŸ¥æ‰¾polls åº”ç”¨ä¸‹çš„æµ‹è¯•ç”¨ä¾‹
++ å®ƒæ‰¾åˆ° django.test.TestCase ç±»çš„ä¸€ä¸ªå­ç±»
++ å®ƒä¸ºæµ‹è¯•åˆ›å»ºäº†ä¸€ä¸ªç‰¹å®šçš„æ•°æ®åº“
++ å®ƒæŸ¥æ‰¾ç”¨äºŽæµ‹è¯•çš„æ–¹æ³• â€”â€” åå­—ä»¥testå¼€å§‹
++ å®ƒè¿è¡Œtest_was_published_recently_with_future_questionåˆ›å»ºä¸€ä¸ªpub_dateä¸ºæœªæ¥30å¤©çš„ Questionå®žä¾‹
++ ... ç„¶åŽåˆ©ç”¨assertEqual()æ–¹æ³•ï¼Œå®ƒå‘çŽ°was_published_recently() è¿”å›žTrueï¼Œå°½ç®¡æˆ‘ä»¬å¸Œæœ›å®ƒè¿”å›žFalse
 
-Õâ¸ö²âÊÔÍ¨ÖªÎÒÃÇÄÄ¸ö²âÊÔÊ§°Ü£¬ÉõÖÁÊÇ´íÎó³öÏÖÔÚÄÄÒ»ÐÐ¡£
+è¿™ä¸ªæµ‹è¯•é€šçŸ¥æˆ‘ä»¬å“ªä¸ªæµ‹è¯•å¤±è´¥ï¼Œç”šè‡³æ˜¯é”™è¯¯å‡ºçŽ°åœ¨å“ªä¸€è¡Œã€‚
 
-### ÐÞ¸´Õâ¸ö´íÎó ###
+### ä¿®å¤è¿™ä¸ªé”™è¯¯ ###
 
-ÎÒÃÇÒÑ¾­ÖªµÀÎÊÌâÊÇÊ²Ã´£ºQuestion.was_published_recently() Ó¦¸Ã·µ»Ø False£¬Èç¹ûËüµÄpub_dateÊÇÔÚÎ´À´¡£ÔÚmodels.pyÖÐÐÞ¸´Õâ¸ö·½·¨£¬ÈÃËüÖ»ÓÐµ±ÈÕÆÚÊÇÔÚ¹ýÈ¥Ê±²Å·µ»ØTrue £º
+æˆ‘ä»¬å·²ç»çŸ¥é“é—®é¢˜æ˜¯ä»€ä¹ˆï¼šQuestion.was_published_recently() åº”è¯¥è¿”å›ž Falseï¼Œå¦‚æžœå®ƒçš„pub_dateæ˜¯åœ¨æœªæ¥ã€‚åœ¨models.pyä¸­ä¿®å¤è¿™ä¸ªæ–¹æ³•ï¼Œè®©å®ƒåªæœ‰å½“æ—¥æœŸæ˜¯åœ¨è¿‡åŽ»æ—¶æ‰è¿”å›žTrue ï¼š
 
 ```
 polls/models.py
@@ -169,7 +169,7 @@ def was_published_recently(self):
     return now - datetime.timedelta(days=1) <= self.pub_date <= now
 ```
 
-ÔÙ´ÎÔËÐÐ²âÊÔ£º
+å†æ¬¡è¿è¡Œæµ‹è¯•ï¼š
 
 ```
 Creating test database for alias 'default'...
@@ -181,15 +181,15 @@ OK
 Destroying test database for alias 'default'...
 ```
 
-ÔÚÕÒ³öÒ»¸ö´íÎóÖ®ºó£¬ÎÒÃÇ±àÐ´Ò»¸ö²âÊÔÀ´±©Â¶Õâ¸ö´íÎó£¬È»ºóÔÚ´úÂëÖÐ¸üÕýÕâ¸ö´íÎóÈÃÎÒÃÇµÄ²âÊÔÍ¨¹ý¡£
+åœ¨æ‰¾å‡ºä¸€ä¸ªé”™è¯¯ä¹‹åŽï¼Œæˆ‘ä»¬ç¼–å†™ä¸€ä¸ªæµ‹è¯•æ¥æš´éœ²è¿™ä¸ªé”™è¯¯ï¼Œç„¶åŽåœ¨ä»£ç ä¸­æ›´æ­£è¿™ä¸ªé”™è¯¯è®©æˆ‘ä»¬çš„æµ‹è¯•é€šè¿‡ã€‚
 
-Î´À´£¬ÎÒÃÇµÄÓ¦ÓÃ¿ÉÄÜ»á³öÐí¶àÆäËüµÄ´íÎó£¬µ«ÊÇÎÒÃÇ¿ÉÒÔ±£Ö¤ÎÒÃÇ²»»áÎÞÒâÖÐÔÙ´ÎÒýÈëÕâ¸ö´íÎó£¬ÒòÎª¼òµ¥µØÔËÐÐÒ»ÏÂÕâ¸ö²âÊÔ¾Í»áÁ¢¼´ÌáÐÑÎÒÃÇ¡£ ÎÒÃÇ¿ÉÒÔÈÏÎªÕâ¸öÓ¦ÓÃµÄÕâÒ»Ð¡²¿·Ö»áÓÀÔ¶°²È«ÁË¡£
+æœªæ¥ï¼Œæˆ‘ä»¬çš„åº”ç”¨å¯èƒ½ä¼šå‡ºè®¸å¤šå…¶å®ƒçš„é”™è¯¯ï¼Œä½†æ˜¯æˆ‘ä»¬å¯ä»¥ä¿è¯æˆ‘ä»¬ä¸ä¼šæ— æ„ä¸­å†æ¬¡å¼•å…¥è¿™ä¸ªé”™è¯¯ï¼Œå› ä¸ºç®€å•åœ°è¿è¡Œä¸€ä¸‹è¿™ä¸ªæµ‹è¯•å°±ä¼šç«‹å³æé†’æˆ‘ä»¬ã€‚ æˆ‘ä»¬å¯ä»¥è®¤ä¸ºè¿™ä¸ªåº”ç”¨çš„è¿™ä¸€å°éƒ¨åˆ†ä¼šæ°¸è¿œå®‰å…¨äº†ã€‚
 
-### ¸ü¼Ó×ÛºÏµÄ²âÊÔ ###
+### æ›´åŠ ç»¼åˆçš„æµ‹è¯• ###
 
-ÔÚÕâÀï£¬ÎÒÃÇ¿ÉÒÔÊ¹was_published_recently() ·½·¨¸ü¼ÓÎÈ¶¨£»ÊÂÊµÉÏ£¬ÔÚÐÞ¸´Ò»¸ö´íÎóµÄÊ±ºòÒýÈëÒ»¸öÐÂµÄ´íÎó½«ÊÇÒ»¼þºÜÁîÈËÞÏÞÎµÄÊÂ¡£
+åœ¨è¿™é‡Œï¼Œæˆ‘ä»¬å¯ä»¥ä½¿was_published_recently() æ–¹æ³•æ›´åŠ ç¨³å®šï¼›äº‹å®žä¸Šï¼Œåœ¨ä¿®å¤ä¸€ä¸ªé”™è¯¯çš„æ—¶å€™å¼•å…¥ä¸€ä¸ªæ–°çš„é”™è¯¯å°†æ˜¯ä¸€ä»¶å¾ˆä»¤äººå°´å°¬çš„äº‹ã€‚
 
-ÔÚÍ¬Ò»¸öÀàÖÐÌí¼ÓÁ½¸öÆäËüµÄ²âÊÔ·½·¨£¬À´¸ü¼Ó×ÛºÏµØ²âÊÔÕâ¸ö·½·¨£º
+åœ¨åŒä¸€ä¸ªç±»ä¸­æ·»åŠ ä¸¤ä¸ªå…¶å®ƒçš„æµ‹è¯•æ–¹æ³•ï¼Œæ¥æ›´åŠ ç»¼åˆåœ°æµ‹è¯•è¿™ä¸ªæ–¹æ³•ï¼š
 
 ```
 polls/tests.py
@@ -212,36 +212,36 @@ def test_was_published_recently_with_recent_question(self):
     self.assertEqual(recent_question.was_published_recently(), True)
 ```
 
-ÏÖÔÚÎÒÃÇÓÐÈý¸ö²âÊÔÀ´±£Ö¤ÎÞÂÛ·¢²¼Ê±¼äÊÇÔÚ¹ýÈ¥¡¢ÏÖÔÚ»¹ÊÇÎ´À´ Question.was_published_recently()¶¼½«·µ»ØºÏÀíµÄÊý¾Ý¡£
+çŽ°åœ¨æˆ‘ä»¬æœ‰ä¸‰ä¸ªæµ‹è¯•æ¥ä¿è¯æ— è®ºå‘å¸ƒæ—¶é—´æ˜¯åœ¨è¿‡åŽ»ã€çŽ°åœ¨è¿˜æ˜¯æœªæ¥ Question.was_published_recently()éƒ½å°†è¿”å›žåˆç†çš„æ•°æ®ã€‚
 
-ÔÙËµÒ»´Î£¬polls Ó¦ÓÃËäÈ»¼òµ¥£¬µ«ÊÇÎÞÂÛËü½ñºó»á±äµÃ¶àÃ´¸´ÔÓÒÔ¼°»áºÍ¶àÉÙÆäËüµÄÓ¦ÓÃ²úÉúÏà»¥×÷ÓÃ£¬ÎÒÃÇ¶¼ÄÜ±£Ö¤ÎÒÃÇ¸Õ¸ÕÎªËü±àÐ´¹ý²âÊÔµÄÄÇ¸ö·½·¨»á°´ÕÕÔ¤ÆÚµÄÄÇÑù¹¤×÷¡£
+å†è¯´ä¸€æ¬¡ï¼Œpolls åº”ç”¨è™½ç„¶ç®€å•ï¼Œä½†æ˜¯æ— è®ºå®ƒä»ŠåŽä¼šå˜å¾—å¤šä¹ˆå¤æ‚ä»¥åŠä¼šå’Œå¤šå°‘å…¶å®ƒçš„åº”ç”¨äº§ç”Ÿç›¸äº’ä½œç”¨ï¼Œæˆ‘ä»¬éƒ½èƒ½ä¿è¯æˆ‘ä»¬åˆšåˆšä¸ºå®ƒç¼–å†™è¿‡æµ‹è¯•çš„é‚£ä¸ªæ–¹æ³•ä¼šæŒ‰ç…§é¢„æœŸçš„é‚£æ ·å·¥ä½œã€‚
 
-## ²âÊÔÒ»¸öÊÓÍ¼ ##
+## æµ‹è¯•ä¸€ä¸ªè§†å›¾ ##
 
-Õâ¸öÍ¶Æ±Ó¦ÓÃÃ»ÓÐÇø·ÖÄÜÁ¦£ºËü½«»á·¢²¼ÈÎºÎÒ»¸öQuestion£¬°üÀ¨ pub_date×Ö¶ÎÎ»ÓÚÎ´À´¡£ÎÒÃÇÓ¦¸Ã¸Ä½øÕâÒ»µã¡£ Éè¶¨pub_dateÔÚÎ´À´Ó¦¸Ã±íÊ¾QuestionÔÚ´Ë¿Ì·¢²¼£¬µ«ÊÇÖ±µ½ÄÇ¸öÊ±¼äµã²Å»á±äµÃ¿É¼û¡£
+è¿™ä¸ªæŠ•ç¥¨åº”ç”¨æ²¡æœ‰åŒºåˆ†èƒ½åŠ›ï¼šå®ƒå°†ä¼šå‘å¸ƒä»»ä½•ä¸€ä¸ªQuestionï¼ŒåŒ…æ‹¬ pub_dateå­—æ®µä½äºŽæœªæ¥ã€‚æˆ‘ä»¬åº”è¯¥æ”¹è¿›è¿™ä¸€ç‚¹ã€‚ è®¾å®špub_dateåœ¨æœªæ¥åº”è¯¥è¡¨ç¤ºQuestionåœ¨æ­¤åˆ»å‘å¸ƒï¼Œä½†æ˜¯ç›´åˆ°é‚£ä¸ªæ—¶é—´ç‚¹æ‰ä¼šå˜å¾—å¯è§ã€‚
 
-### ÊÓÍ¼µÄÒ»¸ö²âÊÔ ###
+### è§†å›¾çš„ä¸€ä¸ªæµ‹è¯• ###
 
-µ±ÎÒÃÇÐÞ¸´ÉÏÃæµÄ´íÎóÊ±£¬ÎÒÃÇÏÈÐ´²âÊÔ£¬È»ºóÐÞ¸Ä´úÂëÀ´ÐÞ¸´Ëü¡£ ÊÂÊµÉÏ£¬ÕâÊÇÓÉ²âÊÔÇý¶¯µÄ¿ª·¢µÄÒ»¸ö¼òµ¥µÄÀý×Ó£¬µ«×öµÄË³Ðò²¢²»ÕæµÄÖØÒª¡£
+å½“æˆ‘ä»¬ä¿®å¤ä¸Šé¢çš„é”™è¯¯æ—¶ï¼Œæˆ‘ä»¬å…ˆå†™æµ‹è¯•ï¼Œç„¶åŽä¿®æ”¹ä»£ç æ¥ä¿®å¤å®ƒã€‚ äº‹å®žä¸Šï¼Œè¿™æ˜¯ç”±æµ‹è¯•é©±åŠ¨çš„å¼€å‘çš„ä¸€ä¸ªç®€å•çš„ä¾‹å­ï¼Œä½†åšçš„é¡ºåºå¹¶ä¸çœŸçš„é‡è¦ã€‚
 
-ÔÚÎÒÃÇµÄµÚÒ»¸ö²âÊÔÖÐ£¬ÎÒÃÇ×¨×¢ÓÚ´úÂëÄÚ²¿µÄÐÐÎª¡£ ÔÚÕâ¸ö²âÊÔÖÐ£¬ÎÒÃÇÏëÒªÍ¨¹ýä¯ÀÀÆ÷´ÓÓÃ»§µÄ½Ç¶ÈÀ´¼ì²éËüµÄÐÐÎª¡£
+åœ¨æˆ‘ä»¬çš„ç¬¬ä¸€ä¸ªæµ‹è¯•ä¸­ï¼Œæˆ‘ä»¬ä¸“æ³¨äºŽä»£ç å†…éƒ¨çš„è¡Œä¸ºã€‚ åœ¨è¿™ä¸ªæµ‹è¯•ä¸­ï¼Œæˆ‘ä»¬æƒ³è¦é€šè¿‡æµè§ˆå™¨ä»Žç”¨æˆ·çš„è§’åº¦æ¥æ£€æŸ¥å®ƒçš„è¡Œä¸ºã€‚
 
-ÔÚÎÒÃÇÊÔ×ÅÐÞ¸´ÈÎºÎÊÂÇéÖ®Ç°£¬ÈÃÎÒÃÇÏÈ²é¿´Ò»ÏÂÎÒÃÇÄÜÓÃµ½µÄ¹¤¾ß¡£
+åœ¨æˆ‘ä»¬è¯•ç€ä¿®å¤ä»»ä½•äº‹æƒ…ä¹‹å‰ï¼Œè®©æˆ‘ä»¬å…ˆæŸ¥çœ‹ä¸€ä¸‹æˆ‘ä»¬èƒ½ç”¨åˆ°çš„å·¥å…·ã€‚
 
-### Django²âÊÔ¿Í»§¶Ë ###
+### Djangoæµ‹è¯•å®¢æˆ·ç«¯ ###
 
-DjangoÌá¹©ÁËÒ»¸ö²âÊÔ¿Í»§¶ËÀ´Ä£ÄâÓÃ»§ºÍ´úÂëµÄ½»»¥¡£ÎÒÃÇ¿ÉÒÔÔÚtests.py ÉõÖÁÔÚshell ÖÐÊ¹ÓÃËü¡£
+Djangoæä¾›äº†ä¸€ä¸ªæµ‹è¯•å®¢æˆ·ç«¯æ¥æ¨¡æ‹Ÿç”¨æˆ·å’Œä»£ç çš„äº¤äº’ã€‚æˆ‘ä»¬å¯ä»¥åœ¨tests.py ç”šè‡³åœ¨shell ä¸­ä½¿ç”¨å®ƒã€‚
 
-ÎÒÃÇ½«ÔÙ´ÎÒÔshell¿ªÊ¼£¬µ«ÊÇÎÒÃÇÐèÒª×öºÜ¶àÔÚtests.pyÖÐ²»±Ø×öµÄÊÂ¡£Ê×ÏÈÊÇÔÚ shellÖÐÉèÖÃ²âÊÔ»·¾³£º
+æˆ‘ä»¬å°†å†æ¬¡ä»¥shellå¼€å§‹ï¼Œä½†æ˜¯æˆ‘ä»¬éœ€è¦åšå¾ˆå¤šåœ¨tests.pyä¸­ä¸å¿…åšçš„äº‹ã€‚é¦–å…ˆæ˜¯åœ¨ shellä¸­è®¾ç½®æµ‹è¯•çŽ¯å¢ƒï¼š
 
 ```
 >>> from django.test.utils import setup_test_environment
 >>> setup_test_environment()
 ```
 
-setup_test_environment()°²×°Ò»¸öÄ£°åäÖÈ¾Æ÷£¬¿ÉÒÔÊ¹ÎÒÃÇÀ´¼ì²éÏìÓ¦µÄÒ»Ð©¶îÍâÊôÐÔ±ÈÈçresponse.context£¬·ñÔòÊÇ·ÃÎÊ²»µ½µÄ¡£Çë×¢Òâ£¬ÕâÖÖ·½·¨²»»á½¨Á¢Ò»¸ö²âÊÔÊý¾Ý¿â£¬ËùÒÔÒÔÏÂÃüÁî½«ÔËÐÐÔÚÏÖÓÐµÄÊý¾Ý¿âÉÏ£¬Êä³öµÄÄÚÈÝÒ²»á¸ù¾ÝÄãÒÑ¾­´´½¨µÄQuestion²»Í¬¶øÉÔÓÐ²»Í¬¡£
+setup_test_environment()å®‰è£…ä¸€ä¸ªæ¨¡æ¿æ¸²æŸ“å™¨ï¼Œå¯ä»¥ä½¿æˆ‘ä»¬æ¥æ£€æŸ¥å“åº”çš„ä¸€äº›é¢å¤–å±žæ€§æ¯”å¦‚response.contextï¼Œå¦åˆ™æ˜¯è®¿é—®ä¸åˆ°çš„ã€‚è¯·æ³¨æ„ï¼Œè¿™ç§æ–¹æ³•ä¸ä¼šå»ºç«‹ä¸€ä¸ªæµ‹è¯•æ•°æ®åº“ï¼Œæ‰€ä»¥ä»¥ä¸‹å‘½ä»¤å°†è¿è¡Œåœ¨çŽ°æœ‰çš„æ•°æ®åº“ä¸Šï¼Œè¾“å‡ºçš„å†…å®¹ä¹Ÿä¼šæ ¹æ®ä½ å·²ç»åˆ›å»ºçš„Questionä¸åŒè€Œç¨æœ‰ä¸åŒã€‚
 
-ÏÂÒ»²½ÎÒÃÇÐèÒªµ¼Èë²âÊÔ¿Í»§¶ËÀà£¨ÔÚÖ®ºóµÄtests.py ÖÐ£¬ÎÒÃÇ½«Ê¹ÓÃdjango.test.TestCaseÀà£¬Ëü¾ßÓÐ×Ô¼ºµÄ¿Í»§¶Ë£¬½«²»ÐèÒªµ¼ÈëÕâ¸öÀà£©£º
+ä¸‹ä¸€æ­¥æˆ‘ä»¬éœ€è¦å¯¼å…¥æµ‹è¯•å®¢æˆ·ç«¯ç±»ï¼ˆåœ¨ä¹‹åŽçš„tests.py ä¸­ï¼Œæˆ‘ä»¬å°†ä½¿ç”¨django.test.TestCaseç±»ï¼Œå®ƒå…·æœ‰è‡ªå·±çš„å®¢æˆ·ç«¯ï¼Œå°†ä¸éœ€è¦å¯¼å…¥è¿™ä¸ªç±»ï¼‰ï¼š
 
 ```
 >>> from django.test import Client
@@ -249,7 +249,7 @@ setup_test_environment()°²×°Ò»¸öÄ£°åäÖÈ¾Æ÷£¬¿ÉÒÔÊ¹ÎÒÃÇÀ´¼ì²éÏìÓ¦µÄÒ»Ð©¶îÍâÊôÐÔ±È
 >>> client = Client()
 ```
 
-ÕâÐ©¶¼×öÍêÖ®ºó£¬ÎÒÃÇ¿ÉÒÔÈÃÕâ¸ö¿Í»§¶ËÀ´ÎªÎÒÃÇ×öÒ»Ð©ÊÂ£º
+è¿™äº›éƒ½åšå®Œä¹‹åŽï¼Œæˆ‘ä»¬å¯ä»¥è®©è¿™ä¸ªå®¢æˆ·ç«¯æ¥ä¸ºæˆ‘ä»¬åšä¸€äº›äº‹ï¼š
 
 ```
 >>> # get a response from '/'
@@ -283,11 +283,11 @@ setup_test_environment()°²×°Ò»¸öÄ£°åäÖÈ¾Æ÷£¬¿ÉÒÔÊ¹ÎÒÃÇÀ´¼ì²éÏìÓ¦µÄÒ»Ð©¶îÍâÊôÐÔ±È
 [<Question: Who is your favorite Beatle?>]
 ```
 
-### ¸Ä½øÎÒÃÇµÄÊÓÍ¼ ###
+### æ”¹è¿›æˆ‘ä»¬çš„è§†å›¾ ###
 
-Í¶Æ±µÄÁÐ±íÏÔÊ¾»¹Ã»ÓÐ·¢²¼µÄÍ¶Æ±£¨¼´pub_dateÔÚÎ´À´µÄÍ¶Æ±£©¡£ÈÃÎÒÃÇÀ´ÐÞ¸´Ëü¡£
+æŠ•ç¥¨çš„åˆ—è¡¨æ˜¾ç¤ºè¿˜æ²¡æœ‰å‘å¸ƒçš„æŠ•ç¥¨ï¼ˆå³pub_dateåœ¨æœªæ¥çš„æŠ•ç¥¨ï¼‰ã€‚è®©æˆ‘ä»¬æ¥ä¿®å¤å®ƒã€‚
 
-ÔÚ½Ì³Ì 4ÖÐ£¬ÎÒÃÇ½éÉÜÁËÒ»¸ö¼Ì³ÐListViewµÄ»ùÓÚÀàµÄÊÓÍ¼£º
+åœ¨æ•™ç¨‹ 4ä¸­ï¼Œæˆ‘ä»¬ä»‹ç»äº†ä¸€ä¸ªç»§æ‰¿ListViewçš„åŸºäºŽç±»çš„è§†å›¾ï¼š
 
 ```
 polls/views.py
@@ -300,16 +300,16 @@ class IndexView(generic.ListView):
         return Question.objects.order_by('-pub_date')[:5]
 ```
 
-response.context_data['latest_question_list'] È¡³öÓÉÊÓÍ¼·ÅÖÃÔÚcontext ÖÐµÄÊý¾Ý¡£
+response.context_data['latest_question_list'] å–å‡ºç”±è§†å›¾æ”¾ç½®åœ¨context ä¸­çš„æ•°æ®ã€‚
 
-ÎÒÃÇÐèÒªÐÞ¸Äget_queryset·½·¨²¢ÈÃËü½«ÈÕÆÚÓëtimezone.now()½øÐÐ±È½Ï¡£Ê×ÏÈÎÒÃÇÐèÒªÌí¼ÓÒ»ÐÐµ¼Èë£º
+æˆ‘ä»¬éœ€è¦ä¿®æ”¹get_querysetæ–¹æ³•å¹¶è®©å®ƒå°†æ—¥æœŸä¸Žtimezone.now()è¿›è¡Œæ¯”è¾ƒã€‚é¦–å…ˆæˆ‘ä»¬éœ€è¦æ·»åŠ ä¸€è¡Œå¯¼å…¥ï¼š
 
 ```
 polls/views.py
 from django.utils import timezone
 ```
 
-È»ºóÎÒÃÇ±ØÐëÏñÕâÑùÐÞ¸Äget_queryset·½·¨£º
+ç„¶åŽæˆ‘ä»¬å¿…é¡»åƒè¿™æ ·ä¿®æ”¹get_querysetæ–¹æ³•ï¼š
 
 ```
 polls/views.py
@@ -323,20 +323,20 @@ def get_queryset(self):
     ).order_by('-pub_date')[:5]
 ```
 
-Question.objects.filter(pub_date__lte=timezone.now()) ·µ»ØÒ»¸ö²éÑ¯¼¯£¬°üº¬pub_dateÐ¡ÓÚµÈÓÚtimezone.nowµÄQuestion¡£
+Question.objects.filter(pub_date__lte=timezone.now()) è¿”å›žä¸€ä¸ªæŸ¥è¯¢é›†ï¼ŒåŒ…å«pub_dateå°äºŽç­‰äºŽtimezone.nowçš„Questionã€‚
 
-### ²âÊÔÎÒÃÇµÄÐÂÊÓÍ¼ ###
+### æµ‹è¯•æˆ‘ä»¬çš„æ–°è§†å›¾ ###
 
-Æô¶¯·þÎñÆ÷¡¢ÔÚä¯ÀÀÆ÷ÖÐÔØÈëÕ¾µã¡¢´´½¨Ò»Ð©·¢²¼Ê±¼äÔÚ¹ýÈ¥ºÍ½«À´µÄQuestions £¬È»ºó¼ìÑéÖ»ÓÐÒÑ¾­·¢²¼µÄQuestion»áÕ¹Ê¾³öÀ´£¬ÏÖÔÚÄã¿ÉÒÔ¶Ô×Ô¼º¸Ðµ½ÂúÒâÁË¡£Äã²»ÏëÃ¿´ÎÐÞ¸Ä¿ÉÄÜÓëÕâÏà¹ØµÄ´úÂëÊ±¶¼ÖØ¸´ÕâÑù×ö ¡ª¡ª ËùÒÔÈÃÎÒÃÇ»ùÓÚÒÔÉÏshell»á»°ÖÐµÄÄÚÈÝ£¬ÔÙ±àÐ´Ò»¸ö²âÊÔ¡£
+å¯åŠ¨æœåŠ¡å™¨ã€åœ¨æµè§ˆå™¨ä¸­è½½å…¥ç«™ç‚¹ã€åˆ›å»ºä¸€äº›å‘å¸ƒæ—¶é—´åœ¨è¿‡åŽ»å’Œå°†æ¥çš„Questions ï¼Œç„¶åŽæ£€éªŒåªæœ‰å·²ç»å‘å¸ƒçš„Questionä¼šå±•ç¤ºå‡ºæ¥ï¼ŒçŽ°åœ¨ä½ å¯ä»¥å¯¹è‡ªå·±æ„Ÿåˆ°æ»¡æ„äº†ã€‚ä½ ä¸æƒ³æ¯æ¬¡ä¿®æ”¹å¯èƒ½ä¸Žè¿™ç›¸å…³çš„ä»£ç æ—¶éƒ½é‡å¤è¿™æ ·åš â€”â€” æ‰€ä»¥è®©æˆ‘ä»¬åŸºäºŽä»¥ä¸Šshellä¼šè¯ä¸­çš„å†…å®¹ï¼Œå†ç¼–å†™ä¸€ä¸ªæµ‹è¯•ã€‚
 
-½«ÏÂÃæµÄ´úÂëÌí¼Óµ½polls/tests.py£º
+å°†ä¸‹é¢çš„ä»£ç æ·»åŠ åˆ°polls/tests.pyï¼š
 
 ```
 polls/tests.py
 from django.core.urlresolvers import reverse
 ```
 
-ÎÒÃÇ½«´´½¨Ò»¸ö¿ì½Ýº¯ÊýÀ´´´½¨Question£¬Í¬Ê±ÎÒÃÇÒª´´½¨Ò»¸öÐÂµÄ²âÊÔÀà£º
+æˆ‘ä»¬å°†åˆ›å»ºä¸€ä¸ªå¿«æ·å‡½æ•°æ¥åˆ›å»ºQuestionï¼ŒåŒæ—¶æˆ‘ä»¬è¦åˆ›å»ºä¸€ä¸ªæ–°çš„æµ‹è¯•ç±»ï¼š
 
 ```
 polls/tests.py
@@ -410,21 +410,21 @@ class QuestionViewTests(TestCase):
         )
 ```
 
-ÈÃÎÒÃÇ¸üÏêÏ¸µØ¿´ÏÂÒÔÉÏÕâÐ©ÄÚÈÝ¡£
+è®©æˆ‘ä»¬æ›´è¯¦ç»†åœ°çœ‹ä¸‹ä»¥ä¸Šè¿™äº›å†…å®¹ã€‚
 
-µÚÒ»¸öÊÇQuestionµÄ¿ì½Ýº¯Êýcreate_question£¬½«ÖØ¸´´´½¨QuestionµÄ¹ý³Ì·â×°ÔÚÒ»Æð¡£
+ç¬¬ä¸€ä¸ªæ˜¯Questionçš„å¿«æ·å‡½æ•°create_questionï¼Œå°†é‡å¤åˆ›å»ºQuestionçš„è¿‡ç¨‹å°è£…åœ¨ä¸€èµ·ã€‚
 
-test_index_view_with_no_questions²»´´½¨ÈÎºÎQuestion£¬µ«»á¼ì²éÏûÏ¢¡°No polls are available.¡± ²¢ÑéÖ¤latest_question_listÎª¿Õ¡£×¢Òâdjango.test.TestCaseÀàÌá¹©Ò»Ð©¶îÍâµÄ¶ÏÑÔ·½·¨¡£ÔÚÕâÐ©Àý×ÓÖÐ£¬ÎÒÃÇÊ¹ÓÃassertContains() ºÍ assertQuerysetEqual()¡£
+test_index_view_with_no_questionsä¸åˆ›å»ºä»»ä½•Questionï¼Œä½†ä¼šæ£€æŸ¥æ¶ˆæ¯â€œNo polls are available.â€ å¹¶éªŒè¯latest_question_listä¸ºç©ºã€‚æ³¨æ„django.test.TestCaseç±»æä¾›ä¸€äº›é¢å¤–çš„æ–­è¨€æ–¹æ³•ã€‚åœ¨è¿™äº›ä¾‹å­ä¸­ï¼Œæˆ‘ä»¬ä½¿ç”¨assertContains() å’Œ assertQuerysetEqual()ã€‚
 
-ÔÚtest_index_view_with_a_past_questionÖÐ£¬ÎÒÃÇ´´½¨Ò»¸öQuestion²¢ÑéÖ¤ËüÊÇ·ñ³öÏÖÔÚÁÐ±íÖÐ¡£
+åœ¨test_index_view_with_a_past_questionä¸­ï¼Œæˆ‘ä»¬åˆ›å»ºä¸€ä¸ªQuestionå¹¶éªŒè¯å®ƒæ˜¯å¦å‡ºçŽ°åœ¨åˆ—è¡¨ä¸­ã€‚
 
-ÔÚtest_index_view_with_a_future_questionÖÐ£¬ÎÒÃÇ´´½¨Ò»¸öpub_date ÔÚÎ´À´µÄQuestion¡£Êý¾Ý¿â»áÎªÃ¿Ò»¸ö²âÊÔ·½·¨½øÐÐÖØÖÃ£¬ËùÒÔµÚÒ»¸öQuestionÒÑ¾­²»ÔÚÄÇÀï£¬Òò´ËÊ×Ò³ÃæÀï²»Ó¦¸ÃÓÐÈÎºÎQuestion¡£
+åœ¨test_index_view_with_a_future_questionä¸­ï¼Œæˆ‘ä»¬åˆ›å»ºä¸€ä¸ªpub_date åœ¨æœªæ¥çš„Questionã€‚æ•°æ®åº“ä¼šä¸ºæ¯ä¸€ä¸ªæµ‹è¯•æ–¹æ³•è¿›è¡Œé‡ç½®ï¼Œæ‰€ä»¥ç¬¬ä¸€ä¸ªQuestionå·²ç»ä¸åœ¨é‚£é‡Œï¼Œå› æ­¤é¦–é¡µé¢é‡Œä¸åº”è¯¥æœ‰ä»»ä½•Questionã€‚
 
-µÈµÈ¡£ ÊÂÊµÉÏ£¬ÎÒÃÇÊÇÔÚÓÃ²âÊÔÄ£ÄâÕ¾µãÉÏµÄ¹ÜÀíÔ±ÊäÈëºÍÓÃ»§ÌåÑé£¬¼ì²éÕë¶ÔÏµÍ³Ã¿Ò»¸ö×´Ì¬ºÍ×´Ì¬µÄÐÂ±ä»¯£¬·¢²¼µÄÊÇÔ¤ÆÚµÄ½á¹û¡£
+ç­‰ç­‰ã€‚ äº‹å®žä¸Šï¼Œæˆ‘ä»¬æ˜¯åœ¨ç”¨æµ‹è¯•æ¨¡æ‹Ÿç«™ç‚¹ä¸Šçš„ç®¡ç†å‘˜è¾“å…¥å’Œç”¨æˆ·ä½“éªŒï¼Œæ£€æŸ¥é’ˆå¯¹ç³»ç»Ÿæ¯ä¸€ä¸ªçŠ¶æ€å’ŒçŠ¶æ€çš„æ–°å˜åŒ–ï¼Œå‘å¸ƒçš„æ˜¯é¢„æœŸçš„ç»“æžœã€‚
 
-### ²âÊÔ DetailView ###
+### æµ‹è¯• DetailView ###
 
-Ò»ÇÐ¶¼ÔËÐÐµÃºÜºÃ£» È»¶ø£¬¼´Ê¹Î´À´·¢²¼µÄQuestion²»»á³öÏÖÔÚindexÖÐ£¬Èç¹ûÓÃ»§ÖªµÀ»òÕß²Â³öÕýÈ·µÄURLÒÀÈ»¿ÉÒÔ·ÃÎÊËüÃÇ¡£ËùÒÔÎÒÃÇÐèÒª¸øDetailViewÌí¼ÓÒ»¸öÕâÑùµÄÔ¼Êø£º
+ä¸€åˆ‡éƒ½è¿è¡Œå¾—å¾ˆå¥½ï¼› ç„¶è€Œï¼Œå³ä½¿æœªæ¥å‘å¸ƒçš„Questionä¸ä¼šå‡ºçŽ°åœ¨indexä¸­ï¼Œå¦‚æžœç”¨æˆ·çŸ¥é“æˆ–è€…çŒœå‡ºæ­£ç¡®çš„URLä¾ç„¶å¯ä»¥è®¿é—®å®ƒä»¬ã€‚æ‰€ä»¥æˆ‘ä»¬éœ€è¦ç»™DetailViewæ·»åŠ ä¸€ä¸ªè¿™æ ·çš„çº¦æŸï¼š
 
 ```
 polls/views.py
@@ -437,7 +437,7 @@ class DetailView(generic.DetailView):
         return Question.objects.filter(pub_date__lte=timezone.now())
 ```
 
-µ±È»£¬ÎÒÃÇ½«Ôö¼ÓÒ»Ð©²âÊÔÀ´¼ìÑépub_date ÔÚ¹ýÈ¥µÄQuestion ¿ÉÒÔÏÔÊ¾³öÀ´£¬¶øpub_dateÔÚÎ´À´µÄ²»¿ÉÒÔ£º
+å½“ç„¶ï¼Œæˆ‘ä»¬å°†å¢žåŠ ä¸€äº›æµ‹è¯•æ¥æ£€éªŒpub_date åœ¨è¿‡åŽ»çš„Question å¯ä»¥æ˜¾ç¤ºå‡ºæ¥ï¼Œè€Œpub_dateåœ¨æœªæ¥çš„ä¸å¯ä»¥ï¼š
 
 ```
 polls/tests.py
@@ -466,46 +466,46 @@ class QuestionIndexDetailTests(TestCase):
                             status_code=200)
 ```
 
-### ¸ü¶àµÄ²âÊÔË¼Â· ###
+### æ›´å¤šçš„æµ‹è¯•æ€è·¯ ###
 
-ÎÒÃÇÓ¦¸ÃÌí¼ÓÒ»¸öÀàËÆget_querysetµÄ·½·¨µ½ResultsView²¢Îª¸ÃÊÓÍ¼´´½¨Ò»¸öÐÂµÄÀà¡£Õâ½«ÓëÎÒÃÇ¸Õ¸Õ´´½¨µÄ·Ç³£ÀàËÆ£»Êµ¼ÊÉÏ½«»áÓÐÐí¶àÖØ¸´¡£
+æˆ‘ä»¬åº”è¯¥æ·»åŠ ä¸€ä¸ªç±»ä¼¼get_querysetçš„æ–¹æ³•åˆ°ResultsViewå¹¶ä¸ºè¯¥è§†å›¾åˆ›å»ºä¸€ä¸ªæ–°çš„ç±»ã€‚è¿™å°†ä¸Žæˆ‘ä»¬åˆšåˆšåˆ›å»ºçš„éžå¸¸ç±»ä¼¼ï¼›å®žé™…ä¸Šå°†ä¼šæœ‰è®¸å¤šé‡å¤ã€‚
 
-ÎÒÃÇ»¹¿ÉÒÔÔÚÆäËü·½Ãæ¸Ä½øÎÒÃÇµÄÓ¦ÓÃ£¬²¢ËæÖ®²»¶ÏÔö¼Ó²âÊÔ¡£ÀýÈç£¬·¢²¼Ò»¸öÃ»ÓÐChoicesµÄQuestions¾ÍÏÔµÃÉµÉµµÄ¡£ËùÒÔ£¬ÎÒÃÇµÄÊÓÍ¼Ó¦¸Ã¼ì²éÕâµã²¢ÅÅ³ýÕâÐ© Questions¡£ÎÒÃÇµÄ²âÊÔÓ¦¸Ã´´½¨Ò»¸ö²»´øChoices µÄ QuestionÈ»ºó²âÊÔËü²»»á·¢²¼³öÀ´£¬ Í¬Ê±´´½¨Ò»¸öÀàËÆµÄ´øÓÐ ChoicesµÄQuestion ²¢ÑéÖ¤Ëü»á ·¢²¼³öÀ´¡£
+æˆ‘ä»¬è¿˜å¯ä»¥åœ¨å…¶å®ƒæ–¹é¢æ”¹è¿›æˆ‘ä»¬çš„åº”ç”¨ï¼Œå¹¶éšä¹‹ä¸æ–­å¢žåŠ æµ‹è¯•ã€‚ä¾‹å¦‚ï¼Œå‘å¸ƒä¸€ä¸ªæ²¡æœ‰Choicesçš„Questionså°±æ˜¾å¾—å‚»å‚»çš„ã€‚æ‰€ä»¥ï¼Œæˆ‘ä»¬çš„è§†å›¾åº”è¯¥æ£€æŸ¥è¿™ç‚¹å¹¶æŽ’é™¤è¿™äº› Questionsã€‚æˆ‘ä»¬çš„æµ‹è¯•åº”è¯¥åˆ›å»ºä¸€ä¸ªä¸å¸¦Choices çš„ Questionç„¶åŽæµ‹è¯•å®ƒä¸ä¼šå‘å¸ƒå‡ºæ¥ï¼Œ åŒæ—¶åˆ›å»ºä¸€ä¸ªç±»ä¼¼çš„å¸¦æœ‰ Choicesçš„Question å¹¶éªŒè¯å®ƒä¼š å‘å¸ƒå‡ºæ¥ã€‚
 
-Ò²ÐíµÇÂ½µÄÓÃ»§Ó¦¸Ã±»ÔÊÐí²é¿´»¹Ã»·¢²¼µÄ Questions£¬µ«ÆÕÍ¨ÓÎ¿Í²»ÐÐ¡£ ÔÙËµÒ»´Î£ºÎÞÂÛÌí¼ÓÊ²Ã´´úÂëÀ´Íê³ÉÕâ¸öÒªÇó£¬ÐèÒªÌá¹©ÏàÓ¦µÄ²âÊÔ´úÂë£¬ÎÞÂÛÄãÊÇ·ñÊÇÏÈ±àÐ´²âÊÔÈ»ºóÈÃÕâÐ©´úÂëÍ¨¹ý²âÊÔ£¬»¹ÊÇÏÈÓÃ´úÂë½â¾öÆäÖÐµÄÂß¼­È»ºó±àÐ´²âÊÔÀ´Ö¤Ã÷Ëü¡£
+ä¹Ÿè®¸ç™»é™†çš„ç”¨æˆ·åº”è¯¥è¢«å…è®¸æŸ¥çœ‹è¿˜æ²¡å‘å¸ƒçš„ Questionsï¼Œä½†æ™®é€šæ¸¸å®¢ä¸è¡Œã€‚ å†è¯´ä¸€æ¬¡ï¼šæ— è®ºæ·»åŠ ä»€ä¹ˆä»£ç æ¥å®Œæˆè¿™ä¸ªè¦æ±‚ï¼Œéœ€è¦æä¾›ç›¸åº”çš„æµ‹è¯•ä»£ç ï¼Œæ— è®ºä½ æ˜¯å¦æ˜¯å…ˆç¼–å†™æµ‹è¯•ç„¶åŽè®©è¿™äº›ä»£ç é€šè¿‡æµ‹è¯•ï¼Œè¿˜æ˜¯å…ˆç”¨ä»£ç è§£å†³å…¶ä¸­çš„é€»è¾‘ç„¶åŽç¼–å†™æµ‹è¯•æ¥è¯æ˜Žå®ƒã€‚
 
-´ÓÄ³ÖÖ³Ì¶ÈÉÏÀ´Ëµ£¬ÄãÒ»¶¨»á²é¿´ÄãµÄ²âÊÔ£¬È»ºóÏëÖªµÀÊÇ·ñÄãµÄ²âÊÔ³ÌÐò¹ýÓÚÓ·Ö×£¬Õâ½«ÎÒÃÇ´øÏòÏÂÃæµÄÄÚÈÝ£º
+ä»ŽæŸç§ç¨‹åº¦ä¸Šæ¥è¯´ï¼Œä½ ä¸€å®šä¼šæŸ¥çœ‹ä½ çš„æµ‹è¯•ï¼Œç„¶åŽæƒ³çŸ¥é“æ˜¯å¦ä½ çš„æµ‹è¯•ç¨‹åºè¿‡äºŽè‡ƒè‚¿ï¼Œè¿™å°†æˆ‘ä»¬å¸¦å‘ä¸‹é¢çš„å†…å®¹ï¼š
 
-## ²âÊÔÔ½¶àÔ½ºÃ ##
+## æµ‹è¯•è¶Šå¤šè¶Šå¥½ ##
 
-¿´ÆðÀ´ÎÒÃÇµÄ²âÊÔ´úÂëµÄÔö³¤ÕýÔÚÊ§È¥¿ØÖÆ¡£ ÒÔÕâÑùµÄËÙ¶È£¬²âÊÔµÄ´úÂëÁ¿½«ºÜ¿ì³¬¹ýÎÒÃÇµÄÓ¦ÓÃ£¬¶Ô±ÈÎÒÃÇÆäËüÓÅÃÀ¼ò½àµÄ´úÂë£¬ÖØ¸´ºÁÎÞÃÀ¸Ð¡£
+çœ‹èµ·æ¥æˆ‘ä»¬çš„æµ‹è¯•ä»£ç çš„å¢žé•¿æ­£åœ¨å¤±åŽ»æŽ§åˆ¶ã€‚ ä»¥è¿™æ ·çš„é€Ÿåº¦ï¼Œæµ‹è¯•çš„ä»£ç é‡å°†å¾ˆå¿«è¶…è¿‡æˆ‘ä»¬çš„åº”ç”¨ï¼Œå¯¹æ¯”æˆ‘ä»¬å…¶å®ƒä¼˜ç¾Žç®€æ´çš„ä»£ç ï¼Œé‡å¤æ¯«æ— ç¾Žæ„Ÿã€‚
 
-Ã»¹ØÏµ¡£ÈÃËüÃÇ¼ÌÐøÔö³¤¡£×îÖØÒªµÄÊÇ£¬Äã¿ÉÒÔÐ´Ò»¸ö²âÊÔÒ»´Î£¬È»ºóÍüÁËËü¡£ µ±Äã¼ÌÐø¿ª·¢ÄãµÄ³ÌÐòÊ±£¬Ëü½«¼ÌÐøÖ´ÐÐÓÐÓÃµÄ¹¦ÄÜ¡£
+æ²¡å…³ç³»ã€‚è®©å®ƒä»¬ç»§ç»­å¢žé•¿ã€‚æœ€é‡è¦çš„æ˜¯ï¼Œä½ å¯ä»¥å†™ä¸€ä¸ªæµ‹è¯•ä¸€æ¬¡ï¼Œç„¶åŽå¿˜äº†å®ƒã€‚ å½“ä½ ç»§ç»­å¼€å‘ä½ çš„ç¨‹åºæ—¶ï¼Œå®ƒå°†ç»§ç»­æ‰§è¡Œæœ‰ç”¨çš„åŠŸèƒ½ã€‚
 
-ÓÐÊ±£¬²âÊÔÐèÒª¸üÐÂ¡£ ¼ÙÉèÎÒÃÇÐÞ¸ÄÎÒÃÇµÄÊÓÍ¼Ê¹µÃÖ»ÓÐ¾ßÓÐChoicesµÄ Questions ²Å»á·¢²¼¡£ÔÚÕâÖÖÇé¿öÏÂ£¬ÎÒÃÇÐí¶àÒÑ¾­´æÔÚµÄ²âÊÔ¶¼½«Ê§°Ü ¡ª¡ª Õâ»á¸æËßÎÒÃÇÄÄÐ©²âÊÔÐèÒª±»ÐÞ¸ÄÀ´Ê¹µÃËüÃÇ±£³Ö×îÐÂ£¬ËùÒÔ´ÓÄ³ÖÖ³Ì¶ÈÉÏ½²£¬²âÊÔ¿ÉÒÔ×Ô¼ºÕÕ¹Ë×Ô¼º¡£
+æœ‰æ—¶ï¼Œæµ‹è¯•éœ€è¦æ›´æ–°ã€‚ å‡è®¾æˆ‘ä»¬ä¿®æ”¹æˆ‘ä»¬çš„è§†å›¾ä½¿å¾—åªæœ‰å…·æœ‰Choicesçš„ Questions æ‰ä¼šå‘å¸ƒã€‚åœ¨è¿™ç§æƒ…å†µä¸‹ï¼Œæˆ‘ä»¬è®¸å¤šå·²ç»å­˜åœ¨çš„æµ‹è¯•éƒ½å°†å¤±è´¥ â€”â€” è¿™ä¼šå‘Šè¯‰æˆ‘ä»¬å“ªäº›æµ‹è¯•éœ€è¦è¢«ä¿®æ”¹æ¥ä½¿å¾—å®ƒä»¬ä¿æŒæœ€æ–°ï¼Œæ‰€ä»¥ä»ŽæŸç§ç¨‹åº¦ä¸Šè®²ï¼Œæµ‹è¯•å¯ä»¥è‡ªå·±ç…§é¡¾è‡ªå·±ã€‚
 
-ÔÚ×î»µµÄÇé¿öÏÂ£¬ÔÚÄãµÄ¿ª·¢¹ý³ÌÖÐ£¬Äã»á·¢ÏÖÐí¶à²âÊÔÏÖÔÚ±äµÃÈßÓà¡£ ¼´Ê¹ÕâÑù£¬Ò²²»ÊÇÎÊÌâ£»¶Ô²âÊÔÀ´Ëµ£¬ÈßÓàÊÇÒ»¼þºÃ ÊÂ¡£
+åœ¨æœ€åçš„æƒ…å†µä¸‹ï¼Œåœ¨ä½ çš„å¼€å‘è¿‡ç¨‹ä¸­ï¼Œä½ ä¼šå‘çŽ°è®¸å¤šæµ‹è¯•çŽ°åœ¨å˜å¾—å†—ä½™ã€‚ å³ä½¿è¿™æ ·ï¼Œä¹Ÿä¸æ˜¯é—®é¢˜ï¼›å¯¹æµ‹è¯•æ¥è¯´ï¼Œå†—ä½™æ˜¯ä¸€ä»¶å¥½ äº‹ã€‚
 
-Ö»ÒªÄãµÄ²âÊÔ±»ºÏÀíµØ×éÖ¯£¬ËüÃÇ¾Í²»»á±äµÃÄÑÒÔ¹ÜÀí¡£ ´Ó¾­ÑéÉÏÀ´Ëµ£¬ºÃµÄ×ö·¨ÊÇ£º
+åªè¦ä½ çš„æµ‹è¯•è¢«åˆç†åœ°ç»„ç»‡ï¼Œå®ƒä»¬å°±ä¸ä¼šå˜å¾—éš¾ä»¥ç®¡ç†ã€‚ ä»Žç»éªŒä¸Šæ¥è¯´ï¼Œå¥½çš„åšæ³•æ˜¯ï¼š
 
-+ Ã¿¸öÄ£ÐÍ»òÊÓÍ¼¾ßÓÐÒ»¸öµ¥¶ÀµÄTestClass
-+ ÎªÄãÏë²âÊÔµÄÃ¿Ò»ÖÖÇé¿ö½¨Á¢Ò»¸öµ¥¶ÀµÄ²âÊÔ·½·¨
-+ ²âÊÔ·½·¨µÄÃû×Ö¿ÉÒÔÃèÊöËüÃÇµÄ¹¦ÄÜ
++ æ¯ä¸ªæ¨¡åž‹æˆ–è§†å›¾å…·æœ‰ä¸€ä¸ªå•ç‹¬çš„TestClass
++ ä¸ºä½ æƒ³æµ‹è¯•çš„æ¯ä¸€ç§æƒ…å†µå»ºç«‹ä¸€ä¸ªå•ç‹¬çš„æµ‹è¯•æ–¹æ³•
++ æµ‹è¯•æ–¹æ³•çš„åå­—å¯ä»¥æè¿°å®ƒä»¬çš„åŠŸèƒ½
 
-## ½øÒ»²½µÄ²âÊÔ ##
+## è¿›ä¸€æ­¥çš„æµ‹è¯• ##
 
-±¾½Ì³ÌÖ»½éÉÜÁËÒ»Ð©»ù±¾µÄ²âÊÔ¡£ »¹ÓÐºÜ¶àÄã¿ÉÒÔ×ö£¬ÓÐÐí¶à·Ç³£ÓÐÓÃµÄ¹¤¾ß¿ÉÒÔËæ±ãÊ¹ÓÃÀ´ÄãÊµÏÖÒ»Ð©·Ç³£´ÏÃ÷µÄ×ö·¨¡£
+æœ¬æ•™ç¨‹åªä»‹ç»äº†ä¸€äº›åŸºæœ¬çš„æµ‹è¯•ã€‚ è¿˜æœ‰å¾ˆå¤šä½ å¯ä»¥åšï¼Œæœ‰è®¸å¤šéžå¸¸æœ‰ç”¨çš„å·¥å…·å¯ä»¥éšä¾¿ä½¿ç”¨æ¥ä½ å®žçŽ°ä¸€äº›éžå¸¸èªæ˜Žçš„åšæ³•ã€‚
 
-ÀýÈç£¬ËäÈ»ÎÒÃÇµÄ²âÊÔ¸²¸ÇÁËÄ£ÐÍµÄÄÚ²¿Âß¼­ºÍÊÓÍ¼·¢²¼ÐÅÏ¢µÄ·½Ê½£¬Äã¿ÉÒÔÊ¹ÓÃÒ»¸ö¡°ä¯ÀÀÆ÷¡±¿ò¼ÜÀýÈçSeleniumÀ´²âÊÔÄãµÄHTMLÎÄ¼þÔÚä¯ÀÀÆ÷ÖÐÕæÊµäÖÈ¾µÄÑù×Ó¡£ ÕâÐ©¹¤¾ß²»½ö¿ÉÒÔÈÃÄã¼ì²éÄãµÄDjango´úÂëµÄÐÐÎª£¬»¹ÄÜ¹»¼ì²éÄãµÄJavaScriptµÄÐÐÎª¡£ Ëü»áÆô¶¯Ò»¸öä¯ÀÀÆ÷£¬²¢¿ªÊ¼ÓëÄãµÄÍøÕ¾½øÐÐ½»»¥£¬¾ÍÏñÓÐÒ»¸öÈËÔÚ²Ù×ÝÒ»Ñù£¬·Ç³£ÖµµÃÒ»¿´£¡ Django °üº¬Ò»¸öLiveServerTestCaseÀ´°ïÖúÓëSelenium ÕâÑùµÄ¹¤¾ß¼¯³É¡£
+ä¾‹å¦‚ï¼Œè™½ç„¶æˆ‘ä»¬çš„æµ‹è¯•è¦†ç›–äº†æ¨¡åž‹çš„å†…éƒ¨é€»è¾‘å’Œè§†å›¾å‘å¸ƒä¿¡æ¯çš„æ–¹å¼ï¼Œä½ å¯ä»¥ä½¿ç”¨ä¸€ä¸ªâ€œæµè§ˆå™¨â€æ¡†æž¶ä¾‹å¦‚Seleniumæ¥æµ‹è¯•ä½ çš„HTMLæ–‡ä»¶åœ¨æµè§ˆå™¨ä¸­çœŸå®žæ¸²æŸ“çš„æ ·å­ã€‚ è¿™äº›å·¥å…·ä¸ä»…å¯ä»¥è®©ä½ æ£€æŸ¥ä½ çš„Djangoä»£ç çš„è¡Œä¸ºï¼Œè¿˜èƒ½å¤Ÿæ£€æŸ¥ä½ çš„JavaScriptçš„è¡Œä¸ºã€‚ å®ƒä¼šå¯åŠ¨ä¸€ä¸ªæµè§ˆå™¨ï¼Œå¹¶å¼€å§‹ä¸Žä½ çš„ç½‘ç«™è¿›è¡Œäº¤äº’ï¼Œå°±åƒæœ‰ä¸€ä¸ªäººåœ¨æ“çºµä¸€æ ·ï¼Œéžå¸¸å€¼å¾—ä¸€çœ‹ï¼ Django åŒ…å«ä¸€ä¸ªLiveServerTestCaseæ¥å¸®åŠ©ä¸ŽSelenium è¿™æ ·çš„å·¥å…·é›†æˆã€‚
 
-Èç¹ûÄãÓÐÒ»¸ö¸´ÔÓµÄÓ¦ÓÃ£¬Äã¿ÉÄÜÎªÁËÊµÏÖcontinuous integration£¬ÏëÔÚÃ¿´ÎÌá½»´úÂëºó¶Ô´úÂë½øÐÐ×Ô¶¯»¯²âÊÔ£¬ÈÃ´úÂë×Ô¶¯ ¡ª¡ª ÖÁÉÙÊÇ²¿·Ö×Ô¶¯ ¡ª¡ª µØÀ´¿ØÖÆËüµÄÖÊÁ¿¡£
+å¦‚æžœä½ æœ‰ä¸€ä¸ªå¤æ‚çš„åº”ç”¨ï¼Œä½ å¯èƒ½ä¸ºäº†å®žçŽ°continuous integrationï¼Œæƒ³åœ¨æ¯æ¬¡æäº¤ä»£ç åŽå¯¹ä»£ç è¿›è¡Œè‡ªåŠ¨åŒ–æµ‹è¯•ï¼Œè®©ä»£ç è‡ªåŠ¨ â€”â€” è‡³å°‘æ˜¯éƒ¨åˆ†è‡ªåŠ¨ â€”â€” åœ°æ¥æŽ§åˆ¶å®ƒçš„è´¨é‡ã€‚
 
-·¢ÏÖÄãÓ¦ÓÃÖÐÎ´¾­²âÊÔµÄ´úÂëµÄÒ»¸öºÃ·½·¨ÊÇ¼ì²é²âÊÔ´úÂëµÄ¸²¸ÇÂÊ¡£ ÕâÒ²ÓÐÖúÓÚÊ¶±ð´àÈõµÄÉõÖÁËÀ´úÂë¡£ Èç¹ûÄã²»ÄÜ²âÊÔÒ»¶Î´úÂë£¬ÕâÍ¨³£ÒâÎ¶×ÅÕâÐ©´úÂëÐèÒª±»ÖØ¹¹»òÕßÒÆ³ý¡£ Coverage½«°ïÖúÎÒÃÇÊ¶±ðËÀ´úÂë¡£ ²é¿´Óëcoverage.py ¼¯³ÉÀ´ÁË½â¸ü¶àÏ¸½Ú¡£
+å‘çŽ°ä½ åº”ç”¨ä¸­æœªç»æµ‹è¯•çš„ä»£ç çš„ä¸€ä¸ªå¥½æ–¹æ³•æ˜¯æ£€æŸ¥æµ‹è¯•ä»£ç çš„è¦†ç›–çŽ‡ã€‚ è¿™ä¹Ÿæœ‰åŠ©äºŽè¯†åˆ«è„†å¼±çš„ç”šè‡³æ­»ä»£ç ã€‚ å¦‚æžœä½ ä¸èƒ½æµ‹è¯•ä¸€æ®µä»£ç ï¼Œè¿™é€šå¸¸æ„å‘³ç€è¿™äº›ä»£ç éœ€è¦è¢«é‡æž„æˆ–è€…ç§»é™¤ã€‚ Coverageå°†å¸®åŠ©æˆ‘ä»¬è¯†åˆ«æ­»ä»£ç ã€‚ æŸ¥çœ‹ä¸Žcoverage.py é›†æˆæ¥äº†è§£æ›´å¤šç»†èŠ‚ã€‚
 
-Django ÖÐµÄ²âÊÔÓÐ¹ØÓÚ²âÊÔ¸ü¼ÓÈ«ÃæµÄÐÅÏ¢¡£
+Django ä¸­çš„æµ‹è¯•æœ‰å…³äºŽæµ‹è¯•æ›´åŠ å…¨é¢çš„ä¿¡æ¯ã€‚
 
-## ÏÂÒ»²½£¿ ##
+## ä¸‹ä¸€æ­¥ï¼Ÿ ##
 
-¹ØÓÚ²âÊÔµÄÍêÕûÏ¸½Ú£¬Çë²é¿´Django ÖÐµÄ²âÊÔ¡£
+å…³äºŽæµ‹è¯•çš„å®Œæ•´ç»†èŠ‚ï¼Œè¯·æŸ¥çœ‹Django ä¸­çš„æµ‹è¯•ã€‚
 
-µ±Äã¶ÔDjango ÊÓÍ¼µÄ²âÊÔ¸Ðµ½ÂúÒâºó£¬ÇëÔÄ¶Á±¾½Ì³ÌµÄµÚ6²¿·ÖÀ´ ÁË½â¾²Ì¬ÎÄ¼þµÄ¹ÜÀí¡£
+å½“ä½ å¯¹Django è§†å›¾çš„æµ‹è¯•æ„Ÿåˆ°æ»¡æ„åŽï¼Œè¯·é˜…è¯»æœ¬æ•™ç¨‹çš„ç¬¬6éƒ¨åˆ†æ¥ äº†è§£é™æ€æ–‡ä»¶çš„ç®¡ç†ã€‚

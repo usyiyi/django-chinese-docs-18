@@ -1,109 +1,109 @@
 <!--
-  ÒëÕß£ºGithub@wizardforcel
+  è¯‘è€…ï¼šGithub@wizardforcel
 -->
 
-# ÖÐ¼ä¼þ #
+# ä¸­é—´ä»¶ #
 
-ÕâÆªÎÄµµ½éÉÜÁËDjango×Ô´øµÄËùÓÐÖÐ¼ä¼þ×é¼þ¡£ Òª²é¿´¹ØÓÚÈçºÎÊ¹ÓÃËüÃÇÒÔ¼°ÈçºÎ±àÐ´×Ô¼ºµÄÖÐ¼ä¼þ£¬Çë¼ûÖÐ¼ä¼þÊ¹ÓÃÖ¸µ¼¡£
+è¿™ç¯‡æ–‡æ¡£ä»‹ç»äº†Djangoè‡ªå¸¦çš„æ‰€æœ‰ä¸­é—´ä»¶ç»„ä»¶ã€‚ è¦æŸ¥çœ‹å…³äºŽå¦‚ä½•ä½¿ç”¨å®ƒä»¬ä»¥åŠå¦‚ä½•ç¼–å†™è‡ªå·±çš„ä¸­é—´ä»¶ï¼Œè¯·è§ä¸­é—´ä»¶ä½¿ç”¨æŒ‡å¯¼ã€‚
 
-## ¿ÉÓÃµÄÖÐ¼ä¼þ ##
+## å¯ç”¨çš„ä¸­é—´ä»¶ ##
 
-### »º´æÖÐ¼ä¼þ ###
+### ç¼“å­˜ä¸­é—´ä»¶ ###
 
 **class UpdateCacheMiddleware[source]**
 
 **class FetchFromCacheMiddleware[source]**
 
-¿ªÆôÈ«Õ¾·¶Î§µÄ»º´æ¡£ Èç¹û¿ªÆôÁËÕâÐ©»º´æ£¬ÈÎºÎÒ»¸öÓÉDjangoÌá¹©µÄÒ³Ãæ½«»á±»»º´æ£¬»º´æÊ±³¤ÊÇÓÉÄãÔÚCACHE_MIDDLEWARE_SECONDSÅäÖÃÖÐ¶¨ÒåµÄ¡£Ïê¼û»º´æÎÄµµ¡£
+å¼€å¯å…¨ç«™èŒƒå›´çš„ç¼“å­˜ã€‚ å¦‚æžœå¼€å¯äº†è¿™äº›ç¼“å­˜ï¼Œä»»ä½•ä¸€ä¸ªç”±Djangoæä¾›çš„é¡µé¢å°†ä¼šè¢«ç¼“å­˜ï¼Œç¼“å­˜æ—¶é•¿æ˜¯ç”±ä½ åœ¨CACHE_MIDDLEWARE_SECONDSé…ç½®ä¸­å®šä¹‰çš„ã€‚è¯¦è§ç¼“å­˜æ–‡æ¡£ã€‚
 
-### "³£ÓÃ"µÄÖÐ¼ä¼þ ###
+### "å¸¸ç”¨"çš„ä¸­é—´ä»¶ ###
 
 **class CommonMiddleware[source]**
 
-¸øÍêÃÀÖ÷ÒåÕßÔö¼ÓÒ»Ð©±ãÀûÌõ¼þ£º
+ç»™å®Œç¾Žä¸»ä¹‰è€…å¢žåŠ ä¸€äº›ä¾¿åˆ©æ¡ä»¶ï¼š
 
-+ ½ûÖ¹·ÃÎÊDISALLOWED_USER_AGENTSÖÐÉèÖÃµÄÓÃ»§´úÀí£¬ÕâÏîÅäÖÃÓ¦¸ÃÊÇÒ»¸öÒÑ±àÒëµÄÕýÔò±í´ïÊ½¶ÔÏóµÄÁÐ±í¡£
-+ »ùÓÚAPPEND_SLASHºÍPREPEND_WWWµÄÉèÖÃÀ´ÖØÐ´URL¡£
++ ç¦æ­¢è®¿é—®DISALLOWED_USER_AGENTSä¸­è®¾ç½®çš„ç”¨æˆ·ä»£ç†ï¼Œè¿™é¡¹é…ç½®åº”è¯¥æ˜¯ä¸€ä¸ªå·²ç¼–è¯‘çš„æ­£åˆ™è¡¨è¾¾å¼å¯¹è±¡çš„åˆ—è¡¨ã€‚
++ åŸºäºŽAPPEND_SLASHå’ŒPREPEND_WWWçš„è®¾ç½®æ¥é‡å†™URLã€‚
 
-Èç¹ûAPPEND_SLASHÉèÎªTrue²¢ÇÒÒ»¿ªÊ¼µÄµÄURLÃ»ÓÐÒÔÐ±Ïß½áÎ²£¬²¢ÇÒÔÚURLconfÖÐÒ²Ã»ÕÒµ½¶ÔÓ¦¶¨Òå£¬ÕâÊ±ÐÎ³ÉÒ»¸öÒ»¸öÐ±Ïß½áÎ²ÐÂµÄURL¡£Èç¹ûÕâ¸öÐÂµÄURL´æÔÚÓÚURLconf£¬ÕâÊ±Django»áÖØ¶¨ÏòÇëÇóµ½Õâ¸öÐÂURLÉÏ£¬·ñÔò£¬Ò»¿ªÊ¼µÄURL°´Õý³£Çé¿ö´¦Àí¡£
+å¦‚æžœAPPEND_SLASHè®¾ä¸ºTrueå¹¶ä¸”ä¸€å¼€å§‹çš„çš„URLæ²¡æœ‰ä»¥æ–œçº¿ç»“å°¾ï¼Œå¹¶ä¸”åœ¨URLconfä¸­ä¹Ÿæ²¡æ‰¾åˆ°å¯¹åº”å®šä¹‰ï¼Œè¿™æ—¶å½¢æˆä¸€ä¸ªä¸€ä¸ªæ–œçº¿ç»“å°¾æ–°çš„URLã€‚å¦‚æžœè¿™ä¸ªæ–°çš„URLå­˜åœ¨äºŽURLconfï¼Œè¿™æ—¶Djangoä¼šé‡å®šå‘è¯·æ±‚åˆ°è¿™ä¸ªæ–°URLä¸Šï¼Œå¦åˆ™ï¼Œä¸€å¼€å§‹çš„URLæŒ‰æ­£å¸¸æƒ…å†µå¤„ç†ã€‚
 
-±ÈÈç£¬foo.com/bar½«»á±»ÖØ¶¨Ïòµ½foo.com/bar/£¬Èç¹ûÄãÃ»ÓÐÎªfoo.com/bar¶¨ÒåÓÐÐ§µÄÕýÔò£¬µ«ÊÇÎªfoo.com/bar/¶¨ÒåÁËÓÐÐ§µÄÕýÔò¡£
+æ¯”å¦‚ï¼Œfoo.com/barå°†ä¼šè¢«é‡å®šå‘åˆ°foo.com/bar/ï¼Œå¦‚æžœä½ æ²¡æœ‰ä¸ºfoo.com/barå®šä¹‰æœ‰æ•ˆçš„æ­£åˆ™ï¼Œä½†æ˜¯ä¸ºfoo.com/bar/å®šä¹‰äº†æœ‰æ•ˆçš„æ­£åˆ™ã€‚
 
-Èç¹ûPREPEND_WWWÉèÎªTrue£¬Ç°ÃæÈ±ÉÙ "www."µÄurl½«»á±»ÖØ¶¨Ïòµ½ÏàÍ¬µ«ÊÇÒÔÒ»¸ö"www."¿ªÍ·µÄurl¡£
+å¦‚æžœPREPEND_WWWè®¾ä¸ºTrueï¼Œå‰é¢ç¼ºå°‘ "www."çš„urlå°†ä¼šè¢«é‡å®šå‘åˆ°ç›¸åŒä½†æ˜¯ä»¥ä¸€ä¸ª"www."å¼€å¤´çš„urlã€‚
 
-Á½ÖÖÑ¡Ïî¶¼ÊÇÎªÁË¹æ·¶»¯url¡£ÆäÖÐµÄÕÜÑ§¾ÍÊÇ£¬ÈÎºÎÒ»¸öurlÓ¦¸ÃÔÚÒ»¸öµØ·½½ö´æÔÚÒ»¸ö¡£¼¼ÊõÉÏÀ´½²£¬url foo.com/bar  Çø±ðÓÚfoo.com/bar/ --  ËÑË÷ÒýÇæË÷Òý»á°ÑÕâÀï·Ö¿ª´¦Àí -- Òò´Ë£¬×î¼ÑÊµ¼ù¾ÍÊÇ¹æ·¶»¯url¡£
+ä¸¤ç§é€‰é¡¹éƒ½æ˜¯ä¸ºäº†è§„èŒƒåŒ–urlã€‚å…¶ä¸­çš„å“²å­¦å°±æ˜¯ï¼Œä»»ä½•ä¸€ä¸ªurlåº”è¯¥åœ¨ä¸€ä¸ªåœ°æ–¹ä»…å­˜åœ¨ä¸€ä¸ªã€‚æŠ€æœ¯ä¸Šæ¥è®²ï¼Œurl foo.com/bar  åŒºåˆ«äºŽfoo.com/bar/ --  æœç´¢å¼•æ“Žç´¢å¼•ä¼šæŠŠè¿™é‡Œåˆ†å¼€å¤„ç† -- å› æ­¤ï¼Œæœ€ä½³å®žè·µå°±æ˜¯è§„èŒƒåŒ–urlã€‚
 
-+ »ùÓÚ  USE_ETAGS  ÉèÖÃÀ´´¦ÀíETag¡£Èç¹ûÉèÖÃUSE_ETAGSÎªTrue£¬Django»áÍ¨¹ýMD5-hashing´¦ÀíÒ³ÃæµÄÄÚÈÝÀ´ÎªÃ¿Ò»¸öÒ³ÃæÇëÇó¼ÆËãEtag£¬²¢ÇÒÈç¹ûºÏÊÊµÄ»°£¬Ëü½«»á·¢ËÍÐ¯´øNot ModifiedµÄÏìÓ¦¡£
++ åŸºäºŽ  USE_ETAGS  è®¾ç½®æ¥å¤„ç†ETagã€‚å¦‚æžœè®¾ç½®USE_ETAGSä¸ºTrueï¼ŒDjangoä¼šé€šè¿‡MD5-hashingå¤„ç†é¡µé¢çš„å†…å®¹æ¥ä¸ºæ¯ä¸€ä¸ªé¡µé¢è¯·æ±‚è®¡ç®—Etagï¼Œå¹¶ä¸”å¦‚æžœåˆé€‚çš„è¯ï¼Œå®ƒå°†ä¼šå‘é€æºå¸¦Not Modifiedçš„å“åº”ã€‚
 
 **CommonMiddleware.response_redirect_class**
 
 ```
-Django 1.8ÖÐÐÂÔö
+Django 1.8ä¸­æ–°å¢ž
 ```
 
-Ä¬ÈÏÎªHttpResponsePermanentRedirect¡£Ëü¼Ì³ÐÁËCommonMiddleware£¬²¢¸²Ð´ÁËÊôÐÔÀ´×Ô¶¨ÒåÖÐ¼ä¼þ·¢³öµÄÖØ¶¨Ïò¡£
+é»˜è®¤ä¸ºHttpResponsePermanentRedirectã€‚å®ƒç»§æ‰¿äº†CommonMiddlewareï¼Œå¹¶è¦†å†™äº†å±žæ€§æ¥è‡ªå®šä¹‰ä¸­é—´ä»¶å‘å‡ºçš„é‡å®šå‘ã€‚
 
 **class BrokenLinkEmailsMiddleware[source]**
 
-+ ÏòMANAGERS·¢ËÍËÀÁ´ÌáÐÑÓÊ¼þ£¨Ïê¼û´íÎó±¨¸æ£©¡£
++ å‘MANAGERSå‘é€æ­»é“¾æé†’é‚®ä»¶ï¼ˆè¯¦è§é”™è¯¯æŠ¥å‘Šï¼‰ã€‚
 
-### GZipÖÐ¼ä¼þ ###
+### GZipä¸­é—´ä»¶ ###
 
 **class GZipMiddleware[source]**
 
-> ¾¯¸æ
+> è­¦å‘Š
 > 
-> °²È«ÑÐ¾¿Ô±×î½ü·¢ÏÖ£¬µ±Ñ¹Ëõ¼¼Êõ£¨°üÀ¨GZipMiddleware£©ÓÃÓÚÒ»¸öÍøÕ¾µÄÊ±ºò£¬ÍøÕ¾»áÊÜµ½Ò»Ð©¿ÉÄÜµÄ¹¥»÷¡£´ËÍâ£¬ÕâÐ©·½·¨¿ÉÒÔÓÃÓÚÆÆ»µDjangoµÄCSRF±£»¤¡£ÔÚÄãµÄÕ¾µãÊ¹ÓÃGZipMiddlewareÖ®Ç°£¬ÄãÓ¦¸ÃÏÈ×ÐÏ¸¿¼ÂÇÒ»ÏÂÄãµÄÕ¾µãÊÇ·ñÈÝÒ×ÊÜµ½ÕâÐ©¹¥»÷¡£ Èç¹ûÄã²»È·¶¨ÊÇ·ñ»áÊÜµ½ÕâÐ©Ó°Ïì£¬Ó¦¸Ã±ÜÃâÊ¹ÓÃ GZipMiddleware¡£Ïê¼ûthe BREACH paper (PDF)ºÍbreachattack.com¡£
+> å®‰å…¨ç ”ç©¶å‘˜æœ€è¿‘å‘çŽ°ï¼Œå½“åŽ‹ç¼©æŠ€æœ¯ï¼ˆåŒ…æ‹¬GZipMiddlewareï¼‰ç”¨äºŽä¸€ä¸ªç½‘ç«™çš„æ—¶å€™ï¼Œç½‘ç«™ä¼šå—åˆ°ä¸€äº›å¯èƒ½çš„æ”»å‡»ã€‚æ­¤å¤–ï¼Œè¿™äº›æ–¹æ³•å¯ä»¥ç”¨äºŽç ´åDjangoçš„CSRFä¿æŠ¤ã€‚åœ¨ä½ çš„ç«™ç‚¹ä½¿ç”¨GZipMiddlewareä¹‹å‰ï¼Œä½ åº”è¯¥å…ˆä»”ç»†è€ƒè™‘ä¸€ä¸‹ä½ çš„ç«™ç‚¹æ˜¯å¦å®¹æ˜“å—åˆ°è¿™äº›æ”»å‡»ã€‚ å¦‚æžœä½ ä¸ç¡®å®šæ˜¯å¦ä¼šå—åˆ°è¿™äº›å½±å“ï¼Œåº”è¯¥é¿å…ä½¿ç”¨ GZipMiddlewareã€‚è¯¦è§the BREACH paper (PDF)å’Œbreachattack.comã€‚
 
-ÎªÖ§³ÖGZipÑ¹ËõµÄä¯ÀÀÆ÷£¨Ò»Ð©ÏÖ´úµÄä¯ÀÀÆ÷£©Ñ¹ËõÄÚÈÝ¡£
+ä¸ºæ”¯æŒGZipåŽ‹ç¼©çš„æµè§ˆå™¨ï¼ˆä¸€äº›çŽ°ä»£çš„æµè§ˆå™¨ï¼‰åŽ‹ç¼©å†…å®¹ã€‚
 
-½¨Òé°ÑÕâ¸öÖÐ¼ä¼þ·Åµ½ÖÐ¼ä¼þÅäÖÃÁÐ±íµÄµÚÒ»¸ö£¬ÕâÑùÑ¹ËõÏìÓ¦ÄÚÈÝµÄ´¦Àí»áµ½×îºó²Å ·¢Éú¡£
+å»ºè®®æŠŠè¿™ä¸ªä¸­é—´ä»¶æ”¾åˆ°ä¸­é—´ä»¶é…ç½®åˆ—è¡¨çš„ç¬¬ä¸€ä¸ªï¼Œè¿™æ ·åŽ‹ç¼©å“åº”å†…å®¹çš„å¤„ç†ä¼šåˆ°æœ€åŽæ‰ å‘ç”Ÿã€‚
 
-Èç¹ûÂú×ãÏÂÃæÌõ¼þµÄ»°£¬ÄÚÈÝ²»»á±»Ñ¹Ëõ£º
+å¦‚æžœæ»¡è¶³ä¸‹é¢æ¡ä»¶çš„è¯ï¼Œå†…å®¹ä¸ä¼šè¢«åŽ‹ç¼©ï¼š
 
-+ ÏûÏ¢ÌåµÄ³¤¶ÈÐ¡ÓÚ200¸ö×Ö½Ú¡£
-+ ÏìÓ¦ÒÑ¾­ÉèÖÃÁËContent-EncodingÐ­ÒéÍ·¡£
-+ ÇëÇó£¨ä¯ÀÀÆ÷£©Ã»ÓÐ·¢ËÍ°üº¬gzipµÄAccept-EncodingÐ­ÒéÍ·¡£
++ æ¶ˆæ¯ä½“çš„é•¿åº¦å°äºŽ200ä¸ªå­—èŠ‚ã€‚
++ å“åº”å·²ç»è®¾ç½®äº†Content-Encodingåè®®å¤´ã€‚
++ è¯·æ±‚ï¼ˆæµè§ˆå™¨ï¼‰æ²¡æœ‰å‘é€åŒ…å«gzipçš„Accept-Encodingåè®®å¤´ã€‚
 
-Äã¿ÉÒÔÍ¨¹ýÕâ¸ögzip_page()×°ÊÎÆ÷Ê¹ÓÃ¶ÀÁ¢µÄGZipÑ¹Ëõ¡£
+ä½ å¯ä»¥é€šè¿‡è¿™ä¸ªgzip_page()è£…é¥°å™¨ä½¿ç”¨ç‹¬ç«‹çš„GZipåŽ‹ç¼©ã€‚
 
-### ´øÌõ¼þÅÐ¶ÏµÄGETÖÐ¼ä¼þ ###
+### å¸¦æ¡ä»¶åˆ¤æ–­çš„GETä¸­é—´ä»¶ ###
 
 **class ConditionalGetMiddleware[source]**
 
-´¦Àí´øÓÐÌõ¼þÅÐ¶Ï×´Ì¬GET²Ù×÷¡£ Èç¹ûÒ»¸öÇëÇó°üº¬ ETag »òÕßLast-ModifiedÐ­ÒéÍ·£¬²¢ÇÒÇëÇó°üº¬If-None-Match»òIf-Modified-Since£¬ÕâÊ±ÏìÓ¦»á±» Ìæ»»ÎªHttpResponseNotModified¡£
+å¤„ç†å¸¦æœ‰æ¡ä»¶åˆ¤æ–­çŠ¶æ€GETæ“ä½œã€‚ å¦‚æžœä¸€ä¸ªè¯·æ±‚åŒ…å« ETag æˆ–è€…Last-Modifiedåè®®å¤´ï¼Œå¹¶ä¸”è¯·æ±‚åŒ…å«If-None-Matchæˆ–If-Modified-Sinceï¼Œè¿™æ—¶å“åº”ä¼šè¢« æ›¿æ¢ä¸ºHttpResponseNotModifiedã€‚
 
-ÁíÍâ£¬Ëü»áÉèÖÃDateºÍContent-LengthÏìÓ¦Í·¡£
+å¦å¤–ï¼Œå®ƒä¼šè®¾ç½®Dateå’ŒContent-Lengthå“åº”å¤´ã€‚
 
-### ±¾µØÖÐ¼ä¼þ ###
+### æœ¬åœ°ä¸­é—´ä»¶ ###
 
 **class LocaleMiddleware[source]**
 
-»ùÓÚÇëÇóÖÐµÄÊý¾Ý¿ªÆôÓïÑÔÑ¡Ôñ¡£ Ëü¿ÉÒÔÎªÃ¿¸öÓÃ»§½øÐÐ¶¨ÖÆ¡£ Ïê¼û¹ú¼Ê»¯ÎÄµµ¡£
+åŸºäºŽè¯·æ±‚ä¸­çš„æ•°æ®å¼€å¯è¯­è¨€é€‰æ‹©ã€‚ å®ƒå¯ä»¥ä¸ºæ¯ä¸ªç”¨æˆ·è¿›è¡Œå®šåˆ¶ã€‚ è¯¦è§å›½é™…åŒ–æ–‡æ¡£ã€‚
 
 **LocaleMiddleware.response_redirect_class**
 
-Ä¬ÈÏÎªHttpResponseRedirect¡£¼Ì³Ð×ÔLocaleMiddleware²¢¸²Ð´ÁËÊôÐÔÀ´×Ô¶¨ÒåÖÐ¼ä¼þ·¢³öµÄÖØ¶¨Ïò¡£
+é»˜è®¤ä¸ºHttpResponseRedirectã€‚ç»§æ‰¿è‡ªLocaleMiddlewareå¹¶è¦†å†™äº†å±žæ€§æ¥è‡ªå®šä¹‰ä¸­é—´ä»¶å‘å‡ºçš„é‡å®šå‘ã€‚
 
-### ÏûÏ¢ÖÐ¼ä¼þ ###
+### æ¶ˆæ¯ä¸­é—´ä»¶ ###
 
 **class MessageMiddleware[source]**
 
-¿ªÆô»ùÓÚcookie»ò»á»°µÄÏûÏ¢Ö§³Ö¡£Ïê¼ûÏûÏ¢ÎÄµµ¡£
+å¼€å¯åŸºäºŽcookieæˆ–ä¼šè¯çš„æ¶ˆæ¯æ”¯æŒã€‚è¯¦è§æ¶ˆæ¯æ–‡æ¡£ã€‚
 
-### °²È«ÖÐ¼ä¼þ ###
+### å®‰å…¨ä¸­é—´ä»¶ ###
 
-> ¾¯¸æ
+> è­¦å‘Š
 > 
-> Èç¹ûÄãµÄ²¿Êð»·¾³ÔÊÐíµÄ»°£¬ÈÃÄãµÄÇ°¶Ëweb·þÎñÆ÷Õ¹Ê¾SecurityMiddlewareÌá¹©µÄ¹¦ÄÜÊÇ¸öºÃÖ÷Òâ¡£ÕâÑùÒ»À´£¬Èç¹ûÓÐÈÎºÎÇëÇóÃ»ÓÐ±»Django´¦Àí£¨±ÈÈç¾²Ì¬Ã½Ìå»òÓÃ»§ÉÏ´«µÄÎÄ¼þ£©£¬ËûÃÇ»áÓµÓÐºÍÏòDjangoÓ¦ÓÃµÄÇëÇóÏàÍ¬µÄ±£»¤¡£
+> å¦‚æžœä½ çš„éƒ¨ç½²çŽ¯å¢ƒå…è®¸çš„è¯ï¼Œè®©ä½ çš„å‰ç«¯webæœåŠ¡å™¨å±•ç¤ºSecurityMiddlewareæä¾›çš„åŠŸèƒ½æ˜¯ä¸ªå¥½ä¸»æ„ã€‚è¿™æ ·ä¸€æ¥ï¼Œå¦‚æžœæœ‰ä»»ä½•è¯·æ±‚æ²¡æœ‰è¢«Djangoå¤„ç†ï¼ˆæ¯”å¦‚é™æ€åª’ä½“æˆ–ç”¨æˆ·ä¸Šä¼ çš„æ–‡ä»¶ï¼‰ï¼Œä»–ä»¬ä¼šæ‹¥æœ‰å’Œå‘Djangoåº”ç”¨çš„è¯·æ±‚ç›¸åŒçš„ä¿æŠ¤ã€‚
 
 **class SecurityMiddleware[source]**
 
 ```
-Django 1.8ÖÐÐÂÔö
+Django 1.8ä¸­æ–°å¢ž
 ```
 
-django.middleware.security.SecurityMiddlewareÎªÇëÇó/ÏìÓ¦Ñ­»·Ìá¹©ÁË¼¸ÖÖ°²È«¸Ä½ø¡£Ã¿Ò»ÖÖ¿ÉÒÔÍ¨¹ýÒ»¸öÑ¡Ïî¶ÀÁ¢¿ªÆô»ò¹Ø±Õ¡£
+django.middleware.security.SecurityMiddlewareä¸ºè¯·æ±‚/å“åº”å¾ªçŽ¯æä¾›äº†å‡ ç§å®‰å…¨æ”¹è¿›ã€‚æ¯ä¸€ç§å¯ä»¥é€šè¿‡ä¸€ä¸ªé€‰é¡¹ç‹¬ç«‹å¼€å¯æˆ–å…³é—­ã€‚
 
 + SECURE_BROWSER_XSS_FILTER
 + SECURE_CONTENT_TYPE_NOSNIFF
@@ -115,166 +115,166 @@ django.middleware.security.SecurityMiddlewareÎªÇëÇó/ÏìÓ¦Ñ­»·Ìá¹©ÁË¼¸ÖÖ°²È«¸Ä½ø¡£
 
 ### HTTP Strict Transport Security (HSTS) ###
 
-¶ÔÓÚÄÇÐ©Ó¦¸ÃÖ»ÄÜÍ¨¹ýHTTPS·ÃÎÊµÄÕ¾µã£¬Äã¿ÉÒÔÍ¨¹ýÉèÖÃHSTSÐ­ÒéÍ·£¬Í¨ÖªÏÖ´úµÄä¯ÀÀÆ÷£¬¾Ü¾øÓÃ²»°²È«µÄÁ¬½ÓÀ´Á¬½ÓÄãµÄÓòÃû¡£Õâ»á½µµÍÄãÊÜµ½SSL-strippingµÄÖÐ¼äÈË£¨MITM£©¹¥»÷µÄ·çÏÕ¡£
+å¯¹äºŽé‚£äº›åº”è¯¥åªèƒ½é€šè¿‡HTTPSè®¿é—®çš„ç«™ç‚¹ï¼Œä½ å¯ä»¥é€šè¿‡è®¾ç½®HSTSåè®®å¤´ï¼Œé€šçŸ¥çŽ°ä»£çš„æµè§ˆå™¨ï¼Œæ‹’ç»ç”¨ä¸å®‰å…¨çš„è¿žæŽ¥æ¥è¿žæŽ¥ä½ çš„åŸŸåã€‚è¿™ä¼šé™ä½Žä½ å—åˆ°SSL-strippingçš„ä¸­é—´äººï¼ˆMITMï¼‰æ”»å‡»çš„é£Žé™©ã€‚
 
-Èç¹ûÄã½«SECURE_HSTS_SECONDSÉèÖÃÎªÒ»¸ö·ÇÁãÖµ£¬SecurityMiddleware»áÔÚËùÓÐµÄHTTPSÏìÓ¦ÖÐÉèÖÃÕâ¸öÐ­ÒéÍ·¡£
+å¦‚æžœä½ å°†SECURE_HSTS_SECONDSè®¾ç½®ä¸ºä¸€ä¸ªéžé›¶å€¼ï¼ŒSecurityMiddlewareä¼šåœ¨æ‰€æœ‰çš„HTTPSå“åº”ä¸­è®¾ç½®è¿™ä¸ªåè®®å¤´ã€‚
 
-¿ªÆôHSTSµÄÊ±ºò£¬Ê×ÏÈÊ¹ÓÃÒ»¸öÐ¡µÄÖµÀ´²âÊÔËüÊÇ¸öºÃÖ÷Òâ£¬ÀýÈç£¬ÈÃSECURE_HSTS_SECONDS = 3600ÎªÒ»¸öÐ¡Ê±¡£Ã¿µ±ä¯ÀÀÆ÷ÔÚÄãµÄÕ¾µã¿´µ½HSTSÐ­ÒéÍ·£¬¶¼»áÔÚÌá¹©µÄÊ±¼ä¶ÎÄÚ¾ø¶ÔÊ¹ÓÃ²»°²È«£¨HTTP£©µÄ·½Ê½Á¬½Óµ½ÄãµÄÓòÃû¡£Ò»µ©ÄãÈ·ÈÏÄãÕ¾µãÉÏµÄËùÓÐ¶«Î÷¶¼ÒÔ°²È«µÄ·½Ê½Ìá¹©£¨ÀýÈç£¬HSTS²¢²»»á¸ÉÈÅÈÎºÎÊÂÇé£©£¬½¨ÒéÄãÔö¼ÓÕâ¸öÖµ£¬ÕâÑù²»³£·ÃÎÊÄãÕ¾µãµÄÓÎ¿ÍÒ²»á±»±£»¤£¨±ÈÈç£¬Ò»°ãÉèÖÃÎª31536000Ãë£¬Ò»Äê£©¡£
+å¼€å¯HSTSçš„æ—¶å€™ï¼Œé¦–å…ˆä½¿ç”¨ä¸€ä¸ªå°çš„å€¼æ¥æµ‹è¯•å®ƒæ˜¯ä¸ªå¥½ä¸»æ„ï¼Œä¾‹å¦‚ï¼Œè®©SECURE_HSTS_SECONDS = 3600ä¸ºä¸€ä¸ªå°æ—¶ã€‚æ¯å½“æµè§ˆå™¨åœ¨ä½ çš„ç«™ç‚¹çœ‹åˆ°HSTSåè®®å¤´ï¼Œéƒ½ä¼šåœ¨æä¾›çš„æ—¶é—´æ®µå†…ç»å¯¹ä½¿ç”¨ä¸å®‰å…¨ï¼ˆHTTPï¼‰çš„æ–¹å¼è¿žæŽ¥åˆ°ä½ çš„åŸŸåã€‚ä¸€æ—¦ä½ ç¡®è®¤ä½ ç«™ç‚¹ä¸Šçš„æ‰€æœ‰ä¸œè¥¿éƒ½ä»¥å®‰å…¨çš„æ–¹å¼æä¾›ï¼ˆä¾‹å¦‚ï¼ŒHSTSå¹¶ä¸ä¼šå¹²æ‰°ä»»ä½•äº‹æƒ…ï¼‰ï¼Œå»ºè®®ä½ å¢žåŠ è¿™ä¸ªå€¼ï¼Œè¿™æ ·ä¸å¸¸è®¿é—®ä½ ç«™ç‚¹çš„æ¸¸å®¢ä¹Ÿä¼šè¢«ä¿æŠ¤ï¼ˆæ¯”å¦‚ï¼Œä¸€èˆ¬è®¾ç½®ä¸º31536000ç§’ï¼Œä¸€å¹´ï¼‰ã€‚
 
-ÁíÍâ£¬Èç¹ûÄã½« SECURE_HSTS_INCLUDE_SUBDOMAINSÉèÖÃÎªTrue,£¬SecurityMiddleware»á½«includeSubDomains±êÇ©Ìí¼Óµ½Strict-Transport-SecurityÐ­ÒéÍ·ÖÐ¡£Ç¿ÁÒÍÆ¼öÕâÑù×ö£¨¼ÙÉèËùÓÐ×ÓÓòÍêÈ«Ê¹ÓÃHTTPS£©£¬·ñÔòÄãµÄÕ¾µãÈÔ¾ÉÓÐ¿ÉÄÜÓÉÓÚ×ÓÓòµÄ²»°²È«Á¬½Ó¶øÊÜµ½¹¥»÷¡£
+å¦å¤–ï¼Œå¦‚æžœä½ å°† SECURE_HSTS_INCLUDE_SUBDOMAINSè®¾ç½®ä¸ºTrue,ï¼ŒSecurityMiddlewareä¼šå°†includeSubDomainsæ ‡ç­¾æ·»åŠ åˆ°Strict-Transport-Securityåè®®å¤´ä¸­ã€‚å¼ºçƒˆæŽ¨èè¿™æ ·åšï¼ˆå‡è®¾æ‰€æœ‰å­åŸŸå®Œå…¨ä½¿ç”¨HTTPSï¼‰ï¼Œå¦åˆ™ä½ çš„ç«™ç‚¹ä»æ—§æœ‰å¯èƒ½ç”±äºŽå­åŸŸçš„ä¸å®‰å…¨è¿žæŽ¥è€Œå—åˆ°æ”»å‡»ã€‚
 
-> ¾¯¸æ
+> è­¦å‘Š
 > 
-> HSTS²ßÂÔÔÚÄãµÄÕû¸öÓòÖÐ¶¼±»Ó¦ÓÃ£¬²»½ö½öÊÇÄãËùÉèÖÃÐ­ÒéÍ·µÄÏìÓ¦ÖÐµÄurl¡£ËùÒÔ£¬Èç¹ûÄãµÄÕû¸öÓò¶¼ÉèÖÃÎªHTTPS only£¬ÄãÓ¦¸ÃÖ»Ê¹ÓÃHSTS²ßÂÔ¡£
+> HSTSç­–ç•¥åœ¨ä½ çš„æ•´ä¸ªåŸŸä¸­éƒ½è¢«åº”ç”¨ï¼Œä¸ä»…ä»…æ˜¯ä½ æ‰€è®¾ç½®åè®®å¤´çš„å“åº”ä¸­çš„urlã€‚æ‰€ä»¥ï¼Œå¦‚æžœä½ çš„æ•´ä¸ªåŸŸéƒ½è®¾ç½®ä¸ºHTTPS onlyï¼Œä½ åº”è¯¥åªä½¿ç”¨HSTSç­–ç•¥ã€‚
 > 
-> ÊÊµ±×ñÑ­HSTSÐ­ÒéÍ·µÄä¯ÀÀÆ÷£¬»áÍ¨¹ýÏÔÊ¾¾¯¸æµÄ·½Ê½£¬¾Ü¾øÈÃÓÃ»§Á¬½Óµ½Ö¤Êé¹ýÆÚµÄ¡¢×ÔÐÐÇ©ÊðµÄ¡¢»òÕßÆäËûSSLÖ¤ÊéÎÞÐ§µÄÕ¾µã¡£Èç¹ûÄãÊ¹ÓÃÁËHSTS£¬È·±£ÄãµÄÖ¤Êé´¦ÓÚÒ»Ö±ÓÐÐ§µÄ×´Ì¬£¡
+> é€‚å½“éµå¾ªHSTSåè®®å¤´çš„æµè§ˆå™¨ï¼Œä¼šé€šè¿‡æ˜¾ç¤ºè­¦å‘Šçš„æ–¹å¼ï¼Œæ‹’ç»è®©ç”¨æˆ·è¿žæŽ¥åˆ°è¯ä¹¦è¿‡æœŸçš„ã€è‡ªè¡Œç­¾ç½²çš„ã€æˆ–è€…å…¶ä»–SSLè¯ä¹¦æ— æ•ˆçš„ç«™ç‚¹ã€‚å¦‚æžœä½ ä½¿ç”¨äº†HSTSï¼Œç¡®ä¿ä½ çš„è¯ä¹¦å¤„äºŽä¸€ç›´æœ‰æ•ˆçš„çŠ¶æ€ï¼
 
-> ×¢Òâ
+> æ³¨æ„
 > 
-> Èç¹ûÄãµÄÕ¾µã²¿ÊðÔÚ¸ºÔØ¾ùºâÆ÷»òÕß·´Ïò´úÀíÖ®ºó£¬²¢ÇÒStrict-Transport-SecurityÐ­ÒéÍ·Ã»ÓÐÌí¼Óµ½ÄãµÄÏìÓ¦ÖÐ£¬Ô­ÒòÊÇDjangoÓÐ¿ÉÄÜÒâÊ¶²»µ½ÕâÊÇÒ»¸ö°²È«Á¬½Ó¡£Äã¿ÉÄÜÐèÒªÉèÖÃSECURE_PROXY_SSL_HEADER¡£
+> å¦‚æžœä½ çš„ç«™ç‚¹éƒ¨ç½²åœ¨è´Ÿè½½å‡è¡¡å™¨æˆ–è€…åå‘ä»£ç†ä¹‹åŽï¼Œå¹¶ä¸”Strict-Transport-Securityåè®®å¤´æ²¡æœ‰æ·»åŠ åˆ°ä½ çš„å“åº”ä¸­ï¼ŒåŽŸå› æ˜¯Djangoæœ‰å¯èƒ½æ„è¯†ä¸åˆ°è¿™æ˜¯ä¸€ä¸ªå®‰å…¨è¿žæŽ¥ã€‚ä½ å¯èƒ½éœ€è¦è®¾ç½®SECURE_PROXY_SSL_HEADERã€‚
 
 ### X-Content-Type-Options: nosniff ###
 
-Ò»Ð©ä¯ÀÀÆ÷»á³¢ÊÔ²Â²âËûÃÇËùµÃÄÚÈÝµÄÀàÐÍ£¬¶ø²»ÊÇ¶ÁÈ¡Content-TypeÐ­ÒéÍ·¡£ËäÈ»ÕâÑùÓÐÖúÓÚÅäÖÃ²»µ±µÄ·þÎñÆ÷Õý³£ÏÔÊ¾ÄÚÈÝ£¬µ«Ò²»áµ¼ÖÂ°²È«ÎÊÌâ¡£
+ä¸€äº›æµè§ˆå™¨ä¼šå°è¯•çŒœæµ‹ä»–ä»¬æ‰€å¾—å†…å®¹çš„ç±»åž‹ï¼Œè€Œä¸æ˜¯è¯»å–Content-Typeåè®®å¤´ã€‚è™½ç„¶è¿™æ ·æœ‰åŠ©äºŽé…ç½®ä¸å½“çš„æœåŠ¡å™¨æ­£å¸¸æ˜¾ç¤ºå†…å®¹ï¼Œä½†ä¹Ÿä¼šå¯¼è‡´å®‰å…¨é—®é¢˜ã€‚
 
-Èç¹ûÄãµÄÕ¾µãÔÊÐíÓÃ»§ÉÏ´«ÎÄ¼þ£¬Ò»Ð©¶ñÒâµÄÓÃ»§¿ÉÄÜ»áÉÏ´«Ò»¸ö¾«ÐÄ¹¹ÔìµÄÎÄ¼þ£¬µ±Äã¾õµÃËüÎÞº¦µÄÊ±ºò£¬ÎÄ¼þ»á±»ä¯ÀÀÆ÷½âÊÍ³ÉHTML»òÕßJavascript¡£
+å¦‚æžœä½ çš„ç«™ç‚¹å…è®¸ç”¨æˆ·ä¸Šä¼ æ–‡ä»¶ï¼Œä¸€äº›æ¶æ„çš„ç”¨æˆ·å¯èƒ½ä¼šä¸Šä¼ ä¸€ä¸ªç²¾å¿ƒæž„é€ çš„æ–‡ä»¶ï¼Œå½“ä½ è§‰å¾—å®ƒæ— å®³çš„æ—¶å€™ï¼Œæ–‡ä»¶ä¼šè¢«æµè§ˆå™¨è§£é‡ŠæˆHTMLæˆ–è€…Javascriptã€‚
 
-ÓûÖª¸ü¶àÓÐ¹ØÕâ¸öÐ­ÒéÍ·ºÍä¯ÀÀÆ÷ÈçºÎ´¦ÀíËüµÄÄÚÈÝ£¬Äã¿ÉÒÔÔÚIE°²È«²©¿ÍÖÐ¶Áµ½Ëü¡£
+æ¬²çŸ¥æ›´å¤šæœ‰å…³è¿™ä¸ªåè®®å¤´å’Œæµè§ˆå™¨å¦‚ä½•å¤„ç†å®ƒçš„å†…å®¹ï¼Œä½ å¯ä»¥åœ¨IEå®‰å…¨åšå®¢ä¸­è¯»åˆ°å®ƒã€‚
 
-Òª·ÀÖ¹ä¯ÀÀÆ÷²Â²âÄÚÈÝÀàÐÍ£¬²¢ÇÒÇ¿ÖÆËüÒ»Ö±Ê¹ÓÃ Content-TypeÐ­ÒéÍ·ÖÐÌá¹©µÄÀàÐÍ£¬Äã¿ÉÒÔ´«µÝX-Content-Type-Options: nosniffÐ­ÒéÍ·¡£SecurityMiddleware½«»á¶ÔËùÓÐÏìÓ¦ÕâÑù×ö£¬Èç¹ûSECURE_CONTENT_TYPE_NOSNIFF ÉèÖÃÎªTrue¡£
+è¦é˜²æ­¢æµè§ˆå™¨çŒœæµ‹å†…å®¹ç±»åž‹ï¼Œå¹¶ä¸”å¼ºåˆ¶å®ƒä¸€ç›´ä½¿ç”¨ Content-Typeåè®®å¤´ä¸­æä¾›çš„ç±»åž‹ï¼Œä½ å¯ä»¥ä¼ é€’X-Content-Type-Options: nosniffåè®®å¤´ã€‚SecurityMiddlewareå°†ä¼šå¯¹æ‰€æœ‰å“åº”è¿™æ ·åšï¼Œå¦‚æžœSECURE_CONTENT_TYPE_NOSNIFF è®¾ç½®ä¸ºTrueã€‚
 
-×¢ÒâÔÚ´ó¶àÊýDjango²»Éæ¼°´¦ÀíÉÏ´«ÎÄ¼þµÄ²¿Êð»·¾³ÖÐ£¬Õâ¸öÉèÖÃ²»»áÓÐÈÎºÎ°ïÖú¡£ÀýÈç£¬Èç¹ûÄãµÄMEDIA_URL±»Ç°¶Ëweb·þÎñÆ÷Ö±½Ó´¦Àí£¨ÀýÈçnginxºÍApache£©£¬Äã¿ÉÄÜÏëÒªÔÚÄÇÀïÉèÖÃÕâ¸öÐ­ÒéÍ·¡£¶øÔÚÁíÒ»·½Ãæ£¬Èç¹ûÄãÊ¹ÓÃDjangoÖ´ÐÐÎªÁËÏÂÔØÎÄ¼þ¶øÇëÇóÊÚÈ¨Ö®ÀàµÄÊÂÇé£¬²¢ÇÒÄã²»ÄÜÊ¹ÓÃÄãµÄweb·þÎñÆ÷ÉèÖÃÐ­ÒéÍ·£¬Õâ¸öÉèÖÃ»áºÜÓÐÓÃ¡£
+æ³¨æ„åœ¨å¤§å¤šæ•°Djangoä¸æ¶‰åŠå¤„ç†ä¸Šä¼ æ–‡ä»¶çš„éƒ¨ç½²çŽ¯å¢ƒä¸­ï¼Œè¿™ä¸ªè®¾ç½®ä¸ä¼šæœ‰ä»»ä½•å¸®åŠ©ã€‚ä¾‹å¦‚ï¼Œå¦‚æžœä½ çš„MEDIA_URLè¢«å‰ç«¯webæœåŠ¡å™¨ç›´æŽ¥å¤„ç†ï¼ˆä¾‹å¦‚nginxå’ŒApacheï¼‰ï¼Œä½ å¯èƒ½æƒ³è¦åœ¨é‚£é‡Œè®¾ç½®è¿™ä¸ªåè®®å¤´ã€‚è€Œåœ¨å¦ä¸€æ–¹é¢ï¼Œå¦‚æžœä½ ä½¿ç”¨Djangoæ‰§è¡Œä¸ºäº†ä¸‹è½½æ–‡ä»¶è€Œè¯·æ±‚æŽˆæƒä¹‹ç±»çš„äº‹æƒ…ï¼Œå¹¶ä¸”ä½ ä¸èƒ½ä½¿ç”¨ä½ çš„webæœåŠ¡å™¨è®¾ç½®åè®®å¤´ï¼Œè¿™ä¸ªè®¾ç½®ä¼šå¾ˆæœ‰ç”¨ã€‚
 
 ### X-XSS-Protection: 1; mode=block ###
 
-Ò»Ð©ä¯ÀÀÆ÷ÄÜ¹»ÆÁ±Îµô³öÏÖXSS¹¥»÷µÄÄÚÈÝ¡£Í¨¹ýÑ°ÕÒÒ³ÃæÖÐGET»òÕßPOST²ÎÊýÖÐµÄJavaScriptÄÚÈÝÀ´ÊµÏÖ¡£Èç¹ûJavaScriptÔÚ·þÎñÆ÷µÄÏìÓ¦ÖÐ±»ÖØ·Å£¬Ò³Ãæ¾Í»áÍ£Ö¹äÖÈ¾£¬²¢Õ¹Ê¾Ò»¸ö´íÎóÒ³À´È¡´ú¡£
+ä¸€äº›æµè§ˆå™¨èƒ½å¤Ÿå±è”½æŽ‰å‡ºçŽ°XSSæ”»å‡»çš„å†…å®¹ã€‚é€šè¿‡å¯»æ‰¾é¡µé¢ä¸­GETæˆ–è€…POSTå‚æ•°ä¸­çš„JavaScriptå†…å®¹æ¥å®žçŽ°ã€‚å¦‚æžœJavaScriptåœ¨æœåŠ¡å™¨çš„å“åº”ä¸­è¢«é‡æ”¾ï¼Œé¡µé¢å°±ä¼šåœæ­¢æ¸²æŸ“ï¼Œå¹¶å±•ç¤ºä¸€ä¸ªé”™è¯¯é¡µæ¥å–ä»£ã€‚
 
-X-XSS-ProtectionÐ­ÒéÍ·ÓÃÀ´¿ØÖÆXSS¹ýÂËÆ÷µÄ²Ù×÷¡£
+X-XSS-Protectionåè®®å¤´ç”¨æ¥æŽ§åˆ¶XSSè¿‡æ»¤å™¨çš„æ“ä½œã€‚
 
-ÒªÔÚä¯ÀÀÆ÷ÖÐÆôÓÃXSS¹ýÂËÆ÷£¬²¢ÇÒÇ¿ÖÆËüÒ»Ö±ÆÁ±Î¿ÉÒÉµÄXSS¹¥»÷£¬Äã¿ÉÒÔÔÚÐ­ÒéÍ·ÖÐ´«µÝX-XSS-Protection: 1; mode=block¡£  Èç¹ûSECURE_BROWSER_XSS_FILTERÉèÖÃÎªTrue£¬SecurityMiddleware»áÔÚËùÓÐÏìÓ¦ÖÐÕâÑù×ö¡£
+è¦åœ¨æµè§ˆå™¨ä¸­å¯ç”¨XSSè¿‡æ»¤å™¨ï¼Œå¹¶ä¸”å¼ºåˆ¶å®ƒä¸€ç›´å±è”½å¯ç–‘çš„XSSæ”»å‡»ï¼Œä½ å¯ä»¥åœ¨åè®®å¤´ä¸­ä¼ é€’X-XSS-Protection: 1; mode=blockã€‚  å¦‚æžœSECURE_BROWSER_XSS_FILTERè®¾ç½®ä¸ºTrueï¼ŒSecurityMiddlewareä¼šåœ¨æ‰€æœ‰å“åº”ä¸­è¿™æ ·åšã€‚
 
-> ¾¯¸æ
+> è­¦å‘Š
 > 
-> ä¯ÀÀÆ÷µÄXSS¹ýÂËÆ÷ÊÇÒ»¸öÊ®·ÖÓÐÐ§µÄÊÖ¶Î£¬µ«ÊÇ²»Òª¹ý¶ÈÒÀÀµËü¡£Ëü²¢²»ÄÜ¼ì²âµ½ËùÓÐµÄXSS¹¥»÷£¬Ò²²»ÊÇËùÓÐä¯ÀÀÆ÷¶¼Ö§³ÖÕâÒ»Ð­ÒéÍ·¡£È·±£ÄãÐ£ÑéºÍ¹ýÂËÁËËùÓÐµÄÊäÈëÀ´·ÀÖ¹XSS¹¥»÷¡£
+> æµè§ˆå™¨çš„XSSè¿‡æ»¤å™¨æ˜¯ä¸€ä¸ªååˆ†æœ‰æ•ˆçš„æ‰‹æ®µï¼Œä½†æ˜¯ä¸è¦è¿‡åº¦ä¾èµ–å®ƒã€‚å®ƒå¹¶ä¸èƒ½æ£€æµ‹åˆ°æ‰€æœ‰çš„XSSæ”»å‡»ï¼Œä¹Ÿä¸æ˜¯æ‰€æœ‰æµè§ˆå™¨éƒ½æ”¯æŒè¿™ä¸€åè®®å¤´ã€‚ç¡®ä¿ä½ æ ¡éªŒå’Œè¿‡æ»¤äº†æ‰€æœ‰çš„è¾“å…¥æ¥é˜²æ­¢XSSæ”»å‡»ã€‚
 
-### SSLÖØ¶¨Ïò ###
+### SSLé‡å®šå‘ ###
 
-Èç¹ûÄãÍ¬Ê±Ìá¹©HTTPºÍHTTPSÁ¬½Ó£¬´ó¶àÊýÓÃ»§»áÄ¬ÈÏÊ¹ÓÃ²»°²È«µÄ£¨HTTP£©Á´½Ó¡£ÎªÁË¸ü¸ßµÄ°²È«ÐÔ£¬ÄãÓ¦¸Ã½²ËùÓÐHTTPÁ¬½ÓÖØ¶¨Ïòµ½HTTPÁ¬½Ó¡£
+å¦‚æžœä½ åŒæ—¶æä¾›HTTPå’ŒHTTPSè¿žæŽ¥ï¼Œå¤§å¤šæ•°ç”¨æˆ·ä¼šé»˜è®¤ä½¿ç”¨ä¸å®‰å…¨çš„ï¼ˆHTTPï¼‰é“¾æŽ¥ã€‚ä¸ºäº†æ›´é«˜çš„å®‰å…¨æ€§ï¼Œä½ åº”è¯¥è®²æ‰€æœ‰HTTPè¿žæŽ¥é‡å®šå‘åˆ°HTTPè¿žæŽ¥ã€‚
 
-Èç¹ûÄã½«SECURE_SSL_REDIRECTÉèÖÃÎªTrue£¬SecurityMiddleware»á½«HTTPÁ´½ÓÓÀ¾ÃµØ£¨HTTP 301£¬permanently£©ÖØ¶¨Ïòµ½HTTPSÁ¬½Ó¡£
+å¦‚æžœä½ å°†SECURE_SSL_REDIRECTè®¾ç½®ä¸ºTrueï¼ŒSecurityMiddlewareä¼šå°†HTTPé“¾æŽ¥æ°¸ä¹…åœ°ï¼ˆHTTP 301ï¼Œpermanentlyï¼‰é‡å®šå‘åˆ°HTTPSè¿žæŽ¥ã€‚
 
-> ×¢Òâ
+> æ³¨æ„
 > 
-> ÓÉÓÚÐÔÄÜÒòËØ£¬×îºÃÔÚDjangoÍâÃæÖ´ÐÐÕâÐ©ÖØ¶¨Ïò£¬ÔÚnginxÕâÖÖÇ°¶Ë¸ºÔØ¾ùºâÆ÷»òÕß·´Ïò´úÀí·þÎñÆ÷ÖÐÖ´ÐÐ¡£SECURE_SSL_REDIRECT×¨ÃÅÎªÕâÖÖ²¿ÊðÇé¿ö¶øÉè¼Æ£¬µ±Õâ²»¿ÉÑ¡ÔñµÄÊ±ºò¡£
+> ç”±äºŽæ€§èƒ½å› ç´ ï¼Œæœ€å¥½åœ¨Djangoå¤–é¢æ‰§è¡Œè¿™äº›é‡å®šå‘ï¼Œåœ¨nginxè¿™ç§å‰ç«¯è´Ÿè½½å‡è¡¡å™¨æˆ–è€…åå‘ä»£ç†æœåŠ¡å™¨ä¸­æ‰§è¡Œã€‚SECURE_SSL_REDIRECTä¸“é—¨ä¸ºè¿™ç§éƒ¨ç½²æƒ…å†µè€Œè®¾è®¡ï¼Œå½“è¿™ä¸å¯é€‰æ‹©çš„æ—¶å€™ã€‚
 
-Èç¹ûSECURE_SSL_HOSTÉèÖÃÓÐÒ»¸öÖµ£¬ËùÓÐÖØ¶¨Ïò¶¼»á·¢µ½ÖµÖÐµÄÖ÷»ú£¬¶ø²»ÊÇÔ­Ê¼µÄÇëÇóÖ÷»ú¡£
+å¦‚æžœSECURE_SSL_HOSTè®¾ç½®æœ‰ä¸€ä¸ªå€¼ï¼Œæ‰€æœ‰é‡å®šå‘éƒ½ä¼šå‘åˆ°å€¼ä¸­çš„ä¸»æœºï¼Œè€Œä¸æ˜¯åŽŸå§‹çš„è¯·æ±‚ä¸»æœºã€‚
 
-Èç¹ûÄãÕ¾µãÉÏµÄÒ»Ð©Ò³ÃæÓ¦¸ÃÒÔHTTP·½Ê½Ìá¹©£¬²¢ÇÒ²»ÐèÒªÖØ¶¨Ïòµ½HTTPS£¬Äã¿ÉÒÔSECURE_REDIRECT_EXEMPTÉèÖÃÖÐÁÐ³öÆ¥ÅäÄÇÐ©urlµÄÕýÔò±í´ïÊ½¡£
+å¦‚æžœä½ ç«™ç‚¹ä¸Šçš„ä¸€äº›é¡µé¢åº”è¯¥ä»¥HTTPæ–¹å¼æä¾›ï¼Œå¹¶ä¸”ä¸éœ€è¦é‡å®šå‘åˆ°HTTPSï¼Œä½ å¯ä»¥SECURE_REDIRECT_EXEMPTè®¾ç½®ä¸­åˆ—å‡ºåŒ¹é…é‚£äº›urlçš„æ­£åˆ™è¡¨è¾¾å¼ã€‚
 
-> ×¢Òâ
+> æ³¨æ„
 > 
-> Èç¹ûÄãÔÚ¸ºÔØ¾ùºâÆ÷»òÕß·´Ïò´úÀí·þÎñÆ÷ºóÃæ²¿ÊðÓ¦ÓÃ£¬¶øÇÒDjango²»ÄÜ±æ±ð³öÊ²Ã´Ê±ºòÒ»¸öÇëÇóÊÇ°²È«µÄ£¬Äã¿ÉÄÜÐèÒªÉèÖÃSECURE_PROXY_SSL_HEADER¡£
+> å¦‚æžœä½ åœ¨è´Ÿè½½å‡è¡¡å™¨æˆ–è€…åå‘ä»£ç†æœåŠ¡å™¨åŽé¢éƒ¨ç½²åº”ç”¨ï¼Œè€Œä¸”Djangoä¸èƒ½è¾¨åˆ«å‡ºä»€ä¹ˆæ—¶å€™ä¸€ä¸ªè¯·æ±‚æ˜¯å®‰å…¨çš„ï¼Œä½ å¯èƒ½éœ€è¦è®¾ç½®SECURE_PROXY_SSL_HEADERã€‚
 
-### »á»°ÖÐ¼ä¼þ ###
+### ä¼šè¯ä¸­é—´ä»¶ ###
 
 **class SessionMiddleware[source]**
 
-¿ªÆô»á»°Ö§³Ö¡£Ïê¼û»á»°ÎÄµµ¡£
+å¼€å¯ä¼šè¯æ”¯æŒã€‚è¯¦è§ä¼šè¯æ–‡æ¡£ã€‚
 
-### Õ¾µãÖÐ¼ä¼þ ###
+### ç«™ç‚¹ä¸­é—´ä»¶ ###
 
 **class CurrentSiteMiddleware[source]**
 
 ```
-Django 1.7ÖÐÐÂÔö
+Django 1.7ä¸­æ–°å¢ž
 ```
 
-ÏòÃ¿¸ö½ÓÊÕµ½µÄHttpRequest¶ÔÏóÌí¼ÓÒ»¸ösiteÊôÐÔ£¬±íÊ¾µ±Ç°µÄÕ¾µã¡£Ïê¼ûÕ¾µãÎÄµµ¡£
+å‘æ¯ä¸ªæŽ¥æ”¶åˆ°çš„HttpRequestå¯¹è±¡æ·»åŠ ä¸€ä¸ªsiteå±žæ€§ï¼Œè¡¨ç¤ºå½“å‰çš„ç«™ç‚¹ã€‚è¯¦è§ç«™ç‚¹æ–‡æ¡£ã€‚
 
-### ÈÏÖ¤ÖÐ¼ä¼þ ###
+### è®¤è¯ä¸­é—´ä»¶ ###
 
 **class AuthenticationMiddleware[source]**
 
-ÏòÃ¿¸ö½ÓÊÕµ½µÄHttpRequest¶ÔÏóÌí¼ÓuserÊôÐÔ£¬±íÊ¾µ±Ç°µÇÂ¼µÄÓÃ»§¡£Ïê¼ûwebÇëÇóÖÐµÄÈÏÖ¤¡£
+å‘æ¯ä¸ªæŽ¥æ”¶åˆ°çš„HttpRequestå¯¹è±¡æ·»åŠ userå±žæ€§ï¼Œè¡¨ç¤ºå½“å‰ç™»å½•çš„ç”¨æˆ·ã€‚è¯¦è§webè¯·æ±‚ä¸­çš„è®¤è¯ã€‚
 
 **class RemoteUserMiddleware[source]**
 
-Ê¹ÓÃweb·þÎñÆ÷Ìá¹©ÈÏÖ¤µÄÖÐ¼ä¼þ¡£Ïê¼ûÊ¹ÓÃREMOTE_USER½øÐÐÈÏÖ¤¡£
+ä½¿ç”¨webæœåŠ¡å™¨æä¾›è®¤è¯çš„ä¸­é—´ä»¶ã€‚è¯¦è§ä½¿ç”¨REMOTE_USERè¿›è¡Œè®¤è¯ã€‚
 
 **class SessionAuthenticationMiddleware[source]**
 
 ```
-Django 1.7ÖÐÐÂÔö
+Django 1.7ä¸­æ–°å¢ž
 ```
 
-µ±ÓÃ»§ÐÞ¸ÄÃÜÂëµÄÊ±ºòÊ¹ÓÃ»§µÄ»á»°Ê§Ð§¡£Ïê¼ûÃÜÂë¸ü¸ÄÊ±µÄ»á»°Ê§Ð§¡£ÔÚMIDDLEWARE_CLASSESÖÐ£¬Õâ¸öÖÐ¼ä¼þ±ØÐë³öÏÖÔÚdjango.contrib.auth.middleware.AuthenticationMiddlewareÖ®ºó¡£
+å½“ç”¨æˆ·ä¿®æ”¹å¯†ç çš„æ—¶å€™ä½¿ç”¨æˆ·çš„ä¼šè¯å¤±æ•ˆã€‚è¯¦è§å¯†ç æ›´æ”¹æ—¶çš„ä¼šè¯å¤±æ•ˆã€‚åœ¨MIDDLEWARE_CLASSESä¸­ï¼Œè¿™ä¸ªä¸­é—´ä»¶å¿…é¡»å‡ºçŽ°åœ¨django.contrib.auth.middleware.AuthenticationMiddlewareä¹‹åŽã€‚
 
-### CSRF±£»¤ÖÐ¼ä¼þ ###
+### CSRFä¿æŠ¤ä¸­é—´ä»¶ ###
 
 **class CsrfViewMiddleware[source]**
 
-Ìí¼Ó¿çÕ¾µãÇëÇóÎ±ÔìµÄ±£»¤£¬Í¨¹ýÏòPOST±íµ¥Ìí¼ÓÒ»¸öÒþ²ØµÄ±íµ¥×Ö¶Î£¬²¢¼ì²éÇëÇóÖÐÊÇ·ñÓÐÕýÈ·µÄÖµ¡£Ïê¼ûCSRF±£»¤ÎÄµµ¡£
+æ·»åŠ è·¨ç«™ç‚¹è¯·æ±‚ä¼ªé€ çš„ä¿æŠ¤ï¼Œé€šè¿‡å‘POSTè¡¨å•æ·»åŠ ä¸€ä¸ªéšè—çš„è¡¨å•å­—æ®µï¼Œå¹¶æ£€æŸ¥è¯·æ±‚ä¸­æ˜¯å¦æœ‰æ­£ç¡®çš„å€¼ã€‚è¯¦è§CSRFä¿æŠ¤æ–‡æ¡£ã€‚
 
-### X-Frame-OptionsÖÐ¼ä¼þ ###
+### X-Frame-Optionsä¸­é—´ä»¶ ###
 
 **class XFrameOptionsMiddleware[source]**
 
-Í¨¹ýX-Frame-OptionsÐ­ÒéÍ·½øÐÐ¼òµ¥µÄµã»÷½Ù³Ö±£»¤¡£
+é€šè¿‡X-Frame-Optionsåè®®å¤´è¿›è¡Œç®€å•çš„ç‚¹å‡»åŠ«æŒä¿æŠ¤ã€‚
 
-## ÖÐ¼ä¼þµÄÅÅÐò ##
+## ä¸­é—´ä»¶çš„æŽ’åº ##
 
-ÏÂÃæÊÇÒ»Ð©¹ØÓÚDjangoÖÐ¼ä¼þÅÅÐòµÄÌáÊ¾¡£
+ä¸‹é¢æ˜¯ä¸€äº›å…³äºŽDjangoä¸­é—´ä»¶æŽ’åºçš„æç¤ºã€‚
 
 **UpdateCacheMiddleware**
 
-·ÅÔÚÐÞ¸Ä´óÁ¿Ð­ÒéÍ·µÄÖÐ¼ä¼þ(SessionMiddleware, GZipMiddleware, LocaleMiddleware)Ö®Ç°¡£
+æ”¾åœ¨ä¿®æ”¹å¤§é‡åè®®å¤´çš„ä¸­é—´ä»¶(SessionMiddleware, GZipMiddleware, LocaleMiddleware)ä¹‹å‰ã€‚
 
 **GZipMiddleware**
 
-·ÅÔÚÈÎºÎ¿ÉÄÜÐÞ¸Ä»òÊ¹ÓÃÏìÓ¦ÏûÏ¢ÌåµÄÖÐ¼ä¼þÖ®Ç°¡£
+æ”¾åœ¨ä»»ä½•å¯èƒ½ä¿®æ”¹æˆ–ä½¿ç”¨å“åº”æ¶ˆæ¯ä½“çš„ä¸­é—´ä»¶ä¹‹å‰ã€‚
 
-·ÅÔÚUpdateCacheMiddlewareÖ®ºó£º»áÐÞ¸Ä´óÁ¿µÄÐ­ÒéÍ·¡£
+æ”¾åœ¨UpdateCacheMiddlewareä¹‹åŽï¼šä¼šä¿®æ”¹å¤§é‡çš„åè®®å¤´ã€‚
 
 **ConditionalGetMiddleware**
 
-·ÅÔÚCommonMiddlewareÖ®Ç°£ºµ±USE_ETAGS = TrueÊ±»áÊ¹ÓÃËüµÄEtag Ð­ÒéÍ·¡£
+æ”¾åœ¨CommonMiddlewareä¹‹å‰ï¼šå½“USE_ETAGS = Trueæ—¶ä¼šä½¿ç”¨å®ƒçš„Etag åè®®å¤´ã€‚
 
 **SessionMiddleware**
 
-·ÅÔÚUpdateCacheMiddlewareÖ®ºó£º»áÐÞ¸Ä ´óÁ¿Ð­ÒéÍ·¡£
+æ”¾åœ¨UpdateCacheMiddlewareä¹‹åŽï¼šä¼šä¿®æ”¹ å¤§é‡åè®®å¤´ã€‚
 
 **LocaleMiddleware**
 
-·ÅÔÚSessionMiddleware£¨ÓÉÓÚÊ¹ÓÃ»á»°Êý¾Ý£©ºÍ CacheMiddleware£¨ÓÉÓÚÒªÐÞ¸Ä´óÁ¿Ð­ÒéÍ·£©Ö®ºóµÄ×îÉÏÃæ¡£
+æ”¾åœ¨SessionMiddlewareï¼ˆç”±äºŽä½¿ç”¨ä¼šè¯æ•°æ®ï¼‰å’Œ CacheMiddlewareï¼ˆç”±äºŽè¦ä¿®æ”¹å¤§é‡åè®®å¤´ï¼‰ä¹‹åŽçš„æœ€ä¸Šé¢ã€‚
 
 **CommonMiddleware**
 
-·ÅÔÚÈÎºÎ¿ÉÄÜÐÞ¸ÄÏàÓ¦µÄÖÐ¼ä¼þÖ®Ç°£¨ÒòÎªËü»áÉú³ÉETags£©¡£
+æ”¾åœ¨ä»»ä½•å¯èƒ½ä¿®æ”¹ç›¸åº”çš„ä¸­é—´ä»¶ä¹‹å‰ï¼ˆå› ä¸ºå®ƒä¼šç”ŸæˆETagsï¼‰ã€‚
 
-ÔÚGZipMiddlewareÖ®ºó£¬²»»áÔÚÑ¹ËõºóµÄÄÚÈÝÉÏÔÙÈ¥Éú³ÉETag¡£
+åœ¨GZipMiddlewareä¹‹åŽï¼Œä¸ä¼šåœ¨åŽ‹ç¼©åŽçš„å†…å®¹ä¸Šå†åŽ»ç”ŸæˆETagã€‚
 
-¾¡¿ÉÄÜ·ÅÔÚ¿¿ÉÏÃæµÄÎ»ÖÃ£¬ÒòÎªAPPEND_SLASH»òÕßPREPEND_WWWÉèÖÃÎª TrueÊ±»á±»ÖØ¶¨Ïò¡£
+å°½å¯èƒ½æ”¾åœ¨é ä¸Šé¢çš„ä½ç½®ï¼Œå› ä¸ºAPPEND_SLASHæˆ–è€…PREPEND_WWWè®¾ç½®ä¸º Trueæ—¶ä¼šè¢«é‡å®šå‘ã€‚
 
 **CsrfViewMiddleware**
 
-·ÅÔÚÈÎºÎ¼ÙÉèCSRF¹¥»÷±»´¦ÀíµÄÊÓÍ¼ÖÐ¼ä¼þÖ®Ç°¡£
+æ”¾åœ¨ä»»ä½•å‡è®¾CSRFæ”»å‡»è¢«å¤„ç†çš„è§†å›¾ä¸­é—´ä»¶ä¹‹å‰ã€‚
 
 **AuthenticationMiddleware**
 
-·ÅÔÚSessionMiddlewareÖ®ºó£ºÒòÎªËüÊ¹ÓÃ»á»°´æ´¢¡£
+æ”¾åœ¨SessionMiddlewareä¹‹åŽï¼šå› ä¸ºå®ƒä½¿ç”¨ä¼šè¯å­˜å‚¨ã€‚
 
 **MessageMiddleware**
 
-·ÅÔÚSessionMiddlewareÖ®ºó£º»áÊ¹ÓÃ»ùÓÚ»á»°µÄ´æ´¢¡£
+æ”¾åœ¨SessionMiddlewareä¹‹åŽï¼šä¼šä½¿ç”¨åŸºäºŽä¼šè¯çš„å­˜å‚¨ã€‚
 
 **FetchFromCacheMiddleware**
 
-·ÅÔÚÈÎºÎÐÞ¸Ä´óÁ¿Ð­ÒéÍ·µÄÖÐ¼ä¼þÖ®ºó£ºÐ­ÒéÍ·±»ÓÃÀ´´Ó»º´æµÄ¹þÏ£±íÖÐ»ñÈ¡Öµ¡£
+æ”¾åœ¨ä»»ä½•ä¿®æ”¹å¤§é‡åè®®å¤´çš„ä¸­é—´ä»¶ä¹‹åŽï¼šåè®®å¤´è¢«ç”¨æ¥ä»Žç¼“å­˜çš„å“ˆå¸Œè¡¨ä¸­èŽ·å–å€¼ã€‚
 
 **FlatpageFallbackMiddleware**
 
-Ó¦¸Ã·ÅÔÚ×îµ×ÏÂ£¬ÒòÎªËûÊÇÖÐ¼ä¼þÖÐµÄµ×ÅÆ¡£
+åº”è¯¥æ”¾åœ¨æœ€åº•ä¸‹ï¼Œå› ä¸ºä»–æ˜¯ä¸­é—´ä»¶ä¸­çš„åº•ç‰Œã€‚
 
 **RedirectFallbackMiddleware**
 
-Ó¦¸Ã·ÅÔÚ×îµ×ÏÂ£¬ÒòÎªËûÊÇÖÐ¼ä¼þÖÐµÄµ×ÅÆ¡£
+åº”è¯¥æ”¾åœ¨æœ€åº•ä¸‹ï¼Œå› ä¸ºä»–æ˜¯ä¸­é—´ä»¶ä¸­çš„åº•ç‰Œã€‚

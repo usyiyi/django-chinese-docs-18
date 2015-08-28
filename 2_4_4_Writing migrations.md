@@ -1,16 +1,16 @@
 <!--
-  ���ߣ�Github@wizardforcel
+  译者：Github@wizardforcel
 -->
 
-# ��д���ݿ�Ǩ�� #
+# 编写数据库迁移 #
 
-��һ�ڽ���������������ڲ�ͬ�������η����ͱ�д���ݿ�Ǩ��. �й�Ǩ�Ƶ��������ϣ���鿴 the topic guide.
+这一节介绍你可能遇到的在不同情况下如何分析和编写数据库迁移. 有关迁移的入门资料，请查看 the topic guide.
 
-## ����Ǩ�ƺͶ����ݿ� ##
+## 数据迁移和多数据库 ##
 
-��ʹ�ö�����ݿ�ʱ����Ҫ����Ƿ����ĳ���ض����ݿ�����Ǩ�ơ����磬����� ֻ ����ĳ���ض����ݿ�������Ǩ�ơ�
+在使用多个数据库时，需要解决是否针对某个特定数据库运行迁移。例如，你可能 只 想在某个特定数据库上运行迁移。
 
-Ϊ���������RunPython��ͨ���鿴schema_editor.connection.alias ������������ݿ����ӱ�����
+为此你可以在RunPython中通过查看schema_editor.connection.alias 属性来检查数据库连接别名：
 
 ```
 from django.db import migrations
@@ -32,10 +32,10 @@ class Migration(migrations.Migration):
 ```
 
 ```
-Django 1.8 ��������
+Django 1.8 中新增。
 ```
 
-��Ҳ�����ṩһ����ʾ��Ϊ **hints�������ݵ����ݿ�·�ɵ�allow_migrate() ������
+你也可以提供一个提示作为 **hints参数传递到数据库路由的allow_migrate() 方法：
 
 ```
 myapp/dbrouters.py
@@ -47,7 +47,7 @@ class MyRouter(object):
         return True
 ```
 
-Ȼ��Ҫ�����Ǩ�������ã�ִ�����²�����
+然后，要在你的迁移中利用，执行以下操作：
 
 ```
 from django.db import migrations
@@ -66,19 +66,19 @@ class Migration(migrations.Migration):
     ]
 ```
 
-������RunPython����RunSQL����ֻ��һ��ģ����Ӱ�죬���ʵ���ǽ�model_name��Ϊ��ʾ���ݣ�ʹ�価���ܶ�·�ɿɼ�����Կɸ��õĺ͵�����Ӧ�ü�����Ҫ��
+如果你的RunPython或者RunSQL操作只对一个模型有影响，最佳实践是将model_name作为提示传递，使其尽可能对路由可见。这对可复用的和第三方应用极其重要。
 
-## ����Ψһ�ֶε�Ǩ�� ##
+## 添加唯一字段的迁移 ##
 
-�����Ӧ����һ�������ء���Ǩ�ƣ������һ���Ѵ��ڵ�����������һ��Ψһ�ķǿ��ֶΣ������������Ϊλ���Ѵ������е�ֵֻ������һ�Ρ�������Ҫ�Ƴ�Ψһ�Ե�Լ����
+如果你应用了一个“朴素”的迁移，向表中一个已存在的行中添加了一个唯一的非空字段，会产生错误，因为位于已存在行中的值只会生成一次。所以需要移除唯一性的约束。
 
-���ԣ�Ӧ��ִ������Ĳ��衣����������У����ǻ���Ĭ��ֵ����һ���ǿյ�UUIDField�ֶΡ�����Ը��������Ҫ�޸ĸ����ֶΡ�
+所以，应该执行下面的步骤。在这个例子中，我们会以默认值添加一个非空的UUIDField字段。你可以根据你的需要修改各个字段。
 
-+ ��default=...��unique=True�������ӵ���ģ�͵��ֶ��С�����������У�����Ĭ��ʹ��uuid.uuid4��
-+ ���� makemigrations ���
-+ �༭������Ǩ���ļ���
++ 把default=...和unique=True参数添加到你模型的字段中。在这个例子中，我们默认使用uuid.uuid4。
++ 运行 makemigrations 命令。
++ 编辑创建的迁移文件。
 
-���ɵ�Ǩ���࿴��ȥ��������
+生成的迁移类看上去像这样：
 
 ```
 class Migration(migrations.Migration):
@@ -96,13 +96,13 @@ class Migration(migrations.Migration):
     ]
 ```
 
-����Ҫ���������ģ�
+你需要做三处更改：
 
-+ �������ɵ�Ǩ�����и��ƣ����ӵڶ���AddField����������ΪAlterField��
-+ �ڵ�һ��AddField�����У���unique=True��Ϊ null=True����ᴴ��һ���м��null�ֶΡ�
-+ ����������֮�䣬����һ��RunPython��RunSQL����Ϊÿ���Ѵ��ڵ�������һ��Ψһֵ������UUID����
++ 从已生成的迁移类中复制，添加第二个AddField操作，并改为AlterField。
++ 在第一个AddField操作中，把unique=True改为 null=True，这会创建一个中间的null字段。
++ 在两个操作之间，添加一个RunPython或RunSQL操作为每个已存在的行生成一个唯一值（例如UUID）。
 
-���յ�Ǩ����Ӧ�ÿ�������������
+最终的迁移类应该看起来是这样：
 
 ```
 # -*- coding: utf-8 -*-
@@ -139,6 +139,6 @@ class Migration(migrations.Migration):
     ]
 ```
 
-�����������ƽ��һ��ʹ��migrate����Ӧ��Ǩ�ơ�
+现在你可以像平常一样使用migrate命令应用迁移。
 
-ע������������Ǩ������ʱ�ö��󱻴������ͻ������������(race condition)����AddField֮�� RunPython֮ǰ�����Ķ���Ḳд����ԭʼ��uuid��
+注意如果你在这个迁移运行时让对象被创建，就会产生竞争条件(race condition)。在AddField之后， RunPython之前创建的对象会覆写他们原始的uuid。

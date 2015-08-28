@@ -1,14 +1,14 @@
 <!--
-  ÒëÕß£ºGithub@wizardforcel
+  è¯‘è€…ï¼šGithub@wizardforcel
 -->
 
-# ¹ØÁª¶ÔÏó²Î¿¼ #
+# å…³è”å¯¹è±¡å‚è€ƒ #
 
 **class RelatedManager**
 
-"¹ØÁª¹ÜÀíÆ÷"ÊÇÔÚÒ»¶Ô¶à»òÕß¶à¶Ô¶àµÄ¹ØÁªÉÏÏÂÎÄÖÐÊ¹ÓÃµÄ¹ÜÀíÆ÷¡£Ëü´æÔÚÓÚÏÂÃæÁ½ÖÖÇé¿ö£º
+"å…³è”ç®¡ç†å™¨"æ˜¯åœ¨ä¸€å¯¹å¤šæˆ–è€…å¤šå¯¹å¤šçš„å…³è”ä¸Šä¸‹æ–‡ä¸­ä½¿ç”¨çš„ç®¡ç†å™¨ã€‚å®ƒå­˜åœ¨äºŽä¸‹é¢ä¸¤ç§æƒ…å†µï¼š
 
-ForeignKey¹ØÏµµÄ¡°ÁíÒ»±ß¡±¡£ÏñÕâÑù£º
+ForeignKeyå…³ç³»çš„â€œå¦ä¸€è¾¹â€ã€‚åƒè¿™æ ·ï¼š
 
 ```
 from django.db import models
@@ -21,9 +21,9 @@ class Article(models.Model):
     reporter = models.ForeignKey(Reporter)
 ```
 
-ÔÚÉÏÃæµÄÀý×ÓÖÐ£¬¹ÜÀíÆ÷reporter.article_setÓµÓÐÏÂÃæµÄ·½·¨¡£
+åœ¨ä¸Šé¢çš„ä¾‹å­ä¸­ï¼Œç®¡ç†å™¨reporter.article_setæ‹¥æœ‰ä¸‹é¢çš„æ–¹æ³•ã€‚
 
-ManyToManyField¹ØÏµµÄÁ½±ß£º
+ManyToManyFieldå…³ç³»çš„ä¸¤è¾¹ï¼š
 
 ```
 class Topping(models.Model):
@@ -34,13 +34,13 @@ class Pizza(models.Model):
     toppings = models.ManyToManyField(Topping)
 ```
 
-Õâ¸öÀý×ÓÖÐ£¬topping.pizza_set ºÍpizza.toppings¶¼ÓµÓÐÏÂÃæµÄ·½·¨¡£
+è¿™ä¸ªä¾‹å­ä¸­ï¼Œtopping.pizza_set å’Œpizza.toppingséƒ½æ‹¥æœ‰ä¸‹é¢çš„æ–¹æ³•ã€‚
 
 **add(obj1[, obj2, ...])**
 
-°ÑÖ¸¶¨µÄÄ£ÐÍ¶ÔÏóÌí¼Óµ½¹ØÁª¶ÔÏó¼¯ÖÐ¡£
+æŠŠæŒ‡å®šçš„æ¨¡åž‹å¯¹è±¡æ·»åŠ åˆ°å…³è”å¯¹è±¡é›†ä¸­ã€‚
 
-ÀýÈç£º
+ä¾‹å¦‚ï¼š
 
 ```
 >>> b = Blog.objects.get(id=1)
@@ -48,11 +48,11 @@ class Pizza(models.Model):
 >>> b.entry_set.add(e) # Associates Entry e with Blog b.
 ```
 
-ÔÚÉÏÃæµÄÀý×ÓÖÐ£¬¶ÔÓÚForeignKey¹ØÏµ£¬e.save()ÓÉ¹ØÁª¹ÜÀíÆ÷µ÷ÓÃ£¬Ö´ÐÐ¸üÐÂ²Ù×÷¡£È»¶ø£¬ÔÚ¶à¶Ô¶à¹ØÏµÖÐÊ¹ÓÃadd()²¢²»»áµ÷ÓÃÈÎºÎ save()·½·¨£¬¶øÊÇÓÉQuerySet.bulk_create()´´½¨¹ØÏµ¡£Èç¹ûÄãÐèÒªÔÚ¹ØÏµ±»´´½¨Ê±Ö´ÐÐÒ»Ð©×Ô¶¨ÒåµÄÂß¼­£¬Çë¼àÌým2m_changedÐÅºÅ¡£
+åœ¨ä¸Šé¢çš„ä¾‹å­ä¸­ï¼Œå¯¹äºŽForeignKeyå…³ç³»ï¼Œe.save()ç”±å…³è”ç®¡ç†å™¨è°ƒç”¨ï¼Œæ‰§è¡Œæ›´æ–°æ“ä½œã€‚ç„¶è€Œï¼Œåœ¨å¤šå¯¹å¤šå…³ç³»ä¸­ä½¿ç”¨add()å¹¶ä¸ä¼šè°ƒç”¨ä»»ä½• save()æ–¹æ³•ï¼Œè€Œæ˜¯ç”±QuerySet.bulk_create()åˆ›å»ºå…³ç³»ã€‚å¦‚æžœä½ éœ€è¦åœ¨å…³ç³»è¢«åˆ›å»ºæ—¶æ‰§è¡Œä¸€äº›è‡ªå®šä¹‰çš„é€»è¾‘ï¼Œè¯·ç›‘å¬m2m_changedä¿¡å·ã€‚
 
 **create(\*\*kwargs)**
 
-´´½¨Ò»¸öÐÂµÄ¶ÔÏó£¬±£´æ¶ÔÏó£¬²¢½«ËüÌí¼Óµ½¹ØÁª¶ÔÏó¼¯Ö®ÖÐ¡£·µ»ØÐÂ´´½¨µÄ¶ÔÏó£º
+åˆ›å»ºä¸€ä¸ªæ–°çš„å¯¹è±¡ï¼Œä¿å­˜å¯¹è±¡ï¼Œå¹¶å°†å®ƒæ·»åŠ åˆ°å…³è”å¯¹è±¡é›†ä¹‹ä¸­ã€‚è¿”å›žæ–°åˆ›å»ºçš„å¯¹è±¡ï¼š
 
 ```
 >>> b = Blog.objects.get(id=1)
@@ -65,7 +65,7 @@ class Pizza(models.Model):
 # No need to call e.save() at this point -- it's already been saved.
 ```
 
-ÕâÍêÈ«µÈ¼ÛÓÚ£¨²»¹ý¸ü¼Ó¼ò½àÓÚ£©£º
+è¿™å®Œå…¨ç­‰ä»·äºŽï¼ˆä¸è¿‡æ›´åŠ ç®€æ´äºŽï¼‰ï¼š
 
 ```
 >>> b = Blog.objects.get(id=1)
@@ -78,11 +78,11 @@ class Pizza(models.Model):
 >>> e.save(force_insert=True)
 ```
 
-Òª×¢ÒâÎÒÃÇ²¢²»ÐèÒªÖ¸¶¨Ä£ÐÍÖÐÓÃÓÚ¶¨Òå¹ØÏµµÄ¹Ø¼ü´Ê²ÎÊý¡£ÔÚÉÏÃæµÄÀý×ÓÖÐ£¬ÎÒÃÇ²¢Ã»ÓÐ´«Èëblog²ÎÊý¸øcreate()¡£Django»áÃ÷°×ÐÂµÄ Entry¶ÔÏóblog Ó¦¸ÃÌí¼Óµ½bÖÐ¡£
+è¦æ³¨æ„æˆ‘ä»¬å¹¶ä¸éœ€è¦æŒ‡å®šæ¨¡åž‹ä¸­ç”¨äºŽå®šä¹‰å…³ç³»çš„å…³é”®è¯å‚æ•°ã€‚åœ¨ä¸Šé¢çš„ä¾‹å­ä¸­ï¼Œæˆ‘ä»¬å¹¶æ²¡æœ‰ä¼ å…¥blogå‚æ•°ç»™create()ã€‚Djangoä¼šæ˜Žç™½æ–°çš„ Entryå¯¹è±¡blog åº”è¯¥æ·»åŠ åˆ°bä¸­ã€‚
 
 **remove(obj1[, obj2, ...])**
 
-´Ó¹ØÁª¶ÔÏó¼¯ÖÐÒÆ³ýÖ´ÐÐµÄÄ£ÐÍ¶ÔÏó£º
+ä»Žå…³è”å¯¹è±¡é›†ä¸­ç§»é™¤æ‰§è¡Œçš„æ¨¡åž‹å¯¹è±¡ï¼š
 
 ```
 >>> b = Blog.objects.get(id=1)
@@ -90,38 +90,38 @@ class Pizza(models.Model):
 >>> b.entry_set.remove(e) # Disassociates Entry e from Blog b.
 ```
 
-ºÍadd()ÏàËÆ£¬ÉÏÃæµÄÀý×ÓÖÐ£¬e.save()¿É»áÖ´ÐÐ¸üÐÂ²Ù×÷¡£µ«ÊÇ£¬¶à¶Ô¶à¹ØÏµÉÏµÄremove()£¬»áÊ¹ÓÃQuerySet.delete()É¾³ý¹ØÏµ£¬ÒâË¼ÊÇ²¢²»»áÓÐÈÎºÎÄ£ÐÍµ÷ÓÃsave()·½·¨£ºÈç¹ûÄãÏëÔÚÒ»¸ö¹ØÏµ±»É¾³ýÊ±Ö´ÐÐ×Ô¶¨ÒåµÄ´úÂë£¬Çë¼àÌým2m_changedÐÅºÅ¡£
+å’Œadd()ç›¸ä¼¼ï¼Œä¸Šé¢çš„ä¾‹å­ä¸­ï¼Œe.save()å¯ä¼šæ‰§è¡Œæ›´æ–°æ“ä½œã€‚ä½†æ˜¯ï¼Œå¤šå¯¹å¤šå…³ç³»ä¸Šçš„remove()ï¼Œä¼šä½¿ç”¨QuerySet.delete()åˆ é™¤å…³ç³»ï¼Œæ„æ€æ˜¯å¹¶ä¸ä¼šæœ‰ä»»ä½•æ¨¡åž‹è°ƒç”¨save()æ–¹æ³•ï¼šå¦‚æžœä½ æƒ³åœ¨ä¸€ä¸ªå…³ç³»è¢«åˆ é™¤æ—¶æ‰§è¡Œè‡ªå®šä¹‰çš„ä»£ç ï¼Œè¯·ç›‘å¬m2m_changedä¿¡å·ã€‚
 
-¶ÔÓÚForeignKey¶ÔÏó£¬Õâ¸ö·½·¨½öÔÚnull=TrueÊ±´æÔÚ¡£Èç¹û¹ØÁªµÄ×Ö¶Î²»ÄÜÉèÖÃÎªNone (NULL)£¬ÔòÕâ¸ö¶ÔÏóÔÚÌí¼Óµ½ÁíÒ»¸ö¹ØÁªÖ®Ç°²»ÄÜÒÆ³ý¹ØÁª¡£ÔÚÉÏÃæµÄÀý×ÓÖÐ£¬´Ób.entry_set()ÒÆ³ýeµÈ¼ÛÓÚÈÃe.blog = None£¬ÓÉÓÚblogµÄForeignKeyÃ»ÓÐÉèÖÃnull=True£¬Õâ¸ö²Ù×÷ÊÇÎÞÐ§µÄ¡£
+å¯¹äºŽForeignKeyå¯¹è±¡ï¼Œè¿™ä¸ªæ–¹æ³•ä»…åœ¨null=Trueæ—¶å­˜åœ¨ã€‚å¦‚æžœå…³è”çš„å­—æ®µä¸èƒ½è®¾ç½®ä¸ºNone (NULL)ï¼Œåˆ™è¿™ä¸ªå¯¹è±¡åœ¨æ·»åŠ åˆ°å¦ä¸€ä¸ªå…³è”ä¹‹å‰ä¸èƒ½ç§»é™¤å…³è”ã€‚åœ¨ä¸Šé¢çš„ä¾‹å­ä¸­ï¼Œä»Žb.entry_set()ç§»é™¤eç­‰ä»·äºŽè®©e.blog = Noneï¼Œç”±äºŽblogçš„ForeignKeyæ²¡æœ‰è®¾ç½®null=Trueï¼Œè¿™ä¸ªæ“ä½œæ˜¯æ— æ•ˆçš„ã€‚
 
-¶ÔÓÚForeignKey¶ÔÏó£¬¸Ã·½·¨½ÓÊÜÒ»¸öbulk²ÎÊýÀ´¿ØÖÆËüÈç¹ûÖ´ÐÐ²Ù×÷¡£Èç¹ûÎªTrue£¨Ä¬ÈÏÖµ£©£¬QuerySet.update()»á±»Ê¹ÓÃ¡£¶øÈç¹ûbulk=False£¬»áÔÚÃ¿¸öµ¥¶ÀµÄÄ£ÐÍÊµÀýÉÏµ÷ÓÃsave()·½·¨¡£Õâ»á´¥·¢pre_saveºÍpost_save£¬ËüÃÇ»áÏûºÄÒ»¶¨µÄÐÔÄÜ¡£
+å¯¹äºŽForeignKeyå¯¹è±¡ï¼Œè¯¥æ–¹æ³•æŽ¥å—ä¸€ä¸ªbulkå‚æ•°æ¥æŽ§åˆ¶å®ƒå¦‚æžœæ‰§è¡Œæ“ä½œã€‚å¦‚æžœä¸ºTrueï¼ˆé»˜è®¤å€¼ï¼‰ï¼ŒQuerySet.update()ä¼šè¢«ä½¿ç”¨ã€‚è€Œå¦‚æžœbulk=Falseï¼Œä¼šåœ¨æ¯ä¸ªå•ç‹¬çš„æ¨¡åž‹å®žä¾‹ä¸Šè°ƒç”¨save()æ–¹æ³•ã€‚è¿™ä¼šè§¦å‘pre_saveå’Œpost_saveï¼Œå®ƒä»¬ä¼šæ¶ˆè€—ä¸€å®šçš„æ€§èƒ½ã€‚
 
 **clear()**
 
-´Ó¹ØÁª¶ÔÏó¼¯ÖÐÒÆ³ýÒ»ÇÐ¶ÔÏó¡£
+ä»Žå…³è”å¯¹è±¡é›†ä¸­ç§»é™¤ä¸€åˆ‡å¯¹è±¡ã€‚
 
 ```
 >>> b = Blog.objects.get(id=1)
 >>> b.entry_set.clear()
 ```
 
-×¢ÒâÕâÑù²»»áÉ¾³ý¶ÔÏó ¡ª¡ª Ö»»áÉ¾³ýËûÃÇÖ®¼äµÄ¹ØÁª¡£
+æ³¨æ„è¿™æ ·ä¸ä¼šåˆ é™¤å¯¹è±¡ â€”â€” åªä¼šåˆ é™¤ä»–ä»¬ä¹‹é—´çš„å…³è”ã€‚
 
-¾ÍÏñ remove() ·½·¨Ò»Ñù£¬clear()Ö»ÄÜÔÚ null=TrueµÄForeignKeyÉÏ±»µ÷ÓÃ£¬Ò²¿ÉÒÔ½ÓÊÜbulk¹Ø¼ü´Ê²ÎÊý¡£
+å°±åƒ remove() æ–¹æ³•ä¸€æ ·ï¼Œclear()åªèƒ½åœ¨ null=Trueçš„ForeignKeyä¸Šè¢«è°ƒç”¨ï¼Œä¹Ÿå¯ä»¥æŽ¥å—bulkå…³é”®è¯å‚æ•°ã€‚
 
-> ×¢Òâ
+> æ³¨æ„
 > 
-> ×¢Òâ¶ÔÓÚËùÓÐÀàÐÍµÄ¹ØÁª×Ö¶Î£¬add()¡¢create()¡¢remove()ºÍclear()¶¼»áÂíÉÏ¸üÐÂÊý¾Ý¿â¡£»»¾ä»°Ëµ£¬ÔÚ¹ØÁªµÄÈÎºÎÒ»¶Ë£¬¶¼²»ÐèÒªÔÙµ÷ÓÃsave()·½·¨¡£
+> æ³¨æ„å¯¹äºŽæ‰€æœ‰ç±»åž‹çš„å…³è”å­—æ®µï¼Œadd()ã€create()ã€remove()å’Œclear()éƒ½ä¼šé©¬ä¸Šæ›´æ–°æ•°æ®åº“ã€‚æ¢å¥è¯è¯´ï¼Œåœ¨å…³è”çš„ä»»ä½•ä¸€ç«¯ï¼Œéƒ½ä¸éœ€è¦å†è°ƒç”¨save()æ–¹æ³•ã€‚
 > 
-> Í¬Ñù£¬Èç¹ûÄãÔÙ¶à¶Ô¶à¹ØÏµÖÐÊ¹ÓÃÁËÖÐ¼äÄ£ÐÍ£¬Ò»Ð©¹ØÁª¹ÜÀíµÄ·½·¨»á±»½ûÓÃ¡£
+> åŒæ ·ï¼Œå¦‚æžœä½ å†å¤šå¯¹å¤šå…³ç³»ä¸­ä½¿ç”¨äº†ä¸­é—´æ¨¡åž‹ï¼Œä¸€äº›å…³è”ç®¡ç†çš„æ–¹æ³•ä¼šè¢«ç¦ç”¨ã€‚
 
-## Ö±½Ó¸³Öµ ##
+## ç›´æŽ¥èµ‹å€¼ ##
 
-Í¨¹ý¸³ÖµÒ»¸öÐÂµÄ¿Éµü´úµÄ¶ÔÏó£¬¹ØÁª¶ÔÏó¼¯¿ÉÒÔ±»ÕûÌåÌæ»»µô¡£
+é€šè¿‡èµ‹å€¼ä¸€ä¸ªæ–°çš„å¯è¿­ä»£çš„å¯¹è±¡ï¼Œå…³è”å¯¹è±¡é›†å¯ä»¥è¢«æ•´ä½“æ›¿æ¢æŽ‰ã€‚
 
 ```
 >>> new_list = [obj1, obj2, obj3]
 >>> e.related_set = new_list
 ```
 
-Èç¹ûÍâ¼ü¹ØÏµÂú×ãnull=True£¬¹ØÁª¹ÜÀíÆ÷»áÔÚÌí¼Ónew_listÖÐµÄÄÚÈÝÖ®Ç°£¬Ê×ÏÈµ÷ÓÃclear()·½·¨À´½â³ý¹ØÁª¼¯ÖÐÒ»ÇÐÒÑ´æÔÚ¶ÔÏóµÄ¹ØÁª¡£·ñÔò£¬ new_listÖÐµÄ¶ÔÏó»áÔÚÒÑ´æÔÚµÄ¹ØÁªµÄ»ù´¡ÉÏ±»Ìí¼Ó¡£
+å¦‚æžœå¤–é”®å…³ç³»æ»¡è¶³null=Trueï¼Œå…³è”ç®¡ç†å™¨ä¼šåœ¨æ·»åŠ new_listä¸­çš„å†…å®¹ä¹‹å‰ï¼Œé¦–å…ˆè°ƒç”¨clear()æ–¹æ³•æ¥è§£é™¤å…³è”é›†ä¸­ä¸€åˆ‡å·²å­˜åœ¨å¯¹è±¡çš„å…³è”ã€‚å¦åˆ™ï¼Œ new_listä¸­çš„å¯¹è±¡ä¼šåœ¨å·²å­˜åœ¨çš„å…³è”çš„åŸºç¡€ä¸Šè¢«æ·»åŠ ã€‚

@@ -1,44 +1,44 @@
 <!--
-  ��Դ��http://python.usyiyi.cn/django/index.html
+  来源：http://python.usyiyi.cn/django/index.html
 -->
 
-# ΪDjango��д�׸����� #
+# 为Django编写首个补丁 #
 
-## ���� ##
+## 介绍 ##
 
-����ȤΪ���������㹱����Ҳ�������Django�з�������Ҫ�޸���©����������ϣ��Ϊ������һ��С������
+有兴趣为社区做出点贡献吗？也许你会在Django中发现你想要修复的漏洞，或者你希望为它添加一个小特征。
 
-ΪDjango����������±�������ʹ��Ĺ��ǵõ��������÷�ʽ��һ��ʼ����ܻ�ʹ���Ӳ�������ʵ���Ǻܼ򵥵ġ��������������ǻ�һ��һ��Ϊ���˵�����������ͨ������ѧϰ��
+为Django作贡献这件事本身就是使你的顾虑得到解决的最好方式。一开始这可能会使你怯步，但事实上是很简单的。整个过程中我们会一步一步为你解说，所以你可以通过例子学习。
 
-## Who��s this tutorial for? ##
+## Who’s this tutorial for? ##
 
-ʹ�ý̳�ǰ������ϣ�������ٶ���Django�����з�ʽ�л������˽⡣����ζ��������������д���Լ���Django appʱʹ�ý̡̳� ����֮�⣬��Ӧ�ö���Python�����кܺõ��˽⡣���������̫�˽⣬ ����Ϊ���Ƽ�Dive Into Python�����ڳ���ʹ��Python�ĳ���Ա��˵����һ���ܰ���������ѣ������ߵ����顣
+使用教程前，我们希望你至少对于Django的运行方式有基础的了解。这意味着你可以自如地在写你自己的Django app时使用教程。 除此之外，你应该对于Python本身有很好的了解。如果您并不太了解， 我们为您推荐Dive Into Python，对于初次使用Python的程序员来说这是一本很棒（而且免费）的在线电子书。
 
-���ڰ汾����ϵͳ��Trac����Ϥ������˵����ݽ̳̼����е���������������Ϣ�����������ǿ�ʼѧϰ������Ȼ���������ϣ������ΪDjango���ף�����ܻ�ϣ���Ķ����������Щ��ͬ���ߵ���Ϣ��
+对于版本控制系统及Trac不熟悉的人来说，这份教程及其中的链接所包含的信息足以满足你们开始学习的需求。然而，如果你希望定期为Django贡献，你可能会希望阅读更多关于这些不同工具的信息。
 
-��Ȼ�������еĴ󲿷����ݣ�Django�ᾡ�������������԰������Ķ��ߡ�
+当然对于其中的大部分内容，Django会尽可能做出解释以帮助广大的读者。
 
-> �δ���ð���:
+> 何处获得帮助:
 > 
-> �������ʹ�ñ��̳�ʱ�������ѣ�����Է�����Ϣ��django������ ���ߵ�½ #django-dev on irc.freenode.net ������Djangoʹ�������������
+> 如果你在使用本教程时遇到困难，你可以发送信息给django开发者 或者登陆 #django-dev on irc.freenode.net 向其他Django使用者需求帮助。
 
-## �̳̰��������� ##
+## 教程包含的内容 ##
 
-һ��ʼ���ǻ������ΪDjango��д�������ڽ̳̽���ʱ���㽫�߱����ڹ��ߺ����������̵Ļ����˽⡣׼ȷ��˵�����ǵĽ̳̽��������¼��㣺
+一开始我们会帮助你为Django编写补丁，在教程结束时，你将具备对于工具和所包含过程的基本了解。准确来说，我们的教程将包含以下几点：
 
-+ ��װGit��
-+ �������Django�Ŀ�������
-+ ����Django�Ĳ������
-+ Ϊ��Ĳ�����дһ������
-+ Ϊ��Ĳ������롣
-+ ������Ĳ�����
-+ Ϊ�������ĸı�дһ�������ļ���
-+ ȥ����Ѱ�Ҹ������Ϣ��
++ 安装Git。
++ 如何下载Django的开发复本
++ 运行Django的测试组件
++ 为你的补丁编写一个测试
++ 为你的补丁编码。
++ 测试你的补丁。
++ 为你所做的改变写一个补丁文件。
++ 去哪里寻找更多的信息。
 
-һ�����������ݽ̳̣���������ʣ�µ�Django��s documentation on contributing. �������˴�����Ϣ���κ����ΪDjango����ʽ�����߱���ȥ�Ķ���������������⣬��Ҳ��������
+一旦你完成了这份教程，你可以浏览剩下的Django’s documentation on contributing. 它包含了大量信息。任何想成为Django的正式贡献者必须去阅读它。如果你有问题，它也许会给你答案
 
-## ��װGit ##
+## 安装Git ##
 
-ʹ�ý̳�ǰ������Ҫ��װ��Git������Django�����¿����汾����Ϊ�������ĸı����ɲ����ļ�
+使用教程前，你需要安装好Git，下载Django的最新开发版本并且为你作出的改变生成补丁文件
 
-Ϊ��ȷ�����Ƿ��Ѿ���װ��Git, ���� git ���������С������Ϣ��ʾ�����޷��ҵ�, �����Ҫ���ز���װGit, �����Ķ� Git��s download page.
+为了确认你是否已经安装了Git, 输入 git 进入命令行。如果信息提示命令无法找到, 你就需要下载并安装Git, 详情阅读 Git’s download page.

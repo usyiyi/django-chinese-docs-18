@@ -1,18 +1,18 @@
 <!--
-  ÒëÕß£ºGithub@wizardforcel
+  è¯‘è€…ï¼šGithub@wizardforcel
 -->
 
-# ½«ÒÅÁôÊý¾Ý¿âÕûºÏµ½Django #
+# å°†é—ç•™æ•°æ®åº“æ•´åˆåˆ°Django #
 
-ËäÈ»Django×îÊÊºÏÓÃÀ´¿ª·¢ÐÂµÄÓ¦ÓÃ£¬µ«Ò²¿ÉÒÔ½«ËüÕûºÏµ½ÒÅÁôµÄÊý¾Ý¿âÖÐ¡£Django°üº¬ÁËºÜ¶à¹¤¾ß£¬¾¡¿ÉÄÜ×Ô¶¯»¯½â¾öÕâÀàÎÊÌâ¡£
+è™½ç„¶Djangoæœ€é€‚åˆç”¨æ¥å¼€å‘æ–°çš„åº”ç”¨ï¼Œä½†ä¹Ÿå¯ä»¥å°†å®ƒæ•´åˆåˆ°é—ç•™çš„æ•°æ®åº“ä¸­ã€‚DjangoåŒ…å«äº†å¾ˆå¤šå·¥å…·ï¼Œå°½å¯èƒ½è‡ªåŠ¨åŒ–è§£å†³è¿™ç±»é—®é¢˜ã€‚
 
-ÕâÆªÎÄÕÂ¼ÙÉèÄãÁË½âDjangoµÄ»ù´¡²¿·Ö£¬ËüÃÇÔÚ½Ì³ÌÖÐÌá¼°¡£
+è¿™ç¯‡æ–‡ç« å‡è®¾ä½ äº†è§£Djangoçš„åŸºç¡€éƒ¨åˆ†ï¼Œå®ƒä»¬åœ¨æ•™ç¨‹ä¸­æåŠã€‚
 
-Ò»µ©ÄãµÄDjango»·¾³½¨Á¢ºÃÖ®ºó£¬Äã¿ÉÒÔ°´ÕÕÕâ¸ö´óÖÂµÄÁ÷³Ì£¬ÕûºÏÄãµÄÏÖÓÐÊý¾Ý¿â¡£
+ä¸€æ—¦ä½ çš„DjangoçŽ¯å¢ƒå»ºç«‹å¥½ä¹‹åŽï¼Œä½ å¯ä»¥æŒ‰ç…§è¿™ä¸ªå¤§è‡´çš„æµç¨‹ï¼Œæ•´åˆä½ çš„çŽ°æœ‰æ•°æ®åº“ã€‚
 
-## ÏòDjangoÌá¹©ÄãµÄÊý¾Ý¿â²ÎÊý ##
+## å‘Djangoæä¾›ä½ çš„æ•°æ®åº“å‚æ•° ##
 
-ÄãÐèÒª¸æËßDjangoÄãµÄÊý¾Ý¿âÁ¬½Ó²ÎÊý£¬ÒÔ¼°Êý¾Ý¿âµÄÃû³Æ¡£ÇëÐÞ¸ÄDATABASESÉèÖÃ£¬Îª'Ä¬ÈÏ' Á¬½ÓµÄÒÔÏÂ¼ü¸³Öµ£º
+ä½ éœ€è¦å‘Šè¯‰Djangoä½ çš„æ•°æ®åº“è¿žæŽ¥å‚æ•°ï¼Œä»¥åŠæ•°æ®åº“çš„åç§°ã€‚è¯·ä¿®æ”¹DATABASESè®¾ç½®ï¼Œä¸º'é»˜è®¤' è¿žæŽ¥çš„ä»¥ä¸‹é”®èµ‹å€¼ï¼š
 
 + NAME
 + ENGINE
@@ -21,25 +21,25 @@
 + HOST
 + PORT
 
-## ×Ô¶¯Éú³ÉÄ£ÐÍ ##
+## è‡ªåŠ¨ç”Ÿæˆæ¨¡åž‹ ##
 
-Django×Ô´ø½Ð×öinspectdbµÄ¹¤¾ß£¬¿ÉÒÔ°´ÕÕÏÖÓÐµÄÊý¾Ý¿â´´½¨Ä£ÐÍ¡£Äã¿ÉÒÔÔËÐÐÒÔÏÂÃüÁî£¬²¢²é¿´Êä³ö£º
+Djangoè‡ªå¸¦å«åšinspectdbçš„å·¥å…·ï¼Œå¯ä»¥æŒ‰ç…§çŽ°æœ‰çš„æ•°æ®åº“åˆ›å»ºæ¨¡åž‹ã€‚ä½ å¯ä»¥è¿è¡Œä»¥ä¸‹å‘½ä»¤ï¼Œå¹¶æŸ¥çœ‹è¾“å‡ºï¼š
 
 ```
 $ python manage.py inspectdb
 ```
 
-Í¨¹ýÖØ¶¨ÏòUnix±ê×¼Êä³öÁ÷À´±£´æÎÄ¼þ£º
+é€šè¿‡é‡å®šå‘Unixæ ‡å‡†è¾“å‡ºæµæ¥ä¿å­˜æ–‡ä»¶ï¼š
 
 ```
 $ python manage.py inspectdb > models.py
 ```
 
-Õâ¸öÌØÐÔÊÇÒ»¸ö¿ì½Ý·½Ê½£¬²¢²»ÊÇÒ»¸öÈ·¶¨µÄÄ£ÐÍÉú³ÉÆ÷¡£Ïê¼ûinspectdbÎÄµµ ¡£
+è¿™ä¸ªç‰¹æ€§æ˜¯ä¸€ä¸ªå¿«æ·æ–¹å¼ï¼Œå¹¶ä¸æ˜¯ä¸€ä¸ªç¡®å®šçš„æ¨¡åž‹ç”Ÿæˆå™¨ã€‚è¯¦è§inspectdbæ–‡æ¡£ ã€‚
 
-Ò»µ©Äã´´½¨ºÃÁËÄãµÄÄ£ÐÍ£¬°ÑÎÄ¼þÃüÃûÎªmodels.py£¬È»ºó°ÑËü·Åµ½ÄãÓ¦ÓÃµÄPython°üÖÐ¡£È»ºó°ÑÓ¦ÓÃÌí¼Óµ½ÄãµÄINSTALLED_APPS ÉèÖÃÖÐ¡£
+ä¸€æ—¦ä½ åˆ›å»ºå¥½äº†ä½ çš„æ¨¡åž‹ï¼ŒæŠŠæ–‡ä»¶å‘½åä¸ºmodels.pyï¼Œç„¶åŽæŠŠå®ƒæ”¾åˆ°ä½ åº”ç”¨çš„PythonåŒ…ä¸­ã€‚ç„¶åŽæŠŠåº”ç”¨æ·»åŠ åˆ°ä½ çš„INSTALLED_APPS è®¾ç½®ä¸­ã€‚
 
-Ä¬ÈÏÇé¿öÏÂ£¬inspectdb´´½¨Î´±»¹ÜÀíµÄÄ£ÐÍ¡£Õâ¾ÍÊÇËµ£¬Ä£ÐÍµÄMetaÀàÖÐµÄmanaged = False¸æËßDjango²»Òª¹ÜÀíÃ¿¸ö±íµÄ´´½¨¡¢ÐÞ¸ÄºÍÉ¾³ý£º
+é»˜è®¤æƒ…å†µä¸‹ï¼Œinspectdbåˆ›å»ºæœªè¢«ç®¡ç†çš„æ¨¡åž‹ã€‚è¿™å°±æ˜¯è¯´ï¼Œæ¨¡åž‹çš„Metaç±»ä¸­çš„managed = Falseå‘Šè¯‰Djangoä¸è¦ç®¡ç†æ¯ä¸ªè¡¨çš„åˆ›å»ºã€ä¿®æ”¹å’Œåˆ é™¤ï¼š
 
 ```
 class Person(models.Model):
@@ -50,16 +50,16 @@ class Person(models.Model):
        db_table = 'CENSUS_PERSONS'
 ```
 
-Èç¹ûÄãÏ£ÍûDjango¹ÜÀí±íµÄÉúÃüÖÜÆÚ£¬ÄãÐèÒª°ÑmanagedÑ¡Ïî¸ÄÎª True£¨»òÕß¼òµ¥µØ°ÑËüÒÆ³ý£¬ÒòÎªTrueÊÇÄ¬ÈÏÖµ£©¡£
+å¦‚æžœä½ å¸Œæœ›Djangoç®¡ç†è¡¨çš„ç”Ÿå‘½å‘¨æœŸï¼Œä½ éœ€è¦æŠŠmanagedé€‰é¡¹æ”¹ä¸º Trueï¼ˆæˆ–è€…ç®€å•åœ°æŠŠå®ƒç§»é™¤ï¼Œå› ä¸ºTrueæ˜¯é»˜è®¤å€¼ï¼‰ã€‚
 
-## °²×°DjangoºËÐÄ±í ##
+## å®‰è£…Djangoæ ¸å¿ƒè¡¨ ##
 
-½ÓÏÂÀ´£¬ÔËÐÐmigrateÃüÁîÀ´°²×°ËùÓÐËùÐèµÄ¶îÍâµÄÊý¾Ý¿â¼ÇÂ¼£¬±ÈÈçºóÌ¨È¨ÏÞºÍÄÚÈÝÀàÐÍ£º
+æŽ¥ä¸‹æ¥ï¼Œè¿è¡Œmigrateå‘½ä»¤æ¥å®‰è£…æ‰€æœ‰æ‰€éœ€çš„é¢å¤–çš„æ•°æ®åº“è®°å½•ï¼Œæ¯”å¦‚åŽå°æƒé™å’Œå†…å®¹ç±»åž‹ï¼š
 
 ```
 $ python manage.py migrate
 ```
 
-## ²âÊÔºÍµ÷Õû ##
+## æµ‹è¯•å’Œè°ƒæ•´ ##
 
-ÉÏÃæ¾ÍÊÇËùÓÐ»ù±¾µÄ²½ÖèÁË ¡ª¡ª µ½Ä¿Ç°ÎªÖ¹Äã»áÏëÒªµ÷ÕûDjango×Ô¶¯Éú³ÉµÄÄ£ÐÍ£¬Ö±µ½ËûÃÇ°´ÕÕÄãÏëÒªµÄ·½Ê½¹¤×÷¡£³¢ÊÔÍ¨¹ýDjangoÊý¾Ý¿âAPI·ÃÎÊÄãµÄÊý¾Ý£¬²¢ÇÒ³¢ÊÔÊ¹ÓÃDjangoºóÌ¨Ò³Ãæ±à¼­¶ÔÏó£¬ÒÔ¼°ÏàÓ¦µØ±à¼­Ä£ÐÍÎÄ¼þ¡£
+ä¸Šé¢å°±æ˜¯æ‰€æœ‰åŸºæœ¬çš„æ­¥éª¤äº† â€”â€” åˆ°ç›®å‰ä¸ºæ­¢ä½ ä¼šæƒ³è¦è°ƒæ•´Djangoè‡ªåŠ¨ç”Ÿæˆçš„æ¨¡åž‹ï¼Œç›´åˆ°ä»–ä»¬æŒ‰ç…§ä½ æƒ³è¦çš„æ–¹å¼å·¥ä½œã€‚å°è¯•é€šè¿‡Djangoæ•°æ®åº“APIè®¿é—®ä½ çš„æ•°æ®ï¼Œå¹¶ä¸”å°è¯•ä½¿ç”¨DjangoåŽå°é¡µé¢ç¼–è¾‘å¯¹è±¡ï¼Œä»¥åŠç›¸åº”åœ°ç¼–è¾‘æ¨¡åž‹æ–‡ä»¶ã€‚

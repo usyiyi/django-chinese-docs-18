@@ -1,20 +1,20 @@
 <!--
-  À´Ô´£ºhttp://django-chinese-docs.readthedocs.org/
+  æ¥æºï¼šhttp://django-chinese-docs.readthedocs.org/
 -->
 
-# ³õÌ½ Django #
+# åˆæŽ¢ Django #
 
-À´Ô´£º[django-chinese-docs.readthedocs.org](http://django-chinese-docs.readthedocs.org/)
+æ¥æºï¼š[django-chinese-docs.readthedocs.org](http://django-chinese-docs.readthedocs.org/)
 
-ÓÉÓÚDjangoÊÇÔÚÒ»¸ö¿ì½Ú×àµÄÐÂÎÅ±à¼­ÊÒ»·¾³ÏÂ¿ª·¢³öÀ´µÄ£¬Òò´ËËü±»Éè¼Æ³ÉÈÃÆÕÍ¨µÄÍøÕ¾¿ª·¢¹¤×÷¼òµ¥¶ø¿ì ½Ý¡£ÒÔÏÂ¼òµ¥½éÉÜÁËÈçºÎÓÃ Django ±àÐ´Ò»¸öÊý¾Ý¿âÇý¶¯µÄWebÓ¦ÓÃ³ÌÐò¡£
+ç”±äºŽDjangoæ˜¯åœ¨ä¸€ä¸ªå¿«èŠ‚å¥çš„æ–°é—»ç¼–è¾‘å®¤çŽ¯å¢ƒä¸‹å¼€å‘å‡ºæ¥çš„ï¼Œå› æ­¤å®ƒè¢«è®¾è®¡æˆè®©æ™®é€šçš„ç½‘ç«™å¼€å‘å·¥ä½œç®€å•è€Œå¿« æ·ã€‚ä»¥ä¸‹ç®€å•ä»‹ç»äº†å¦‚ä½•ç”¨ Django ç¼–å†™ä¸€ä¸ªæ•°æ®åº“é©±åŠ¨çš„Webåº”ç”¨ç¨‹åºã€‚
 
-±¾ÎÄµµµÄÄ¿±êÊÇ¸øÄãÃèÊö×ã¹»µÄ¼¼ÊõÏ¸½ÚÄÜÈÃÄãÀí½âDjangoÊÇÈçºÎ¹¤×÷µÄ£¬µ«ÊÇËü²¢²»±íÊ¾ÊÇÒ»¸öÐÂÊÖÖ¸ÄÏ»ò²Î¿¼Ä¿Â¼ ¨C ÆäÊµÕâÐ©ÎÒÃÇ¶¼ÓÐ! µ±Äã×¼±¸ÐÂ½¨Ò»¸öÏîÄ¿£¬Äã¿ÉÒÔ *´ÓÐÂÊÖÖ¸ÄÏ¿ªÊ¼* »òÕß *ÉîÈëÔÄ¶ÁÏêÏ¸µÄÎÄµµ*.
+æœ¬æ–‡æ¡£çš„ç›®æ ‡æ˜¯ç»™ä½ æè¿°è¶³å¤Ÿçš„æŠ€æœ¯ç»†èŠ‚èƒ½è®©ä½ ç†è§£Djangoæ˜¯å¦‚ä½•å·¥ä½œçš„ï¼Œä½†æ˜¯å®ƒå¹¶ä¸è¡¨ç¤ºæ˜¯ä¸€ä¸ªæ–°æ‰‹æŒ‡å—æˆ–å‚è€ƒç›®å½• â€“ å…¶å®žè¿™äº›æˆ‘ä»¬éƒ½æœ‰! å½“ä½ å‡†å¤‡æ–°å»ºä¸€ä¸ªé¡¹ç›®ï¼Œä½ å¯ä»¥ *ä»Žæ–°æ‰‹æŒ‡å—å¼€å§‹* æˆ–è€… *æ·±å…¥é˜…è¯»è¯¦ç»†çš„æ–‡æ¡£*.
 
-## Éè¼ÆÄãµÄÄ£ÐÍ(model) ##
+## è®¾è®¡ä½ çš„æ¨¡åž‹(model) ##
 
-¾¡¹ÜÄãÔÚ Django ÖÐ¿ÉÒÔ²»Ê¹ÓÃÊý¾Ý¿â£¬µ«ÊÇËüÌá¹©ÁËÒ»¸öÍêÉÆµÄ¿ÉÒÔÓÃ Python ´úÂëÃèÊöÄãµÄÊý¾Ý¿â½á¹¹µÄ¶ÔÏó¹ØÁªÓ³Éä(ORM)¡£
+å°½ç®¡ä½ åœ¨ Django ä¸­å¯ä»¥ä¸ä½¿ç”¨æ•°æ®åº“ï¼Œä½†æ˜¯å®ƒæä¾›äº†ä¸€ä¸ªå®Œå–„çš„å¯ä»¥ç”¨ Python ä»£ç æè¿°ä½ çš„æ•°æ®åº“ç»“æž„çš„å¯¹è±¡å…³è”æ˜ å°„(ORM)ã€‚
 
-*Êý¾ÝÄ£ÐÍÓï·¨* Ìá¹©ÁËÐí¶à·á¸»µÄ·½·¨À´Õ¹ÏÖÄãµÄÄ£ÐÍ ¨C µ½Ä¿Ç°ÎªÖ¹£¬ËüÒÑ¾­½â¾öÁËÁ½¸ö¶àÄê»ýÀÛÏÂÀ´Êý¾Ý¿â¼Ü¹¹ÎÊÌâ¡£ÏÂÃæÊÇ¸ö¼òµ¥µÄÀý×Ó£¬¿ÉÄÜ±»±£´æÎª mysite/news/models.py:
+*æ•°æ®æ¨¡åž‹è¯­æ³•* æä¾›äº†è®¸å¤šä¸°å¯Œçš„æ–¹æ³•æ¥å±•çŽ°ä½ çš„æ¨¡åž‹ â€“ åˆ°ç›®å‰ä¸ºæ­¢ï¼Œå®ƒå·²ç»è§£å†³äº†ä¸¤ä¸ªå¤šå¹´ç§¯ç´¯ä¸‹æ¥æ•°æ®åº“æž¶æž„é—®é¢˜ã€‚ä¸‹é¢æ˜¯ä¸ªç®€å•çš„ä¾‹å­ï¼Œå¯èƒ½è¢«ä¿å­˜ä¸º mysite/news/models.py:
 
 ```
 class Reporter(models.Model):
@@ -33,47 +33,47 @@ class Article(models.Model):
         return self.headline
 ```
 
-## °²×°Ëü ##
+## å®‰è£…å®ƒ ##
 
-ÏÂÒ»²½£¬ÔËÐÐ Django ÃüÁîÐÐ¹¤¾ßÀ´×Ô¶¯´´½¨Êý¾Ý¿â±í£º
+ä¸‹ä¸€æ­¥ï¼Œè¿è¡Œ Django å‘½ä»¤è¡Œå·¥å…·æ¥è‡ªåŠ¨åˆ›å»ºæ•°æ®åº“è¡¨ï¼š
 
 ```
 manage.py syncdb
 ```
 
-syncdb ÃüÁî»á²éÕÒÄãËùÓÐ¿ÉÓÃµÄÄ£ÐÍ(models)È»ºóÔÚÄãµÄÊý¾Ý¿âÖÐ´´½¨»¹²»´æÔÚµÄÊý¾Ý¿â±í¡£
+syncdb å‘½ä»¤ä¼šæŸ¥æ‰¾ä½ æ‰€æœ‰å¯ç”¨çš„æ¨¡åž‹(models)ç„¶åŽåœ¨ä½ çš„æ•°æ®åº“ä¸­åˆ›å»ºè¿˜ä¸å­˜åœ¨çš„æ•°æ®åº“è¡¨ã€‚
 
-## ÏíÓÃ±ã½ÝµÄ API ##
+## äº«ç”¨ä¾¿æ·çš„ API ##
 
-½Ó×Å£¬Äã¾Í¿ÉÒÔÊ¹ÓÃÒ»¸ö±ã½ÝÇÒ¹¦ÄÜ·á¸»µÄ *Python API* À´·ÃÎÊÄãµÄÊý¾Ý¡£API ÊÇ¶¯Ì¬Éú³ÉµÄ£¬²»ÐèÒª´úÂëÉú³É:
+æŽ¥ç€ï¼Œä½ å°±å¯ä»¥ä½¿ç”¨ä¸€ä¸ªä¾¿æ·ä¸”åŠŸèƒ½ä¸°å¯Œçš„ *Python API* æ¥è®¿é—®ä½ çš„æ•°æ®ã€‚API æ˜¯åŠ¨æ€ç”Ÿæˆçš„ï¼Œä¸éœ€è¦ä»£ç ç”Ÿæˆ:
 
 ```
-# µ¼ÈëÎÒÃÇÔÚ "news "Ó¦ÓÃÖÐ´´½¨µÄÄ£ÐÍ¡£
+# å¯¼å…¥æˆ‘ä»¬åœ¨ "news "åº”ç”¨ä¸­åˆ›å»ºçš„æ¨¡åž‹ã€‚
 >>> from news.models import Reporter, Article
 
-# ÔÚÏµÍ³ÖÐ»¹Ã»ÓÐ reporters ¡£
+# åœ¨ç³»ç»Ÿä¸­è¿˜æ²¡æœ‰ reporters ã€‚
 >>> Reporter.objects.all()
 []
 
-# ´´½¨Ò»¸öÐÂµÄ Reporter ¡£
+# åˆ›å»ºä¸€ä¸ªæ–°çš„ Reporter ã€‚
 >>> r = Reporter(full_name='John Smith')
 
-# ½«¶ÔÏó±£´æµ½Êý¾Ý¿â¡£ÄãÐèÒªÏÔÊ¾µÄµ÷ÓÃ save() ·½·¨¡£
+# å°†å¯¹è±¡ä¿å­˜åˆ°æ•°æ®åº“ã€‚ä½ éœ€è¦æ˜¾ç¤ºçš„è°ƒç”¨ save() æ–¹æ³•ã€‚
 >>> r.save()
 
-# ÏÖÔÚËüÓµÓÐÁËÒ»¸öID¡£
+# çŽ°åœ¨å®ƒæ‹¥æœ‰äº†ä¸€ä¸ªIDã€‚
 >>> r.id
 1
 
-# ÏÖÔÚÐÂµÄ reporter ÒÑ¾­´æÔÚÊý¾Ý¿âÀïÁË¡£
+# çŽ°åœ¨æ–°çš„ reporter å·²ç»å­˜åœ¨æ•°æ®åº“é‡Œäº†ã€‚
 >>> Reporter.objects.all()
 [<Reporter: John Smith>]
 
-# ×Ö¶Î±»±íÊ¾ÎªÒ»¸ö Python ¶ÔÏóµÄÊôÐÔ¡£
+# å­—æ®µè¢«è¡¨ç¤ºä¸ºä¸€ä¸ª Python å¯¹è±¡çš„å±žæ€§ã€‚
 >>> r.full_name
 'John Smith'
 
-# Django Ìá¹©ÁË·á¸»µÄÊý¾Ý¿â²éÑ¯ API¡£
+# Django æä¾›äº†ä¸°å¯Œçš„æ•°æ®åº“æŸ¥è¯¢ APIã€‚
 >>> Reporter.objects.get(id=1)
 <Reporter: John Smith>
 >>> Reporter.objects.get(full_name__startswith='John')
@@ -85,41 +85,41 @@ Traceback (most recent call last):
     ...
 DoesNotExist: Reporter matching query does not exist. Lookup parameters were {'id': 2}
 
-# ´´½¨Ò»¸ö article.
+# åˆ›å»ºä¸€ä¸ª article.
 >>> from datetime import date
 >>> a = Article(pub_date=date.today(), headline='Django is cool',
 ...     content='Yeah.', reporter=r)
 >>> a.save()
 
-# ÏÖÔÚ article ÒÑ¾­´æÔÚÊý¾Ý¿âÀïÁË¡£
+# çŽ°åœ¨ article å·²ç»å­˜åœ¨æ•°æ®åº“é‡Œäº†ã€‚
 >>> Article.objects.all()
 [<Article: Django is cool>]
 
-# Article ¶ÔÏóÓÐ API ¿ÉÒÔ·ÃÎÊµ½¹ØÁªµ½ Reporter ¶ÔÏó¡£
+# Article å¯¹è±¡æœ‰ API å¯ä»¥è®¿é—®åˆ°å…³è”åˆ° Reporter å¯¹è±¡ã€‚
 >>> r = a.reporter
 >>> r.full_name
 'John Smith'
 
-# ·´Ö®ÒàÈ»£ºReporter ¶ÔÏóÒ²ÓÐ·ÃÎÊ Article ¶ÔÏóµÄAPI¡£
+# åä¹‹äº¦ç„¶ï¼šReporter å¯¹è±¡ä¹Ÿæœ‰è®¿é—® Article å¯¹è±¡çš„APIã€‚
 >>> r.article_set.all()
 [<Article: Django is cool>]
 
-# API »áÔÚÄ»ºó¸ßÐ§µÄ¹ØÁª±íÀ´Âú×ãÄãµÄ¹ØÁª²éÑ¯µÄÐèÇó¡£
-# ÒÔÏÂÀý×ÓÊÇÕÒ³öÃû×Ö¿ªÍ·Îª "John" µÄ reporter µÄËùÓÐ articles ¡£
+# API ä¼šåœ¨å¹•åŽé«˜æ•ˆçš„å…³è”è¡¨æ¥æ»¡è¶³ä½ çš„å…³è”æŸ¥è¯¢çš„éœ€æ±‚ã€‚
+# ä»¥ä¸‹ä¾‹å­æ˜¯æ‰¾å‡ºåå­—å¼€å¤´ä¸º "John" çš„ reporter çš„æ‰€æœ‰ articles ã€‚
 >>> Article.objects.filter(reporter__full_name__startswith="John")
 [<Article: Django is cool>]
 
-# Í¨¹ý¸ü¸ÄÒ»¸ö¶ÔÏóµÄÊôÐÔÖµ£¬È»ºóÔÙµ÷ÓÃ save() ·½·¨À´¸Ä±äËü¡£
+# é€šè¿‡æ›´æ”¹ä¸€ä¸ªå¯¹è±¡çš„å±žæ€§å€¼ï¼Œç„¶åŽå†è°ƒç”¨ save() æ–¹æ³•æ¥æ”¹å˜å®ƒã€‚
 >>> r.full_name = 'Billy Goat'
 >>> r.save()
 
-# µ÷ÓÃ delete() ·½·¨À´É¾³ýÒ»¸ö¶ÔÏó¡£
+# è°ƒç”¨ delete() æ–¹æ³•æ¥åˆ é™¤ä¸€ä¸ªå¯¹è±¡ã€‚
 >>> r.delete()
 ```
 
-## Ò»¸ö¶¯Ì¬µÄ¹ÜÀí½Ó¿Ú£ºËü²»½ö½öÊÇ¸ö½ÅÊÖ¼Ü ¨C »¹ÊÇ¸öÍêÕûµÄ·¿×Ó ##
+## ä¸€ä¸ªåŠ¨æ€çš„ç®¡ç†æŽ¥å£ï¼šå®ƒä¸ä»…ä»…æ˜¯ä¸ªè„šæ‰‹æž¶ â€“ è¿˜æ˜¯ä¸ªå®Œæ•´çš„æˆ¿å­ ##
 
-Ò»µ©ÄãµÄ models ±»¶¨ÒåºÃ£¬Django ÄÜ×Ô¶¯´´½¨Ò»¸ö×¨ÒµµÄ£¬¿ÉÒÔÓÃÓÚÉú²ú»·¾³µÄ *¹ÜÀí½çÃæ* ¨C Ò»¸ö¿ÉÈÃÊÚÈ¨ÓÃ»§Ìí¼Ó£¬ÐÞ¸ÄºÍÉ¾³ý¶ÔÏóµÄÍøÕ¾¡£ËüÊ¹ÓÃÆðÀ´·Ç³£¼òµ¥Ö»ÐèÔÚÄãµÄ admin site ÖÐ×¢²áÄãµÄÄ£ÐÍ¼´¿É¡£:
+ä¸€æ—¦ä½ çš„ models è¢«å®šä¹‰å¥½ï¼ŒDjango èƒ½è‡ªåŠ¨åˆ›å»ºä¸€ä¸ªä¸“ä¸šçš„ï¼Œå¯ä»¥ç”¨äºŽç”Ÿäº§çŽ¯å¢ƒçš„ *ç®¡ç†ç•Œé¢* â€“ ä¸€ä¸ªå¯è®©æŽˆæƒç”¨æˆ·æ·»åŠ ï¼Œä¿®æ”¹å’Œåˆ é™¤å¯¹è±¡çš„ç½‘ç«™ã€‚å®ƒä½¿ç”¨èµ·æ¥éžå¸¸ç®€å•åªéœ€åœ¨ä½ çš„ admin site ä¸­æ³¨å†Œä½ çš„æ¨¡åž‹å³å¯ã€‚:
 
 ```
 # In models.py...
@@ -141,17 +141,17 @@ from django.contrib import admin
 admin.site.register(models.Article)
 ```
 
-ÕâÖÖÉè¼ÆÀíÄîÊÇÄãµÄÍøÕ¾Ò»°ãÊÇÓÉÒ»¸öÔ±¹¤,»òÕß¿Í»§£¬»òÕß½ö½öÊÇÄã×Ô¼ºÈ¥±à¼­ ¨C ¶øÄãÓ¦¸Ã²»»áÏëÒª½ö½öÎªÁË¹ÜÀíÄÚÈÝ¶øÈ¥´´½¨ºóÌ¨½çÃæ¡£
+è¿™ç§è®¾è®¡ç†å¿µæ˜¯ä½ çš„ç½‘ç«™ä¸€èˆ¬æ˜¯ç”±ä¸€ä¸ªå‘˜å·¥,æˆ–è€…å®¢æˆ·ï¼Œæˆ–è€…ä»…ä»…æ˜¯ä½ è‡ªå·±åŽ»ç¼–è¾‘ â€“ è€Œä½ åº”è¯¥ä¸ä¼šæƒ³è¦ä»…ä»…ä¸ºäº†ç®¡ç†å†…å®¹è€ŒåŽ»åˆ›å»ºåŽå°ç•Œé¢ã€‚
 
-ÔÚÒ»¸ö´´½¨ Django Ó¦ÓÃµÄµäÐÍ¹¤×÷Á÷ÖÐ£¬Ê×ÏÈÐèÒª´´½¨Ä£ÐÍ²¢¾¡¿ÉÄÜ¿ìµØÆô¶¯ºÍÔËÐÐ admin sites£¬ ÈÃÄúµÄÔ±¹¤(»òÕß¿Í»§)ÄÜ¹»¿ªÊ¼Â¼ÈëÊý¾Ý¡£È»ºó,²Å¿ª·¢Õ¹ÏÖÊý¾Ý¸ø¹«ÖÚµÄ·½Ê½¡£
+åœ¨ä¸€ä¸ªåˆ›å»º Django åº”ç”¨çš„å…¸åž‹å·¥ä½œæµä¸­ï¼Œé¦–å…ˆéœ€è¦åˆ›å»ºæ¨¡åž‹å¹¶å°½å¯èƒ½å¿«åœ°å¯åŠ¨å’Œè¿è¡Œ admin sitesï¼Œ è®©æ‚¨çš„å‘˜å·¥(æˆ–è€…å®¢æˆ·)èƒ½å¤Ÿå¼€å§‹å½•å…¥æ•°æ®ã€‚ç„¶åŽ,æ‰å¼€å‘å±•çŽ°æ•°æ®ç»™å…¬ä¼—çš„æ–¹å¼ã€‚
 
-## Éè¼ÆÄãµÄ URLs ##
+## è®¾è®¡ä½ çš„ URLs ##
 
-Ò»¸ö¸É¾»µÄ£¬ÓÅÑÅµÄ URL ·½°¸ÊÇÒ»¸ö¸ßÖÊÁ¿ Web Ó¦ÓÃ³ÌÐòµÄÖØÒªÏ¸½Ú¡£ Django ¹ÄÀøÊ¹ÓÃÆ¯ÁÁµÄ URL Éè¼Æ£¬²¢ÇÒ²»¹ÄÀø°ÑÃ»±ØÒªµÄ¶«Î÷·Åµ½ URLs ÀïÃæ£¬Ïñ .php »ò .asp.
+ä¸€ä¸ªå¹²å‡€çš„ï¼Œä¼˜é›…çš„ URL æ–¹æ¡ˆæ˜¯ä¸€ä¸ªé«˜è´¨é‡ Web åº”ç”¨ç¨‹åºçš„é‡è¦ç»†èŠ‚ã€‚ Django é¼“åŠ±ä½¿ç”¨æ¼‚äº®çš„ URL è®¾è®¡ï¼Œå¹¶ä¸”ä¸é¼“åŠ±æŠŠæ²¡å¿…è¦çš„ä¸œè¥¿æ”¾åˆ° URLs é‡Œé¢ï¼Œåƒ .php æˆ– .asp.
 
-ÎªÁË¸øÒ»¸ö app Éè¼Æ URLs£¬ÄãÐèÒª´´½¨Ò»¸ö Python Ä£¿é½Ð×ö [URLconf](/topics/http/urls)¡£ÕâÊÇÒ»¸öÄãµÄ app ÄÚÈÝÄ¿Â¼£¬ Ëü°üº¬Ò»¸ö¼òµ¥µÄ URL Æ¥ÅäÄ£Ê½Óë Python »Øµ÷º¯Êý¼äµÄÓ³Éä¹ØÏµ¡£ÕâÓÐÖúÓÚ½âñî Python ´úÂëºÍ URLs ¡£
+ä¸ºäº†ç»™ä¸€ä¸ª app è®¾è®¡ URLsï¼Œä½ éœ€è¦åˆ›å»ºä¸€ä¸ª Python æ¨¡å—å«åš [URLconf](/topics/http/urls)ã€‚è¿™æ˜¯ä¸€ä¸ªä½ çš„ app å†…å®¹ç›®å½•ï¼Œ å®ƒåŒ…å«ä¸€ä¸ªç®€å•çš„ URL åŒ¹é…æ¨¡å¼ä¸Ž Python å›žè°ƒå‡½æ•°é—´çš„æ˜ å°„å…³ç³»ã€‚è¿™æœ‰åŠ©äºŽè§£è€¦ Python ä»£ç å’Œ URLs ã€‚
 
-ÕâÊÇÕë¶ÔÉÏÃæ Reporter/Article Àý×ÓËùÅäÖÃµÄ URLconf ´ó¸ÅÑù×Ó:
+è¿™æ˜¯é’ˆå¯¹ä¸Šé¢ Reporter/Article ä¾‹å­æ‰€é…ç½®çš„ URLconf å¤§æ¦‚æ ·å­:
 
 ```
 from django.conf.urls import patterns
@@ -163,17 +163,17 @@ urlpatterns = patterns('',
 )
 ```
 
-ÉÏÃæµÄ´úÂëÓ³ÉäÁË URLs £¬´ÓÒ»¸ö¼òµ¥µÄÕýÔò±í´ïÊ½£¬µ½ Python »Øµ÷º¯Êý(¡°views¡±)ËùÔÚµÄÎ»ÖÃ¡£ ÕýÔò±í´ïÊ½Í¨¹ýÔ²À¨ºÅÀ´¡°²¶»ñ¡± URLs ÖÐµÄÖµ¡£µ±Ò»¸öÓÃ»§ÇëÇóÒ»¸öÒ³ÃæÊ±£¬ Django ½«°´ÕÕË³ÐòÈ¥Æ¥ÅäÃ¿Ò»¸öÄ£Ê½£¬²¢Í£ÔÚµÚÒ»¸öÆ¥ÅäÇëÇóµÄ URL ÉÏ¡£(Èç¹ûÃ»ÓÐÆ¥Åäµ½£¬ Django ½«»áÕ¹Ê¾Ò»¸ö404µÄ´íÎóÒ³Ãæ¡£) Õû¸ö¹ý³ÌÊÇ¼«¿ìµÄ£¬ÒòÎªÔÚ¼ÓÔØÊ±ÕýÔò±í´ïÊ½¾Í½øÐÐÁË±àÒë¡£
+ä¸Šé¢çš„ä»£ç æ˜ å°„äº† URLs ï¼Œä»Žä¸€ä¸ªç®€å•çš„æ­£åˆ™è¡¨è¾¾å¼ï¼Œåˆ° Python å›žè°ƒå‡½æ•°(â€œviewsâ€)æ‰€åœ¨çš„ä½ç½®ã€‚ æ­£åˆ™è¡¨è¾¾å¼é€šè¿‡åœ†æ‹¬å·æ¥â€œæ•èŽ·â€ URLs ä¸­çš„å€¼ã€‚å½“ä¸€ä¸ªç”¨æˆ·è¯·æ±‚ä¸€ä¸ªé¡µé¢æ—¶ï¼Œ Django å°†æŒ‰ç…§é¡ºåºåŽ»åŒ¹é…æ¯ä¸€ä¸ªæ¨¡å¼ï¼Œå¹¶åœåœ¨ç¬¬ä¸€ä¸ªåŒ¹é…è¯·æ±‚çš„ URL ä¸Šã€‚(å¦‚æžœæ²¡æœ‰åŒ¹é…åˆ°ï¼Œ Django å°†ä¼šå±•ç¤ºä¸€ä¸ª404çš„é”™è¯¯é¡µé¢ã€‚) æ•´ä¸ªè¿‡ç¨‹æ˜¯æžå¿«çš„ï¼Œå› ä¸ºåœ¨åŠ è½½æ—¶æ­£åˆ™è¡¨è¾¾å¼å°±è¿›è¡Œäº†ç¼–è¯‘ã€‚
 
-Ò»µ©ÓÐÒ»¸öÕýÔò±í´ïÊ½Æ¥ÅäÉÏÁË£¬Django ½«µ¼ÈëºÍµ÷ÓÃ¶ÔÓ¦µÄÊÓÍ¼£¬ËüÆäÊµ¾ÍÊÇÒ»¸ö¼òµ¥µÄ Python º¯Êý¡£Ã¿¸öÊÓÍ¼½«µÃµ½Ò»¸ö request ¶ÔÏó ¨C Ëü°üº¬ÁË request µÄ meta ÐÅÏ¢ ¨C ºÍÕýÔò±í´ïÊ½Ëù²¶»ñµ½µÄÖµ¡£
+ä¸€æ—¦æœ‰ä¸€ä¸ªæ­£åˆ™è¡¨è¾¾å¼åŒ¹é…ä¸Šäº†ï¼ŒDjango å°†å¯¼å…¥å’Œè°ƒç”¨å¯¹åº”çš„è§†å›¾ï¼Œå®ƒå…¶å®žå°±æ˜¯ä¸€ä¸ªç®€å•çš„ Python å‡½æ•°ã€‚æ¯ä¸ªè§†å›¾å°†å¾—åˆ°ä¸€ä¸ª request å¯¹è±¡ â€“ å®ƒåŒ…å«äº† request çš„ meta ä¿¡æ¯ â€“ å’Œæ­£åˆ™è¡¨è¾¾å¼æ‰€æ•èŽ·åˆ°çš„å€¼ã€‚
 
-ÀýÈç£ºÈç¹ûÒ»¸öÓÃ»§ÇëÇóÁË¸ö URL ¡°/articles/2005/05/39323/¡±, Django ½«»áÕâÑùµ÷ÓÃº¯Êý news.views.article_detail(request, '2005', '05', '39323').
+ä¾‹å¦‚ï¼šå¦‚æžœä¸€ä¸ªç”¨æˆ·è¯·æ±‚äº†ä¸ª URL â€œ/articles/2005/05/39323/â€, Django å°†ä¼šè¿™æ ·è°ƒç”¨å‡½æ•° news.views.article_detail(request, '2005', '05', '39323').
 
-## ±àÐ´ÄãµÄÊÓÍ¼(views) ##
+## ç¼–å†™ä½ çš„è§†å›¾(views) ##
 
-Ã¿¸öÊÓÍ¼Ö»¸ºÔðÁ½¼þÊÂÖÐµÄÒ»¼þ£º·µ»ØÒ»¸ö°üº¬ÇëÇóÒ³ÃæÄÚÈÝµÄ HttpResponse ¶ÔÏó; »òÅ×³öÒ»¸öÒì³£Èç Http404 ¡£ÖÁÓÚÆäËû¾Í¿¿ÄãÁË¡£
+æ¯ä¸ªè§†å›¾åªè´Ÿè´£ä¸¤ä»¶äº‹ä¸­çš„ä¸€ä»¶ï¼šè¿”å›žä¸€ä¸ªåŒ…å«è¯·æ±‚é¡µé¢å†…å®¹çš„ HttpResponse å¯¹è±¡; æˆ–æŠ›å‡ºä¸€ä¸ªå¼‚å¸¸å¦‚ Http404 ã€‚è‡³äºŽå…¶ä»–å°±é ä½ äº†ã€‚
 
-Í¨³££¬Ò»¸öÊÓÍ¼»á¸ù¾Ý²ÎÊýÀ´¼ìË÷Êý¾Ý£¬¼ÓÔØÒ»¸öÄ£°å²¢ÇÒ¸ù¾Ý¸ÃÄ£°åÀ´³ÊÏÖ¼ìË÷³öÀ´µÄÊý¾Ý¡£ ÏÂÃæÊÇ¸ö½ÓÉÏÀýµÄ year_archive Àý×Ó
+é€šå¸¸ï¼Œä¸€ä¸ªè§†å›¾ä¼šæ ¹æ®å‚æ•°æ¥æ£€ç´¢æ•°æ®ï¼ŒåŠ è½½ä¸€ä¸ªæ¨¡æ¿å¹¶ä¸”æ ¹æ®è¯¥æ¨¡æ¿æ¥å‘ˆçŽ°æ£€ç´¢å‡ºæ¥çš„æ•°æ®ã€‚ ä¸‹é¢æ˜¯ä¸ªæŽ¥ä¸Šä¾‹çš„ year_archive ä¾‹å­
 
 ```
 def year_archive(request, year):
@@ -181,15 +181,15 @@ def year_archive(request, year):
     return render_to_response('news/year_archive.html', {'year': year, 'article_list': a_list})
 ```
 
-Õâ¸öÀý×ÓÊ¹ÓÃÁË Django µÄ [Ä£°åÏµÍ³](/topics/templates)£¬¸ÃÄ£°åÏµÍ³¹¦ÄÜÇ¿´óÇÒ¼òµ¥Ò×ÓÃ£¬ÉõÖÁ·Ç±à³ÌÈËÔ±Ò²»áÊ¹ÓÃ¡£
+è¿™ä¸ªä¾‹å­ä½¿ç”¨äº† Django çš„ [æ¨¡æ¿ç³»ç»Ÿ](/topics/templates)ï¼Œè¯¥æ¨¡æ¿ç³»ç»ŸåŠŸèƒ½å¼ºå¤§ä¸”ç®€å•æ˜“ç”¨ï¼Œç”šè‡³éžç¼–ç¨‹äººå‘˜ä¹Ÿä¼šä½¿ç”¨ã€‚
 
-Éè¼ÆÄãµÄÄ£°å(templates)
+è®¾è®¡ä½ çš„æ¨¡æ¿(templates)
 
-ÉÏÃæµÄÀý×ÓÖÐÔØÈëÁË news/year_archive.html Ä£°å¡£
+ä¸Šé¢çš„ä¾‹å­ä¸­è½½å…¥äº† news/year_archive.html æ¨¡æ¿ã€‚
 
-Django ÓÐÒ»¸öÄ£°åËÑË÷Â·¾¶°å£¬ËüÈÃÄã¾¡¿ÉÄÜµÄ¼õÉÙÈßÓà¶øÖØ¸´ÀûÓÃÄ£°å¡£ÔÚÄãµÄ DjangoÉèÖÃÖÐ£¬Äã¿ÉÒÔÖ¸¶¨Ò»¸ö²éÕÒÄ£°åµÄÄ¿Â¼ÁÐ±í¡£Èç¹ûÒ»¸öÄ£°åÃ»ÓÐÔÚÕâ¸ö ÁÐ±íÖÐ£¬ÄÇÃ´Ëü»áÈ¥²éÕÒµÚ¶þ¸ö£¬È»ºóÒÔ´ËÀàÍÆ¡£
+Django æœ‰ä¸€ä¸ªæ¨¡æ¿æœç´¢è·¯å¾„æ¿ï¼Œå®ƒè®©ä½ å°½å¯èƒ½çš„å‡å°‘å†—ä½™è€Œé‡å¤åˆ©ç”¨æ¨¡æ¿ã€‚åœ¨ä½ çš„ Djangoè®¾ç½®ä¸­ï¼Œä½ å¯ä»¥æŒ‡å®šä¸€ä¸ªæŸ¥æ‰¾æ¨¡æ¿çš„ç›®å½•åˆ—è¡¨ã€‚å¦‚æžœä¸€ä¸ªæ¨¡æ¿æ²¡æœ‰åœ¨è¿™ä¸ª åˆ—è¡¨ä¸­ï¼Œé‚£ä¹ˆå®ƒä¼šåŽ»æŸ¥æ‰¾ç¬¬äºŒä¸ªï¼Œç„¶åŽä»¥æ­¤ç±»æŽ¨ã€‚
 
-¼ÙÉèÕÒµ½ÁËÄ£°å news/year_archive.html ¡£ÏÂÃæÊÇËü´ó¸ÅµÄÑù×Ó:
+å‡è®¾æ‰¾åˆ°äº†æ¨¡æ¿ news/year_archive.html ã€‚ä¸‹é¢æ˜¯å®ƒå¤§æ¦‚çš„æ ·å­:
 
 ```
 {% extends "base.html" %}
@@ -206,15 +206,15 @@ Django ÓÐÒ»¸öÄ£°åËÑË÷Â·¾¶°å£¬ËüÈÃÄã¾¡¿ÉÄÜµÄ¼õÉÙÈßÓà¶øÖØ¸´ÀûÓÃÄ£°å¡£ÔÚÄãµÄ Django
 {% endfor %}
 {% endblock %}
 ```
-±äÁ¿Ê¹ÓÃË«»¨À¨ºÅ°üÎ§¡£``{{ article.headline }}`` ±íÊ¾ ¡°Êä³ö article µÄ headline ÊôÐÔ¡±¡£¶øµã·ûºÅ²»½öÓÃÓÚ±íÊ¾ÊôÐÔ²éÕÒ£¬»¹¿ÉÓÃÓÚ×ÖµäµÄ¼üÖµ²éÕÒ¡¢Ë÷Òý²éÕÒºÍº¯Êýµ÷ÓÃ¡£
+å˜é‡ä½¿ç”¨åŒèŠ±æ‹¬å·åŒ…å›´ã€‚``{{ article.headline }}`` è¡¨ç¤º â€œè¾“å‡º article çš„ headline å±žæ€§â€ã€‚è€Œç‚¹ç¬¦å·ä¸ä»…ç”¨äºŽè¡¨ç¤ºå±žæ€§æŸ¥æ‰¾ï¼Œè¿˜å¯ç”¨äºŽå­—å…¸çš„é”®å€¼æŸ¥æ‰¾ã€ç´¢å¼•æŸ¥æ‰¾å’Œå‡½æ•°è°ƒç”¨ã€‚
 
-×¢Òâ {{ article.pub_date|date:"F j, Y" }} Ê¹ÓÃÁË Unix ·ç¸ñµÄ¡°¹ÜµÀ¡±(¡°|¡±·ûºÏ)¡£Õâ¾ÍÊÇËùÎ½µÄÄ£°å¹ýÂËÆ÷£¬Ò»ÖÖÍ¨¹ý±äÁ¿À´¹ýÂËÖµµÄ·½Ê½¡£±¾ÀýÖÐ£¬Python datetime ¶ÔÏó±»¹ýÂË³ÉÖ¸¶¨µÄ¸ñÊ½(ÔÚ PHP µÄÈÕÆÚº¯ÊýÖÐ¿ÉÒÔ¼ûµ½ÕâÖÖ±ä»»)¡£
+æ³¨æ„ {{ article.pub_date|date:"F j, Y" }} ä½¿ç”¨äº† Unix é£Žæ ¼çš„â€œç®¡é“â€(â€œ|â€ç¬¦åˆ)ã€‚è¿™å°±æ˜¯æ‰€è°“çš„æ¨¡æ¿è¿‡æ»¤å™¨ï¼Œä¸€ç§é€šè¿‡å˜é‡æ¥è¿‡æ»¤å€¼çš„æ–¹å¼ã€‚æœ¬ä¾‹ä¸­ï¼ŒPython datetime å¯¹è±¡è¢«è¿‡æ»¤æˆæŒ‡å®šçš„æ ¼å¼(åœ¨ PHP çš„æ—¥æœŸå‡½æ•°ä¸­å¯ä»¥è§åˆ°è¿™ç§å˜æ¢)ã€‚
 
-Äã¿ÉÒÔÎÞÏÞÖÆµØ´®ÁªÊ¹ÓÃ¶à¸ö¹ýÂËÆ÷¡£Äã¿ÉÒÔ±àÐ´×Ô¶¨ÒåµÄ¹ýÂËÆ÷¡£Äã¿ÉÒÔ¶¨ÖÆ×Ô ¼ºµÄÄ£°å±ê¼Ç£¬ÔÚÄ»ºóÔËÐÐ×Ô¶¨ÒåµÄ Python ´úÂë¡£
+ä½ å¯ä»¥æ— é™åˆ¶åœ°ä¸²è”ä½¿ç”¨å¤šä¸ªè¿‡æ»¤å™¨ã€‚ä½ å¯ä»¥ç¼–å†™è‡ªå®šä¹‰çš„è¿‡æ»¤å™¨ã€‚ä½ å¯ä»¥å®šåˆ¶è‡ª å·±çš„æ¨¡æ¿æ ‡è®°ï¼Œåœ¨å¹•åŽè¿è¡Œè‡ªå®šä¹‰çš„ Python ä»£ç ã€‚
 
-×îºó£¬Django Ê¹ÓÃÁË¡°Ä£°å¼Ì³Ð¡±µÄ¸ÅÄî£ºÕâ¾ÍÊÇ {% extends "base.html" %} Ëù×öµÄÊÂ¡£ËüÒâÎ¶×Å ¡°Ê×ÏÈÔØÈëÃûÎª ¡®base¡¯ µÄÄ£°åÖÐµÄÄÚÈÝµ½µ±Ç°Ä£°å£¬È»ºóÔÙ´¦Àí±¾Ä£°åÖÐµÄÆäÓàÄÚÈÝ¡£¡±×ÜÖ®£¬Ä£°å¼Ì³ÐÈÃÄãÔÚÄ£°å¼ä´ó´ó¼õÉÙÈßÓàÄÚÈÝ£ºÃ¿Ò»¸öÄ£°åÖ»ÐèÒª¶¨ÒåËü¶ÀÌØµÄ²¿·Ö¼´¿É¡£
+æœ€åŽï¼ŒDjango ä½¿ç”¨äº†â€œæ¨¡æ¿ç»§æ‰¿â€çš„æ¦‚å¿µï¼šè¿™å°±æ˜¯ {% extends "base.html" %} æ‰€åšçš„äº‹ã€‚å®ƒæ„å‘³ç€ â€œé¦–å…ˆè½½å…¥åä¸º â€˜baseâ€™ çš„æ¨¡æ¿ä¸­çš„å†…å®¹åˆ°å½“å‰æ¨¡æ¿ï¼Œç„¶åŽå†å¤„ç†æœ¬æ¨¡æ¿ä¸­çš„å…¶ä½™å†…å®¹ã€‚â€æ€»ä¹‹ï¼Œæ¨¡æ¿ç»§æ‰¿è®©ä½ åœ¨æ¨¡æ¿é—´å¤§å¤§å‡å°‘å†—ä½™å†…å®¹ï¼šæ¯ä¸€ä¸ªæ¨¡æ¿åªéœ€è¦å®šä¹‰å®ƒç‹¬ç‰¹çš„éƒ¨åˆ†å³å¯ã€‚
 
-ÏÂÃæÊÇÊ¹ÓÃÁË *¾²Ì¬ÎÄ¼þ* µÄ ¡°base.html¡± Ä£°åµÄ´ó¸ÅÑù×Ó:
+ä¸‹é¢æ˜¯ä½¿ç”¨äº† *é™æ€æ–‡ä»¶* çš„ â€œbase.htmlâ€ æ¨¡æ¿çš„å¤§æ¦‚æ ·å­:
 
 ```
 {% load staticfiles %}
@@ -229,17 +229,17 @@ Django ÓÐÒ»¸öÄ£°åËÑË÷Â·¾¶°å£¬ËüÈÃÄã¾¡¿ÉÄÜµÄ¼õÉÙÈßÓà¶øÖØ¸´ÀûÓÃÄ£°å¡£ÔÚÄãµÄ Django
 </html>
 ```
 
-¼òµ¥µØËµ£¬Ëü¶¨ÒåÁËÍøÕ¾µÄÍâ¹Û£¨º¬ÍøÕ¾µÄ logo £©£¬²¢ÁôÏÂÁË¸ö¡°¶´¡±ÈÃ×ÓÄ£°åÀ´Ìî³ä¡£ÕâÊ¹Õ¾µãµÄÖØÐÂÉè¼Æ±äµÃ·Ç³£ÈÝÒ×£¬Ö»Ðè¸Ä±äÒ»¸öÎÄ¼þ ¨C ¡°base.html¡± Ä£°å¡£
+ç®€å•åœ°è¯´ï¼Œå®ƒå®šä¹‰äº†ç½‘ç«™çš„å¤–è§‚ï¼ˆå«ç½‘ç«™çš„ logo ï¼‰ï¼Œå¹¶ç•™ä¸‹äº†ä¸ªâ€œæ´žâ€è®©å­æ¨¡æ¿æ¥å¡«å……ã€‚è¿™ä½¿ç«™ç‚¹çš„é‡æ–°è®¾è®¡å˜å¾—éžå¸¸å®¹æ˜“ï¼Œåªéœ€æ”¹å˜ä¸€ä¸ªæ–‡ä»¶ â€“ â€œbase.htmlâ€ æ¨¡æ¿ã€‚
 
-ËüÒ²¿ÉÒÔÈÃÄã´´½¨Ò»¸öÍøÕ¾µÄ¶à¸ö°æ±¾£¬²»Í¬µÄ»ù´¡Ä£°å£¬¶øÖØÓÃ×ÓÄ£°å¡£ Django µÄ´´½¨ÕßÒÑ¾­ÀûÓÃÕâÒ»¼¼ÊõÀ´´´ÔìÁËÏÔÖø²»Í¬µÄÊÖ»ú°æ±¾µÄÍøÕ¾ ¨C Ö»Ðè´´½¨Ò»¸öÐÂµÄ»ù´¡Ä£°å¡£
+å®ƒä¹Ÿå¯ä»¥è®©ä½ åˆ›å»ºä¸€ä¸ªç½‘ç«™çš„å¤šä¸ªç‰ˆæœ¬ï¼Œä¸åŒçš„åŸºç¡€æ¨¡æ¿ï¼Œè€Œé‡ç”¨å­æ¨¡æ¿ã€‚ Django çš„åˆ›å»ºè€…å·²ç»åˆ©ç”¨è¿™ä¸€æŠ€æœ¯æ¥åˆ›é€ äº†æ˜¾è‘—ä¸åŒçš„æ‰‹æœºç‰ˆæœ¬çš„ç½‘ç«™ â€“ åªéœ€åˆ›å»ºä¸€ä¸ªæ–°çš„åŸºç¡€æ¨¡æ¿ã€‚
 
-Çë×¢Òâ£¬Èç¹ûÄãÏ²»¶ÆäËûÄ£°åÏµÍ³£¬ÄÇÃ´Äã¿ÉÒÔ²»Ê¹ÓÃ Django µÄÄ£°åÏµÍ³¡£ ËäÈ» Django µÄÄ£°åÏµÍ³ÌØ±ð¼¯³ÉÁË Django µÄÄ£ÐÍ²ã£¬µ«²¢Ã»ÓÐÇ¿ÖÆÄãÊ¹ÓÃËü¡£Í¬Àí£¬ÄãÒ²¿ÉÒÔ²»Ê¹ÓÃ Django µÄÊý¾Ý¿â API¡£Äú¿ÉÒÔÊ¹ÓÃÆäËûÊý¾Ý¿â³éÏó²ã£¬Äú¿ÉÒÔ¶ÁÈ¡ XML ÎÄ¼þ£¬Äã¿ÉÒÔ´Ó´ÅÅÌÖÐ¶ÁÈ¡ÎÄ¼þ£¬»òÈÎºÎÄãÏëÒªµÄ·½·¨È¥²Ù×÷Êý¾Ý¡£ Django µÄÃ¿¸ö×é³É²¿·Ö£º Ä£ÐÍ¡¢ÊÓÍ¼ºÍÄ£°å¶¼¿ÉÒÔ½âñî£¬ÒÔºó»áÌ¸µ½¡£
+è¯·æ³¨æ„ï¼Œå¦‚æžœä½ å–œæ¬¢å…¶ä»–æ¨¡æ¿ç³»ç»Ÿï¼Œé‚£ä¹ˆä½ å¯ä»¥ä¸ä½¿ç”¨ Django çš„æ¨¡æ¿ç³»ç»Ÿã€‚ è™½ç„¶ Django çš„æ¨¡æ¿ç³»ç»Ÿç‰¹åˆ«é›†æˆäº† Django çš„æ¨¡åž‹å±‚ï¼Œä½†å¹¶æ²¡æœ‰å¼ºåˆ¶ä½ ä½¿ç”¨å®ƒã€‚åŒç†ï¼Œä½ ä¹Ÿå¯ä»¥ä¸ä½¿ç”¨ Django çš„æ•°æ®åº“ APIã€‚æ‚¨å¯ä»¥ä½¿ç”¨å…¶ä»–æ•°æ®åº“æŠ½è±¡å±‚ï¼Œæ‚¨å¯ä»¥è¯»å– XML æ–‡ä»¶ï¼Œä½ å¯ä»¥ä»Žç£ç›˜ä¸­è¯»å–æ–‡ä»¶ï¼Œæˆ–ä»»ä½•ä½ æƒ³è¦çš„æ–¹æ³•åŽ»æ“ä½œæ•°æ®ã€‚ Django çš„æ¯ä¸ªç»„æˆéƒ¨åˆ†ï¼š æ¨¡åž‹ã€è§†å›¾å’Œæ¨¡æ¿éƒ½å¯ä»¥è§£è€¦ï¼Œä»¥åŽä¼šè°ˆåˆ°ã€‚
 
-## Õâ½ö½öÊÇÒ»µãÆ¤Ã« ##
+## è¿™ä»…ä»…æ˜¯ä¸€ç‚¹çš®æ¯› ##
 
-ÕâÀïÖ»ÊÇ¼òÒª¸ÅÊöÁË Django µÄ¹¦ÄÜ¡£ÒÔÏÂÊÇÒ»Ð©¸üÓÐÓÃµÄ¹¦ÄÜ£º
+è¿™é‡Œåªæ˜¯ç®€è¦æ¦‚è¿°äº† Django çš„åŠŸèƒ½ã€‚ä»¥ä¸‹æ˜¯ä¸€äº›æ›´æœ‰ç”¨çš„åŠŸèƒ½ï¼š
 
-Ò»¸ö *»º´æ¿ò¼Ü* ¿ÉÒÔÓë memcached »òÆäËûºó¶Ë»º´æ¼¯³É¡£
-Ò»¸ö *¾ÛºÏ¿ò¼Ü* ¿ÉÒÔÈÃ´´½¨ RSS ºÍ Atom µÄ feeds Í¬Ð´Ò»¸öÐ¡Ð¡µÄ Python ÀàÒ»ÑùÈÝÒ×¡£
-¸üÐÔ¸ÐµÄ×Ô¶¯´´½¨¹ÜÀíÕ¾µã¹¦ÄÜ ¨C ±¾ÎÄ½ö½ö´¥¼°ÁËµãÆ¤Ã«¡£
-ÏÔÈ»£¬ÏÂÒ»²½ÄãÓ¦¸Ã ÏÂÔØ Django£¬ÔÄ¶Á [ÈëÃÅ½Ì³Ì](/intro/tutorial01) ²¢ÇÒ¼ÓÈë *ÉçÇø*. ¸ÐÐ»ÄúµÄ¹Ø×¢£¡
+ä¸€ä¸ª *ç¼“å­˜æ¡†æž¶* å¯ä»¥ä¸Ž memcached æˆ–å…¶ä»–åŽç«¯ç¼“å­˜é›†æˆã€‚
+ä¸€ä¸ª *èšåˆæ¡†æž¶* å¯ä»¥è®©åˆ›å»º RSS å’Œ Atom çš„ feeds åŒå†™ä¸€ä¸ªå°å°çš„ Python ç±»ä¸€æ ·å®¹æ˜“ã€‚
+æ›´æ€§æ„Ÿçš„è‡ªåŠ¨åˆ›å»ºç®¡ç†ç«™ç‚¹åŠŸèƒ½ â€“ æœ¬æ–‡ä»…ä»…è§¦åŠäº†ç‚¹çš®æ¯›ã€‚
+æ˜¾ç„¶ï¼Œä¸‹ä¸€æ­¥ä½ åº”è¯¥ ä¸‹è½½ Djangoï¼Œé˜…è¯» [å…¥é—¨æ•™ç¨‹](/intro/tutorial01) å¹¶ä¸”åŠ å…¥ *ç¤¾åŒº*. æ„Ÿè°¢æ‚¨çš„å…³æ³¨ï¼

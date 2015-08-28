@@ -1,42 +1,42 @@
 <!--
-  À´Ô´£ºhttp://django-chinese-docs.readthedocs.org/
+  æ¥æºï¼šhttp://django-chinese-docs.readthedocs.org/
 -->
 
-# ±àÐ´ÄãµÄµÚÒ»¸ö Django ³ÌÐò µÚ3²¿·Ö #
+# ç¼–å†™ä½ çš„ç¬¬ä¸€ä¸ª Django ç¨‹åº ç¬¬3éƒ¨åˆ† #
 
-±¾½Ì³ÌÉÏ½Ó ½Ì³Ì µÚ2²¿·Ö ¡£ÎÒÃÇ½«¼ÌÐø ¿ª·¢ Web-poll Ó¦ÓÃ²¢ÇÒ×¨×¢ÔÚ´´½¨¹«¹²½çÃæ ¨C ¡°ÊÓÍ¼ £¨views £©¡±¡£
+æœ¬æ•™ç¨‹ä¸ŠæŽ¥ æ•™ç¨‹ ç¬¬2éƒ¨åˆ† ã€‚æˆ‘ä»¬å°†ç»§ç»­ å¼€å‘ Web-poll åº”ç”¨å¹¶ä¸”ä¸“æ³¨åœ¨åˆ›å»ºå…¬å…±ç•Œé¢ â€“ â€œè§†å›¾ ï¼ˆviews ï¼‰â€ã€‚
 
-## ÕÜÀí ##
+## å“²ç† ##
 
-ÔÚ Django Ó¦ÓÃ³ÌÐòÖÐ£¬ÊÓÍ¼ÊÇÒ»¡°Àà¡±¾ßÓÐÌØ¶¨¹¦ÄÜºÍÄ£°åµÄÍøÒ³¡£ ÀýÈç£¬ÔÚÒ»¸ö²©¿ÍÓ¦ÓÃ³ÌÐòÖÐ£¬Äã¿ÉÄÜ»áÓÐÒÔÏÂÊÓÍ¼£º
+åœ¨ Django åº”ç”¨ç¨‹åºä¸­ï¼Œè§†å›¾æ˜¯ä¸€â€œç±»â€å…·æœ‰ç‰¹å®šåŠŸèƒ½å’Œæ¨¡æ¿çš„ç½‘é¡µã€‚ ä¾‹å¦‚ï¼Œåœ¨ä¸€ä¸ªåšå®¢åº”ç”¨ç¨‹åºä¸­ï¼Œä½ å¯èƒ½ä¼šæœ‰ä»¥ä¸‹è§†å›¾ï¼š
 
-+ ²©¿ÍÊ×Ò³ ¨C ÏÔÊ¾×îÐÂ·¢±íµÄ²©¿Í¡£
-+ ²©¿ÍÏêÏ¸Ò³Ãæ ¨C Ò»Æª²©¿ÍµÄ¶ÀÁ¢Ò³Ãæ¡£
-+ »ùÓÚÄê·ÝµÄ¹éµµÒ³ ¨C ÏÔÊ¾¸ø¶¨Äê·ÝÖÐ·¢±í²©¿ÍµÄËùÓÐÔÂ·Ý¡£
-+ »ùÓÚÔÂ·ÝµÄ¹éµµÒ³ ¨C ÏÔÊ¾¸ø¶¨ÔÂ·ÝÖÐ·¢±í²©¿ÍµÄËùÓÐÈÕÆÚ¡£
-+ »ùÓÚÈÕÆÚµÄ¹éµµÒ³ ¨C ÏÔÊ¾¸ø¶¨ÈÕÆÚÖÐ·¢±íµÄËùÓÐµÄ²©¿Í¡£
-+ ÆÀÂÛ¹¦ÄÜ ¨C ÎªÒ»Æª¸ø¶¨²©¿Í·¢±íÆÀÂÛ¡£
++ åšå®¢é¦–é¡µ â€“ æ˜¾ç¤ºæœ€æ–°å‘è¡¨çš„åšå®¢ã€‚
++ åšå®¢è¯¦ç»†é¡µé¢ â€“ ä¸€ç¯‡åšå®¢çš„ç‹¬ç«‹é¡µé¢ã€‚
++ åŸºäºŽå¹´ä»½çš„å½’æ¡£é¡µ â€“ æ˜¾ç¤ºç»™å®šå¹´ä»½ä¸­å‘è¡¨åšå®¢çš„æ‰€æœ‰æœˆä»½ã€‚
++ åŸºäºŽæœˆä»½çš„å½’æ¡£é¡µ â€“ æ˜¾ç¤ºç»™å®šæœˆä»½ä¸­å‘è¡¨åšå®¢çš„æ‰€æœ‰æ—¥æœŸã€‚
++ åŸºäºŽæ—¥æœŸçš„å½’æ¡£é¡µ â€“ æ˜¾ç¤ºç»™å®šæ—¥æœŸä¸­å‘è¡¨çš„æ‰€æœ‰çš„åšå®¢ã€‚
++ è¯„è®ºåŠŸèƒ½ â€“ ä¸ºä¸€ç¯‡ç»™å®šåšå®¢å‘è¡¨è¯„è®ºã€‚
 
-ÔÚÎÒÃÇµÄ poll Ó¦ÓÃ³ÌÐòÖÐ£¬½«ÓÐÒÔÏÂËÄ¸öÊÓÍ¼£º
+åœ¨æˆ‘ä»¬çš„ poll åº”ç”¨ç¨‹åºä¸­ï¼Œå°†æœ‰ä»¥ä¸‹å››ä¸ªè§†å›¾ï¼š
 
-+ Poll ¡°index¡± Ò³ ¨C ÏÔÊ¾×îÐÂ·¢²¼µÄÃñÒâµ÷²é¡£
-+ Poll ¡°detail¡± Ò³ ¨C ÏÔÊ¾Ò»ÏîÃñÒâµ÷²éµÄ¾ßÌåÎÊÌâ£¬²»ÏÔÊ¾¸ÃÏîµÄÍ¶Æ±½á¹ûµ«¿ÉÒÔ½øÐÐÍ¶Æ±µÄ form ¡£
-+ Poll ¡°results¡± Ò³ ¨C ÏÔÊ¾Ò»Ïî¸ø¶¨µÄÃñÒâµ÷²éµÄÍ¶Æ±½á¹û¡£
-+ Í¶Æ±¹¦ÄÜ ¨C ÎªÒ»Ïî¸ø¶¨µÄÃñÒâµ÷²é´¦ÀíÍ¶Æ±Ñ¡Ïî¡£
++ Poll â€œindexâ€ é¡µ â€“ æ˜¾ç¤ºæœ€æ–°å‘å¸ƒçš„æ°‘æ„è°ƒæŸ¥ã€‚
++ Poll â€œdetailâ€ é¡µ â€“ æ˜¾ç¤ºä¸€é¡¹æ°‘æ„è°ƒæŸ¥çš„å…·ä½“é—®é¢˜ï¼Œä¸æ˜¾ç¤ºè¯¥é¡¹çš„æŠ•ç¥¨ç»“æžœä½†å¯ä»¥è¿›è¡ŒæŠ•ç¥¨çš„ form ã€‚
++ Poll â€œresultsâ€ é¡µ â€“ æ˜¾ç¤ºä¸€é¡¹ç»™å®šçš„æ°‘æ„è°ƒæŸ¥çš„æŠ•ç¥¨ç»“æžœã€‚
++ æŠ•ç¥¨åŠŸèƒ½ â€“ ä¸ºä¸€é¡¹ç»™å®šçš„æ°‘æ„è°ƒæŸ¥å¤„ç†æŠ•ç¥¨é€‰é¡¹ã€‚
 
-ÔÚ Django ÖÐ£¬ÍøÒ³¼°ÆäËûÄÚÈÝÊÇÓÉÊÓÍ¼À´Õ¹ÏÖµÄ¡£¶øÃ¿¸öÊÓÍ¼¾ÍÊÇÒ»¸ö¼òµ¥µÄ Python º¯Êý£¨»ò·½·¨£¬ ¶ÔÓÚ»ùÓÚÀàµÄÊÓÍ¼Çé¿öÏÂ£©¡£Django »áÍ¨¹ý¼ì²éËùÇëÇóµÄ URL £¨È·ÇÐµØËµÊÇÓòÃûÖ®ºóµÄÄÇ²¿·Ö URL£©À´Æ¥ÅäÒ»¸öÊÓÍ¼¡£
+åœ¨ Django ä¸­ï¼Œç½‘é¡µåŠå…¶ä»–å†…å®¹æ˜¯ç”±è§†å›¾æ¥å±•çŽ°çš„ã€‚è€Œæ¯ä¸ªè§†å›¾å°±æ˜¯ä¸€ä¸ªç®€å•çš„ Python å‡½æ•°ï¼ˆæˆ–æ–¹æ³•ï¼Œ å¯¹äºŽåŸºäºŽç±»çš„è§†å›¾æƒ…å†µä¸‹ï¼‰ã€‚Django ä¼šé€šè¿‡æ£€æŸ¥æ‰€è¯·æ±‚çš„ URL ï¼ˆç¡®åˆ‡åœ°è¯´æ˜¯åŸŸåä¹‹åŽçš„é‚£éƒ¨åˆ† URLï¼‰æ¥åŒ¹é…ä¸€ä¸ªè§†å›¾ã€‚
 
-Æ½Ê±ÄãÉÏÍøµÄÊ±ºò¿ÉÄÜ»áÓöµ½Ïñ ¡°ME2/Sites/dirmod.asp?sid=&type=gen&mod=Core+Pages&gid=A6CD4967199A42D9B65B1B¡± ÕâÖÖÈç´ËÃÀÀöµÄ URL¡£ µ«ÊÇÄã»áºÜ¸ßÐËÖªµÀ Django ÔÊÐíÎÒÃÇÊ¹ÓÃ±ÈÄÇÓÅÑÅµÄ URL Ä£Ê½ À´Õ¹ÏÖ URL¡£
+å¹³æ—¶ä½ ä¸Šç½‘çš„æ—¶å€™å¯èƒ½ä¼šé‡åˆ°åƒ â€œME2/Sites/dirmod.asp?sid=&type=gen&mod=Core+Pages&gid=A6CD4967199A42D9B65B1Bâ€ è¿™ç§å¦‚æ­¤ç¾Žä¸½çš„ URLã€‚ ä½†æ˜¯ä½ ä¼šå¾ˆé«˜å…´çŸ¥é“ Django å…è®¸æˆ‘ä»¬ä½¿ç”¨æ¯”é‚£ä¼˜é›…çš„ URL æ¨¡å¼ æ¥å±•çŽ° URLã€‚
 
-URL Ä£Ê½¾ÍÊÇÒ»¸ö¼òµ¥µÄÒ»°ãÐÎÊ½µÄ URL - ±ÈÈç: `/newsarchive/<year>/<month>/`.
+URL æ¨¡å¼å°±æ˜¯ä¸€ä¸ªç®€å•çš„ä¸€èˆ¬å½¢å¼çš„ URL - æ¯”å¦‚: `/newsarchive/<year>/<month>/`.
 
-Django ÊÇÍ¨¹ý ¡®URLconfs¡¯ ´Ó URL »ñÈ¡µ½ÊÓÍ¼µÄ¡£¶ø URLconf ÊÇ½« URL Ä£Ê½ ( ÓÉÕýÔò±í´ïÊ½À´ÃèÊöµÄ ) Ó³Éäµ½ÊÓÍ¼µÄÒ»ÖÖÅäÖÃ¡£
+Django æ˜¯é€šè¿‡ â€˜URLconfsâ€™ ä»Ž URL èŽ·å–åˆ°è§†å›¾çš„ã€‚è€Œ URLconf æ˜¯å°† URL æ¨¡å¼ ( ç”±æ­£åˆ™è¡¨è¾¾å¼æ¥æè¿°çš„ ) æ˜ å°„åˆ°è§†å›¾çš„ä¸€ç§é…ç½®ã€‚
 
-±¾½Ì³ÌÖÐ½éÉÜÁËÊ¹ÓÃ URLconfs µÄ»ù±¾Ö¸Áî£¬Äã¿ÉÒÔ²éÔÄ django.core.urlresolvers À´»ñÈ¡¸ü¶àÐÅÏ¢¡£
+æœ¬æ•™ç¨‹ä¸­ä»‹ç»äº†ä½¿ç”¨ URLconfs çš„åŸºæœ¬æŒ‡ä»¤ï¼Œä½ å¯ä»¥æŸ¥é˜… django.core.urlresolvers æ¥èŽ·å–æ›´å¤šä¿¡æ¯ã€‚
 
-## ±àÐ´ÄãµÄµÚÒ»¸öÊÓÍ¼ ##
+## ç¼–å†™ä½ çš„ç¬¬ä¸€ä¸ªè§†å›¾ ##
 
-ÈÃÎÒÃÇ±àÐ´µÚÒ»¸öÊÓÍ¼¡£´ò¿ªÎÄ¼þ polls/views.py ²¢ÔÚÆäÖÐÊäÈëÒÔÏÂ Python ´úÂë
+è®©æˆ‘ä»¬ç¼–å†™ç¬¬ä¸€ä¸ªè§†å›¾ã€‚æ‰“å¼€æ–‡ä»¶ polls/views.py å¹¶åœ¨å…¶ä¸­è¾“å…¥ä»¥ä¸‹ Python ä»£ç 
 
 ```
 from django.http import HttpResponse
@@ -45,9 +45,9 @@ def index(request):
     return HttpResponse("Hello, world. You're at the poll index.")
 ```
 
-ÔÚ Django ÖÐÕâ¿ÉÄÜÊÇ×î¼òµ¥µÄÊÓÍ¼ÁË¡£ÎªÁËµ÷ÓÃÕâ¸öÊÓÍ¼£¬ÎÒÃÇÐèÒª½«ËüÓ³Éäµ½Ò»¸ö URL ¨C Îª´ËÎÒÃÇÐèÒªÅäÖÃÒ»¸öURLconf ¡£
+åœ¨ Django ä¸­è¿™å¯èƒ½æ˜¯æœ€ç®€å•çš„è§†å›¾äº†ã€‚ä¸ºäº†è°ƒç”¨è¿™ä¸ªè§†å›¾ï¼Œæˆ‘ä»¬éœ€è¦å°†å®ƒæ˜ å°„åˆ°ä¸€ä¸ª URL â€“ ä¸ºæ­¤æˆ‘ä»¬éœ€è¦é…ç½®ä¸€ä¸ªURLconf ã€‚
 
-ÔÚ polls Ä¿Â¼ÏÂ´´½¨Ò»¸öÃûÎª urls.py µÄ URLconf ÎÄµµ¡£ ÄãµÄÓ¦ÓÃÄ¿Â¼ÏÖÔÚ¿´ÆðÀ´ÏñÕâÑù
+åœ¨ polls ç›®å½•ä¸‹åˆ›å»ºä¸€ä¸ªåä¸º urls.py çš„ URLconf æ–‡æ¡£ã€‚ ä½ çš„åº”ç”¨ç›®å½•çŽ°åœ¨çœ‹èµ·æ¥åƒè¿™æ ·
 
 ```
 polls/
@@ -59,7 +59,7 @@ polls/
     views.py
 ```
 
-ÔÚ polls/urls.py ÎÄ¼þÖÐÊäÈëÒÔÏÂ´úÂë£º
+åœ¨ polls/urls.py æ–‡ä»¶ä¸­è¾“å…¥ä»¥ä¸‹ä»£ç ï¼š
 
 ```
 from django.conf.urls import patterns, url
@@ -71,7 +71,7 @@ urlpatterns = patterns('',
 )
 ```
 
-ÏÂÒ»²½ÊÇ½« polls.urls Ä£¿éÖ¸Ïò root URLconf ¡£ÔÚ mysite/urls.py ÖÐ²åÈëÒ»¸ö include() ·½·¨£¬×îºóµÄÑù×ÓÈçÏÂËùÊ¾
+ä¸‹ä¸€æ­¥æ˜¯å°† polls.urls æ¨¡å—æŒ‡å‘ root URLconf ã€‚åœ¨ mysite/urls.py ä¸­æ’å…¥ä¸€ä¸ª include() æ–¹æ³•ï¼Œæœ€åŽçš„æ ·å­å¦‚ä¸‹æ‰€ç¤º
 
 ```
 from django.conf.urls import patterns, include, url
@@ -85,35 +85,35 @@ urlpatterns = patterns('',
 )
 ```
 
-ÏÖÔÚÄãÔÚ URLconf ÖÐÅäÖÃÁË index ÊÓÍ¼¡£Í¨¹ýä¯ÀÀÆ÷·ÃÎÊ http://localhost:8000/polls/ £¬ÈçÍ¬ÄãÔÚ index ÊÓÍ¼ÖÐ¶¨ÒåµÄÒ»Ñù£¬Äã½«¿´µ½ ¡°Hello, world. You¡¯re at the poll index.¡± ÎÄ×Ö¡£
+çŽ°åœ¨ä½ åœ¨ URLconf ä¸­é…ç½®äº† index è§†å›¾ã€‚é€šè¿‡æµè§ˆå™¨è®¿é—® http://localhost:8000/polls/ ï¼Œå¦‚åŒä½ åœ¨ index è§†å›¾ä¸­å®šä¹‰çš„ä¸€æ ·ï¼Œä½ å°†çœ‹åˆ° â€œHello, world. Youâ€™re at the poll index.â€ æ–‡å­—ã€‚
 
-url() º¯ÊýÓÐËÄ¸ö²ÎÊý£¬Á½¸ö±ØÐëµÄ£º regex ºÍ ``view``£¬ Á½¸ö¿ÉÑ¡µÄ£º ``kwargs``£¬ ÒÔ¼° ``name``¡£ ½ÓÏÂÀ´£¬À´Ì½ÌÖÏÂÕâÐ©²ÎÊýµÄÒâÒå¡£
+url() å‡½æ•°æœ‰å››ä¸ªå‚æ•°ï¼Œä¸¤ä¸ªå¿…é¡»çš„ï¼š regex å’Œ ``view``ï¼Œ ä¸¤ä¸ªå¯é€‰çš„ï¼š ``kwargs``ï¼Œ ä»¥åŠ ``name``ã€‚ æŽ¥ä¸‹æ¥ï¼Œæ¥æŽ¢è®¨ä¸‹è¿™äº›å‚æ•°çš„æ„ä¹‰ã€‚
 
-## url() ²ÎÊý: regex #
+## url() å‚æ•°: regex #
 
-regex ÊÇ regular expression µÄ¼òÐ´£¬ÕâÊÇ×Ö·û´®ÖÐµÄÄ£Ê½Æ¥ÅäµÄÒ»ÖÖÓï·¨£¬ ÔÚ Django ÖÐ¾ÍÊÇÊÇ url Æ¥ÅäÄ£Ê½¡£ Django ½«ÇëÇóµÄ URL ´ÓÉÏÖÁÏÂÒÀ´ÎÆ¥ÅäÁÐ±íÖÐµÄÕýÔò±í´ïÊ½£¬Ö±µ½Æ¥Åäµ½Ò»¸öÎªÖ¹¡£
+regex æ˜¯ regular expression çš„ç®€å†™ï¼Œè¿™æ˜¯å­—ç¬¦ä¸²ä¸­çš„æ¨¡å¼åŒ¹é…çš„ä¸€ç§è¯­æ³•ï¼Œ åœ¨ Django ä¸­å°±æ˜¯æ˜¯ url åŒ¹é…æ¨¡å¼ã€‚ Django å°†è¯·æ±‚çš„ URL ä»Žä¸Šè‡³ä¸‹ä¾æ¬¡åŒ¹é…åˆ—è¡¨ä¸­çš„æ­£åˆ™è¡¨è¾¾å¼ï¼Œç›´åˆ°åŒ¹é…åˆ°ä¸€ä¸ªä¸ºæ­¢ã€‚
 
-ÐèÒª×¢ÒâµÄÊÇ£¬ÕâÐ©ÕýÔò±í´ïÊ½²»»áÆ¥Åä GET ºÍ POST ²ÎÊý£¬ÒÔ¼°ÓòÃû¡£ ÀýÈç£ºÕë¶Ô http://www.example.com/myapp/ ÕâÒ»ÇëÇó£¬URLconf ½«Ö»²éÕÒ myapp/``¡£¶øÔÚ ``http://www.example.com/myapp/?page=3 ÖÐ URLconf Ò²½ö²éÕÒ myapp/ ¡£
+éœ€è¦æ³¨æ„çš„æ˜¯ï¼Œè¿™äº›æ­£åˆ™è¡¨è¾¾å¼ä¸ä¼šåŒ¹é… GET å’Œ POST å‚æ•°ï¼Œä»¥åŠåŸŸåã€‚ ä¾‹å¦‚ï¼šé’ˆå¯¹ http://www.example.com/myapp/ è¿™ä¸€è¯·æ±‚ï¼ŒURLconf å°†åªæŸ¥æ‰¾ myapp/``ã€‚è€Œåœ¨ ``http://www.example.com/myapp/?page=3 ä¸­ URLconf ä¹Ÿä»…æŸ¥æ‰¾ myapp/ ã€‚
 
-Èç¹ûÄãÐèÒªÕýÔò±í´ïÊ½·½ÃæµÄ°ïÖú£¬Çë²ÎÔÄ Wikipedia¡¯s entry ºÍ±¾ÎÄµµÖÐµÄ re Ä£¿é¡£ ´ËÍâ£¬O¡¯Reilly ³ö°æµÄÓÉ Jeffrey Friedl ÖøµÄ ¡°Mastering Regular Expressions¡± Ò²ÊÇ²»´íµÄ¡£ µ«ÊÇ£¬Êµ¼ÊÉÏ£¬Äã²¢²»ÐèÒª³ÉÎªÒ»¸öÕýÔò±í´ïÊ½µÄ×¨¼Ò£¬½ö½öÐèÒªÖªµÀÈçºÎ²¶»ñ¼òµ¥µÄÄ£Ê½¡£ ÊÂÊµÉÏ£¬¸´ÔÓµÄÕýÔò±í´ïÊ½»á½µµÍ²éÕÒÐÔÄÜ£¬Òò´ËÄã²»ÄÜÍêÈ«ÒÀÀµÕýÔò±í´ïÊ½µÄ¹¦ÄÜ¡£
+å¦‚æžœä½ éœ€è¦æ­£åˆ™è¡¨è¾¾å¼æ–¹é¢çš„å¸®åŠ©ï¼Œè¯·å‚é˜… Wikipediaâ€™s entry å’Œæœ¬æ–‡æ¡£ä¸­çš„ re æ¨¡å—ã€‚ æ­¤å¤–ï¼ŒOâ€™Reilly å‡ºç‰ˆçš„ç”± Jeffrey Friedl è‘—çš„ â€œMastering Regular Expressionsâ€ ä¹Ÿæ˜¯ä¸é”™çš„ã€‚ ä½†æ˜¯ï¼Œå®žé™…ä¸Šï¼Œä½ å¹¶ä¸éœ€è¦æˆä¸ºä¸€ä¸ªæ­£åˆ™è¡¨è¾¾å¼çš„ä¸“å®¶ï¼Œä»…ä»…éœ€è¦çŸ¥é“å¦‚ä½•æ•èŽ·ç®€å•çš„æ¨¡å¼ã€‚ äº‹å®žä¸Šï¼Œå¤æ‚çš„æ­£åˆ™è¡¨è¾¾å¼ä¼šé™ä½ŽæŸ¥æ‰¾æ€§èƒ½ï¼Œå› æ­¤ä½ ä¸èƒ½å®Œå…¨ä¾èµ–æ­£åˆ™è¡¨è¾¾å¼çš„åŠŸèƒ½ã€‚
 
-×îºóÓÐ¸öÐÔÄÜÉÏµÄÌáÊ¾£ºÕâÐ©ÕýÔò±í´ïÊ½ÔÚ URLconf Ä£¿éµÚÒ»´Î¼ÓÔØÊ±»á±»±àÒë¡£ Òò´ËËüÃÇËÙ¶È³¬¿ì ( ÏñÉÏÃæÌáµ½µÄÄÇÑùÖ»Òª²éÕÒµÄ²»ÊÇÌ«¸´ÔÓ )¡£
+æœ€åŽæœ‰ä¸ªæ€§èƒ½ä¸Šçš„æç¤ºï¼šè¿™äº›æ­£åˆ™è¡¨è¾¾å¼åœ¨ URLconf æ¨¡å—ç¬¬ä¸€æ¬¡åŠ è½½æ—¶ä¼šè¢«ç¼–è¯‘ã€‚ å› æ­¤å®ƒä»¬é€Ÿåº¦è¶…å¿« ( åƒä¸Šé¢æåˆ°çš„é‚£æ ·åªè¦æŸ¥æ‰¾çš„ä¸æ˜¯å¤ªå¤æ‚ )ã€‚
 
-## url() ²ÎÊý£º view ##
+## url() å‚æ•°ï¼š view ##
 
-µ± Django Æ¥ÅäÁËÒ»¸öÕýÔò±í´ïÊ½¾Í»áµ÷ÓÃÖ¸¶¨µÄÊÓÍ¼¹¦ÄÜ£¬°üº¬Ò»¸ö HttpRequest ÊµÀý×÷ÎªµÚÒ»¸ö²ÎÊýºÍÕýÔò±í´ïÊ½ ¡°²¶»ñ¡± µÄÒ»Ð©ÖµµÄ×÷ÎªÆäËû²ÎÊý¡£ Èç¹ûÊ¹ÓÃ¼òµ¥µÄÕýÔò²¶»ñ£¬½«°´Ë³ÐòÎ»ÖÃ´«²ÎÊý£»Èç¹û°´ÃüÃûµÄÕýÔò²¶»ñ£¬½«°´¹Ø¼ü×Ö´«²ÎÊýÖµ¡£ ÓÐ¹ØÕâÒ»µãÎÒÃÇ»á¸ø³öÒ»¸öÀý×Ó¡£
+å½“ Django åŒ¹é…äº†ä¸€ä¸ªæ­£åˆ™è¡¨è¾¾å¼å°±ä¼šè°ƒç”¨æŒ‡å®šçš„è§†å›¾åŠŸèƒ½ï¼ŒåŒ…å«ä¸€ä¸ª HttpRequest å®žä¾‹ä½œä¸ºç¬¬ä¸€ä¸ªå‚æ•°å’Œæ­£åˆ™è¡¨è¾¾å¼ â€œæ•èŽ·â€ çš„ä¸€äº›å€¼çš„ä½œä¸ºå…¶ä»–å‚æ•°ã€‚ å¦‚æžœä½¿ç”¨ç®€å•çš„æ­£åˆ™æ•èŽ·ï¼Œå°†æŒ‰é¡ºåºä½ç½®ä¼ å‚æ•°ï¼›å¦‚æžœæŒ‰å‘½åçš„æ­£åˆ™æ•èŽ·ï¼Œå°†æŒ‰å…³é”®å­—ä¼ å‚æ•°å€¼ã€‚ æœ‰å…³è¿™ä¸€ç‚¹æˆ‘ä»¬ä¼šç»™å‡ºä¸€ä¸ªä¾‹å­ã€‚
 
-## url() ²ÎÊý£º kwargs ##
+## url() å‚æ•°ï¼š kwargs ##
 
-ÈÎÒâ¹Ø¼ü×Ö²ÎÊý¿É´«Ò»¸ö×ÖµäÖÁÄ¿±êÊÓÍ¼¡£ÔÚ±¾½Ì³ÌÖÐ£¬ÎÒÃÇ²¢²»´òËãÊ¹ÓÃ Django ÕâÒ»ÌØÐÔ¡£
+ä»»æ„å…³é”®å­—å‚æ•°å¯ä¼ ä¸€ä¸ªå­—å…¸è‡³ç›®æ ‡è§†å›¾ã€‚åœ¨æœ¬æ•™ç¨‹ä¸­ï¼Œæˆ‘ä»¬å¹¶ä¸æ‰“ç®—ä½¿ç”¨ Django è¿™ä¸€ç‰¹æ€§ã€‚
 
-## url() ²ÎÊý£º name ##
+## url() å‚æ•°ï¼š name ##
 
-ÃüÃûÄãµÄ URL £¬ÈÃÄãÔÚ Django µÄÆäËûµØ·½Ã÷È·µØÒýÓÃËü£¬ÌØ±ðÊÇÔÚÄ£°åÖÐ¡£ ÕâÒ»Ç¿´óµÄ¹¦ÄÜ¿ÉÔÊÐíÄãÍ¨¹ýÒ»¸öÎÄ¼þ¾Í¿ÉÈ«¾ÖÐÞ¸ÄÏîÄ¿ÖÐµÄ URL Ä£Ê½¡£
+å‘½åä½ çš„ URL ï¼Œè®©ä½ åœ¨ Django çš„å…¶ä»–åœ°æ–¹æ˜Žç¡®åœ°å¼•ç”¨å®ƒï¼Œç‰¹åˆ«æ˜¯åœ¨æ¨¡æ¿ä¸­ã€‚ è¿™ä¸€å¼ºå¤§çš„åŠŸèƒ½å¯å…è®¸ä½ é€šè¿‡ä¸€ä¸ªæ–‡ä»¶å°±å¯å…¨å±€ä¿®æ”¹é¡¹ç›®ä¸­çš„ URL æ¨¡å¼ã€‚
 
-## ±àÐ´¸ü¶àÊÓÍ¼ ##
+## ç¼–å†™æ›´å¤šè§†å›¾ ##
 
-ÏÖÔÚÈÃÎÒÃÇÌí¼ÓÒ»Ð©ÊÓÍ¼µ½ polls/views.py ÖÐÈ¥¡£ÕâÐ©ÊÓÍ¼ÓëÖ®Ç°µÄÂÔÓÐ²»Í¬£¬ÒòÎª ËüÃÇÓÐÒ»¸ö²ÎÊý£º:
+çŽ°åœ¨è®©æˆ‘ä»¬æ·»åŠ ä¸€äº›è§†å›¾åˆ° polls/views.py ä¸­åŽ»ã€‚è¿™äº›è§†å›¾ä¸Žä¹‹å‰çš„ç•¥æœ‰ä¸åŒï¼Œå› ä¸º å®ƒä»¬æœ‰ä¸€ä¸ªå‚æ•°ï¼š:
 
 ```
 def detail(request, poll_id):
@@ -126,7 +126,7 @@ def vote(request, poll_id):
     return HttpResponse("You're voting on poll %s." % poll_id)
 ```
 
-½«ÐÂÊÓÍ¼°´ÈçÏÂËùÊ¾µÄ url() ·½·¨Ìí¼Óµ½ polls.urls Ä£¿éÖÐÈ¥£º:
+å°†æ–°è§†å›¾æŒ‰å¦‚ä¸‹æ‰€ç¤ºçš„ url() æ–¹æ³•æ·»åŠ åˆ° polls.urls æ¨¡å—ä¸­åŽ»ï¼š:
 
 ```
 from django.conf.urls import patterns, url
@@ -145,40 +145,40 @@ urlpatterns = patterns('',
 )
 ```
 
-ÔÚÄãµÄä¯ÀÀÆ÷ÖÐ·ÃÎÊ http://localhost:8000/polls/34/ ¡£½«ÔËÐÐ detail() ·½·¨²¢ÇÒÏÔÊ¾ÄãÔÚ URL ÖÐÌá¹©µÄÈÎÒâ ID ¡£ÊÔ×Å·ÃÎÊ http://localhost:8000/polls/34/results/ ºÍ http://localhost:8000/polls/34/vote/ ¨C ½«»áÏÔÊ¾¶ÔÓ¦µÄ½á¹ûÒ³¼°Í¶Æ±Ò³¡£
+åœ¨ä½ çš„æµè§ˆå™¨ä¸­è®¿é—® http://localhost:8000/polls/34/ ã€‚å°†è¿è¡Œ detail() æ–¹æ³•å¹¶ä¸”æ˜¾ç¤ºä½ åœ¨ URL ä¸­æä¾›çš„ä»»æ„ ID ã€‚è¯•ç€è®¿é—® http://localhost:8000/polls/34/results/ å’Œ http://localhost:8000/polls/34/vote/ â€“ å°†ä¼šæ˜¾ç¤ºå¯¹åº”çš„ç»“æžœé¡µåŠæŠ•ç¥¨é¡µã€‚
 
-µ±ÓÐÈË·ÃÎÊÄãµÄÍøÕ¾Ò³ÃæÈç ¡° /polls/34/ ¡± Ê±£¬Django »á¼ÓÔØ mysite.urls Ä£¿é£¬ÕâÊÇÒòÎª ROOT_URLCONF ÉèÖÃÖ¸ÏòËü¡£½Ó×ÅÔÚ¸ÃÄ£¿éÖÐÑ°ÕÒÃûÎª``urlpatterns`` µÄ±äÁ¿²¢ÒÀ´ÎÆ¥ÅäÆäÖÐµÄÕýÔò±í´ïÊ½¡£ include() ¿ÉÈÃÎÒÃÇ±ãÀûµØÒýÓÃÆäËû URLconfs ¡£Çë×¢Òâ include() ÖÐµÄÕýÔò±í´ïÊ½Ã»ÓÐ $ (×Ö·û´®½áÎ²µÄÆ¥Åä·û match character) ¶øÎ²²¿ÊÇÒ»¸ö·´Ð±¸Ü¡£µ± Django ½âÎö include() Ê±£¬Ëü½ØÈ¡Æ¥ÅäµÄ URL ÄÇ²¿·Ö¶ø°ÑÊ£ÓàµÄ×Ö·û´®½»ÓÉ ¼ÓÔØ½øÀ´µÄ URLconf ×÷½øÒ»²½´¦Àí¡£
+å½“æœ‰äººè®¿é—®ä½ çš„ç½‘ç«™é¡µé¢å¦‚ â€œ /polls/34/ â€ æ—¶ï¼ŒDjango ä¼šåŠ è½½ mysite.urls æ¨¡å—ï¼Œè¿™æ˜¯å› ä¸º ROOT_URLCONF è®¾ç½®æŒ‡å‘å®ƒã€‚æŽ¥ç€åœ¨è¯¥æ¨¡å—ä¸­å¯»æ‰¾åä¸º``urlpatterns`` çš„å˜é‡å¹¶ä¾æ¬¡åŒ¹é…å…¶ä¸­çš„æ­£åˆ™è¡¨è¾¾å¼ã€‚ include() å¯è®©æˆ‘ä»¬ä¾¿åˆ©åœ°å¼•ç”¨å…¶ä»– URLconfs ã€‚è¯·æ³¨æ„ include() ä¸­çš„æ­£åˆ™è¡¨è¾¾å¼æ²¡æœ‰ $ (å­—ç¬¦ä¸²ç»“å°¾çš„åŒ¹é…ç¬¦ match character) è€Œå°¾éƒ¨æ˜¯ä¸€ä¸ªåæ–œæ ã€‚å½“ Django è§£æž include() æ—¶ï¼Œå®ƒæˆªå–åŒ¹é…çš„ URL é‚£éƒ¨åˆ†è€ŒæŠŠå‰©ä½™çš„å­—ç¬¦ä¸²äº¤ç”± åŠ è½½è¿›æ¥çš„ URLconf ä½œè¿›ä¸€æ­¥å¤„ç†ã€‚
 
-include() ±³ºóÒþ²ØµÄÏë·¨ÊÇÊ¹ URLs ¼´²å¼´ÓÃ¡£ ÓÉÓÚ polls ÔÚ×Ô¼ºµÄ URLconf(polls/urls.py) ÖÐ£¬Òò´ËËüÃÇ¿ÉÒÔ±»·ÅÖÃÔÚ ¡°/polls/¡± Â·¾¶ÏÂ£¬»ò ¡°/fun_polls/¡± Â·¾¶ÏÂ£¬»ò ¡°/content/polls/¡± Â·¾¶ÏÂ£¬»òÕßÆäËû¸ùÂ·¾¶£¬¶øÓ¦ÓÃÈÔ¿ÉÒÔÔËÐÐ¡£
+include() èƒŒåŽéšè—çš„æƒ³æ³•æ˜¯ä½¿ URLs å³æ’å³ç”¨ã€‚ ç”±äºŽ polls åœ¨è‡ªå·±çš„ URLconf(polls/urls.py) ä¸­ï¼Œå› æ­¤å®ƒä»¬å¯ä»¥è¢«æ”¾ç½®åœ¨ â€œ/polls/â€ è·¯å¾„ä¸‹ï¼Œæˆ– â€œ/fun_polls/â€ è·¯å¾„ä¸‹ï¼Œæˆ– â€œ/content/polls/â€ è·¯å¾„ä¸‹ï¼Œæˆ–è€…å…¶ä»–æ ¹è·¯å¾„ï¼Œè€Œåº”ç”¨ä»å¯ä»¥è¿è¡Œã€‚
 
-ÒÔÏÂÊÇµ±ÓÃ»§·ÃÎÊ ¡°/polls/34/¡± Â·¾¶Ê±ÏµÍ³ÖÐ½«·¢ÉúµÄÊÂ£º
+ä»¥ä¸‹æ˜¯å½“ç”¨æˆ·è®¿é—® â€œ/polls/34/â€ è·¯å¾„æ—¶ç³»ç»Ÿä¸­å°†å‘ç”Ÿçš„äº‹ï¼š
 
-+ Django ½«Ñ°ÕÒ '^polls/' µÄÆ¥Åä
-+ ½Ó×Å£¬Django ½ØÈ¡Æ¥ÅäÎÄ±¾ ("polls/") ºóÊ£ÓàµÄÎÄ±¾ ¨C "34/" ¨C ´«µÝµ½ ¡®polls.urls¡¯ URLconf ÖÐ×÷½øÒ»²½´¦Àí£¬ ÔÙ½«Æ¥Åä r'^(?P<poll_id>\d+)/$' µÄ½á¹û×÷Îª²ÎÊý´«¸ø detail() ÊÓÍ¼
++ Django å°†å¯»æ‰¾ '^polls/' çš„åŒ¹é…
++ æŽ¥ç€ï¼ŒDjango æˆªå–åŒ¹é…æ–‡æœ¬ ("polls/") åŽå‰©ä½™çš„æ–‡æœ¬ â€“ "34/" â€“ ä¼ é€’åˆ° â€˜polls.urlsâ€™ URLconf ä¸­ä½œè¿›ä¸€æ­¥å¤„ç†ï¼Œ å†å°†åŒ¹é… r'^(?P<poll_id>\d+)/$' çš„ç»“æžœä½œä¸ºå‚æ•°ä¼ ç»™ detail() è§†å›¾
 
 ```
 detail(request=<HttpRequest object>, poll_id='34')
 ```
 
-poll_id='34' Õâ²¿·Ö¾ÍÊÇÀ´×Ô (?P<poll_id>\d+) Æ¥ÅäµÄ½á¹û¡£ Ê¹ÓÃÀ¨ºÅ°üÎ§Ò»¸ö ÕýÔò±í´ïÊ½Ëù¡°²¶»ñ¡±µÄÎÄ±¾¿É×÷ÎªÒ»¸ö²ÎÊý´«¸øÊÓÍ¼º¯Êý£»``?P<poll_id>`` ½«»á¶¨ÒåÃû³ÆÓÃÓÚ±êÊ¶Æ¥ÅäµÄÄÚÈÝ£» ¶ø \d+ ÊÇÒ»¸öÓÃÓÚÆ¥ÅäÊý×ÖÐòÁÐ£¨¼´Ò»¸öÊý×Ö£©µÄÕýÔò±í´ïÊ½¡£
+poll_id='34' è¿™éƒ¨åˆ†å°±æ˜¯æ¥è‡ª (?P<poll_id>\d+) åŒ¹é…çš„ç»“æžœã€‚ ä½¿ç”¨æ‹¬å·åŒ…å›´ä¸€ä¸ª æ­£åˆ™è¡¨è¾¾å¼æ‰€â€œæ•èŽ·â€çš„æ–‡æœ¬å¯ä½œä¸ºä¸€ä¸ªå‚æ•°ä¼ ç»™è§†å›¾å‡½æ•°ï¼›``?P<poll_id>`` å°†ä¼šå®šä¹‰åç§°ç”¨äºŽæ ‡è¯†åŒ¹é…çš„å†…å®¹ï¼› è€Œ \d+ æ˜¯ä¸€ä¸ªç”¨äºŽåŒ¹é…æ•°å­—åºåˆ—ï¼ˆå³ä¸€ä¸ªæ•°å­—ï¼‰çš„æ­£åˆ™è¡¨è¾¾å¼ã€‚
 
-ÒòÎª URL Ä£Ê½ÊÇÕýÔò±í´ïÊ½£¬ËùÒÔÄã¿ÉÒÔºÁÎÞÏÞÖÆµØÊ¹ÓÃËüÃÇ¡£µ«ÊÇ²»Òª¼ÓÉÏ URL ¶àÓàµÄ²¿·ÖÈç .html ¨C ³ý·ÇÄãÏë£¬ÄÇÄã¿ÉÒÔÏñÏÂÃæÕâÑù£º:
+å› ä¸º URL æ¨¡å¼æ˜¯æ­£åˆ™è¡¨è¾¾å¼ï¼Œæ‰€ä»¥ä½ å¯ä»¥æ¯«æ— é™åˆ¶åœ°ä½¿ç”¨å®ƒä»¬ã€‚ä½†æ˜¯ä¸è¦åŠ ä¸Š URL å¤šä½™çš„éƒ¨åˆ†å¦‚ .html â€“ é™¤éžä½ æƒ³ï¼Œé‚£ä½ å¯ä»¥åƒä¸‹é¢è¿™æ ·ï¼š:
 
 ```
 (r'^polls/latest\.html$', 'polls.views.index'),
 ```
 
-ÕæµÄ£¬²»ÒªÕâÑù×ö¡£ÕâºÜÉµ¡£
+çœŸçš„ï¼Œä¸è¦è¿™æ ·åšã€‚è¿™å¾ˆå‚»ã€‚
 
-## ÔÚÊÓÍ¼ÖÐÌí¼ÓÐ©Êµ¼ÊµÄ¹¦ÄÜ ##
+## åœ¨è§†å›¾ä¸­æ·»åŠ äº›å®žé™…çš„åŠŸèƒ½ ##
 
-Ã¿¸öÊÓÍ¼Ö»¸ºÔðÒÔÏÂÁ½¼þÊÂÖÐµÄÒ»¼þ£º·µ»ØÒ»¸ö HttpResponse ¶ÔÏó£¬ÆäÖÐ°üº¬ÁËËùÇëÇóÒ³ÃæµÄÄÚÈÝ£¬ »òÕßÅ×³öÒ»¸öÒì³££¬ÀýÈç Http404 ¡£Ê£ÏÂµÄ¾ÍÓÉÄãÀ´ÊµÏÖÁË¡£
+æ¯ä¸ªè§†å›¾åªè´Ÿè´£ä»¥ä¸‹ä¸¤ä»¶äº‹ä¸­çš„ä¸€ä»¶ï¼šè¿”å›žä¸€ä¸ª HttpResponse å¯¹è±¡ï¼Œå…¶ä¸­åŒ…å«äº†æ‰€è¯·æ±‚é¡µé¢çš„å†…å®¹ï¼Œ æˆ–è€…æŠ›å‡ºä¸€ä¸ªå¼‚å¸¸ï¼Œä¾‹å¦‚ Http404 ã€‚å‰©ä¸‹çš„å°±ç”±ä½ æ¥å®žçŽ°äº†ã€‚
 
-ÄãµÄÊÓÍ¼¿ÉÒÔ¶ÁÈ¡Êý¾Ý¿â¼ÇÂ¼£¬»òÕß²»ÓÃ¡£Ëü¿ÉÒÔÊ¹ÓÃÒ»¸öÄ£°åÏµÍ³£¬ÀýÈç Django µÄ ¨C »òÕßµÚÈý·½µÄ Python Ä£°åÏµÍ³ ¨C »ò²»ÓÃ¡£Ëü¿ÉÒÔÉú³ÉÒ»¸ö PDF ÎÄ¼þ£¬Êä³ö XML £¬ ¼´Ê±´´½¨ ZIP ÎÄ¼þ£¬ Äã¿ÉÒÔÊ¹ÓÃÄãÏëÓÃµÄÈÎºÎ Python ¿âÀ´×öÄãÏë×öµÄÈÎºÎÊÂ¡£
+ä½ çš„è§†å›¾å¯ä»¥è¯»å–æ•°æ®åº“è®°å½•ï¼Œæˆ–è€…ä¸ç”¨ã€‚å®ƒå¯ä»¥ä½¿ç”¨ä¸€ä¸ªæ¨¡æ¿ç³»ç»Ÿï¼Œä¾‹å¦‚ Django çš„ â€“ æˆ–è€…ç¬¬ä¸‰æ–¹çš„ Python æ¨¡æ¿ç³»ç»Ÿ â€“ æˆ–ä¸ç”¨ã€‚å®ƒå¯ä»¥ç”Ÿæˆä¸€ä¸ª PDF æ–‡ä»¶ï¼Œè¾“å‡º XML ï¼Œ å³æ—¶åˆ›å»º ZIP æ–‡ä»¶ï¼Œ ä½ å¯ä»¥ä½¿ç”¨ä½ æƒ³ç”¨çš„ä»»ä½• Python åº“æ¥åšä½ æƒ³åšçš„ä»»ä½•äº‹ã€‚
 
-¶ø Django Ö»ÒªÇóÊÇÒ»¸ö HttpResponse »òÒ»¸öÒì³£¡£
+è€Œ Django åªè¦æ±‚æ˜¯ä¸€ä¸ª HttpResponse æˆ–ä¸€ä¸ªå¼‚å¸¸ã€‚
 
-ÒòÎªËüºÜ·½±ã£¬ÄÇÈÃÎÒÃÇÀ´Ê¹ÓÃ Django ×Ô¼ºµÄÊý¾Ý¿â API °É£¬ ÔÚ ½Ì³Ì µÚ1²¿·Ö ÖÐÌá¹ý¡£ÐÞ¸ÄÏÂ index() ÊÓÍ¼£¬ ÈÃËüÏÔÊ¾ÏµÍ³ÖÐ×îÐÂ·¢²¼µÄ 5 ¸öµ÷²éÎÊÌâ£¬ÒÔ¶ººÅ·Ö¸î²¢°´·¢²¼ÈÕÆÚÅÅÐò£º:
+å› ä¸ºå®ƒå¾ˆæ–¹ä¾¿ï¼Œé‚£è®©æˆ‘ä»¬æ¥ä½¿ç”¨ Django è‡ªå·±çš„æ•°æ®åº“ API å§ï¼Œ åœ¨ æ•™ç¨‹ ç¬¬1éƒ¨åˆ† ä¸­æè¿‡ã€‚ä¿®æ”¹ä¸‹ index() è§†å›¾ï¼Œ è®©å®ƒæ˜¾ç¤ºç³»ç»Ÿä¸­æœ€æ–°å‘å¸ƒçš„ 5 ä¸ªè°ƒæŸ¥é—®é¢˜ï¼Œä»¥é€—å·åˆ†å‰²å¹¶æŒ‰å‘å¸ƒæ—¥æœŸæŽ’åºï¼š:
 
 ```
 from django.http import HttpResponse
@@ -191,23 +191,23 @@ def index(request):
     return HttpResponse(output)
 ```
 
-ÔÚÕâ¾ÍÓÐÁË¸öÎÊÌâ£¬Ò³ÃæµÄÉè¼ÆÊÇÓ²±àÂëÔÚÊÓÍ¼ÖÐµÄ¡£Èç¹ûÄãÏë¸Ä±äÒ³ÃæµÄÍâ¹Û£¬¾Í±ØÐëÐÞ¸ÄÕâÀïµÄ Python ´úÂë¡£Òò´Ë£¬ÈÃÎÒÃÇÊ¹ÓÃ Django µÄÄ£°åÏµÍ³´´½¨Ò»¸öÄ£°å¸øÊÓÍ¼ÓÃ£¬¾ÍÊ¹Ò³ÃæÉè¼Æ´Ó Python ´úÂëÖÐ ·ÖÀë³öÀ´ÁË¡£
+åœ¨è¿™å°±æœ‰äº†ä¸ªé—®é¢˜ï¼Œé¡µé¢çš„è®¾è®¡æ˜¯ç¡¬ç¼–ç åœ¨è§†å›¾ä¸­çš„ã€‚å¦‚æžœä½ æƒ³æ”¹å˜é¡µé¢çš„å¤–è§‚ï¼Œå°±å¿…é¡»ä¿®æ”¹è¿™é‡Œçš„ Python ä»£ç ã€‚å› æ­¤ï¼Œè®©æˆ‘ä»¬ä½¿ç”¨ Django çš„æ¨¡æ¿ç³»ç»Ÿåˆ›å»ºä¸€ä¸ªæ¨¡æ¿ç»™è§†å›¾ç”¨ï¼Œå°±ä½¿é¡µé¢è®¾è®¡ä»Ž Python ä»£ç ä¸­ åˆ†ç¦»å‡ºæ¥äº†ã€‚
 
-Ê×ÏÈ£¬ÔÚ polls Ä¿Â¼ÏÂ´´½¨Ò»¸ö templates Ä¿Â¼¡£ Django ½«»áÔÚÄÇÑ°ÕÒÄ£°å¡£
+é¦–å…ˆï¼Œåœ¨ polls ç›®å½•ä¸‹åˆ›å»ºä¸€ä¸ª templates ç›®å½•ã€‚ Django å°†ä¼šåœ¨é‚£å¯»æ‰¾æ¨¡æ¿ã€‚
 
-Django µÄ TEMPLATE_LOADERS ÅäÖÃÖÐ°üº¬Ò»¸öÖªµÀÈçºÎ´Ó¸÷ÖÖÀ´Ô´µ¼ÈëÄ£°åµÄ¿Éµ÷ÓÃµÄ·½·¨ÁÐ±í¡£ ÆäÖÐÓÐÒ»¸öÄ¬ÈÏÖµÊÇ django.template.loaders.app_directories.Loader £¬Django ¾Í»áÔÚÃ¿¸ö INSTALLED_APPS µÄ ¡°templates¡± ×ÓÄ¿Â¼ÏÂ²éÕÒÄ£°å - Õâ¾ÍÊÇ Django ÖªµÀÔõÃ´ÕÒµ½ polls Ä£°åµÄÔ­Òò£¬¼´Ê¹ÎÒÃÇ Ã»ÓÐÐÞ¸Ä TEMPLATE_DIRS, »¹ÊÇÈçÍ¬ÔÚ ½Ì³Ì µÚ2²¿·Ö ÄÇÑù¡£
+Django çš„ TEMPLATE_LOADERS é…ç½®ä¸­åŒ…å«ä¸€ä¸ªçŸ¥é“å¦‚ä½•ä»Žå„ç§æ¥æºå¯¼å…¥æ¨¡æ¿çš„å¯è°ƒç”¨çš„æ–¹æ³•åˆ—è¡¨ã€‚ å…¶ä¸­æœ‰ä¸€ä¸ªé»˜è®¤å€¼æ˜¯ django.template.loaders.app_directories.Loader ï¼ŒDjango å°±ä¼šåœ¨æ¯ä¸ª INSTALLED_APPS çš„ â€œtemplatesâ€ å­ç›®å½•ä¸‹æŸ¥æ‰¾æ¨¡æ¿ - è¿™å°±æ˜¯ Django çŸ¥é“æ€Žä¹ˆæ‰¾åˆ° polls æ¨¡æ¿çš„åŽŸå› ï¼Œå³ä½¿æˆ‘ä»¬ æ²¡æœ‰ä¿®æ”¹ TEMPLATE_DIRS, è¿˜æ˜¯å¦‚åŒåœ¨ æ•™ç¨‹ ç¬¬2éƒ¨åˆ† é‚£æ ·ã€‚
 
-> ×éÖ¯Ä£°å
+> ç»„ç»‡æ¨¡æ¿
 > 
-> ÎÒÃÇ ÄÜ¹» ÔÚÒ»¸ö´óµÄÄ£°åÄ¿Â¼ÏÂÒ»Æð¹²ÓÃÎÒÃÇËùÓÐµÄÄ£°å£¬¶øÇÒËüÃÇ»áÔËÐÐµÃºÜºÃ¡£ µ«ÊÇ£¬´ËÄ£°åÊôÓÚ polls Ó¦ÓÃ£¬Òò´ËÓëÎÒÃÇÔÚÉÏÒ»¸ö½Ì³ÌÖÐ´´½¨µÄ¹ÜÀíÄ£°å²»Í¬£¬ ÎÒÃÇÒª°ÑÕâ¸öÄ£°å·ÅÔÚÓ¦ÓÃµÄÄ£°åÄ¿Â¼ (polls/templates) ÏÂ¶ø²»ÊÇÏîÄ¿µÄÄ£°åÄ¿Â¼ (templates) ¡£ ÎÒÃÇ½«ÔÚ ¿ÉÖØÓÃµÄÓ¦ÓÃ½Ì³Ì ÖÐÏêÏ¸ÌÖÂÛÎÒÃÇ ÎªÊ²Ã´ ÒªÕâÑù×ö¡£
+> æˆ‘ä»¬ èƒ½å¤Ÿ åœ¨ä¸€ä¸ªå¤§çš„æ¨¡æ¿ç›®å½•ä¸‹ä¸€èµ·å…±ç”¨æˆ‘ä»¬æ‰€æœ‰çš„æ¨¡æ¿ï¼Œè€Œä¸”å®ƒä»¬ä¼šè¿è¡Œå¾—å¾ˆå¥½ã€‚ ä½†æ˜¯ï¼Œæ­¤æ¨¡æ¿å±žäºŽ polls åº”ç”¨ï¼Œå› æ­¤ä¸Žæˆ‘ä»¬åœ¨ä¸Šä¸€ä¸ªæ•™ç¨‹ä¸­åˆ›å»ºçš„ç®¡ç†æ¨¡æ¿ä¸åŒï¼Œ æˆ‘ä»¬è¦æŠŠè¿™ä¸ªæ¨¡æ¿æ”¾åœ¨åº”ç”¨çš„æ¨¡æ¿ç›®å½• (polls/templates) ä¸‹è€Œä¸æ˜¯é¡¹ç›®çš„æ¨¡æ¿ç›®å½• (templates) ã€‚ æˆ‘ä»¬å°†åœ¨ å¯é‡ç”¨çš„åº”ç”¨æ•™ç¨‹ ä¸­è¯¦ç»†è®¨è®ºæˆ‘ä»¬ ä¸ºä»€ä¹ˆ è¦è¿™æ ·åšã€‚
 
-ÔÚÄã¸Õ²Å´´½¨µÄ``templates`` Ä¿Â¼ÏÂ£¬ÁíÍâ´´½¨¸öÃûÎª polls µÄÄ¿Â¼£¬²¢ÔÚÆäÖÐ´´½¨Ò»¸ö index.html ÎÄ¼þ¡£»»¾ä»°Ëµ£¬ÄãµÄÄ£°åÓ¦¸ÃÊÇ polls/templates/polls/index.html ¡£ÓÉÓÚÖªµÀÈçÉÏËùÊöµÄ app_directories Ä£°å¼ÓÔØÆ÷ÊÇ ÈçºÎÔËÐÐµÄ£¬Äã¿ÉÒÔ²Î¿¼ Django ÄÚµÄÄ£°å¼òµ¥µÄ×÷Îª polls/index.html Ä£°å¡£
+åœ¨ä½ åˆšæ‰åˆ›å»ºçš„``templates`` ç›®å½•ä¸‹ï¼Œå¦å¤–åˆ›å»ºä¸ªåä¸º polls çš„ç›®å½•ï¼Œå¹¶åœ¨å…¶ä¸­åˆ›å»ºä¸€ä¸ª index.html æ–‡ä»¶ã€‚æ¢å¥è¯è¯´ï¼Œä½ çš„æ¨¡æ¿åº”è¯¥æ˜¯ polls/templates/polls/index.html ã€‚ç”±äºŽçŸ¥é“å¦‚ä¸Šæ‰€è¿°çš„ app_directories æ¨¡æ¿åŠ è½½å™¨æ˜¯ å¦‚ä½•è¿è¡Œçš„ï¼Œä½ å¯ä»¥å‚è€ƒ Django å†…çš„æ¨¡æ¿ç®€å•çš„ä½œä¸º polls/index.html æ¨¡æ¿ã€‚
 
-> Ä£°åÃüÃû¿Õ¼ä
+> æ¨¡æ¿å‘½åç©ºé—´
 > 
-> ÏÖÔÚÎÒÃÇ Ò²Ðí ÄÜ¹»Ö±½Ó°ÑÎÒÃÇµÄÄ£°å·ÅÔÚ polls/templates Ä¿Â¼ÏÂ ( ¶ø²»ÊÇÁíÍâ´´½¨ polls ×ÓÄ¿Â¼ ) £¬ µ«ËüÊµ¼ÊÉÏÊÇÒ»¸ö»µ×¢Òâ¡£ Django ½«»áÑ¡ÔñµÚÒ»¸öÕÒµ½µÄ°´Ãû³ÆÆ¥ÅäµÄÄ£°å£¬ Èç¹ûÄãÔÚ ²»Í¬ Ó¦ÓÃÖÐÓÐÏàÍ¬µÄÃû³ÆµÄÄ£°å£¬Django ½«ÎÞ·¨Çø·ÖËüÃÇ¡£ ÎÒÃÇÏëÒªÈÃ Django Ö¸ÏòÕýÈ·µÄÄ£°å£¬×î¼òµ¥µÄ·½·¨ÊÇÍ¨¹ý ÃüÃû¿Õ¼ä À´È·±£ÊÇ ËûÃÇµÄÄ£°å¡£Ò²¾ÍÊÇËµ£¬½«Ä£°å·ÅÔÚ ÁíÒ»¸ö Ä¿Â¼ÏÂ²¢ÃüÃûÎªÓ¦ÓÃ±¾ÉíµÄÃû³Æ¡£
+> çŽ°åœ¨æˆ‘ä»¬ ä¹Ÿè®¸ èƒ½å¤Ÿç›´æŽ¥æŠŠæˆ‘ä»¬çš„æ¨¡æ¿æ”¾åœ¨ polls/templates ç›®å½•ä¸‹ ( è€Œä¸æ˜¯å¦å¤–åˆ›å»º polls å­ç›®å½• ) ï¼Œ ä½†å®ƒå®žé™…ä¸Šæ˜¯ä¸€ä¸ªåæ³¨æ„ã€‚ Django å°†ä¼šé€‰æ‹©ç¬¬ä¸€ä¸ªæ‰¾åˆ°çš„æŒ‰åç§°åŒ¹é…çš„æ¨¡æ¿ï¼Œ å¦‚æžœä½ åœ¨ ä¸åŒ åº”ç”¨ä¸­æœ‰ç›¸åŒçš„åç§°çš„æ¨¡æ¿ï¼ŒDjango å°†æ— æ³•åŒºåˆ†å®ƒä»¬ã€‚ æˆ‘ä»¬æƒ³è¦è®© Django æŒ‡å‘æ­£ç¡®çš„æ¨¡æ¿ï¼Œæœ€ç®€å•çš„æ–¹æ³•æ˜¯é€šè¿‡ å‘½åç©ºé—´ æ¥ç¡®ä¿æ˜¯ ä»–ä»¬çš„æ¨¡æ¿ã€‚ä¹Ÿå°±æ˜¯è¯´ï¼Œå°†æ¨¡æ¿æ”¾åœ¨ å¦ä¸€ä¸ª ç›®å½•ä¸‹å¹¶å‘½åä¸ºåº”ç”¨æœ¬èº«çš„åç§°ã€‚
 
-½«ÒÔÏÂ´úÂëÌí¼Óµ½¸ÃÄ£°åÖÐ:
+å°†ä»¥ä¸‹ä»£ç æ·»åŠ åˆ°è¯¥æ¨¡æ¿ä¸­:
 
 ```
 {% if latest_poll_list %}
@@ -221,7 +221,7 @@ Django µÄ TEMPLATE_LOADERS ÅäÖÃÖÐ°üº¬Ò»¸öÖªµÀÈçºÎ´Ó¸÷ÖÖÀ´Ô´µ¼ÈëÄ£°åµÄ¿Éµ÷ÓÃµÄ·½·
 {% endif %}
 ```
 
-ÏÖÔÚÈÃÎÒÃÇÔÚ index ÊÓÍ¼ÖÐÊ¹ÓÃÕâ¸öÄ£°å£º
+çŽ°åœ¨è®©æˆ‘ä»¬åœ¨ index è§†å›¾ä¸­ä½¿ç”¨è¿™ä¸ªæ¨¡æ¿ï¼š
 
 ```
 from django.http import HttpResponse
@@ -238,13 +238,13 @@ def index(request):
     return HttpResponse(template.render(context))
 ```
 
-´úÂë½«¼ÓÔØ polls/index.html Ä£°å²¢´«µÝÒ»¸ö context ±äÁ¿¡£ The context is a dictionary mapping template variable names to Python ¸Ã context ±äÁ¿ÊÇÒ»¸öÓ³ÉäÁË Python ¶ÔÏóµ½Ä£°å±äÁ¿µÄ×Öµä¡£
+ä»£ç å°†åŠ è½½ polls/index.html æ¨¡æ¿å¹¶ä¼ é€’ä¸€ä¸ª context å˜é‡ã€‚ The context is a dictionary mapping template variable names to Python è¯¥ context å˜é‡æ˜¯ä¸€ä¸ªæ˜ å°„äº† Python å¯¹è±¡åˆ°æ¨¡æ¿å˜é‡çš„å­—å…¸ã€‚
 
-ÔÚÄãµÄä¯ÀÀÆ÷ÖÐ¼ÓÔØ ¡°/polls/¡± Ò³£¬ÄãÓ¦¸Ã¿´µ½Ò»¸öÁÐ±í£¬°üº¬ÁËÔÚ½Ì³Ì µÚ1²¿·Ö ÖÐ´´½¨µÄ ¡°What¡¯s up¡± µ÷²é¡£¶øÁ´½ÓÖ¸Ïò poll µÄÏêÏ¸Ò³Ãæ¡£
+åœ¨ä½ çš„æµè§ˆå™¨ä¸­åŠ è½½ â€œ/polls/â€ é¡µï¼Œä½ åº”è¯¥çœ‹åˆ°ä¸€ä¸ªåˆ—è¡¨ï¼ŒåŒ…å«äº†åœ¨æ•™ç¨‹ ç¬¬1éƒ¨åˆ† ä¸­åˆ›å»ºçš„ â€œWhatâ€™s upâ€ è°ƒæŸ¥ã€‚è€Œé“¾æŽ¥æŒ‡å‘ poll çš„è¯¦ç»†é¡µé¢ã€‚
 
-## ¿ì½Ý·½Ê½: render() ##
+## å¿«æ·æ–¹å¼: render() ##
 
-ÕâÊÇÒ»¸ö·Ç³£³£¼ûµÄÏ°¹ßÓÃÓï£¬ÓÃÓÚ¼ÓÔØÄ£°å£¬Ìî³äÉÏÏÂÎÄ²¢·µ»ØÒ»¸öº¬ÓÐÄ£°åäÖÈ¾½á¹ûµÄ HttpResponse ¶ÔÏó¡£ Django Ìá¹©ÁËÒ»ÖÖ¿ì½Ý·½Ê½¡£ÕâÀïÖØÐ´ÍêÕûµÄ index() ÊÓÍ¼
+è¿™æ˜¯ä¸€ä¸ªéžå¸¸å¸¸è§çš„ä¹ æƒ¯ç”¨è¯­ï¼Œç”¨äºŽåŠ è½½æ¨¡æ¿ï¼Œå¡«å……ä¸Šä¸‹æ–‡å¹¶è¿”å›žä¸€ä¸ªå«æœ‰æ¨¡æ¿æ¸²æŸ“ç»“æžœçš„ HttpResponse å¯¹è±¡ã€‚ Django æä¾›äº†ä¸€ç§å¿«æ·æ–¹å¼ã€‚è¿™é‡Œé‡å†™å®Œæ•´çš„ index() è§†å›¾
 
 ```
 from django.shortcuts import render
@@ -257,13 +257,13 @@ def index(request):
     return render(request, 'polls/index.html', context)
 ```
 
-Çë×¢Òâ£¬Ò»µ©ÎÒÃÇÔÚËùÓÐÊÓÍ¼ÖÐ¶¼ÕâÑù×öÁË£¬ÎÒÃÇ¾Í²»ÔÙÐèÒªµ¼Èë loader £¬ Context ºÍ HttpResponse ( Èç¹ûÄãÈÔÈ»±£ÁôÁË detail,``resutls``, ºÍ``vote`` ·½·¨£¬Äã»¹ÊÇÐèÒª±£Áô HttpResponse ) ¡£
+è¯·æ³¨æ„ï¼Œä¸€æ—¦æˆ‘ä»¬åœ¨æ‰€æœ‰è§†å›¾ä¸­éƒ½è¿™æ ·åšäº†ï¼Œæˆ‘ä»¬å°±ä¸å†éœ€è¦å¯¼å…¥ loader ï¼Œ Context å’Œ HttpResponse ( å¦‚æžœä½ ä»ç„¶ä¿ç•™äº† detail,``resutls``, å’Œ``vote`` æ–¹æ³•ï¼Œä½ è¿˜æ˜¯éœ€è¦ä¿ç•™ HttpResponse ) ã€‚
 
-render() º¯ÊýÖÐµÚÒ»¸ö²ÎÊýÊÇ request ¶ÔÏó£¬µÚ¶þ¸ö²ÎÊýÊÇÒ»¸öÄ£°åÃû³Æ£¬µÚÈý¸öÊÇÒ»¸ö×ÖµäÀàÐÍµÄ¿ÉÑ¡²ÎÊý¡£ Ëü½«·µ»ØÒ»¸ö°üº¬ÓÐ¸ø¶¨Ä£°å¸ù¾Ý¸ø¶¨µÄÉÏÏÂÎÄäÖÈ¾½á¹ûµÄ HttpResponse ¶ÔÏó¡£
+render() å‡½æ•°ä¸­ç¬¬ä¸€ä¸ªå‚æ•°æ˜¯ request å¯¹è±¡ï¼Œç¬¬äºŒä¸ªå‚æ•°æ˜¯ä¸€ä¸ªæ¨¡æ¿åç§°ï¼Œç¬¬ä¸‰ä¸ªæ˜¯ä¸€ä¸ªå­—å…¸ç±»åž‹çš„å¯é€‰å‚æ•°ã€‚ å®ƒå°†è¿”å›žä¸€ä¸ªåŒ…å«æœ‰ç»™å®šæ¨¡æ¿æ ¹æ®ç»™å®šçš„ä¸Šä¸‹æ–‡æ¸²æŸ“ç»“æžœçš„ HttpResponse å¯¹è±¡ã€‚
 
-## Å×³ö 404 Òì³£ ##
+## æŠ›å‡º 404 å¼‚å¸¸ ##
 
-ÏÖÔÚÈÃÎÒÃÇ½â¾ö poll µÄÏêÏ¸ÊÓÍ¼ ¨C ¸ÃÒ³ÏÔÊ¾Ò»¸ö¸ø¶¨ poll µÄÏêÏ¸ÎÊÌâ¡£ ÊÓÍ¼´úÂëÈçÏÂËùÊ¾£º:
+çŽ°åœ¨è®©æˆ‘ä»¬è§£å†³ poll çš„è¯¦ç»†è§†å›¾ â€“ è¯¥é¡µæ˜¾ç¤ºä¸€ä¸ªç»™å®š poll çš„è¯¦ç»†é—®é¢˜ã€‚ è§†å›¾ä»£ç å¦‚ä¸‹æ‰€ç¤ºï¼š:
 
 ```
 from django.http import Http404
@@ -276,19 +276,19 @@ def detail(request, poll_id):
     return render(request, 'polls/detail.html', {'poll': poll})
 ```
 
-ÔÚÕâÓÐ¸öÐÂ¸ÅÄî£ºÈç¹ûÇëÇóµÄ poll µÄ ID ²»´æÔÚ£¬¸ÃÊÓÍ¼½«Å×³ö Http404 Òì³£¡£
+åœ¨è¿™æœ‰ä¸ªæ–°æ¦‚å¿µï¼šå¦‚æžœè¯·æ±‚çš„ poll çš„ ID ä¸å­˜åœ¨ï¼Œè¯¥è§†å›¾å°†æŠ›å‡º Http404 å¼‚å¸¸ã€‚
 
-ÎÒÃÇÉÔºóÌÖÂÛÈçºÎÉèÖÃ polls/detail.html Ä£°å£¬ÈôÊÇÄãÏë¿ìËÙÔËÐÐÉÏÃæµÄÀý×Ó£¬ ÔÚÄ£°åÎÄ¼þÖÐÌí¼ÓÈçÏÂ´úÂë£º
+æˆ‘ä»¬ç¨åŽè®¨è®ºå¦‚ä½•è®¾ç½® polls/detail.html æ¨¡æ¿ï¼Œè‹¥æ˜¯ä½ æƒ³å¿«é€Ÿè¿è¡Œä¸Šé¢çš„ä¾‹å­ï¼Œ åœ¨æ¨¡æ¿æ–‡ä»¶ä¸­æ·»åŠ å¦‚ä¸‹ä»£ç ï¼š
 
 ```
 {{ poll }}
 ```
 
-ÏÖÔÚÄã¿ÉÒÔÔËÐÐÁË¡£
+çŽ°åœ¨ä½ å¯ä»¥è¿è¡Œäº†ã€‚
 
-## ¿ì½Ý·½Ê½: get_object_or_404() ##
+## å¿«æ·æ–¹å¼: get_object_or_404() ##
 
-ÕâºÜ³£¼û£¬µ±ÄãÊ¹ÓÃ get() »ñÈ¡¶ÔÏóÊ± ¶ÔÏóÈ´²»´æÔÚÊ±¾Í»áÅ×³ö Http404 Òì³£¡£¶Ô´Ë Django Ìá¹©ÁËÒ»¸ö¿ì½Ý²Ù×÷¡£ÈçÏÂËùÊ¾ÖØÐ´ detail() ÊÓÍ¼£º
+è¿™å¾ˆå¸¸è§ï¼Œå½“ä½ ä½¿ç”¨ get() èŽ·å–å¯¹è±¡æ—¶ å¯¹è±¡å´ä¸å­˜åœ¨æ—¶å°±ä¼šæŠ›å‡º Http404 å¼‚å¸¸ã€‚å¯¹æ­¤ Django æä¾›äº†ä¸€ä¸ªå¿«æ·æ“ä½œã€‚å¦‚ä¸‹æ‰€ç¤ºé‡å†™ detail() è§†å›¾ï¼š
 
 ```
 from django.shortcuts import render, get_object_or_404
@@ -298,35 +298,35 @@ def detail(request, poll_id):
     return render(request, 'polls/detail.html', {'poll': poll})
 ```
 
-get_object_or_404() º¯ÊýÐèÒªÒ»¸ö Django Ä£ÐÍÀà×÷ÎªµÚÒ»¸ö²ÎÊýÒÔ¼° Ò»Ð©¹Ø¼ü×Ö²ÎÊý£¬Ëü½«ÕâÐ©²ÎÊý´«µÝ¸øÄ£ÐÍ¹ÜÀíÆ÷ÖÐµÄ get() º¯Êý¡£ Èô¶ÔÏó²»´æÔÚÊ±¾ÍÅ×³ö Http404 Òì³£¡£
+get_object_or_404() å‡½æ•°éœ€è¦ä¸€ä¸ª Django æ¨¡åž‹ç±»ä½œä¸ºç¬¬ä¸€ä¸ªå‚æ•°ä»¥åŠ ä¸€äº›å…³é”®å­—å‚æ•°ï¼Œå®ƒå°†è¿™äº›å‚æ•°ä¼ é€’ç»™æ¨¡åž‹ç®¡ç†å™¨ä¸­çš„ get() å‡½æ•°ã€‚ è‹¥å¯¹è±¡ä¸å­˜åœ¨æ—¶å°±æŠ›å‡º Http404 å¼‚å¸¸ã€‚
 
-> ÕÜÀí
+> å“²ç†
 > 
-> ÎªÊ²Ã´ÎÒÃÇÒªÊ¹ÓÃÒ»¸ö get_object_or_404() ¸¨Öúº¯Êý ¶ø²»ÊÇÔÚ¸ü¸ß¼¶±ð×Ô¶¯²¶»ñ ObjectDoesNotExist Òì³££¬ »òÕßÓÉÄ£ÐÍ API Å×³ö Http404 Òì³£¶ø²»ÊÇ ObjectDoesNotExist Òì³££¿
+> ä¸ºä»€ä¹ˆæˆ‘ä»¬è¦ä½¿ç”¨ä¸€ä¸ª get_object_or_404() è¾…åŠ©å‡½æ•° è€Œä¸æ˜¯åœ¨æ›´é«˜çº§åˆ«è‡ªåŠ¨æ•èŽ· ObjectDoesNotExist å¼‚å¸¸ï¼Œ æˆ–è€…ç”±æ¨¡åž‹ API æŠ›å‡º Http404 å¼‚å¸¸è€Œä¸æ˜¯ ObjectDoesNotExist å¼‚å¸¸ï¼Ÿ
 > 
-> ÒòÎªÄÇÑù»áÊ¹Ä£ÐÍ²ãÓëÊÓÍ¼²ãñîºÏÔÚÒ»Æð¡£Django ×îÖØÒªµÄÉè¼ÆÄ¿±êÖ®Ò» ¾ÍÊÇ±£³ÖËÉñîºÏ¡£Ò»Ð©¿ØÖÆñîºÏÔÚ django.shortcuts Ä£¿éÖÐ½éÉÜ¡£
+> å› ä¸ºé‚£æ ·ä¼šä½¿æ¨¡åž‹å±‚ä¸Žè§†å›¾å±‚è€¦åˆåœ¨ä¸€èµ·ã€‚Django æœ€é‡è¦çš„è®¾è®¡ç›®æ ‡ä¹‹ä¸€ å°±æ˜¯ä¿æŒæ¾è€¦åˆã€‚ä¸€äº›æŽ§åˆ¶è€¦åˆåœ¨ django.shortcuts æ¨¡å—ä¸­ä»‹ç»ã€‚
 
-»¹ÓÐ¸ö get_list_or_404() º¯Êý£¬Óë get_object_or_404() Ò»Ñù ¨C ²»¹ýÖ´ÐÐµÄÊÇ filter() ¶ø²»ÊÇ get() ¡£Èô·µ»ØµÄÊÇ¿ÕÁÐ±í½«Å×³ö Http404 Òì³£¡£
+è¿˜æœ‰ä¸ª get_list_or_404() å‡½æ•°ï¼Œä¸Ž get_object_or_404() ä¸€æ · â€“ ä¸è¿‡æ‰§è¡Œçš„æ˜¯ filter() è€Œä¸æ˜¯ get() ã€‚è‹¥è¿”å›žçš„æ˜¯ç©ºåˆ—è¡¨å°†æŠ›å‡º Http404 å¼‚å¸¸ã€‚
 
-## ±àÐ´Ò»¸ö 404 ( Ò³ÃæÎ´ÕÒµ½ ) ÊÓÍ¼ ##
+## ç¼–å†™ä¸€ä¸ª 404 ( é¡µé¢æœªæ‰¾åˆ° ) è§†å›¾ ##
 
-µ±ÄãÔÚÊÓÍ¼ÖÐÅ×³ö Http404 Ê±£¬Django ½«ÔØÈëÒ»¸öÌØ¶¨µÄÊÓÍ¼À´´¦Àí 404 ´íÎó¡£Django »á¸ù¾ÝÄãµÄ root URLconf ( ½öÔÚÄãµÄ root URLconf ÖÐ£»ÔÚÆäËûÈÎºÎµØ·½ÉèÖÃ handler404 ¶¼ÎÞÐ§ £©ÖÐÉèÖÃµÄ handler404 ±äÁ¿À´²éÕÒ¸ÃÊÓÍ¼£¬Õâ¸ö±äÁ¿ÊÇ¸ö Python °ü¸ñÊ½×Ö·û´® ¨C ºÍ±ê×¼ URLconf ÖÐµÄ»Øµ÷º¯Êý¸ñÊ½ÊÇÒ»ÑùµÄ¡£ 404 ÊÓÍ¼±¾ÉíÃ»ÓÐÊ²Ã´ÌØÊâÐÔ£ºËü¾ÍÊÇÒ»¸öÆÕÍ¨µÄÊÓÍ¼¡£
+å½“ä½ åœ¨è§†å›¾ä¸­æŠ›å‡º Http404 æ—¶ï¼ŒDjango å°†è½½å…¥ä¸€ä¸ªç‰¹å®šçš„è§†å›¾æ¥å¤„ç† 404 é”™è¯¯ã€‚Django ä¼šæ ¹æ®ä½ çš„ root URLconf ( ä»…åœ¨ä½ çš„ root URLconf ä¸­ï¼›åœ¨å…¶ä»–ä»»ä½•åœ°æ–¹è®¾ç½® handler404 éƒ½æ— æ•ˆ ï¼‰ä¸­è®¾ç½®çš„ handler404 å˜é‡æ¥æŸ¥æ‰¾è¯¥è§†å›¾ï¼Œè¿™ä¸ªå˜é‡æ˜¯ä¸ª Python åŒ…æ ¼å¼å­—ç¬¦ä¸² â€“ å’Œæ ‡å‡† URLconf ä¸­çš„å›žè°ƒå‡½æ•°æ ¼å¼æ˜¯ä¸€æ ·çš„ã€‚ 404 è§†å›¾æœ¬èº«æ²¡æœ‰ä»€ä¹ˆç‰¹æ®Šæ€§ï¼šå®ƒå°±æ˜¯ä¸€ä¸ªæ™®é€šçš„è§†å›¾ã€‚
 
-Í¨³£Äã²»±Ø·ÑÐÄÈ¥±àÐ´ 404 ÊÓÍ¼¡£ÈôÄãÃ»ÓÐÉèÖÃ handler404 ±äÁ¿£¬Ä¬ÈÏÇé¿öÏÂ»áÊ¹ÓÃÄÚÖÃµÄ django.views.defaults.page_not_found() ÊÓÍ¼¡£»òÕßÄã¿ÉÒÔÔÚÄãµÄÄ£°åÄ¿Â¼ÏÂµÄ¸ùÄ¿Â¼ÖÐ ´´½¨Ò»¸ö 404.html Ä£°å¡£µ± DEBUG ÖµÊÇ False ( ÔÚÄãµÄ settings Ä£¿éÖÐ ) Ê±£¬ Ä¬ÈÏµÄ 404 ÊÓÍ¼½«Ê¹ÓÃ´ËÄ£°åÀ´ÏÔÊ¾ËùÓÐµÄ 404 ´íÎó¡£ Èç¹ûÄã´´½¨ÁËÕâ¸öÄ£°å£¬ÖÁÉÙÌí¼ÓÐ©Èç¡°Ò³ÃæÎ´ÕÒµ½¡± µÄÄÚÈÝ¡£
+é€šå¸¸ä½ ä¸å¿…è´¹å¿ƒåŽ»ç¼–å†™ 404 è§†å›¾ã€‚è‹¥ä½ æ²¡æœ‰è®¾ç½® handler404 å˜é‡ï¼Œé»˜è®¤æƒ…å†µä¸‹ä¼šä½¿ç”¨å†…ç½®çš„ django.views.defaults.page_not_found() è§†å›¾ã€‚æˆ–è€…ä½ å¯ä»¥åœ¨ä½ çš„æ¨¡æ¿ç›®å½•ä¸‹çš„æ ¹ç›®å½•ä¸­ åˆ›å»ºä¸€ä¸ª 404.html æ¨¡æ¿ã€‚å½“ DEBUG å€¼æ˜¯ False ( åœ¨ä½ çš„ settings æ¨¡å—ä¸­ ) æ—¶ï¼Œ é»˜è®¤çš„ 404 è§†å›¾å°†ä½¿ç”¨æ­¤æ¨¡æ¿æ¥æ˜¾ç¤ºæ‰€æœ‰çš„ 404 é”™è¯¯ã€‚ å¦‚æžœä½ åˆ›å»ºäº†è¿™ä¸ªæ¨¡æ¿ï¼Œè‡³å°‘æ·»åŠ äº›å¦‚â€œé¡µé¢æœªæ‰¾åˆ°â€ çš„å†…å®¹ã€‚
 
-Ò»Ð©ÓÐ¹Ø 404 ÊÓÍ¼ÐèÒª×¢ÒâµÄÊÂÏî :
+ä¸€äº›æœ‰å…³ 404 è§†å›¾éœ€è¦æ³¨æ„çš„äº‹é¡¹ :
 
-+ Èç¹û DEBUG ÉèÎª True ( ÔÚÄãµÄ settings Ä£¿éÀï ) ÄÇÃ´ÄãµÄ 404 ÊÓÍ¼½«ÓÀÔ¶²»»á±»Ê¹ÓÃ ( Òò´Ë 404.html Ä£°åÒ²½«ÓÀÔ¶²»»á±»äÖÈ¾ ) ÒòÎª½«ÒªÏÔÊ¾µÄÊÇ¸ú×ÙÐÅÏ¢¡£
-+ µ± Django ÔÚ URLconf ÖÐ²»ÄÜÕÒµ½ÄÜÆ¥ÅäµÄÕýÔò±í´ïÊ½Ê± 404 ÊÓÍ¼Ò²½«±»µ÷ÓÃ¡£
-±àÐ´Ò»¸ö 500 ( ·þÎñÆ÷´íÎó ) ÊÓÍ¼
++ å¦‚æžœ DEBUG è®¾ä¸º True ( åœ¨ä½ çš„ settings æ¨¡å—é‡Œ ) é‚£ä¹ˆä½ çš„ 404 è§†å›¾å°†æ°¸è¿œä¸ä¼šè¢«ä½¿ç”¨ ( å› æ­¤ 404.html æ¨¡æ¿ä¹Ÿå°†æ°¸è¿œä¸ä¼šè¢«æ¸²æŸ“ ) å› ä¸ºå°†è¦æ˜¾ç¤ºçš„æ˜¯è·Ÿè¸ªä¿¡æ¯ã€‚
++ å½“ Django åœ¨ URLconf ä¸­ä¸èƒ½æ‰¾åˆ°èƒ½åŒ¹é…çš„æ­£åˆ™è¡¨è¾¾å¼æ—¶ 404 è§†å›¾ä¹Ÿå°†è¢«è°ƒç”¨ã€‚
+ç¼–å†™ä¸€ä¸ª 500 ( æœåŠ¡å™¨é”™è¯¯ ) è§†å›¾
 
-ÀàËÆµÄ£¬Äã¿ÉÒÔÔÚ root URLconf ÖÐ¶¨Òå handler500 ±äÁ¿£¬ÔÚ·þÎñÆ÷·¢Éú´íÎóÊ± µ÷ÓÃËüÖ¸ÏòµÄÊÓÍ¼¡£·þÎñÆ÷´íÎóÊÇÖ¸ÊÓÍ¼´úÂë²úÉúµÄÔËÐÐÊ±´íÎó¡£
+ç±»ä¼¼çš„ï¼Œä½ å¯ä»¥åœ¨ root URLconf ä¸­å®šä¹‰ handler500 å˜é‡ï¼Œåœ¨æœåŠ¡å™¨å‘ç”Ÿé”™è¯¯æ—¶ è°ƒç”¨å®ƒæŒ‡å‘çš„è§†å›¾ã€‚æœåŠ¡å™¨é”™è¯¯æ˜¯æŒ‡è§†å›¾ä»£ç äº§ç”Ÿçš„è¿è¡Œæ—¶é”™è¯¯ã€‚
 
-Í¬Ñù£¬ÄãÔÚÄ£°å¸ùÄ¿Â¼ÏÂ´´½¨Ò»¸ö 500.html Ä£°å²¢ÇÒÌí¼ÓÐ©Ïñ¡°³ö´íÁË¡±µÄÄÚÈÝ¡£
+åŒæ ·ï¼Œä½ åœ¨æ¨¡æ¿æ ¹ç›®å½•ä¸‹åˆ›å»ºä¸€ä¸ª 500.html æ¨¡æ¿å¹¶ä¸”æ·»åŠ äº›åƒâ€œå‡ºé”™äº†â€çš„å†…å®¹ã€‚
 
-## Ê¹ÓÃÄ£°åÏµÍ³ ##
+## ä½¿ç”¨æ¨¡æ¿ç³»ç»Ÿ ##
 
-»Øµ½ÎÒÃÇ poll Ó¦ÓÃµÄ detail() ÊÓÍ¼ÖÐ£¬Ö¸¶¨ poll ±äÁ¿ºó£¬``polls/detail.html`` Ä£°å¿ÉÄÜ¿´ÆðÀ´ÕâÑù :
+å›žåˆ°æˆ‘ä»¬ poll åº”ç”¨çš„ detail() è§†å›¾ä¸­ï¼ŒæŒ‡å®š poll å˜é‡åŽï¼Œ``polls/detail.html`` æ¨¡æ¿å¯èƒ½çœ‹èµ·æ¥è¿™æ · :
 
 ```
 <h1>{{ poll.question }}</h1>
@@ -337,21 +337,21 @@ get_object_or_404() º¯ÊýÐèÒªÒ»¸ö Django Ä£ÐÍÀà×÷ÎªµÚÒ»¸ö²ÎÊýÒÔ¼° Ò»Ð©¹Ø¼ü×Ö²ÎÊý£
 </ul>
 ```
 
-Ä£°åÏµÍ³Ê¹ÓÃÁË¡°±äÁ¿.ÊôÐÔ¡±µÄÓï·¨·ÃÎÊ±äÁ¿µÄÊôÐÔÖµ¡£ ÀýÈç {{ poll.question }} £¬ Ê×ÏÈ Django ¶Ô poll ¶ÔÏó×ö×Öµä²éÑ¯¡£ ·ñÔò Django »á³¢ÊÔÊôÐÔ²éÑ¯ ¨C ÔÚ±¾ÀýÖÐÊôÐÔ²éÑ¯³É¹¦ÁË¡£ Èç¹ûÊôÐÔ²éÑ¯»¹ÊÇÊ§°ÜÁË£¬Django ½«³¢ÊÔ list-index ²éÑ¯¡£
+æ¨¡æ¿ç³»ç»Ÿä½¿ç”¨äº†â€œå˜é‡.å±žæ€§â€çš„è¯­æ³•è®¿é—®å˜é‡çš„å±žæ€§å€¼ã€‚ ä¾‹å¦‚ {{ poll.question }} ï¼Œ é¦–å…ˆ Django å¯¹ poll å¯¹è±¡åšå­—å…¸æŸ¥è¯¢ã€‚ å¦åˆ™ Django ä¼šå°è¯•å±žæ€§æŸ¥è¯¢ â€“ åœ¨æœ¬ä¾‹ä¸­å±žæ€§æŸ¥è¯¢æˆåŠŸäº†ã€‚ å¦‚æžœå±žæ€§æŸ¥è¯¢è¿˜æ˜¯å¤±è´¥äº†ï¼ŒDjango å°†å°è¯• list-index æŸ¥è¯¢ã€‚
 
-ÔÚ {% for %} Ñ­»·ÖÐÓÐ·½·¨µ÷ÓÃ: poll.choice_set.all ¾ÍÊÇ Python ´úÂë poll.choice_set.all(),Ëü½«·µ»ØÒ»×é¿Éµü´úµÄ Choice ¶ÔÏó£¬¿ÉÒÔÓÃÔÚ {% for %} ±êÇ©ÖÐ¡£
+åœ¨ {% for %} å¾ªçŽ¯ä¸­æœ‰æ–¹æ³•è°ƒç”¨: poll.choice_set.all å°±æ˜¯ Python ä»£ç  poll.choice_set.all(),å®ƒå°†è¿”å›žä¸€ç»„å¯è¿­ä»£çš„ Choice å¯¹è±¡ï¼Œå¯ä»¥ç”¨åœ¨ {% for %} æ ‡ç­¾ä¸­ã€‚
 
-Çë²ÎÔÄ Ä£°åÖ¸ÄÏ À´ÁË½âÄ£°åµÄ¸ü¶àÄÚÈÝ¡£
+è¯·å‚é˜… æ¨¡æ¿æŒ‡å— æ¥äº†è§£æ¨¡æ¿çš„æ›´å¤šå†…å®¹ã€‚
 
-## ÒÆ³ýÄ£°åÖÐÓ²±àÂëµÄ URLS ##
+## ç§»é™¤æ¨¡æ¿ä¸­ç¡¬ç¼–ç çš„ URLS ##
 
-¼ÇµÃÂð? ÔÚ polls/index.html Ä£°åÖÐ£¬ÎÒÃÇÁ´½Óµ½ poll µÄÁ´½ÓÊÇÓ²±àÂë³ÉÕâÑù×ÓµÄ£º
+è®°å¾—å—? åœ¨ polls/index.html æ¨¡æ¿ä¸­ï¼Œæˆ‘ä»¬é“¾æŽ¥åˆ° poll çš„é“¾æŽ¥æ˜¯ç¡¬ç¼–ç æˆè¿™æ ·å­çš„ï¼š
 
 ```
 <li><a href="/polls/{{ poll.id }}/">{{ poll.question }}</a></li>
 ```
 
-ÎÊÌâ³öÔÚÓ²±àÂë£¬½ôñîºÏÊ¹µÃÔÚ´óÁ¿µÄÄ£°åÖÐÐÞ¸Ä URLs ³ÉÎª¸»ÓÐÌôÕ½ÐÔµÄÏîÄ¿¡£ ²»¹ý£¬¼ÈÈ»ÄãÔÚ polls.urls Ä£¿éÖÐµÄ url() º¯ÊýÖÐ¶¨ÒåÁË ÃüÃû²ÎÊý£¬ÄÇÃ´¾Í¿ÉÒÔÔÚ url ÅäÖÃÖÐÊ¹ÓÃ {% url %} Ä£°å±ê¼ÇÀ´ÒÆ³ýÌØ¶¨µÄ URL Â·¾¶ÒÀÀµ:
+é—®é¢˜å‡ºåœ¨ç¡¬ç¼–ç ï¼Œç´§è€¦åˆä½¿å¾—åœ¨å¤§é‡çš„æ¨¡æ¿ä¸­ä¿®æ”¹ URLs æˆä¸ºå¯Œæœ‰æŒ‘æˆ˜æ€§çš„é¡¹ç›®ã€‚ ä¸è¿‡ï¼Œæ—¢ç„¶ä½ åœ¨ polls.urls æ¨¡å—ä¸­çš„ url() å‡½æ•°ä¸­å®šä¹‰äº† å‘½åå‚æ•°ï¼Œé‚£ä¹ˆå°±å¯ä»¥åœ¨ url é…ç½®ä¸­ä½¿ç”¨ {% url %} æ¨¡æ¿æ ‡è®°æ¥ç§»é™¤ç‰¹å®šçš„ URL è·¯å¾„ä¾èµ–:
 
 ```
 <li><a href="{% url 'detail' poll.id %}">{{ poll.question }}</a></li>
@@ -359,36 +359,36 @@ get_object_or_404() º¯ÊýÐèÒªÒ»¸ö Django Ä£ÐÍÀà×÷ÎªµÚÒ»¸ö²ÎÊýÒÔ¼° Ò»Ð©¹Ø¼ü×Ö²ÎÊý£
 
 > Note
 > 
-> Èç¹û {% url 'detail' poll.id %} (º¬ÒýºÅ) ²»ÄÜÔËÐÐ£¬µ«ÊÇ {% url detail poll.id %} (²»º¬ÒýºÅ) È´ÄÜÔËÐÐ£¬ÄÇÃ´ÒâÎ¶×ÅÄãÊ¹ÓÃµÄ Djang µÍÓÚ < 1.5 °æ¡£ÕâÑùµÄ»°£¬ÄãÐèÒªÔÚÄ£°åÎÄ¼þµÄ¶¥²¿Ìí¼ÓÈçÏÂµÄÉùÃ÷£º:
+> å¦‚æžœ {% url 'detail' poll.id %} (å«å¼•å·) ä¸èƒ½è¿è¡Œï¼Œä½†æ˜¯ {% url detail poll.id %} (ä¸å«å¼•å·) å´èƒ½è¿è¡Œï¼Œé‚£ä¹ˆæ„å‘³ç€ä½ ä½¿ç”¨çš„ Djang ä½ŽäºŽ < 1.5 ç‰ˆã€‚è¿™æ ·çš„è¯ï¼Œä½ éœ€è¦åœ¨æ¨¡æ¿æ–‡ä»¶çš„é¡¶éƒ¨æ·»åŠ å¦‚ä¸‹çš„å£°æ˜Žï¼š:
 > 
 ```
 {% load url from future %}
 ```
 > 
 
-ÆäÔ­Àí¾ÍÊÇÔÚ polls.urls Ä£¿éÖÐÑ°ÕÒÖ¸¶¨µÄ URL ¶¨Òå¡£ ÄãÖªµÀÃüÃûÎª ¡®detail¡¯ µÄ URL ¾ÍÈçÏÂËùÊ¾ÄÇÑù¶¨ÒåµÄÒ»Ñù£º:
+å…¶åŽŸç†å°±æ˜¯åœ¨ polls.urls æ¨¡å—ä¸­å¯»æ‰¾æŒ‡å®šçš„ URL å®šä¹‰ã€‚ ä½ çŸ¥é“å‘½åä¸º â€˜detailâ€™ çš„ URL å°±å¦‚ä¸‹æ‰€ç¤ºé‚£æ ·å®šä¹‰çš„ä¸€æ ·ï¼š:
 
 ```
 ...
-# 'name' µÄÖµÓÉ {% url %} Ä£°å±ê¼ÇÀ´ÒýÓÃ
+# 'name' çš„å€¼ç”± {% url %} æ¨¡æ¿æ ‡è®°æ¥å¼•ç”¨
 url(r'^(?P<poll_id>\d+)/$', views.detail, name='detail'),
 ...
 ```
 
-Èç¹ûÄãÏë½« polls µÄ detail ÊÓÍ¼µÄ URL ¸Ä³ÉÆäËûÑù×Ó£¬»òÐíÏñ polls/specifics/12/ ÕâÑù×Ó£¬ÄÇ¾Í²»ÐèÒªÔÚÄ£°å£¨»òÕßÄ£°å¼¯£©ÖÐÐÞ¸Ä¶øÖ»ÒªÔÚ polls/urls.py ÐÞ¸Ä¾ÍÐÐÁË:
+å¦‚æžœä½ æƒ³å°† polls çš„ detail è§†å›¾çš„ URL æ”¹æˆå…¶ä»–æ ·å­ï¼Œæˆ–è®¸åƒ polls/specifics/12/ è¿™æ ·å­ï¼Œé‚£å°±ä¸éœ€è¦åœ¨æ¨¡æ¿ï¼ˆæˆ–è€…æ¨¡æ¿é›†ï¼‰ä¸­ä¿®æ”¹è€Œåªè¦åœ¨ polls/urls.py ä¿®æ”¹å°±è¡Œäº†:
 
 ```
 ...
-# ÐÂÔö 'specifics'
+# æ–°å¢ž 'specifics'
 url(r'^specifics/(?P<poll_id>\d+)/$', views.detail, name='detail'),
 ...
 ```
 
-## URL Ãû³ÆµÄÃüÃû¿Õ¼ä ##
+## URL åç§°çš„å‘½åç©ºé—´ ##
 
-±¾½Ì³ÌÖÐµÄÏîÄ¿Ö»ÓÐÒ»¸öÓ¦ÓÃ£º``polls`` ¡£ÔÚÊµ¼ÊµÄ Django ÏîÄ¿ÖÐ£¬¿ÉÄÜÓÐ 5¡¢10¡¢20 »òÕß ¸ü¶àµÄÓ¦ÓÃ¡£Django ÊÇÈçºÎÇø·ÖËüÃÇµÄ URL Ãû³ÆµÄÄØ£¿±ÈÈçËµ£¬``polls`` Ó¦ÓÃÓÐÒ»¸ö detail ÊÓÍ¼£¬¶ø¿ÉÄÜ»áÔÚÍ¬Ò»¸öÏîÄ¿ÖÐÊÇÒ»¸ö²©¿ÍÓ¦ÓÃµÄÊÓÍ¼¡£Django ÊÇÈçºÎÖªµÀ Ê¹ÓÃ {% url %} Ä£°å±ê¼Ç´´½¨Ó¦ÓÃµÄ url Ê±Ñ¡ÔñÕýÈ·ÄØ£¿
+æœ¬æ•™ç¨‹ä¸­çš„é¡¹ç›®åªæœ‰ä¸€ä¸ªåº”ç”¨ï¼š``polls`` ã€‚åœ¨å®žé™…çš„ Django é¡¹ç›®ä¸­ï¼Œå¯èƒ½æœ‰ 5ã€10ã€20 æˆ–è€… æ›´å¤šçš„åº”ç”¨ã€‚Django æ˜¯å¦‚ä½•åŒºåˆ†å®ƒä»¬çš„ URL åç§°çš„å‘¢ï¼Ÿæ¯”å¦‚è¯´ï¼Œ``polls`` åº”ç”¨æœ‰ä¸€ä¸ª detail è§†å›¾ï¼Œè€Œå¯èƒ½ä¼šåœ¨åŒä¸€ä¸ªé¡¹ç›®ä¸­æ˜¯ä¸€ä¸ªåšå®¢åº”ç”¨çš„è§†å›¾ã€‚Django æ˜¯å¦‚ä½•çŸ¥é“ ä½¿ç”¨ {% url %} æ¨¡æ¿æ ‡è®°åˆ›å»ºåº”ç”¨çš„ url æ—¶é€‰æ‹©æ­£ç¡®å‘¢ï¼Ÿ
 
-´ð°¸ÊÇÔÚÄãµÄ root URLconf ÅäÖÃÖÐÌí¼ÓÃüÃû¿Õ¼ä¡£ÔÚ mysite/urls.py ÎÄ¼þ (ÏîÄ¿µÄ ``urls.py``£¬²»ÊÇÓ¦ÓÃµÄ) ÖÐ£¬ÐÞ¸ÄÎª°üº¬ÃüÃû¿Õ¼äµÄ¶¨Òå:
+ç­”æ¡ˆæ˜¯åœ¨ä½ çš„ root URLconf é…ç½®ä¸­æ·»åŠ å‘½åç©ºé—´ã€‚åœ¨ mysite/urls.py æ–‡ä»¶ (é¡¹ç›®çš„ ``urls.py``ï¼Œä¸æ˜¯åº”ç”¨çš„) ä¸­ï¼Œä¿®æ”¹ä¸ºåŒ…å«å‘½åç©ºé—´çš„å®šä¹‰:
 
 ```
 from django.conf.urls import patterns, include, url
@@ -402,16 +402,16 @@ urlpatterns = patterns('',
 )
 ```
 
-ÏÖÔÚ½«ÄãµÄ polls/index.html Ä£°åÖÐÔ­À´µÄ detail ÊÓÍ¼:
+çŽ°åœ¨å°†ä½ çš„ polls/index.html æ¨¡æ¿ä¸­åŽŸæ¥çš„ detail è§†å›¾:
 
 ```
 <li><a href="{% url 'detail' poll.id %}">{{ poll.question }}</a></li>
 ```
 
-ÐÞ¸ÄÎª°üº¬ÃüÃû¿Õ¼äµÄ detail ÊÓÍ¼:
+ä¿®æ”¹ä¸ºåŒ…å«å‘½åç©ºé—´çš„ detail è§†å›¾:
 
 ```
 <li><a href="{% url 'polls:detail' poll.id %}">{{ poll.question }}</a></li>
 ```
 
-µ±Äã±àÐ´ÊÓÍ¼ÊìÁ·ºó£¬ÇëÔÄ¶Á ½Ì³Ì µÚ4²¿·Ö À´Ñ§Ï°ÈçºÎ´¦Àí¼òµ¥µÄ±íµ¥ºÍÍ¨ÓÃÊÓÍ¼¡£
+å½“ä½ ç¼–å†™è§†å›¾ç†Ÿç»ƒåŽï¼Œè¯·é˜…è¯» æ•™ç¨‹ ç¬¬4éƒ¨åˆ† æ¥å­¦ä¹ å¦‚ä½•å¤„ç†ç®€å•çš„è¡¨å•å’Œé€šç”¨è§†å›¾ã€‚

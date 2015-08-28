@@ -1,20 +1,20 @@
 <!--
-  ÒëÕß£ºGithub@wizardforcel
+  è¯‘è€…ï¼šGithub@wizardforcel
 -->
 
-# ÖÐ¼ä¼þ #
+# ä¸­é—´ä»¶ #
 
-ÖÐ¼ä¼þÊÇÒ»¸ö½éÈëDjangoµÄÇëÇóºÍÏìÓ¦µÄ´¦Àí¹ý³ÌÖÐµÄ¹³×Ó¿ò¼Ü¡£ËüÊÇÒ»¸öÇáÁ¿¼¶£¬µ×²ãµÄ¡°²å¼þ¡±ÏµÍ³£¬ÓÃÓÚÔÚÈ«¾ÖÐÞ¸ÄDjangoµÄÊäÈë»òÊä³ö¡£
+ä¸­é—´ä»¶æ˜¯ä¸€ä¸ªä»‹å…¥Djangoçš„è¯·æ±‚å’Œå“åº”çš„å¤„ç†è¿‡ç¨‹ä¸­çš„é’©å­æ¡†æž¶ã€‚å®ƒæ˜¯ä¸€ä¸ªè½»é‡çº§ï¼Œåº•å±‚çš„â€œæ’ä»¶â€ç³»ç»Ÿï¼Œç”¨äºŽåœ¨å…¨å±€ä¿®æ”¹Djangoçš„è¾“å…¥æˆ–è¾“å‡ºã€‚
 
-ÖÐ¼ä¼þ×é¼þÔðÈÎ´¦ÀíÄ³Ð©ÌØÊâµÄ¹¦ÄÜ¡£ÀýÈç£¬Django°üº¬Ò»¸öÖÐ¼ä¼þ×é¼þ£¬AuthenticationMiddleware £¬Ê¹ÓÃ»á»°½«ÓÃ»§ºÍÇëÇó¹ØÁª¡£
+ä¸­é—´ä»¶ç»„ä»¶è´£ä»»å¤„ç†æŸäº›ç‰¹æ®Šçš„åŠŸèƒ½ã€‚ä¾‹å¦‚ï¼ŒDjangoåŒ…å«ä¸€ä¸ªä¸­é—´ä»¶ç»„ä»¶ï¼ŒAuthenticationMiddleware ï¼Œä½¿ç”¨ä¼šè¯å°†ç”¨æˆ·å’Œè¯·æ±‚å…³è”ã€‚
 
-ÕâÆªÎÄµµ½²½âÁËÖÐ¼ä¼þÈçºÎ¹¤×÷£¬ÈçºÎ¼¤»îÖÐ¼ä¼þ£¬ÒÔ¼°ÈçºÎ±àÐ´×Ô¼ºµÄÖÐ¼ä¼þ¡£Django¼¯³ÉÁËÒ»Ð©ÄÚÖÃµÄÖÐ¼ä¼þ¿ÉÒÔÖ±½Ó¿ªÏä¼´ÓÃ¡£ËüÃÇ±»¹éµµÔÚ ÄÚÖÃÖÐ¼ä¼þ²Î¿¼.
+è¿™ç¯‡æ–‡æ¡£è®²è§£äº†ä¸­é—´ä»¶å¦‚ä½•å·¥ä½œï¼Œå¦‚ä½•æ¿€æ´»ä¸­é—´ä»¶ï¼Œä»¥åŠå¦‚ä½•ç¼–å†™è‡ªå·±çš„ä¸­é—´ä»¶ã€‚Djangoé›†æˆäº†ä¸€äº›å†…ç½®çš„ä¸­é—´ä»¶å¯ä»¥ç›´æŽ¥å¼€ç®±å³ç”¨ã€‚å®ƒä»¬è¢«å½’æ¡£åœ¨ å†…ç½®ä¸­é—´ä»¶å‚è€ƒ.
 
-## ¼¤»îÖÐ¼ä¼þ ##
+## æ¿€æ´»ä¸­é—´ä»¶ ##
 
-Òª¼¤»îÒ»¸öÖÐ¼ä¼þ×é¼þ£¬ÐèÒª°ÑËüÌí¼Óµ½ÄãDjangoÅäÖÃÎÄ¼þÖÐµÄMIDDLEWARE_CLASSES ÁÐ±íÖÐ¡£
+è¦æ¿€æ´»ä¸€ä¸ªä¸­é—´ä»¶ç»„ä»¶ï¼Œéœ€è¦æŠŠå®ƒæ·»åŠ åˆ°ä½ Djangoé…ç½®æ–‡ä»¶ä¸­çš„MIDDLEWARE_CLASSES åˆ—è¡¨ä¸­ã€‚
 
-ÔÚMIDDLEWARE_CLASSESÖÐ£¬Ã¿Ò»¸öÖÐ¼ä¼þ×é¼þÓÃ×Ö·û´®µÄ·½Ê½ÃèÊö£ºÒ»¸öÍêÕûµÄPythonÈ«Â·¾¶¼ÓÉÏÖÐ¼ä¼þµÄÀàÃû³Æ¡£ÀýÈç£¬Ê¹ÓÃ django-admin startproject´´½¨¹¤³ÌµÄÊ±ºòÉú³ÉµÄÄ¬ÈÏÖµ£º
+åœ¨MIDDLEWARE_CLASSESä¸­ï¼Œæ¯ä¸€ä¸ªä¸­é—´ä»¶ç»„ä»¶ç”¨å­—ç¬¦ä¸²çš„æ–¹å¼æè¿°ï¼šä¸€ä¸ªå®Œæ•´çš„Pythonå…¨è·¯å¾„åŠ ä¸Šä¸­é—´ä»¶çš„ç±»åç§°ã€‚ä¾‹å¦‚ï¼Œä½¿ç”¨ django-admin startprojectåˆ›å»ºå·¥ç¨‹çš„æ—¶å€™ç”Ÿæˆçš„é»˜è®¤å€¼ï¼š
 
 ```
 MIDDLEWARE_CLASSES = (
@@ -29,90 +29,90 @@ MIDDLEWARE_CLASSES = (
 )
 ```
 
-DjangoµÄ³ÌÐòÖÐ£¬ÖÐ¼ä¼þ²»ÊÇ±ØÐèµÄ ¡ª  Ö»ÒªÄãÏ²»¶£¬MIDDLEWARE_CLASSES¿ÉÒÔÎª¿Õ ¡ª µ«ÊÇÇ¿ÁÒÍÆ¼öÄãÖÁÉÙÊ¹ÓÃCommonMiddleware¡£
+Djangoçš„ç¨‹åºä¸­ï¼Œä¸­é—´ä»¶ä¸æ˜¯å¿…éœ€çš„ â€”  åªè¦ä½ å–œæ¬¢ï¼ŒMIDDLEWARE_CLASSESå¯ä»¥ä¸ºç©º â€” ä½†æ˜¯å¼ºçƒˆæŽ¨èä½ è‡³å°‘ä½¿ç”¨CommonMiddlewareã€‚
 
-MIDDLEWARE_CLASSESÖÐµÄË³Ðò·Ç³£ÖØÒª£¬ÒòÎªÒ»¸öÖÐ¼ä¼þ¿ÉÄÜÒÀÀµÓÚÁíÍâÒ»¸ö¡£ÀýÈç£¬AuthenticationMiddlewareÔÚ»á»°ÖÐ´¢´æÒÑÈÏÖ¤µÄÓÃ»§¡£ËùÒÔËü±ØÐëÔÚSessionMiddlewareÖ®ºóÔËÐÐ¡£Ò»Ð©¹ØÓÚDjangoÖÐ¼ä¼þÀàµÄË³ÐòµÄ³£¼ûÌáÊ¾£¬Çë¼ûMiddleware ordering¡£
+MIDDLEWARE_CLASSESä¸­çš„é¡ºåºéžå¸¸é‡è¦ï¼Œå› ä¸ºä¸€ä¸ªä¸­é—´ä»¶å¯èƒ½ä¾èµ–äºŽå¦å¤–ä¸€ä¸ªã€‚ä¾‹å¦‚ï¼ŒAuthenticationMiddlewareåœ¨ä¼šè¯ä¸­å‚¨å­˜å·²è®¤è¯çš„ç”¨æˆ·ã€‚æ‰€ä»¥å®ƒå¿…é¡»åœ¨SessionMiddlewareä¹‹åŽè¿è¡Œã€‚ä¸€äº›å…³äºŽDjangoä¸­é—´ä»¶ç±»çš„é¡ºåºçš„å¸¸è§æç¤ºï¼Œè¯·è§Middleware orderingã€‚
 
-## ¹³×ÓºÍÓ¦ÓÃË³Ðò ##
+## é’©å­å’Œåº”ç”¨é¡ºåº ##
 
-ÔÚÇëÇó½×¶ÎÖÐ£¬µ÷ÓÃÊÓÍ¼Ö®Ç°£¬Django»á°´ÕÕMIDDLEWARE_CLASSESÖÐ¶¨ÒåµÄË³Ðò×Ô¶¥ÏòÏÂÓ¦ÓÃÖÐ¼ä¼þ¡£»áÓÃµ½Á½¸ö¹³×Ó£º
+åœ¨è¯·æ±‚é˜¶æ®µä¸­ï¼Œè°ƒç”¨è§†å›¾ä¹‹å‰ï¼ŒDjangoä¼šæŒ‰ç…§MIDDLEWARE_CLASSESä¸­å®šä¹‰çš„é¡ºåºè‡ªé¡¶å‘ä¸‹åº”ç”¨ä¸­é—´ä»¶ã€‚ä¼šç”¨åˆ°ä¸¤ä¸ªé’©å­ï¼š
 
 + process_request()
 + process_view()
 
-ÔÚÏìÓ¦½×¶ÎÖÐ£¬µ÷ÓÃÊÓÍ¼Ö®ºó£¬ÖÐ¼ä¼þ»á°´ÕÕÏà·´µÄË³ÐòÓ¦ÓÃ£¬×Ôµ×ÏòÉÏ¡£»áÓÃµ½Èý¸ö¹³×Ó£º
+åœ¨å“åº”é˜¶æ®µä¸­ï¼Œè°ƒç”¨è§†å›¾ä¹‹åŽï¼Œä¸­é—´ä»¶ä¼šæŒ‰ç…§ç›¸åçš„é¡ºåºåº”ç”¨ï¼Œè‡ªåº•å‘ä¸Šã€‚ä¼šç”¨åˆ°ä¸‰ä¸ªé’©å­ï¼š
 
-+ process_exception() £¨½öµ±ÊÓÍ¼Å×³öÒì³£µÄÊ±ºò£©
-+ process_template_response() £¨½öÓÃÓÚÄ£°åÏìÓ¦£©
++ process_exception() ï¼ˆä»…å½“è§†å›¾æŠ›å‡ºå¼‚å¸¸çš„æ—¶å€™ï¼‰
++ process_template_response() ï¼ˆä»…ç”¨äºŽæ¨¡æ¿å“åº”ï¼‰
 + process_response()
 
 ![](https://docs.djangoproject.com/en/1.8/_images/middleware.svg)
 
-Èç¹ûÄãÔ¸ÒâµÄ»°£¬Äã¿ÉÒÔ°ÑËüÏëÏó³ÉÒ»¿ÅÑó´Ð£ºÃ¿¸öÖÐ¼ä¼þ¶¼ÊÇ°ü¹üÊÓÍ¼µÄÒ»²ã¡°Æ¤¡±¡£
+å¦‚æžœä½ æ„¿æ„çš„è¯ï¼Œä½ å¯ä»¥æŠŠå®ƒæƒ³è±¡æˆä¸€é¢—æ´‹è‘±ï¼šæ¯ä¸ªä¸­é—´ä»¶éƒ½æ˜¯åŒ…è£¹è§†å›¾çš„ä¸€å±‚â€œçš®â€ã€‚
 
-Ã¿¸ö¹³×ÓµÄÐÐÎª½ÓÏÂÀ´»áÃèÊö¡£
+æ¯ä¸ªé’©å­çš„è¡Œä¸ºæŽ¥ä¸‹æ¥ä¼šæè¿°ã€‚
 
-## ±àÐ´×Ô¼ºµÄÖÐ¼ä¼þ ##
+## ç¼–å†™è‡ªå·±çš„ä¸­é—´ä»¶ ##
 
-±àÐ´×Ô¼ºµÄÖÐ¼ä¼þºÜÈÝÒ×µÄ¡£Ã¿¸öÖÐ¼ä¼þ×é¼þÊÇÒ»¸öµ¥¶ÀµÄPythonµÄclass£¬Äã¿ÉÒÔ¶¨Ò»¸ö»ò¶à¸öÏÂÃæµÄÕâÐ©·½·¨£º
+ç¼–å†™è‡ªå·±çš„ä¸­é—´ä»¶å¾ˆå®¹æ˜“çš„ã€‚æ¯ä¸ªä¸­é—´ä»¶ç»„ä»¶æ˜¯ä¸€ä¸ªå•ç‹¬çš„Pythonçš„classï¼Œä½ å¯ä»¥å®šä¸€ä¸ªæˆ–å¤šä¸ªä¸‹é¢çš„è¿™äº›æ–¹æ³•ï¼š
 
 ### process_request ###
 
 **process_request(request)**
 
-requestÊÇÒ»¸öHttpRequest ¶ÔÏó¡£
+requestæ˜¯ä¸€ä¸ªHttpRequest å¯¹è±¡ã€‚
 
-ÔÚDjango¾ö¶¨Ö´ÐÐÄÄ¸öÊÓÍ¼(view)Ö®Ç°£¬process_request()»á±»Ã¿´ÎÇëÇóµ÷ÓÃ¡£
+åœ¨Djangoå†³å®šæ‰§è¡Œå“ªä¸ªè§†å›¾(view)ä¹‹å‰ï¼Œprocess_request()ä¼šè¢«æ¯æ¬¡è¯·æ±‚è°ƒç”¨ã€‚
 
-ËüÓ¦¸Ã·µ»ØÒ»¸öNone »òÒ»¸öHttpResponse¶ÔÏó¡£Èç¹û·µ»Ø None, Django»á¼ÌÐø´¦ÀíÕâ¸öÇëÇó£¬Ö´ÐÐÆäËûprocess_request()ÖÐ¼ä¼þ£¬È»ºóprocess_view()ÖÐ¼ä¼þÏÔÊ¾¶ÔÓ¦µÄÊÓÍ¼¡£Èç¹ûËü·µ»ØÒ»¸öHttpResponse¶ÔÏó£¬Django±ã²»ÔÙ»áÈ¥µ÷ÓÃÆäËûµÄÇëÇó(request), ÊÓÍ¼(view)»òÆäËûÖÐ¼ä¼þ£¬»ò¶ÔÓ¦µÄÊÓÍ¼£»´¦ÀíHttpResponseµÄÖÐ¼ä¼þ»á´¦ÀíÈÎºÎ·µ»ØµÄÏìÓ¦(response)¡£
+å®ƒåº”è¯¥è¿”å›žä¸€ä¸ªNone æˆ–ä¸€ä¸ªHttpResponseå¯¹è±¡ã€‚å¦‚æžœè¿”å›ž None, Djangoä¼šç»§ç»­å¤„ç†è¿™ä¸ªè¯·æ±‚ï¼Œæ‰§è¡Œå…¶ä»–process_request()ä¸­é—´ä»¶ï¼Œç„¶åŽprocess_view()ä¸­é—´ä»¶æ˜¾ç¤ºå¯¹åº”çš„è§†å›¾ã€‚å¦‚æžœå®ƒè¿”å›žä¸€ä¸ªHttpResponseå¯¹è±¡ï¼ŒDjangoä¾¿ä¸å†ä¼šåŽ»è°ƒç”¨å…¶ä»–çš„è¯·æ±‚(request), è§†å›¾(view)æˆ–å…¶ä»–ä¸­é—´ä»¶ï¼Œæˆ–å¯¹åº”çš„è§†å›¾ï¼›å¤„ç†HttpResponseçš„ä¸­é—´ä»¶ä¼šå¤„ç†ä»»ä½•è¿”å›žçš„å“åº”(response)ã€‚
 
 ### process_view ###
 
 **process_view(request, view_func, view_args, view_kwargs)**
 
-requestÊÇÒ»¸öHttpRequest¶ÔÏó¡£view_funcÊÇ Django»áµ÷ÓÃµÄÒ»¸öPythonµÄº¯Êý¡£(ËüÈ·ÊµÊÇÒ»¸öº¯Êý¶ÔÏó£¬²»ÊÇº¯ÊýµÄ×Ö·ûÃû³Æ¡£) view_argsÊÇÒ»¸ö»á±»´«µÝµ½ÊÓÍ¼µÄÎ»ÖÃ²ÎÊýÁÐ±í£¬¶øview_kwargs ÊÇÒ»¸ö»á±»´«µÝµ½ÊÓÍ¼µÄ¹Ø¼ü×Ö²ÎÊý×Öµä¡£ view_argsºÍ view_kwargs ¶¼²»°üÀ¨µÚÒ»¸öÊÓÍ¼²ÎÊý(request)¡£
+requestæ˜¯ä¸€ä¸ªHttpRequestå¯¹è±¡ã€‚view_funcæ˜¯ Djangoä¼šè°ƒç”¨çš„ä¸€ä¸ªPythonçš„å‡½æ•°ã€‚(å®ƒç¡®å®žæ˜¯ä¸€ä¸ªå‡½æ•°å¯¹è±¡ï¼Œä¸æ˜¯å‡½æ•°çš„å­—ç¬¦åç§°ã€‚) view_argsæ˜¯ä¸€ä¸ªä¼šè¢«ä¼ é€’åˆ°è§†å›¾çš„ä½ç½®å‚æ•°åˆ—è¡¨ï¼Œè€Œview_kwargs æ˜¯ä¸€ä¸ªä¼šè¢«ä¼ é€’åˆ°è§†å›¾çš„å…³é”®å­—å‚æ•°å­—å…¸ã€‚ view_argså’Œ view_kwargs éƒ½ä¸åŒ…æ‹¬ç¬¬ä¸€ä¸ªè§†å›¾å‚æ•°(request)ã€‚
 
-process_view()»áÔÚDjangoµ÷ÓÃÊÓÍ¼(view)Ö®Ç°±»µ÷ÓÃ¡£
+process_view()ä¼šåœ¨Djangoè°ƒç”¨è§†å›¾(view)ä¹‹å‰è¢«è°ƒç”¨ã€‚
 
-Ëü½«·µ»ØNone »òÒ»¸öHttpResponse ¶ÔÏó¡£Èç¹û·µ»Ø None£¬½«»á¼ÌÐø´¦ÀíÕâ¸öÇëÇó£¬Ö´ÐÐÆäËûµÄprocess_view() ÖÐ¼ä¼þ£¬È»ºóÏÔÊ¾¶ÔÓ¦µÄÊÓÍ¼¡£Èç¹û·µ»ØHttpResponse¶ÔÏó£¬Django¾Í²»ÔÙ»áÈ¥µ÷ÓÃÆäËûµÄÊÓÍ¼£¨view£©£¬Òì³£ÖÐ¼ä¼þ£¨exception middleware£©»ò¶ÔÓ¦µÄÊÓÍ¼ £»Ëü»á°ÑÏìÓ¦ÖÐ¼ä¼þÓ¦ÓÃµ½HttpResponseÉÏ£¬²¢·µ»Ø½á¹û¡£
+å®ƒå°†è¿”å›žNone æˆ–ä¸€ä¸ªHttpResponse å¯¹è±¡ã€‚å¦‚æžœè¿”å›ž Noneï¼Œå°†ä¼šç»§ç»­å¤„ç†è¿™ä¸ªè¯·æ±‚ï¼Œæ‰§è¡Œå…¶ä»–çš„process_view() ä¸­é—´ä»¶ï¼Œç„¶åŽæ˜¾ç¤ºå¯¹åº”çš„è§†å›¾ã€‚å¦‚æžœè¿”å›žHttpResponseå¯¹è±¡ï¼ŒDjangoå°±ä¸å†ä¼šåŽ»è°ƒç”¨å…¶ä»–çš„è§†å›¾ï¼ˆviewï¼‰ï¼Œå¼‚å¸¸ä¸­é—´ä»¶ï¼ˆexception middlewareï¼‰æˆ–å¯¹åº”çš„è§†å›¾ ï¼›å®ƒä¼šæŠŠå“åº”ä¸­é—´ä»¶åº”ç”¨åˆ°HttpResponseä¸Šï¼Œå¹¶è¿”å›žç»“æžœã€‚
 
-> ×¢Òâ
+> æ³¨æ„
 > 
-> ÔÚÖÐ¼ä¼þÄÚ²¿£¬´Óprocess_request»òÕßprocess_view·½·¨ÖÐ·ÃÎÊrequest.POST»òÕßrequest.REQUEST½«»á×è°­¸ÃÖÐ¼ä ¼þÖ®ºóµÄËùÓÐÊÓÍ¼ÎÞ·¨ÐÞ¸ÄrequestµÄÉÏ´«´¦Àí³ÌÐò£¬  Ò»°ãÇé¿öÒª±ÜÃâÕâÑùÊ¹ÓÃ¡£
+> åœ¨ä¸­é—´ä»¶å†…éƒ¨ï¼Œä»Žprocess_requestæˆ–è€…process_viewæ–¹æ³•ä¸­è®¿é—®request.POSTæˆ–è€…request.REQUESTå°†ä¼šé˜»ç¢è¯¥ä¸­é—´ ä»¶ä¹‹åŽçš„æ‰€æœ‰è§†å›¾æ— æ³•ä¿®æ”¹requestçš„ä¸Šä¼ å¤„ç†ç¨‹åºï¼Œ  ä¸€èˆ¬æƒ…å†µè¦é¿å…è¿™æ ·ä½¿ç”¨ã€‚
 
-> ÀàCsrfViewMiddleware¿ÉÒÔ±»ÈÏÎªÊÇ¸öÀýÍâ     £¬ÒòÎªËüÌá¹©ÁËcsrf_exempt() ºÍ csrf_protect()Á½¸öÔÊÐíÊÓÍ¼À´¾«È·¿ØÖÆ     ÔÚÄÄ¸öµãÐèÒª¿ªÆôCSRFÑéÖ¤¡£
+> ç±»CsrfViewMiddlewareå¯ä»¥è¢«è®¤ä¸ºæ˜¯ä¸ªä¾‹å¤–     ï¼Œå› ä¸ºå®ƒæä¾›äº†csrf_exempt() å’Œ csrf_protect()ä¸¤ä¸ªå…è®¸è§†å›¾æ¥ç²¾ç¡®æŽ§åˆ¶     åœ¨å“ªä¸ªç‚¹éœ€è¦å¼€å¯CSRFéªŒè¯ã€‚
 
 ### process_template_response ###
 
 **process_template_response(request, response)**
 
-requestÊÇÒ»¸öHttpRequest¶ÔÏó¡£responseÊÇÒ»¸öTemplateResponse¶ÔÏó£¨»òµÈ¼ÛµÄ¶ÔÏó£©£¬ÓÉDjangoÊÓÍ¼»òÕßÖÐ¼ä¼þ·µ»Ø¡£
+requestæ˜¯ä¸€ä¸ªHttpRequestå¯¹è±¡ã€‚responseæ˜¯ä¸€ä¸ªTemplateResponseå¯¹è±¡ï¼ˆæˆ–ç­‰ä»·çš„å¯¹è±¡ï¼‰ï¼Œç”±Djangoè§†å›¾æˆ–è€…ä¸­é—´ä»¶è¿”å›žã€‚
 
-Èç¹ûÏìÓ¦µÄÊµÀýÓÐrender()·½·¨£¬process_template_response()ÔÚÊÓÍ¼¸ÕºÃÖ´ÐÐÍê±ÏÖ®ºó±»µ÷ÓÃ£¬Õâ±íÃ÷ÁËËüÊÇÒ»¸öTemplateResponse¶ÔÏó£¨»òµÈ¼ÛµÄ¶ÔÏó£©¡£
+å¦‚æžœå“åº”çš„å®žä¾‹æœ‰render()æ–¹æ³•ï¼Œprocess_template_response()åœ¨è§†å›¾åˆšå¥½æ‰§è¡Œå®Œæ¯•ä¹‹åŽè¢«è°ƒç”¨ï¼Œè¿™è¡¨æ˜Žäº†å®ƒæ˜¯ä¸€ä¸ªTemplateResponseå¯¹è±¡ï¼ˆæˆ–ç­‰ä»·çš„å¯¹è±¡ï¼‰ã€‚
 
-Õâ¸ö·½·¨±ØÐë·µ»ØÒ»¸öÊµÏÖÁËrender·½·¨µÄÏìÓ¦¶ÔÏó¡£Ëü¿ÉÒÔÐÞ¸Ä¸ø¶¨µÄresponse¶ÔÏó£¬Í¨¹ýÐÞ¸Ä response.template_nameºÍresponse.context_data»òÕßËü¿ÉÒÔ´´½¨Ò»¸öÈ«ÐÂµÄ TemplateResponse»òµÈ¼ÛµÄ¶ÔÏó¡£
+è¿™ä¸ªæ–¹æ³•å¿…é¡»è¿”å›žä¸€ä¸ªå®žçŽ°äº†renderæ–¹æ³•çš„å“åº”å¯¹è±¡ã€‚å®ƒå¯ä»¥ä¿®æ”¹ç»™å®šçš„responseå¯¹è±¡ï¼Œé€šè¿‡ä¿®æ”¹ response.template_nameå’Œresponse.context_dataæˆ–è€…å®ƒå¯ä»¥åˆ›å»ºä¸€ä¸ªå…¨æ–°çš„ TemplateResponseæˆ–ç­‰ä»·çš„å¯¹è±¡ã€‚
 
-Äã²»ÐèÒªÏÔÊ½äÖÈ¾ÏìÓ¦ ¡ª¡ª Ò»µ©ËùÓÐµÄÄ£°åÏìÓ¦ÖÐ¼ä¼þ±»µ÷ÓÃ£¬ÏìÓ¦»á×Ô¶¯±»äÖÈ¾¡£
+ä½ ä¸éœ€è¦æ˜¾å¼æ¸²æŸ“å“åº” â€”â€” ä¸€æ—¦æ‰€æœ‰çš„æ¨¡æ¿å“åº”ä¸­é—´ä»¶è¢«è°ƒç”¨ï¼Œå“åº”ä¼šè‡ªåŠ¨è¢«æ¸²æŸ“ã€‚
 
-ÔÚÒ»¸öÏìÓ¦µÄ´¦ÀíÆÚ¼ä£¬ÖÐ¼ä¼þÒÔÏà·´µÄË³ÐòÔËÐÐ£¬Õâ°üÀ¨process_template_response()¡£
+åœ¨ä¸€ä¸ªå“åº”çš„å¤„ç†æœŸé—´ï¼Œä¸­é—´ä»¶ä»¥ç›¸åçš„é¡ºåºè¿è¡Œï¼Œè¿™åŒ…æ‹¬process_template_response()ã€‚
 
 ### process_response ###
 
 **process_response(request, response)**
 
-requestÊÇÒ»¸öHttpRequest¶ÔÏó¡£responseÊÇDjangoÊÓÍ¼»òÕßÖÐ¼ä¼þ·µ»ØµÄHttpResponse»òÕßStreamingHttpResponse¶ÔÏó¡£
+requestæ˜¯ä¸€ä¸ªHttpRequestå¯¹è±¡ã€‚responseæ˜¯Djangoè§†å›¾æˆ–è€…ä¸­é—´ä»¶è¿”å›žçš„HttpResponseæˆ–è€…StreamingHttpResponseå¯¹è±¡ã€‚
 
-process_response()ÔÚËùÓÐÏìÓ¦·µ»Øä¯ÀÀÆ÷Ö®Ç°±»µ÷ÓÃ¡£
+process_response()åœ¨æ‰€æœ‰å“åº”è¿”å›žæµè§ˆå™¨ä¹‹å‰è¢«è°ƒç”¨ã€‚
 
-Õâ¸ö·½·¨±ØÐë·µ»ØHttpResponse»òÕßStreamingHttpResponse¶ÔÏó¡£Ëü¿ÉÒÔ¸Ä±äÒÑÓÐµÄresponse£¬»òÕß´´½¨²¢·µ»ØÐÂµÄHttpResponse»òStreamingHttpResponse¶ÔÏó¡£
+è¿™ä¸ªæ–¹æ³•å¿…é¡»è¿”å›žHttpResponseæˆ–è€…StreamingHttpResponseå¯¹è±¡ã€‚å®ƒå¯ä»¥æ”¹å˜å·²æœ‰çš„responseï¼Œæˆ–è€…åˆ›å»ºå¹¶è¿”å›žæ–°çš„HttpResponseæˆ–StreamingHttpResponseå¯¹è±¡ã€‚
 
-²»Ïñ process_request()ºÍprocess_view()·½·¨£¬¼´Ê¹Í¬Ò»¸öÖÐ¼ä¼þÀàÖÐµÄprocess_request()ºÍprocess_view()·½·¨»áÒòÎªÇ°ÃæµÄÒ»¸öÖÐ¼ä¼þ·µ»ØHttpResponse¶ø±»Ìø¹ý£¬process_response()·½·¨×ÜÊÇ»á±»µ÷ÓÃ¡£ÌØ±ðÊÇ£¬ÕâÒâÎ¶×ÅÄãµÄprocess_response()·½·¨²»ÄÜÒÀÀµÓÚprocess_request()·½·¨ÖÐµÄÉèÖÃ¡£
+ä¸åƒ process_request()å’Œprocess_view()æ–¹æ³•ï¼Œå³ä½¿åŒä¸€ä¸ªä¸­é—´ä»¶ç±»ä¸­çš„process_request()å’Œprocess_view()æ–¹æ³•ä¼šå› ä¸ºå‰é¢çš„ä¸€ä¸ªä¸­é—´ä»¶è¿”å›žHttpResponseè€Œè¢«è·³è¿‡ï¼Œprocess_response()æ–¹æ³•æ€»æ˜¯ä¼šè¢«è°ƒç”¨ã€‚ç‰¹åˆ«æ˜¯ï¼Œè¿™æ„å‘³ç€ä½ çš„process_response()æ–¹æ³•ä¸èƒ½ä¾èµ–äºŽprocess_request()æ–¹æ³•ä¸­çš„è®¾ç½®ã€‚
 
-×îºó£¬¼Ç×¡ÔÚÏìÓ¦½×¶ÎÖÐ£¬ÖÐ¼ä¼þÒÔÏà·´µÄË³Ðò±»Ó¦ÓÃ£¬×Ôµ×ÏòÉÏ¡£ÒâË¼ÊÇ¶¨ÒåÔÚMIDDLEWARE_CLASSES×îµ×ÏÂµÄÀà»á×îÏÈ±»ÔËÐÐ¡£
+æœ€åŽï¼Œè®°ä½åœ¨å“åº”é˜¶æ®µä¸­ï¼Œä¸­é—´ä»¶ä»¥ç›¸åçš„é¡ºåºè¢«åº”ç”¨ï¼Œè‡ªåº•å‘ä¸Šã€‚æ„æ€æ˜¯å®šä¹‰åœ¨MIDDLEWARE_CLASSESæœ€åº•ä¸‹çš„ç±»ä¼šæœ€å…ˆè¢«è¿è¡Œã€‚
 
-### ´¦ÀíÁ÷Ê½ÏìÓ¦ ###
+### å¤„ç†æµå¼å“åº” ###
 
-²»ÏñHttpResponse£¬StreamingHttpResponse²¢Ã»ÓÐcontentÊôÐÔ¡£ËùÒÔ£¬ÖÐ¼ä¼þÔÙÒ²²»ÄÜ¼ÙÉèËùÓÐÏìÓ¦¶¼´øÓÐcontentÊôÐÔ¡£Èç¹ûËüÃÇÐèÒª·ÃÎÊÄÚÈÝ£¬ËûÃÇ±ØÐë²âÊÔÊÇ·ñÎªÁ÷Ê½ÏìÓ¦£¬²¢ÏàÓ¦µØµ÷Õû×Ô¼ºµÄÐÐÎª¡£
+ä¸åƒHttpResponseï¼ŒStreamingHttpResponseå¹¶æ²¡æœ‰contentå±žæ€§ã€‚æ‰€ä»¥ï¼Œä¸­é—´ä»¶å†ä¹Ÿä¸èƒ½å‡è®¾æ‰€æœ‰å“åº”éƒ½å¸¦æœ‰contentå±žæ€§ã€‚å¦‚æžœå®ƒä»¬éœ€è¦è®¿é—®å†…å®¹ï¼Œä»–ä»¬å¿…é¡»æµ‹è¯•æ˜¯å¦ä¸ºæµå¼å“åº”ï¼Œå¹¶ç›¸åº”åœ°è°ƒæ•´è‡ªå·±çš„è¡Œä¸ºã€‚
 
 ```
 if response.streaming:
@@ -121,9 +121,9 @@ else:
     response.content = alter_content(response.content)
 ```
 
-> ×¢Òâ
+> æ³¨æ„
 > 
-> ÎÒÃÇÐèÒª¼ÙÉèstreaming_content¿ÉÄÜ»á´óµ½ÔÚÄÚ´æÖÐÎÞ·¨ÈÝÄÉ¡£ÏìÓ¦ÖÐ¼ä¼þ¿ÉÄÜ»á°ÑËü·â×°ÔÚÐÂµÄÉú³ÉÆ÷ÖÐ£¬µ«ÊÇÒ»¶¨²»ÒªÏú»ÙËü¡£·â×°Ò»°ã»áÊµÏÖ³ÉÕâÑù£º
+> æˆ‘ä»¬éœ€è¦å‡è®¾streaming_contentå¯èƒ½ä¼šå¤§åˆ°åœ¨å†…å­˜ä¸­æ— æ³•å®¹çº³ã€‚å“åº”ä¸­é—´ä»¶å¯èƒ½ä¼šæŠŠå®ƒå°è£…åœ¨æ–°çš„ç”Ÿæˆå™¨ä¸­ï¼Œä½†æ˜¯ä¸€å®šä¸è¦é”€æ¯å®ƒã€‚å°è£…ä¸€èˆ¬ä¼šå®žçŽ°æˆè¿™æ ·ï¼š
 > 
 ```
 def wrap_streaming_content(content):
@@ -136,33 +136,33 @@ def wrap_streaming_content(content):
 
 **process_exception(request, exception)**
 
-requestÊÇÒ»¸öHttpRequest¶ÔÏó¡£exceptionÊÇÒ»¸ö±»ÊÓÍ¼ÖÐµÄ·½·¨Å×³öÀ´µÄ Exception¶ÔÏó¡£
+requestæ˜¯ä¸€ä¸ªHttpRequestå¯¹è±¡ã€‚exceptionæ˜¯ä¸€ä¸ªè¢«è§†å›¾ä¸­çš„æ–¹æ³•æŠ›å‡ºæ¥çš„ Exceptionå¯¹è±¡ã€‚
 
-µ±Ò»¸öÊÓÍ¼Å×³öÒì³£Ê±£¬Django»áµ÷ÓÃprocess_exception()À´´¦Àí¡£process_exception()Ó¦¸Ã·µ»ØÒ»¸öNone »òÕßÒ»¸öHttpResponse¶ÔÏó¡£Èç¹ûËü·µ»ØÒ»¸öHttpResponse¶ÔÏó£¬Ä£ÐÍÏìÓ¦ºÍÏìÓ¦ÖÐ¼ä¼þ»á±»Ó¦ÓÃ£¬ÏìÓ¦½á¹û»á·µ»Ø¸øä¯ÀÀÆ÷¡£Otherwise, default exception handling kicks in.
+å½“ä¸€ä¸ªè§†å›¾æŠ›å‡ºå¼‚å¸¸æ—¶ï¼ŒDjangoä¼šè°ƒç”¨process_exception()æ¥å¤„ç†ã€‚process_exception()åº”è¯¥è¿”å›žä¸€ä¸ªNone æˆ–è€…ä¸€ä¸ªHttpResponseå¯¹è±¡ã€‚å¦‚æžœå®ƒè¿”å›žä¸€ä¸ªHttpResponseå¯¹è±¡ï¼Œæ¨¡åž‹å“åº”å’Œå“åº”ä¸­é—´ä»¶ä¼šè¢«åº”ç”¨ï¼Œå“åº”ç»“æžœä¼šè¿”å›žç»™æµè§ˆå™¨ã€‚Otherwise, default exception handling kicks in.
 
-ÔÙ´ÎÌáÐÑ£¬ÔÚ´¦ÀíÏìÓ¦ÆÚ¼ä£¬ÖÐ¼ä¼þµÄÖ´ÐÐË³ÐòÊÇµ¹ÐòÖ´ÐÐµÄ£¬Õâ°üÀ¨process_exception¡£Èç¹ûÒ»¸öÒì³£´¦ÀíµÄÖÐ¼ä¼þ·µ»ØÁËÒ»¸öÏìÓ¦£¬ÄÇÕâ¸öÖÐ¼ä¼þÉÏÃæµÄÖÐ¼ä¼þ¶¼½«²»»á±»µ÷ÓÃ¡£
+å†æ¬¡æé†’ï¼Œåœ¨å¤„ç†å“åº”æœŸé—´ï¼Œä¸­é—´ä»¶çš„æ‰§è¡Œé¡ºåºæ˜¯å€’åºæ‰§è¡Œçš„ï¼Œè¿™åŒ…æ‹¬process_exceptionã€‚å¦‚æžœä¸€ä¸ªå¼‚å¸¸å¤„ç†çš„ä¸­é—´ä»¶è¿”å›žäº†ä¸€ä¸ªå“åº”ï¼Œé‚£è¿™ä¸ªä¸­é—´ä»¶ä¸Šé¢çš„ä¸­é—´ä»¶éƒ½å°†ä¸ä¼šè¢«è°ƒç”¨ã€‚
 
 ### \_\_init\_\_ ###
 
-´ó¶àÊýµÄÖÐ¼ä¼þÀà¶¼²»ÐèÒªÒ»¸ö³õÊ¼»¯·½·¨£¬ÒòÎªÖÐ¼ä¼þµÄÀà¶¨Òå½ö½öÊÇÎªprocess\_\*Ìá¹©Ò»¸öÕ¼Î»·û¡£Èç¹ûÄãÈ·ÊµÐèÒªÒ»¸öÈ«¾ÖµÄ×´Ì¬ÄÇ¾Í¿ÉÒÔÍ¨¹ý\_\_init\_\_À´¼ÓÔØ¡£È»ºóÒªÃú¼ÇÈçÏÂÁ½¸ö¾¯¸æ£º
+å¤§å¤šæ•°çš„ä¸­é—´ä»¶ç±»éƒ½ä¸éœ€è¦ä¸€ä¸ªåˆå§‹åŒ–æ–¹æ³•ï¼Œå› ä¸ºä¸­é—´ä»¶çš„ç±»å®šä¹‰ä»…ä»…æ˜¯ä¸ºprocess\_\*æä¾›ä¸€ä¸ªå ä½ç¬¦ã€‚å¦‚æžœä½ ç¡®å®žéœ€è¦ä¸€ä¸ªå…¨å±€çš„çŠ¶æ€é‚£å°±å¯ä»¥é€šè¿‡\_\_init\_\_æ¥åŠ è½½ã€‚ç„¶åŽè¦é“­è®°å¦‚ä¸‹ä¸¤ä¸ªè­¦å‘Šï¼š
 
-Django³õÊ¼»¯ÄãµÄÖÐ¼ä¼þÎÞÐèÈÎºÎ²ÎÊý£¬Òò´Ë²»Òª¶¨ÒåÒ»¸öÓÐ²ÎÊýµÄ\_\_init\_\_·½·¨¡£
-²»Ïñprocess\_\*Ã¿´ÎÇëÇóµ½´ï¶¼Òªµ÷ÓÃ\_\_init\_\_Ö»»á±»µ÷ÓÃÒ»´Î£¬¾ÍÊÇÔÚWeb·þÎñÆô¶¯µÄÊ±ºò¡£
+Djangoåˆå§‹åŒ–ä½ çš„ä¸­é—´ä»¶æ— éœ€ä»»ä½•å‚æ•°ï¼Œå› æ­¤ä¸è¦å®šä¹‰ä¸€ä¸ªæœ‰å‚æ•°çš„\_\_init\_\_æ–¹æ³•ã€‚
+ä¸åƒprocess\_\*æ¯æ¬¡è¯·æ±‚åˆ°è¾¾éƒ½è¦è°ƒç”¨\_\_init\_\_åªä¼šè¢«è°ƒç”¨ä¸€æ¬¡ï¼Œå°±æ˜¯åœ¨WebæœåŠ¡å¯åŠ¨çš„æ—¶å€™ã€‚
 
 
-### ±ê¼ÇÖÐ¼ä¼þ²»±»Ê¹ÓÃ ###
+### æ ‡è®°ä¸­é—´ä»¶ä¸è¢«ä½¿ç”¨ ###
 
-ÓÐÊ±ÔÚÔËÐÐÊ±¾ö¶¨ÊÇ·ñÒ»¸öÖÐ¼ä¼þÐèÒª±»¼ÓÔØÊÇºÜÓÐÓÃµÄ¡£ ÔÚÕâÖÖÇé¿öÏÂ£¬ÄãµÄÖÐ¼ä¼þÖÐµÄ \_\_init\_\_·½·¨¿ÉÒÔÅ×³öÒ»¸ödjango.core.exceptions.MiddlewareNotUsedÒì³£¡£Django»á´ÓÖÐ¼ä¼þ´¦Àí¹ý³ÌÖÐÒÆ³ýÕâ²¿·ÖÖÐ¼ä¼þ£¬²¢ÇÒµ±DEBUGÎªTrueµÄÊ±ºòÔÚdjango.request¼ÇÂ¼Æ÷ÖÐ¼ÇÂ¼µ÷ÊÔÐÅÏ¢¡£
+æœ‰æ—¶åœ¨è¿è¡Œæ—¶å†³å®šæ˜¯å¦ä¸€ä¸ªä¸­é—´ä»¶éœ€è¦è¢«åŠ è½½æ˜¯å¾ˆæœ‰ç”¨çš„ã€‚ åœ¨è¿™ç§æƒ…å†µä¸‹ï¼Œä½ çš„ä¸­é—´ä»¶ä¸­çš„ \_\_init\_\_æ–¹æ³•å¯ä»¥æŠ›å‡ºä¸€ä¸ªdjango.core.exceptions.MiddlewareNotUsedå¼‚å¸¸ã€‚Djangoä¼šä»Žä¸­é—´ä»¶å¤„ç†è¿‡ç¨‹ä¸­ç§»é™¤è¿™éƒ¨åˆ†ä¸­é—´ä»¶ï¼Œå¹¶ä¸”å½“DEBUGä¸ºTrueçš„æ—¶å€™åœ¨django.requestè®°å½•å™¨ä¸­è®°å½•è°ƒè¯•ä¿¡æ¯ã€‚
 
 ```
-1.8ÖÐµÄÐÞ¸Ä£º
+1.8ä¸­çš„ä¿®æ”¹ï¼š
 
-Ö®Ç° MiddlewareNotUsedÒì³£²»»á±»¼ÇÂ¼¡£
+ä¹‹å‰ MiddlewareNotUsedå¼‚å¸¸ä¸ä¼šè¢«è®°å½•ã€‚
 ```
 
-## Ö¸µ¼×¼Ôò ##
+## æŒ‡å¯¼å‡†åˆ™ ##
 
-+ ÖÐ¼ä¼þµÄÀà²»ÄÜÊÇÈÎºÎÀàµÄ×ÓÀà¡£
-+ ÖÐ¼ä¼þ¿ÉÒÔ´æÔÚÓëÄãPythonÂ·¾¶ÖÐµÄÈÎºÎÎ»ÖÃ¡£ DjangoËù¹ØÐÄµÄÖ»ÊÇ±»°üº¬ÔÚMIDDLEWARE_CLASSESÖÐµÄÅäÖÃ¡£
-+ ½«Django¡¯s available middleware×÷ÎªÀý×ÓËæ±ã¿´¿´¡£
-+ Èç¹ûÄãÈÏÎªÄãÐ´µÄÖÐ¼ä¼þ×é½¨¿ÉÄÜ»á¶ÔÆäËûÈËÓÐÓÃ£¬ÄÇ¾Í°ÑËü¹²Ïíµ½ÉçÇø£¡ ÈÃÎÒÃÇÖªµÀËü£¬ÎÒÃÇ»á¿¼ÂÇ°ÑËüÌí¼Óµ½DjangoÖÐ¡£
++ ä¸­é—´ä»¶çš„ç±»ä¸èƒ½æ˜¯ä»»ä½•ç±»çš„å­ç±»ã€‚
++ ä¸­é—´ä»¶å¯ä»¥å­˜åœ¨ä¸Žä½ Pythonè·¯å¾„ä¸­çš„ä»»ä½•ä½ç½®ã€‚ Djangoæ‰€å…³å¿ƒçš„åªæ˜¯è¢«åŒ…å«åœ¨MIDDLEWARE_CLASSESä¸­çš„é…ç½®ã€‚
++ å°†Djangoâ€™s available middlewareä½œä¸ºä¾‹å­éšä¾¿çœ‹çœ‹ã€‚
++ å¦‚æžœä½ è®¤ä¸ºä½ å†™çš„ä¸­é—´ä»¶ç»„å»ºå¯èƒ½ä¼šå¯¹å…¶ä»–äººæœ‰ç”¨ï¼Œé‚£å°±æŠŠå®ƒå…±äº«åˆ°ç¤¾åŒºï¼ è®©æˆ‘ä»¬çŸ¥é“å®ƒï¼Œæˆ‘ä»¬ä¼šè€ƒè™‘æŠŠå®ƒæ·»åŠ åˆ°Djangoä¸­ã€‚
