@@ -1,17 +1,13 @@
-<!--
-  来源：http://django-chinese-docs.readthedocs.org/
--->
-
 # 编写你的第一个 Django 程序 第2部分 #
 
 本教程上接 教程 第1部分 。 我们将继续开发 Web-poll 应用，并且专注在 Django 的 自动生成的管理网站上。
 
 > 哲理
-> 
+>
 > 为你的员工或客户生成添加、修改和删除内容的管理性网站是个单调乏味的工作。 出于这个原因，Django 根据模型完全自动化创建管理界面。
-> 
+>
 > Django 是在新闻编辑室环境下编写的，“内容发表者”和“公共”网站之间有 非常明显的界线。网站管理员使用这个系统来添加新闻、事件、体育成绩等等， 而这些内容会在公共网站上显示出来。Django 解决了为网站管理员创建统一 的管理界面用以编辑内容的问题。
-> 
+>
 > 管理界面不是让网站访问者使用的。它是为网站管理员准备的。
 
 ## 启用管理网站 ##
@@ -58,13 +54,13 @@ python manage.py runserver
 ![](https://docs.djangoproject.com/en/1.8/_images/admin01.png)
 
 > 和你看到的不一样？
-> 
+>
 > 如果看到这，而不是上面的登录界面，那你应该得到一个类似如下所示的错误页面报告：
-> 
+>
 ```
 ImportError at /admin/ cannot import name patterns ...
 ```
-> 
+>
 > 那么你很可能使用的 Django 版本不符合本教程的版本。 你可以切换到对应的旧版本教程去或者更新到较新的 Django 版本。
 
 ## 进入管理网站 ##
@@ -333,9 +329,9 @@ TEMPLATE_DIRS = (
 现在从 Django 源代码中自带的默认 Django 管理模板的目录 (django/contrib/admin/templates) 下复制 admin/base_site.html 模板到你正在使用的 TEMPLATE_DIRS 中任何目录的子目录 admin 下。例如：如果你的 TEMPLATE_DIRS 中包含 '/path/to/mysite/templates' 目录， 如上所述，复制 django/contrib/admin/templates/admin/base_site.html 模板到 /path/to/mysite/templates/admin/base_site.html 。不要忘了是 admin 子目录。
 
 > Django 的源代码在哪里？
-> 
+>
 > 如果在你的文件系统中很难找到 Django 源代码，可以运行如下命令：
-> 
+>
 ```
 python -c "
 import sys
@@ -367,3 +363,9 @@ print(django.__path__)"
 你需要自定义的模板是 admin/index.html 。 （同先前处理 admin/base_site.html 一样 – 从默认目录下复制到你自定义的模板目录下。） 编辑这个文件，你将看到一个名为 app_list 的模板变量。这个变量包含了每一个 已安装的 Django 应用。你可以通过你认为最好的方法硬编码链接到特定对象的管理页面，而不是使用默认模板。 再次强调，如果你不能理解模板语言的话不用担心 – 我们将在教程 3 中详细介绍。
 
 当你熟悉了管理网站的功能后，阅读 教程 第3部分 开始开发公共 poll 界面。
+
+> 译者：[Django 文档协作翻译小组](http://python.usyiyi.cn/django/index.html)，原文：[Part 2: The admin site](https://docs.djangoproject.com/en/1.8/intro/tutorial02/)。
+>
+> 本文以 [CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/cn/) 协议发布，转载请保留作者署名和文章出处。
+>
+> [Django 文档协作翻译小组](http://python.usyiyi.cn/django/index.html)人手紧缺，有兴趣的朋友可以加入我们，完全公益性质。交流群：467338606。

@@ -1,7 +1,3 @@
-<!--
-  来源：http://django-chinese-docs.readthedocs.org/
--->
-
 # 编写你的第一个 Django 程序 第4部分 #
 
 本教程上接 教程 第3部分 。我们将 继续开发 Web-poll 应用并且关注在处理简单的窗体和优化我们的代码。
@@ -129,9 +125,9 @@ detail() ( 在 教程 第3部分 中) 和 results() 视图 都很简单 – 并�
 请继续阅读了解详细的信息。
 
 > 为什么要重构代码？
-> 
+>
 > 通常情况下，当你编写一个 Django 应用时，你会评估下通用视图是否适合解决你的问题， 如果适合你就应该从一开始就使用它，而不是进行到一半才重构你的代码。 但是本教程直到现在都故意集中介绍“硬编码”视图，是为了专注于核心概念上。
-> 
+>
 > 就像你在使用计算器前需要知道基本的数学知识一样。
 
 ## 修改 URLconf ##
@@ -184,3 +180,9 @@ urlpatterns = patterns('',
 有关通用视图的完整详细信息，请参阅 通用视图文档.
 
 当你熟悉了窗体和通用视图后，请阅读 教程 第5部分 来学习测试我们的投票应用。
+
+> 译者：[Django 文档协作翻译小组](http://python.usyiyi.cn/django/index.html)，原文：[Part 4: Forms and generic views](https://docs.djangoproject.com/en/1.8/intro/tutorial04/)。
+>
+> 本文以 [CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/cn/) 协议发布，转载请保留作者署名和文章出处。
+>
+> [Django 文档协作翻译小组](http://python.usyiyi.cn/django/index.html)人手紧缺，有兴趣的朋友可以加入我们，完全公益性质。交流群：467338606。

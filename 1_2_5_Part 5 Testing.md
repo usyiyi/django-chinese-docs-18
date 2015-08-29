@@ -1,7 +1,3 @@
-<!--
-  来源：http://python.usyiyi.cn/django/index.html
--->
-
 # 编写你的第一个Django应用，第5部分 #
 
 本教程上接教程第4部分。 我们已经建立一个网页投票应用，现在我们将为它创建一些自动化测试。
@@ -91,7 +87,7 @@ True
 
 我们需要在自动化测试里做的和刚才在shell里做的差不多，让我们来将它转换成一个自动化测试。
 
-应用的测试用例安装惯例一般放在该应用的tests.py文件中；测试系统将自动在任何以test开头的文件中查找测试用例。 
+应用的测试用例安装惯例一般放在该应用的tests.py文件中；测试系统将自动在任何以test开头的文件中查找测试用例。
 
 将下面的代码放入polls应用下的tests.py文件中：
 
@@ -509,3 +505,9 @@ Django 中的测试有关于测试更加全面的信息。
 关于测试的完整细节，请查看Django 中的测试。
 
 当你对Django 视图的测试感到满意后，请阅读本教程的第6部分来 了解静态文件的管理。
+
+> 译者：[Django 文档协作翻译小组](http://python.usyiyi.cn/django/index.html)，原文：[Part 5: Testing](https://docs.djangoproject.com/en/1.8/intro/tutorial05/)。
+>
+> 本文以 [CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/cn/) 协议发布，转载请保留作者署名和文章出处。
+>
+> [Django 文档协作翻译小组](http://python.usyiyi.cn/django/index.html)人手紧缺，有兴趣的朋友可以加入我们，完全公益性质。交流群：467338606。

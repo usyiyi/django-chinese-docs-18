@@ -1,7 +1,3 @@
-<!--
-  来源：http://python.usyiyi.cn/django/index.html
--->
-
 # 为Django编写首个补丁 #
 
 ## 介绍 ##
@@ -19,7 +15,7 @@
 当然对于其中的大部分内容，Django会尽可能做出解释以帮助广大的读者。
 
 > 何处获得帮助:
-> 
+>
 > 如果你在使用本教程时遇到困难，你可以发送信息给django开发者 或者登陆 #django-dev on irc.freenode.net 向其他Django使用者需求帮助。
 
 ## 教程包含的内容 ##

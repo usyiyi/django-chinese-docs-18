@@ -1,7 +1,3 @@
-<!--
-  来源：http://django-chinese-docs.readthedocs.org/
--->
-
 # 编写你的第一个 Django 程序 第1部分 #
 
 让我们通过例子来学习。
@@ -24,7 +20,7 @@ python -c "import django; print(django.get_version())"
 请参考 如何安装 Django 中的意见先删除旧版本的 Django 再安装一个新的。
 
 > 在哪里可以获得帮助：
-> 
+>
 > 如果您在学习本教程中遇到问题，请在 django-users 上发贴或者在 #django on irc.freenode.net 上与其他可能会帮助您的 Django 用户交流。
 
 ## 创建一个项目 ##
@@ -40,11 +36,11 @@ django-admin.py startproject mysite
 这将在当前目录创建一个 mysite 目录。如果失败了，请查看 Problems running django-admin.py.
 
 > Note
-> 
+>
 > 你需要避免使用 python 保留字或 Django 组件名作为项目的名称。尤其是你应该避免使用的命名如： django (与 Django 本身会冲突) 或者 test (与 Python 内置的包名会冲突).
 
 > 这段代码应该放在哪里？
-> 
+>
 > 如果你有一般 PHP 的编程背景（未使用流行的框架），可能会将你的代码放在 Web 服务器的文档根目录下（例如：``/var/www``）。而在 Django 中，你不必这么做。将任何 Python 代码放在你的 Web 服务器文档根目录不会是一个好主意，因为这可能会增加人们通过 Web 方式查看到你的代码的风险。这不利于安全。
 
 将你的代码放在你的文档根目录 以外 的某些目录, 例如 /home/mycode 。
@@ -62,7 +58,7 @@ mysite/
 ```
 
 > 和你看到的不一样？
-> 
+>
 > 默认的项目布局最近刚刚改变过。如果你看到的是一个“扁平”结构的目录布局（没有内层 mysite/ 目录），你很可能正在使用一个和本教程版本不一致的 Django 版本。你需要切换到对应的旧版教程或者使用较新的 Django 版本。
 
 这些文件是：
@@ -80,12 +76,12 @@ mysite/
 让我们来验证是否工作。从外层 mysite 目录切换进去，若准备好了就运行命令 ``python manage.py runserver``。你将会看到命令行输出如下内容：
 
 ```
-Validating models...
+Performing system checks...
 
 0 errors found
-December 02, 2013 - 15:50:53
-Django version 1.5, using settings 'mysite.settings'
-Development server is running at http://127.0.0.1:8000/
+May 13, 2015 - 15:50:53
+Django version 1.8, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
 
@@ -96,17 +92,17 @@ Quit the server with CONTROL-C.
 现在服务器正在运行中，请在你的 Web 浏览器中访问 http://127.0.0.1:8000/ 。 你会看到一个令人愉悦的，柔和的淡蓝色 “Welcome to Django” 页面。它工作正常！
 
 > 更改端口号
-> 
+>
 > 默认情况下，runserver 命令启动的开发服务器只监听本地 IP 的 8000 端口。
-> 
+>
 > 如果你想改变服务器的端口，把它作为一个命令行参数传递即可。例如以下命令启动的服务器将监听 8080 端口：
-> 
+>
 ```
 python manage.py runserver 8080
 ```
-> 
+>
 > 如果你想改变服务器 IP ，把它和端口号一起传递即可。因此，要监听所有公共 IP 地址（如果你想在其他电脑上炫耀你的工作），请使用：
-> 
+>
 ```
 python manage.py runserver 0.0.0.0:8000
 ```
@@ -128,7 +124,7 @@ python manage.py runserver 0.0.0.0:8000
 如果你是新建数据库，我们建议只使用 SQLite ，将 ENGINE 改为 'django.db.backends.sqlite3' 并且将 NAME 设置为你想存放数据库的地方。 SQLite 是内置在 Python 中的，因此你不需要安装任何东西来支持你的数据库。
 
 > Note
-> 
+>
 > 如果你使用 PostgreSQL 或者 MySQL，确保你已经创建了一个数据库。还是通过你的数据库交互接口中的 “CREATE DATABASE database_name;” 命令做到这一点的。
 > 如果你使用 SQLite ，你不需要事先创建任何东西 - 在需要的时候，将会自动创建数据库文件。
 当你编辑 settings.py 时，将 TIME_ZONE 修改为你所在的时区。默认值是美国中央时区（芝加哥）。
@@ -157,7 +153,7 @@ syncdb 命令参照 INSTALLED_APPS 设置，并在你的 settings.py 文件所�
 如果你感兴趣，可以在你的数据库命令行下输入：``dt`` (PostgreSQL), SHOW TABLES; (MySQL), 或 .schema (SQLite) 来列出 Django 所创建的表。
 
 > 极简主义者
-> 
+>
 > 就像我们上面所说的，一般情况下以上应用都默认包含在内，但不是每个人都需要它们。如果不需要某些或全部应用，在运行 syncdb 命令前可从 INSTALLED_APPS 内随意注释或删除相应的行。syncdb 命令只会为 INSTALLED_APPS 内的应用创建表。
 
 ## 创建模型 ##
@@ -167,7 +163,7 @@ syncdb 命令参照 INSTALLED_APPS 设置，并在你的 settings.py 文件所�
 你通过 Djaong 编写的每个应用都是由 Python 包组成的，这些包存放在你的 Python path 中并且遵循一定的命名规范。 Django 提供了个实用工具可以自动生成一个应用的基本目录架构，因此你可以专注于编写代码而不是去创建目录。
 
 > 项目 ( Projects ) vs. 应用 ( apps )
-> 
+>
 > 项目与应用之间有什么不同之处？应用是一个提供功能的 Web 应用 – 例如：一个博客系统、一个公共记录的数据库或者一个简单的投票系统。 项目是针对一个特定的 Web 网站相关的配置和其应用的组合。一个项目可以包含多个应用。一个应用可以在多个项目中使用。
 
 你的应用可以存放在 Python path 中的任何位置。在本教材中，我们将通过你的 manage.py 文件创建我们的投票应用，以便它可以作为顶层模块导入，而不是作为 mysite 的子模块。
@@ -193,7 +189,7 @@ polls/
 在 Django 中编写一个有数据库支持的 Web 应用的第一步就是定义你的模型 – 从本质上讲就是数据库设计及其附加的元数据。
 
 > 哲理
-> 
+>
 > 模型是有关你数据的唯一且明确的数据源。它包含了你所要存储的数据的基本字段和行为。 Django 遵循 DRY 原则 。目标是为了只在一个地方定义你的数据模型就可从中自动获取数据。
 
 在这简单的投票应用中，我们将创建两个模型： Poll 和 Choice``。``Poll 有问题和发布日期两个字段。``Choice`` 有两个字段： 选项 ( choice ) 的文本内容和投票数。每一个 Choice 都与一个 Poll 关联。
@@ -236,7 +232,7 @@ class Choice(models.Model):
 但首先，我们需要告诉我们的项目已经安装了 polls 应用。
 
 > 哲理
-> 
+>
 > Django 应用是“可插拔的”：你可以在多个项目使用一个应用，你还可以分发应用，因为它们没有被捆绑到一个给定的 Django 安装环境中。
 
 再次编辑 settings.py 文件，在 INSTALLED_APPS 设置中加入 'polls' 字符。因此结果如下所示：
@@ -322,9 +318,9 @@ python manage.py shell
 我们当前使用的环境不同于简单的输入 “python” 进入的 shell 环境，因为 manage.py 设置了 DJANGO_SETTINGS_MODULE 环境变量，该变量给定了 Django 需要导入的 settings.py 文件所在路径。
 
 > 忽略 manage.py
-> 
+>
 > 若你不想使用 manage.py ，也是没有问题的。 仅需要将 DJANGO_SETTINGS_MODULE 环境变量值设为 mysite.settings 并在与 manage.py 文件所在同一目录下运行 python （ 或确保目录在 Python path 下，那 import mysite 就可以了 ）。
-> 
+>
 > 想了解更多的信息，请参考 django-admin.py 文档 。
 
 一旦你进入了 shell，就可通过 database API 来浏览数据：:
@@ -384,11 +380,11 @@ class Choice(models.Model):
 给你的模型添加 __unicode__() 方法是很重要的， 不仅是让你在命令行下有明确提示，而且在 Django 自动生成的管理界面中也会使用到对象的呈现。
 
 > 为什么是 __unicode__() 而不是 __str__()?
-> 
+>
 > 如果你熟悉 Python，那么你可能会习惯在类中添加 __str__() 方法而不是 __unicode__() 方法。 We use 我们在这里使用 __unicode__() 是因为 Django 模型默认处理的是 Unicode 格式。当所有存储在数据库中的数据返回时都会转换为 Unicode 的格式。
-> 
+>
 > Django 模型有个默认的 __str__() 方法 会去调用 __unicode__() 并将结果转换为 UTF-8 编码的字符串。这就意味着 unicode(p) 会返回一个 Unicode 字符串，而 str(p) 会返回一个以 UTF-8 编码的普通字符串。
-> 
+>
 > 如果这让你感觉困惑，那么你只要记住在模型中添加 __unicode__() 方法。 运气好的话，这些代码会正常运行。
 
 请注意这些都是普通的 Python 方法。让我们来添加个自定义方法，为了演示而已：
@@ -488,3 +484,9 @@ True
 欲了解更多有关模型关系的信息，请查看 访问关联对象 。欲了解更多有关如何使用双下划线来通过 API 执行字段查询的，请查看 字段查询 。 如需完整的数据库 API 信息，请查看我们的 数据库 API 参考 。
 
 当你对 API 有所了解后, 请查看 教程 第2部分 来学习 Django 的自动生成的管理网站是如何工作的。
+
+> 译者：[Django 文档协作翻译小组](http://python.usyiyi.cn/django/index.html)，原文：[Part 1: Models](https://docs.djangoproject.com/en/1.8/intro/tutorial01/)。
+>
+> 本文以 [CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/cn/) 协议发布，转载请保留作者署名和文章出处。
+>
+> [Django 文档协作翻译小组](http://python.usyiyi.cn/django/index.html)人手紧缺，有兴趣的朋友可以加入我们，完全公益性质。交流群：467338606。

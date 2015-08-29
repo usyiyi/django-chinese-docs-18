@@ -1,7 +1,3 @@
-<!--
-  来源：http://python.usyiyi.cn/django/index.html
--->
-
 # 高级教程：如何编写可重用的应用 #
 
 本高级教程上接教程 6。我们将把我们的网页投票转换成一个独立的Python包，这样你可以在其它项目中重用或者分享给其它人。
@@ -17,13 +13,13 @@
 比如说，你正在开始一个新的项目，需要一个像我们正在编写的投票应用。你如何让该应用可重用？幸运的是，你已经在正确的道路上。在教程 3中，我们看到我们可以如何使用include将投票应用从项目级别的URLconf 解耦。在本教程中，我们将更进一步，让你的应用在新的项目中容易地使用并随时可以发布给其它人安装和使用。
 
 > 包？应用？
-> 
+>
 > Python 包 提供的方式是分组相关的Python 代码以容易地重用。一个包包含一个或多个Python代码（也叫做“模块”）。
-> 
+>
 > 包可以通过import foo.bar 或from foo import bar 导入。如果一个目录（例如polls）想要形成一个包，它必须包含一个特殊的文件__init__.py，即使这个文件为空。
-> 
+>
 > 一个Django 应用 只是一个Python包，它特意用于Django项目中。一个应用可以使用常见的Django 约定，例如具有models、tests、urls和views 子模块。
-> 
+>
 > 后面我们使用打包这个词来描述将一个Python包变得让其他人易于安装的过程。我们知道，这可能有点绕人。
 
 ## 你的项目和你的可重用的应用 ##
@@ -78,9 +74,9 @@ Python packaging refers to preparing your app in a specific format that can be e
 首先，在你的Django项目之外，为polls创建一个父目录。称这个目录为django-polls。
 
 > 为你的应用选择一个名字
-> 
+>
 > 让为你的包选择一个名字时，检查一下PyPI中的资源以避免与已经存在的包有名字冲突。当创建一个要发布的包时，在你的模块名字前面加上django-通常很有用。 这有助于其他正在查找Django应用的人区分你的应用是专门用于Django的。
-> 
+>
 > 应用的标签（应用的包的点分路径的最后部分）在INSTALLED_APPS中必须唯一。避免使用与Django的contrib 包 中任何一个使用相同的标签，例如auth、admin和messages。
 
 将polls 目录移动到django-polls目录。
@@ -190,9 +186,9 @@ recursive-include docs *
 因为，我们将polls 目录移到项目的目录之外，它不再工作了。我们将通过安装我们的新的django-polls包来修复它。
 
 > 安装成某个用户的库
-> 
+>
 > 以下的步骤将安装django-polls 成某个用户的库。根据用户安装相比系统范围的安装具有许多优点，例如用于没有管理员权限的系统上以及防止你的包影响系统的服务和机器上的其它用户。
-> 
+>
 > 注意根据用户的安装仍然可以影响以该用户身份运行的系统工具，所以virtualenv 是更健壮的解决办法（见下文）。
 
 安装这个包，使用pip（你已经安装好它了，对吧？）：
@@ -225,3 +221,9 @@ pip uninstall django-polls
 + 你将不可以运行这个包的多个版本（或者具有相同名字的其它包）。
 
 特别是一旦你维护几个Django项目，这些情况就会出现。如果确实出现，最好的解决办法是使用virtualenv。这个工具允许你维护多个分离的Python环境，每个都具有它自己的库和包的命名空间。
+
+> 译者：[Django 文档协作翻译小组](http://python.usyiyi.cn/django/index.html)，原文：[How to write reusable apps](https://docs.djangoproject.com/en/1.8/intro/reusable-apps/)。
+>
+> 本文以 [CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/cn/) 协议发布，转载请保留作者署名和文章出处。
+>
+> [Django 文档协作翻译小组](http://python.usyiyi.cn/django/index.html)人手紧缺，有兴趣的朋友可以加入我们，完全公益性质。交流群：467338606。

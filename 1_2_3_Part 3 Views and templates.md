@@ -1,7 +1,3 @@
-<!--
-  来源：http://django-chinese-docs.readthedocs.org/
--->
-
 # 编写你的第一个 Django 程序 第3部分 #
 
 本教程上接 教程 第2部分 。我们将继续 开发 Web-poll 应用并且专注在创建公共界面 – “视图 （views ）”。
@@ -198,13 +194,13 @@ def index(request):
 Django 的 TEMPLATE_LOADERS 配置中包含一个知道如何从各种来源导入模板的可调用的方法列表。 其中有一个默认值是 django.template.loaders.app_directories.Loader ，Django 就会在每个 INSTALLED_APPS 的 “templates” 子目录下查找模板 - 这就是 Django 知道怎么找到 polls 模板的原因，即使我们 没有修改 TEMPLATE_DIRS, 还是如同在 教程 第2部分 那样。
 
 > 组织模板
-> 
+>
 > 我们 能够 在一个大的模板目录下一起共用我们所有的模板，而且它们会运行得很好。 但是，此模板属于 polls 应用，因此与我们在上一个教程中创建的管理模板不同， 我们要把这个模板放在应用的模板目录 (polls/templates) 下而不是项目的模板目录 (templates) 。 我们将在 可重用的应用教程 中详细讨论我们 为什么 要这样做。
 
 在你刚才创建的``templates`` 目录下，另外创建个名为 polls 的目录，并在其中创建一个 index.html 文件。换句话说，你的模板应该是 polls/templates/polls/index.html 。由于知道如上所述的 app_directories 模板加载器是 如何运行的，你可以参考 Django 内的模板简单的作为 polls/index.html 模板。
 
 > 模板命名空间
-> 
+>
 > 现在我们 也许 能够直接把我们的模板放在 polls/templates 目录下 ( 而不是另外创建 polls 子目录 ) ， 但它实际上是一个坏注意。 Django 将会选择第一个找到的按名称匹配的模板， 如果你在 不同 应用中有相同的名称的模板，Django 将无法区分它们。 我们想要让 Django 指向正确的模板，最简单的方法是通过 命名空间 来确保是 他们的模板。也就是说，将模板放在 另一个 目录下并命名为应用本身的名称。
 
 将以下代码添加到该模板中:
@@ -301,9 +297,9 @@ def detail(request, poll_id):
 get_object_or_404() 函数需要一个 Django 模型类作为第一个参数以及 一些关键字参数，它将这些参数传递给模型管理器中的 get() 函数。 若对象不存在时就抛出 Http404 异常。
 
 > 哲理
-> 
+>
 > 为什么我们要使用一个 get_object_or_404() 辅助函数 而不是在更高级别自动捕获 ObjectDoesNotExist 异常， 或者由模型 API 抛出 Http404 异常而不是 ObjectDoesNotExist 异常？
-> 
+>
 > 因为那样会使模型层与视图层耦合在一起。Django 最重要的设计目标之一 就是保持松耦合。一些控制耦合在 django.shortcuts 模块中介绍。
 
 还有个 get_list_or_404() 函数，与 get_object_or_404() 一样 – 不过执行的是 filter() 而不是 get() 。若返回的是空列表将抛出 Http404 异常。
@@ -358,13 +354,13 @@ get_object_or_404() 函数需要一个 Django 模型类作为第一个参数以�
 ```
 
 > Note
-> 
+>
 > 如果 {% url 'detail' poll.id %} (含引号) 不能运行，但是 {% url detail poll.id %} (不含引号) 却能运行，那么意味着你使用的 Djang 低于 < 1.5 版。这样的话，你需要在模板文件的顶部添加如下的声明：:
-> 
+>
 ```
 {% load url from future %}
 ```
-> 
+>
 
 其原理就是在 polls.urls 模块中寻找指定的 URL 定义。 你知道命名为 ‘detail’ 的 URL 就如下所示那样定义的一样：:
 
@@ -415,3 +411,9 @@ urlpatterns = patterns('',
 ```
 
 当你编写视图熟练后，请阅读 教程 第4部分 来学习如何处理简单的表单和通用视图。
+
+> 译者：[Django 文档协作翻译小组](http://python.usyiyi.cn/django/index.html)，原文：[Part 3: Views and templates](https://docs.djangoproject.com/en/1.8/intro/tutorial03/)。
+>
+> 本文以 [CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/cn/) 协议发布，转载请保留作者署名和文章出处。
+>
+> [Django 文档协作翻译小组](http://python.usyiyi.cn/django/index.html)人手紧缺，有兴趣的朋友可以加入我们，完全公益性质。交流群：467338606。
