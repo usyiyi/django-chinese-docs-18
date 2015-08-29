@@ -1,10 +1,6 @@
-<!--
-  译者：WrongWay [www.wrongway.me]
--->
-
 # 执行查询 #
 
-一但你建立好*数据模型*之后，django会自动生成一套数据库抽象的API，可以让你执行增删改查的操作。这篇文档阐述了如何使用这些API。关于所有模型检索选项的详细内容，请见*[数据模型参考](https://docs.djangoproject.com/en/1.8/ref/models/)*。
+一旦你建立好*数据模型*之后，django会自动生成一套数据库抽象的API，可以让你执行增删改查的操作。这篇文档阐述了如何使用这些API。关于所有模型检索选项的详细内容，请见*[数据模型参考](https://docs.djangoproject.com/en/1.8/ref/models/)*。
 
 在整个文档（以及参考）中，我们会大量使用下面的模型，它构成了一个博客应用。
 
@@ -59,9 +55,9 @@ class Entry(models.Model):
 **save()**方法没有返回值。
 
 > 请参见
-> 
+>
 > **save()**方法带有一些高级选项，它们没有在这里给出，完整的细节请见**save()**文档。
-> 
+>
 > 如果你想只用一条语句创建并保存一个对象，使用**create()**方法。
 
 ## 保存对象的改动 ##
@@ -128,7 +124,7 @@ AttributeError: "Manager isn't accessible via Blog instances."
 ```
 
 > **注意**
-> 
+>
 > 管理器通常只可以通过模型类来访问，不可以通过模型实例来访问。这是为了强制区分表级别和记录级别的操作。
 
 对于一个模型来说，**Manager**是**QuerySet**的主要来源。例如，** Blog.objects.all() **会返回持有数据库中所有**Blog**对象的一个**QuerySet**。
@@ -572,7 +568,7 @@ Poll.objects.get(
 ... 但这个查询却是无效的。
 
 > 参见
-> 
+>
 > 在 Django 的单元测试 OR查询实例(OR lookups examples) 中展示了 Q 的用例。
 
 ## 对象比较 ##
@@ -866,3 +862,9 @@ Entry.objects.filter(blog=5) # Query using id directly
 建议的方式是在你的 model 自定义方法或是自定义 model 的 manager 方法来运行查询。虽然 Django 不要求数据操作必须在 model 层中执行。但是把你的商业逻辑代码放在一个地方，从代码组织的角度来看，也是十分明智的。详情请查看 执行原生SQL查询(Performing raw SQL queries).
 
 最后，要注意的是，Django的数据操作层仅仅是访问数据库的一个接口。你可以用其他的工具，编程语言，数据库框架来访问数据库。对你的数据库而言，没什么是非用 Django 不可的。
+
+> 译者：[Django 文档协作翻译小组](http://python.usyiyi.cn/django/index.html)，原文：[Executing queries](https://docs.djangoproject.com/en/1.8/topics/db/queries/)。
+>
+> 本文以 [CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/cn/) 协议发布，转载请保留作者署名和文章出处。
+>
+> [Django 文档协作翻译小组](http://python.usyiyi.cn/django/index.html)人手紧缺，有兴趣的朋友可以加入我们，完全公益性质。交流群：467338606。
