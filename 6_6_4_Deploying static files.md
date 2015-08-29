@@ -3,7 +3,8 @@
 > 另见
 >
 > `django.contrib.staticfiles` 的用法简介，请参见[管理静态文件（CSS、images）](http://python.usyiyi.cn/django/howto/static-files/index.html)。
-在线上环境部署静态文件
+
+## 在线上环境部署静态文件 ##
 
 放置静态文件到线上环境的基本步骤很简单：当静态文件改变时，运行`collectstatic` 命令，然后安排将收集好的静态文件的目录(`STATIC_ROOT`) 搬到静态文件服务器上。取决于`STATICFILES_STORAGE`，这些文件可能需要手工移动到一个新的位置或者`Storage` 类的`post_process` 方法可以帮你。
 
