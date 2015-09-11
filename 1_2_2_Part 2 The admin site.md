@@ -342,7 +342,7 @@ print(django.__path__)"
 
 然后，只需要编辑该文件并将通用的 Djangot 文字替换为你认为适合的属于你自己的网站名。
 
-该模板包含了大量的文字，比如 {% block branding %} 和 {{ title }}``。``{% 和 {{ 标记是 Django 模板语言的一部分。 当 Django 呈现 admin/base_site.html 时，根据模板语言生成最终的 HTML 页面。 Don’t worry if you can’t make any sense of the template right now – 如果你现在不能理解模板的含义先不用担心 – 我们将在教程 3 中深入探讨 Django’ 的模板语言。
+该模板包含了大量的文字，比如 `{% block branding %}` 和 `{{ title }}`。`{%` 和 `{{` 标记是 Django 模板语言的一部分。 当 Django 呈现 admin/base_site.html 时，根据模板语言生成最终的 HTML 页面。 Don’t worry if you can’t make any sense of the template right now – 如果你现在不能理解模板的含义先不用担心 – 我们将在教程 3 中深入探讨 Django’ 的模板语言。
 
 请注意 Django 默认的管理网站中的任何模板都是可覆盖的。 要覆盖一个模板，只需要像刚才处理 base_site.html 一样 – 从默认的目录下复制到你的自定义目录下，并修改它。
 

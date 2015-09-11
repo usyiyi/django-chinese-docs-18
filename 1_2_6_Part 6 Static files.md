@@ -38,7 +38,7 @@ polls/templates/polls/index.html
 <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
 ```
 
-{% load staticfiles %} 从staticfiles模板库加载{% static %} 模板标签。{% static %}模板标签会生成静态文件的绝对URL。
+`{% load staticfiles %}` 从staticfiles模板库加载`{% static %}` 模板标签。`{% static %}`模板标签会生成静态文件的绝对URL。
 
 这就是你在开发过程中，所需要对静态文件做的所有处理。 重新加载 http://localhost:8000/polls/ ，你应该会看到Question的超链接变成了绿色（Django的风格！），这意味着你的样式表被成功导入。
 
@@ -59,7 +59,7 @@ body {
 
 > 警告：
 >
-> 当然，{% static %}模板标签不能用在静态文件（比如样式表）中，因为他们不是由Django生成的。 你应该永远使用相对路径来相互链接静态文件，因为这样你可以改变STATIC_URL （ static模板标签用它来生成URLs）而不用同时修改一大堆静态文件的路径。
+> 当然，`{% static %}`模板标签不能用在静态文件（比如样式表）中，因为他们不是由Django生成的。 你应该永远使用相对路径来相互链接静态文件，因为这样你可以改变STATIC_URL （ static模板标签用它来生成URLs）而不用同时修改一大堆静态文件的路径。
 
 这些知识基础。关于静态文件设置的更多细节和框架中包含的其它部分，参见静态文件 howto 和静态文件参考。部署静态文件讨论如何在真实的服务器上使用静态文件。
 

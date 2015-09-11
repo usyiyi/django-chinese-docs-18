@@ -333,9 +333,9 @@ get_object_or_404() 函数需要一个 Django 模型类作为第一个参数以�
 </ul>
 ```
 
-模板系统使用了“变量.属性”的语法访问变量的属性值。 例如 {{ poll.question }} ， 首先 Django 对 poll 对象做字典查询。 否则 Django 会尝试属性查询 – 在本例中属性查询成功了。 如果属性查询还是失败了，Django 将尝试 list-index 查询。
+模板系统使用了“变量.属性”的语法访问变量的属性值。 例如 `{{ poll.question }}` ， 首先 Django 对 poll 对象做字典查询。 否则 Django 会尝试属性查询 – 在本例中属性查询成功了。 如果属性查询还是失败了，Django 将尝试 list-index 查询。
 
-在 {% for %} 循环中有方法调用: poll.choice_set.all 就是 Python 代码 poll.choice_set.all(),它将返回一组可迭代的 Choice 对象，可以用在 {% for %} 标签中。
+在 `{% for %}` 循环中有方法调用: poll.choice_set.all 就是 Python 代码 poll.choice_set.all(),它将返回一组可迭代的 Choice 对象，可以用在 `{% for %}` 标签中。
 
 请参阅 模板指南 来了解模板的更多内容。
 
@@ -347,7 +347,7 @@ get_object_or_404() 函数需要一个 Django 模型类作为第一个参数以�
 <li><a href="/polls/{{ poll.id }}/">{{ poll.question }}</a></li>
 ```
 
-问题出在硬编码，紧耦合使得在大量的模板中修改 URLs 成为富有挑战性的项目。 不过，既然你在 polls.urls 模块中的 url() 函数中定义了 命名参数，那么就可以在 url 配置中使用 {% url %} 模板标记来移除特定的 URL 路径依赖:
+问题出在硬编码，紧耦合使得在大量的模板中修改 URLs 成为富有挑战性的项目。 不过，既然你在 polls.urls 模块中的 url() 函数中定义了 命名参数，那么就可以在 url 配置中使用 `{% url %}` 模板标记来移除特定的 URL 路径依赖:
 
 ```
 <li><a href="{% url 'detail' poll.id %}">{{ poll.question }}</a></li>
@@ -355,7 +355,7 @@ get_object_or_404() 函数需要一个 Django 模型类作为第一个参数以�
 
 > Note
 >
-> 如果 {% url 'detail' poll.id %} (含引号) 不能运行，但是 {% url detail poll.id %} (不含引号) 却能运行，那么意味着你使用的 Djang 低于 < 1.5 版。这样的话，你需要在模板文件的顶部添加如下的声明：:
+> 如果 `{% url 'detail' poll.id %}` (含引号) 不能运行，但是 `{% url detail poll.id %}` (不含引号) 却能运行，那么意味着你使用的 Djang 低于 < 1.5 版。这样的话，你需要在模板文件的顶部添加如下的声明：:
 >
 ```
 {% load url from future %}
@@ -382,7 +382,7 @@ url(r'^specifics/(?P<poll_id>\d+)/$', views.detail, name='detail'),
 
 ## URL 名称的命名空间 ##
 
-本教程中的项目只有一个应用：``polls`` 。在实际的 Django 项目中，可能有 5、10、20 或者 更多的应用。Django 是如何区分它们的 URL 名称的呢？比如说，``polls`` 应用有一个 detail 视图，而可能会在同一个项目中是一个博客应用的视图。Django 是如何知道 使用 {% url %} 模板标记创建应用的 url 时选择正确呢？
+本教程中的项目只有一个应用：``polls`` 。在实际的 Django 项目中，可能有 5、10、20 或者 更多的应用。Django 是如何区分它们的 URL 名称的呢？比如说，``polls`` 应用有一个 detail 视图，而可能会在同一个项目中是一个博客应用的视图。Django 是如何知道 使用 `{% url %}` 模板标记创建应用的 url 时选择正确呢？
 
 答案是在你的 root URLconf 配置中添加命名空间。在 mysite/urls.py 文件 (项目的 ``urls.py``，不是应用的) 中，修改为包含命名空间的定义:
 

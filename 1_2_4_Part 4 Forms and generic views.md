@@ -23,9 +23,9 @@
 简单的总结下:
 
 + 上面的模板中为每个投票选项设置了一个单选按钮。每个单选按钮的 value 是投票选项对应的 ID 。每个单选按钮的 name 都是 ``“choice”``。这意味着，当有人选择了一个单选按钮并提交了表单，将会发送 的 POST 数据是 ``choice=3``。这是 HTML 表单中的基本概念。
-+ 我们将 form 的 action 设置为 {% url 'polls:vote' poll.id %}``，以及设置了 ``method="post" 。使用 method="post" ( 而不是 method="get") 是非常重要的，因为这种提交表单的方式会改变服务器端的数据。 当你创建一个表单为了修改服务器端的数据时，请使用 method="post" 。这不是 Django 特定的技巧；这是优秀的 Web 开发实践。
++ 我们将 form 的 action 设置为 `{% url 'polls:vote' poll.id %}，以及设置了 `method="post"` 。使用 method="post" ( 而不是 method="get") 是非常重要的，因为这种提交表单的方式会改变服务器端的数据。 当你创建一个表单为了修改服务器端的数据时，请使用 method="post" 。这不是 Django 特定的技巧；这是优秀的 Web 开发实践。
 + forloop.counter 表示 for 标签在循环中已经循环过的次数
-+ 由于我们要创建一个POST form ( 具有修改数据的功能 )，我们需要担心跨站点请求伪造 （ Cross Site Request Forgeries ）。 值得庆幸的是，你不必太担心这一点，因为 Django 自带了一个非常容易使用的系统来防御它。 总之，所有的 POST form 针对内部的 URLs 时都应该使用 {% csrf_token %} 模板标签。
++ 由于我们要创建一个POST form ( 具有修改数据的功能 )，我们需要担心跨站点请求伪造 （ Cross Site Request Forgeries ）。 值得庆幸的是，你不必太担心这一点，因为 Django 自带了一个非常容易使用的系统来防御它。 总之，所有的 POST form 针对内部的 URLs 时都应该使用 `{% csrf_token %}` 模板标签。
 
 现在，让我们来创建一个 Django 视图来处理提交的数据。 记得吗？在 教程 第3部分 中，我们为 polls 应用创建了一个 URLconf 配置中包含有这一行代码:
 
