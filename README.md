@@ -1,7 +1,7 @@
-# django 中文文档协作翻译寻求翻译小能手 #
+# Django 中文文档 1.8 #
 
-django是Python的一个web框架，因为网上目前没有完整的中文文档，就和几个志同道合的朋友建了协作翻译网站，来翻译官方文档，完全公益性质，有兴趣的朋友可以加入我们，菜鸟也可以，拣会的翻译，就当练练手。而且很方便，在网页可直接提交翻译。
+译者：[Django 文档协作翻译小组](http://python.usyiyi.cn/django/index.html)，来源：[Django documentation](https://docs.djangoproject.com/en/1.8/)。
 
-交流群：467338606
+本文档以 [CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/cn/) 协议发布，转载请保留作者署名和文章出处。
 
-网站：[http://python.usyiyi.cn/django/index.html](http://python.usyiyi.cn/django/index.html)
+[Django 文档协作翻译小组](http://python.usyiyi.cn/django/index.html)人手紧缺，有兴趣的朋友可以加入我们，完全公益性质。交流群：467338606。
