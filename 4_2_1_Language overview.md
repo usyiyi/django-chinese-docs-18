@@ -1,3 +1,5 @@
+{% raw %}
+
 # Django模版语言
 
 本文将介绍Django模版系统的语法。如果您需要更多该系统如何工作的技术细节，以及希望扩展它，请浏览 [_The Django template language: for Python programmers_](api.html).
@@ -584,3 +586,5 @@ language, and more.
 > 本文以 [CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/cn/) 协议发布，转载请保留作者署名和文章出处。
 >
 > [Django 文档协作翻译小组](http://python.usyiyi.cn/django/index.html)人手紧缺，有兴趣的朋友可以加入我们，完全公益性质。交流群：467338606。
+
+{% endraw %}
