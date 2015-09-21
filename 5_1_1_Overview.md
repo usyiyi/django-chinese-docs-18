@@ -1,3 +1,5 @@
+{% raw %}
+
 # 使用表单 #
 
 > 关于这页文档
@@ -554,3 +556,5 @@ Django 提供两个表单方法，它们允许你独立地在隐藏的和可见�
 > 本文以 [CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/cn/) 协议发布，转载请保留作者署名和文章出处。
 >
 > [Django 文档协作翻译小组](http://python.usyiyi.cn/django/index.html)人手紧缺，有兴趣的朋友可以加入我们，完全公益性质。交流群：467338606。
+
+{% endraw %}

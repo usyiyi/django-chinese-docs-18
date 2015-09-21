@@ -1,3 +1,5 @@
+{% raw %}
+
 # 编写你的第一个 Django 程序 第4部分 #
 
 本教程上接 教程 第3部分 。我们将 继续开发 Web-poll 应用并且关注在处理简单的窗体和优化我们的代码。
@@ -186,3 +188,5 @@ urlpatterns = patterns('',
 > 本文以 [CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/cn/) 协议发布，转载请保留作者署名和文章出处。
 >
 > [Django 文档协作翻译小组](http://python.usyiyi.cn/django/index.html)人手紧缺，有兴趣的朋友可以加入我们，完全公益性质。交流群：467338606。
+
+{% endraw %}

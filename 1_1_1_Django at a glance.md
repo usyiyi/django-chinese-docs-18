@@ -1,3 +1,5 @@
+{% raw %}
+
 # Django 初探 #
 
 由于Django是在一个快节奏的新闻编辑室环境下开发出来的，因此它被设计成让普通的网站开发工作简单而快 捷。以下简单介绍了如何用 Django 编写一个数据库驱动的Web应用程序。
@@ -243,3 +245,5 @@ Django 有一个模板搜索路径板，它让你尽可能的减少冗余而重�
 > 本文以 [CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/cn/) 协议发布，转载请保留作者署名和文章出处。
 >
 > [Django 文档协作翻译小组](http://python.usyiyi.cn/django/index.html)人手紧缺，有兴趣的朋友可以加入我们，完全公益性质。交流群：467338606。
+
+{% endraw %}

@@ -1,3 +1,5 @@
+{% raw %}
+
 <!--
   译者：wrongwat.cn
   1.8更新：Github@wizardforcel
@@ -97,7 +99,7 @@ urlpatterns = [
 上面就是所有我们需要写的Python代码了。
 
 > 注意
-> 
+>
 > 所以，当（例如）DjangoTemplates后端的APP_DIRS选项在TEMPLATES中设置为True时，模板的位置应该为：/path/to/project/books/templates/books/publisher_list.html。
 
 这个模板将会依据于一个上下文(context)来渲染，这个context包含一个名为object_list 包含所有publisher对象的变量。一个非常简单的模板可能看起来像下面这样：
@@ -161,7 +163,7 @@ class PublisherDetail(DetailView):
 ```
 
 > 注意
-> 
+>
 > 通常来说，get_context_data会将当前类中的上下文数据，合并到所有超类中的上下文数据。要在你自己想要改变上下文的类中保持这一行为，你应该确保在超类中调用了get_context_data。如果没有任意两个类尝试定义相同的键，会返回异常的结果。然而，如果任何一个类尝试在超类持有一个键的情况下覆写它（在调用超类之后），这个类的任何子类都需要显式于超类之后设置它，如果你想要确保他们覆写了所有超类的话。如果你有这个麻烦，复查你视图中的方法调用顺序。
 
 ## 查看对象的子集 ##
@@ -209,7 +211,7 @@ class AcmeBookList(ListView):
 另外需要注意，这并不是处理特定出版商的图书的非常优雅的方法。 如果我们  要创建另外一个出版商页面，我们需要添加另外几行代码到URLconf中，并且再多几个 出版商就会觉得这么做不合理。我们会在下一个章节处理这个问题。
 
 > 注意
-> 
+>
 > 如果你在访问 /books/acme/时出现404错误，检查确保你确实有一个名字为“ACME Publishing”的出版商。通用视图在这种情况下拥有一个allow_empty 的参数。详见基于类的视图参考。
 
 ## 动态过滤 ##
@@ -318,7 +320,9 @@ class AuthorDetailView(DetailView):
 ```
 
 > 注意
-> 
+>
 > 这里URLconf使用参数组的名字pk - 这个名字是DetailView用来查找主键的值的默认名称，其中主键用于过滤查询集。
-> 
+>
 > 如果你想要调用参数组的其它方法，你可以在视图上设置pk_url_kwarg。详见 DetailView参考。
+
+{% endraw %}

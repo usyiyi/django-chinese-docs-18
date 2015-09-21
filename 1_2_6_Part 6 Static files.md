@@ -1,3 +1,5 @@
+{% raw %}
+
 # 编写你的第一个Django应用，第6部分 #
 
 本教程上接教程 5。 我们已经建立一个测试过的网页投票应用，现在我们将添加一张样式表和一张图片。
@@ -74,3 +76,5 @@ body {
 > 本文以 [CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/cn/) 协议发布，转载请保留作者署名和文章出处。
 >
 > [Django 文档协作翻译小组](http://python.usyiyi.cn/django/index.html)人手紧缺，有兴趣的朋友可以加入我们，完全公益性质。交流群：467338606。
+
+{% endraw %}

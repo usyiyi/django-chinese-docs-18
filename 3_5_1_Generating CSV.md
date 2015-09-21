@@ -1,3 +1,5 @@
+{% raw %}
+
 # 使用Django输出CSV #
 这篇文档阐述了如何通过使用Django视图动态输出CSV (Comma Separated Values)。 你可以使用Python CSV 库或者Django的模板系统来达到目的。
 
@@ -127,3 +129,5 @@ def some_view(request):
 > 本文以 [CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/cn/) 协议发布，转载请保留作者署名和文章出处。
 >
 > [Django 文档协作翻译小组](http://python.usyiyi.cn/django/index.html)人手紧缺，有兴趣的朋友可以加入我们，完全公益性质。交流群：467338606。
+
+{% endraw %}

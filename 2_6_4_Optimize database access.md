@@ -1,3 +1,5 @@
+{% raw %}
+
 <!--
   译者：Github@wizardforcel
 -->
@@ -235,3 +237,5 @@ my_band.members.add(my_friend)
 ```
 
 ...其中Bands和Artists具有多对多关联。
+
+{% endraw %}

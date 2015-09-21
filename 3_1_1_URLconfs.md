@@ -1,3 +1,5 @@
+{% raw %}
+
 # URL调度器 #
 
 简洁、优雅的URL 模式在高质量的Web 应用中是一个非常重要的细节。Django 允许你任意设计你的URL，不受框架束缚。
@@ -579,3 +581,5 @@ url(r'^polls/', include((polls_patterns, 'polls', 'author-polls'))),
 > 本文以 [CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/cn/) 协议发布，转载请保留作者署名和文章出处。
 >
 > [Django 文档协作翻译小组](http://python.usyiyi.cn/django/index.html)人手紧缺，有兴趣的朋友可以加入我们，完全公益性质。交流群：467338606。
+
+{% endraw %}
