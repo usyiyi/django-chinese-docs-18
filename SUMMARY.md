@@ -160,7 +160,7 @@
   + [内容类型和泛型关系]()
   + [数据浏览]()
   + [重定向](14_4_1_Redirects.md)
-  + [信号]()
+  + [信号](14_5_Signals.md)
   + [系统检查框架](14_6_System check framework.md)
   + [网站框架]()
   + [Django中的Unicode编码]()
