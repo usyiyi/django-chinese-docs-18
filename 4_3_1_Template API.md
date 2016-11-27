@@ -1,4 +1,4 @@
-
+{% raw %}
 
 # Django 模板语言：面向Python程序员
 
@@ -1295,4 +1295,4 @@ _class_ `StringOrigin`
 
 
 
-
+{% endraw %}
