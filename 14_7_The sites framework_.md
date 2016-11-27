@@ -91,11 +91,10 @@ class Article(models.Model):
 
 *   对于两个站点，开发者可以使用相同的Django 视图代码。显示内容的视图代码需要检查，以确保请求的内容属于当前的站点。就像下面一样:
 
-    
 
-    
 
-    ```
+
+```
 from django.contrib.sites.shortcuts import get_current_site
 
     def article_detail(request, article_id):
@@ -104,12 +103,12 @@ from django.contrib.sites.shortcuts import get_current_site
         except Article.DoesNotExist:
             raise Http404("Article does not exist on this site")
         # ...
-    
+
 ```
 
-    
 
-    
+
+
 
 
 
@@ -333,18 +332,18 @@ Django 的`get_absolute_url()` 可以很方便地获得对象不带域名的URL�
 
 2.  定义[`SITE_ID`](../settings.html#std:setting-SITE_ID) 设置：
 
-    
 
-    
 
-    ```
+
+
+```
 SITE_ID = 1
-    
+
 ```
 
-    
 
-    
+
+
 
 3.  运行[`migrate`](../django-admin.html#django-admin-migrate)。
 
@@ -512,7 +511,7 @@ def my_view(request):
 
 
 
-## Django是如何使用的站点框架 
+## Django是如何使用的站点框架
 
 虽然不强制要求你的网站使用site框架，但是我们鼓励你使用它，因为在一些地方Django利用它。 即使你的Django只在支持单个站点, 你也应该花两秒时间来给你的站点对象创建`domain` 和`name`,并且设置它的ID在你的 [`SITE_ID`](../settings.html#std:setting-SITE_ID) setting中。
 
@@ -590,12 +589,3 @@ Deprecated since version 1.7: This function used to be defined in `django.contri
 Changed in Django 1.8:
 
 This function will now lookup the current site based on [`request.get_host()`](../request-response.html#django.http.HttpRequest.get_host "django.http.HttpRequest.get_host") if the [`SITE_ID`](../settings.html#std:setting-SITE_ID) setting is not defined.
-
-
-
-
-
-
-
-
-
