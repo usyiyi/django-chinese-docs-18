@@ -926,16 +926,16 @@ New in Django 1.8\.
 
 使用参数来发送`EmailMultiAlternatives`。可以覆盖来自定义邮件如何发送给用户。
 
-<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"><col class="field-body"></colgroup><tbody valign="top"><tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body">*   **subject_template_name** – the template for the subject.
+Parameters:
+
+*   **subject_template_name** – the template for the subject.
 *   **email_template_name** – the template for the email body.
-*   **context** – context passed to the `subject_template`, `email_template`,
-    and `html_email_template` (if it is not `None`).
+*   **context** – context passed to the `subject_template`, `email_template`, and `html_email_template` (if it is not `None`).
 *   **from_email** – the sender’s email.
 *   **to_email** – the email of the requester.
-*   **html_email_template_name** – the template for the HTML body;
-    defaults to `None`, in which case a plain text email is sent.
+*   **html_email_template_name** – the template for the HTML body; defaults to `None`, in which case a plain text email is sent.
 
-</td></tr></tbody></table>
+
 
 通常，&nbsp;`save()` 位于`context`中，并带有&nbsp;[`password_reset()`](#django.contrib.auth.views.password_reset ) 向它的email上下文传递的一些变量。
 

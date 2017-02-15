@@ -8,6 +8,8 @@
 
 ## 下载 ##
 
++ [在线阅读](https://www.gitbook.com/book/wizardforcel/django-chinese-docs-18/details)
 + [PDF下载](https://www.gitbook.com/download/pdf/book/wizardforcel/django-chinese-docs-18)
 + [EPUB下载](https://www.gitbook.com/download/epub/book/wizardforcel/django-chinese-docs-18)
 + [MOBI下载](https://www.gitbook.com/download/mobi/book/wizardforcel/django-chinese-docs-18)
++ [代码仓库](https://github.com/wizardforcel/django-chinese-docs-18)

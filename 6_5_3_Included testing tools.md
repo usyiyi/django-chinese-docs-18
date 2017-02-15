@@ -981,7 +981,7 @@ Changed in Django 1.7:
 
 Django本身使用这个信号来重置各种数据：
 
-<colgroup><col width="43%"> <col width="57%"></colgroup>
+
 | Overridden settings | Data reset |
 | --- | --- |
 | USE_TZ, TIME_ZONE | Databases timezone |

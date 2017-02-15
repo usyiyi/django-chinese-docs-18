@@ -37,7 +37,7 @@ _class_ `ModelForm`
 
 每个模型字段有一个对应的默认表单字段。比如，模型中的`CharField` 表现成表单中的`CharField`。模型中的`ManyToManyField` 字段会表现成`MultipleChoiceField` 字段。下面是一个完整的列表：
 
-<colgroup><col width="41%"> <col width="59%"></colgroup> 
+
 | Model field | Form field |
 | --- | --- |
 | [`AutoField`](../../ref/models/fields.html#django.db.models.AutoField "django.db.models.AutoField") | Not represented in the form |
@@ -1003,4 +1003,3 @@ def manage_books(request, author_id):
 ### 指定要在内联表单中使用的窗口小部件
 
 `inlineformset_factory`使用`modelformset_factory`并将其大部分参数传递给`modelformset_factory`。这意味着您可以使用`widgets`参数，将其传递到`modelformset_factory`。请参阅上面的[指定要在窗体中使用的窗口小部件](#specifying-widgets-to-use-in-the-form-with-widgets)的窗口小部件。
-

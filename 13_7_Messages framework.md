@@ -1,6 +1,6 @@
 
 
-# 消息框架 
+# 消息框架
 
 在网页应用中，你经常需要在处理完表单或其它类型的用户输入后，显示一个通知消息（也叫做“flash message”）给用户。
 
@@ -61,7 +61,7 @@ _class_ `storage.base.``BaseStorage`
 
 可以直接从`django.contrib.messages` 导入的内建级别有：
 
-<colgroup><col width="11%"> <col width="89%"></colgroup> 
+
 | Constant | Purpose |
 | --- | --- |
 | `DEBUG` | Development-related messages that will be ignored (or removed) in a production deployment |
@@ -76,7 +76,7 @@ _class_ `storage.base.``BaseStorage`
 
 消息的标签是一个字符串，表示消息的级别以及在视图中添加的其它标签（参见下文[添加额外的消息标签](#adding-extra-message-tags)）。标签存储在字符串中并通过空格分隔。通常情况下，消息的标签用于作为CSS 类来根据消息的类型定制消息的风格。默认情况下，每个级别具有一个标签，为其级别的字符串常量的小写：
 
-<colgroup><col width="56%"> <col width="44%"></colgroup> 
+
 | Level Constant | Tag |
 | --- | --- |
 | `DEBUG` | `debug` |
@@ -204,7 +204,7 @@ def my_view(request):
 
 在创建自定义消息级别时，应小心避免重载现有级别。内置级别的值为：
 
-<colgroup><col width="74%"> <col width="26%"></colgroup> 
+
 | Level Constant | Value |
 | --- | --- |
 | `DEBUG` | 10 |
@@ -357,4 +357,3 @@ New in Django 1.7.
 *   [SESSION_COOKIE_DOMAIN](../settings.html#std:setting-SESSION_COOKIE_DOMAIN)
 *   [SESSION_COOKIE_SECURE](../settings.html#std:setting-SESSION_COOKIE_SECURE)
 *   [SESSION_COOKIE_HTTPONLY](../settings.html#std:setting-SESSION_COOKIE_HTTPONLY)
-

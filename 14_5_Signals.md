@@ -30,12 +30,14 @@ Django 提供了[_一系列的内建信号_](../ref/signals.html)，允许用户
 
 `Signal.``connect`(_receiver_[, _sender=None_, _weak=True_, _dispatch_uid=None_])
 
-<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"><col class="field-body"></colgroup><tbody valign="top"><tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body">*   **receiver** – 和这个信号连接的回调函数。详见[_接收器函数_](#receiver-functions)。
+Parameters:
+
+*   **receiver** – 和这个信号连接的回调函数。详见[_接收器函数_](#receiver-functions)。
 *   **sender** – 指定一个特定的发送器，来从它那里接受信号。详见[_连接由指定发送器发送的信号_](#connecting-to-specific-signals)。
 *   **weak** – DJango通常以弱引用储存信号处理器。这就是说，如果你的接收器是个局部变量，可能会被垃圾回收。当你调用信号的`connect()`方法是，传递&nbsp;`weak=False`来防止这样做。
 *   **dispatch_uid** – 一个信号接收器的唯一标识符，以防信号多次发送。详见[_防止重复的信号_](#preventing-duplicate-signals)。
 
-</td></tr></tbody></table>
+
 
 让我们来看一看它如何通过注册在每次在HTTP请求结束时调用的信号来工作。我们将会连接到[`request_finished`](../ref/signals.html#django.core.signals.request_finished "django.core.signals.request_finished") 信号。
 
@@ -70,7 +72,9 @@ request_finished.connect(my_callback)
 
 `receiver`(_signal_)
 
-<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"><col class="field-body"></colgroup><tbody valign="top"><tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body">**signal** – A signal or a list of signals to connect a function to.</td></tr></tbody></table>
+Parameters:
+
+**signal** – A signal or a list of signals to connect a function to.
 
 下面是使用装饰器连接的方法：
 

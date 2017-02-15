@@ -134,7 +134,7 @@ serializers.deserialize("xml", data, ignorenonexistent=True)
 
 Django支持多种序列化格式，其中一些格式要求您安装第三方Python模块：
 
-<colgroup><col width="14%"> <col width="86%"></colgroup> 
+
 | Identifier | Information |
 | --- | --- |
 | `xml` | Serializes to and from a simple XML dialect. |
@@ -439,4 +439,3 @@ natural_key.dependencies = ['example_app.person']
 ```
 
 此定义确保所有`Person`对象在任何`Book`对象之前序列化。反过来，在`Person`和`Book`序列化之后，引用`Book`的任何对象将被序列化。
-

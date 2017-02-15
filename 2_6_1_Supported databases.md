@@ -142,7 +142,7 @@ DATABASES = {
 
 
 
-### 版本支持 
+### 版本支持
 
 Django 支持MySQL 5.5 和更高版本。
 
@@ -179,7 +179,8 @@ _mysql_exceptions.OperationalError: (
 
 
 
-<colgroup><col class="label"><col></colgroup>
+| | |
+| --- | --- |
 | [[1]](#id4) | Unless this was changed by the packager of your MySQL package. We’ve had reports that the Windows Community Server installer sets up InnoDB as the default storage engine, for example. |
 
 
@@ -351,37 +352,37 @@ default-character-set = utf8
 
 *   在表创建之后, 执行 `ALTER TABLE`语句来转换表为一个新的储存引擎 (例如 InnoDB):
 
-    
 
-    
+
+
 
 ```
 ALTER TABLE <tablename> ENGINE=INNODB;
-    
+
 ```
 
-    
 
-    
+
+
 
     如果你有很多表，这会很繁琐。
 
 *   另一个选择是对于MySQLdb使用`init_command`选项在你创建表之前。
 
-    
 
-    
+
+
 
 ```
 'OPTIONS': {
        'init_command': 'SET storage_engine=INNODB',
     }
-    
+
 ```
 
-    
 
-    
+
+
 
     这设置默认的储存引擎在连接数据库之上。创建了表之后,您应该删除这个选项,因为它增加了一个只需要在每个表创建数据库连接时的查询。
 
@@ -536,9 +537,9 @@ Python的SQLite封装有一个默认的超时时间值决定了在超时之前�
 
 *   增加默认超时时间值通过设置`timeout`数据库选项：
 
-    
 
-    
+
+
 
 ```
 'OPTIONS': {
@@ -546,12 +547,12 @@ Python的SQLite封装有一个默认的超时时间值决定了在超时之前�
         'timeout': 20,
         # ...
     }
-    
+
 ```
 
-    
 
-    
+
+
 
     这只会使SQLite等一段时间才会抛出“database is locked”错误；它不会真的做一些事情去解决他们。
 
@@ -814,6 +815,3 @@ The Oracle后端存储 `TextFields`像`NCLOB` 列.。通常使用LOB列时，Ora
 *   [ADSDB](http://code.google.com/p/adsdb-django/)
 
 Django版本和ORM特性被支持通过这些非官方的后端相当大的变化。查询这些非官方的后端有关的特定功能，以及任何支持的查询，应该针对每个第三方项目提供的支持项目。
-
-
-

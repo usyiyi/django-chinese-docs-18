@@ -279,7 +279,7 @@ In this syntax, each value gets interpreted as a literal string, and there’s n
 
 for循环设置了一系列在循环中可用的变量：
 
-<colgroup><col width="36%"> <col width="64%"></colgroup> 
+
 | Variable | Description |
 | --- | --- |
 | `forloop.counter` | The current iteration of the loop (1-indexed) |
@@ -703,7 +703,7 @@ New in Django 1.8:
 
 可以使用零个，一个，两个或三个参数使用`{％ lorem ％}` 。这些参数是：
 
-<colgroup><col width="15%"> <col width="85%"></colgroup> 
+
 | Argument | Description |
 | --- | --- |
 | `count` | A number (or variable) containing the number of paragraphs or words to generate (default is 1). |
@@ -935,7 +935,7 @@ Note that if you use `{% ssi %}`, you’ll need to define `'allowed_include_root
 
 参数指定要输出哪个模板位：
 
-<colgroup><col width="72%"> <col width="28%"></colgroup> 
+
 | Argument | Outputs |
 | --- | --- |
 | `openblock` | `{%` |
@@ -1212,7 +1212,6 @@ The previous more verbose format is still supported: `{% with business.employees
 
 可用的格式字符串：
 
-<colgroup><col width="12%"> <col width="31%"> <col width="57%"></colgroup> 
 | Format character | Description | Example output |
 | --- | --- | --- |
 | a | `'a.m.'` or `'p.m.'` (Note that this is slightly different than PHP’s output, because this includes periods to match Associated Press style.) | `'a.m.'` |
@@ -1469,7 +1468,7 @@ the output would be the string `"09/01/2008"` (the `"SHORT_DATE_FORMAT"` format 
 
 当不使用参数时，将浮点数舍入到小数点后一位，但前提是要显示小数部分。例如：
 
-<colgroup><col width="26%"> <col width="57%"> <col width="17%"></colgroup> 
+
 | `value` | Template | Output |
 | --- | --- | --- |
 | `34.23234` | `{{ value&#124;floatformat }}` | `34.2` |
@@ -1478,7 +1477,7 @@ the output would be the string `"09/01/2008"` (the `"SHORT_DATE_FORMAT"` format 
 
 如果与数字整数参数一起使用，`floatformat`将数字四舍五入为小数位数。例如：
 
-<colgroup><col width="24%"> <col width="57%"> <col width="20%"></colgroup> 
+
 | `value` | Template | Output |
 | --- | --- | --- |
 | `34.23234` | `{{ value&#124;floatformat:3 }}` | `34.232` |
@@ -1487,7 +1486,7 @@ the output would be the string `"09/01/2008"` (the `"SHORT_DATE_FORMAT"` format 
 
 特别有用的是传递0（零）作为参数，它将使float浮动到最接近的整数。
 
-<colgroup><col width="22%"> <col width="59%"> <col width="19%"></colgroup> 
+
 | `value` | Template | Output |
 | --- | --- | --- |
 | `34.23234` | `{{ value&#124;floatformat:"0" }}` | `34` |
@@ -1496,7 +1495,7 @@ the output would be the string `"09/01/2008"` (the `"SHORT_DATE_FORMAT"` format 
 
 如果传递给`floatformat`的参数为负，则它会将一个数字四舍五入到小数点后的位置，但前提是要显示一个小数部分。例如：
 
-<colgroup><col width="22%"> <col width="59%"> <col width="19%"></colgroup> 
+
 | `value` | Template | Output |
 | --- | --- | --- |
 | `34.23234` | `{{ value&#124;floatformat:"-3" }}` | `34.232` |
@@ -2195,7 +2194,7 @@ slug
 
 ```
 
-<colgroup><col width="13%"> <col width="29%"> <col width="57%"></colgroup> 
+
 | Value | Argument | Outputs |
 | --- | --- | --- |
 | `True` |   | `yes` |

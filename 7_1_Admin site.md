@@ -2225,7 +2225,7 @@ url(r'^reset/done/$', auth_views.password_reset_complete, name='password_reset_c
 
 [`AdminSite`](#django.contrib.admin.AdminSite "django.contrib.admin.AdminSite") 提供以下命名URL：
 
-<colgroup><col width="30%"> <col width="29%"> <col width="41%"></colgroup> 
+
 | Page | URL name | Parameters |
 | --- | --- | --- |
 | Index | `index` |   |
@@ -2238,7 +2238,7 @@ url(r'^reset/done/$', auth_views.password_reset_complete, name='password_reset_c
 
 每个[`ModelAdmin`](#django.contrib.admin.ModelAdmin "django.contrib.admin.ModelAdmin") 实例还将提供额外的命名URL：
 
-<colgroup><col width="27%"> <col width="57%"> <col width="16%"></colgroup> 
+
 | Page | URL name | Parameters |
 | --- | --- | --- |
 | Changelist | `{{ app_label }}_{{ model_name }}_changelist` |   |
@@ -2280,4 +2280,3 @@ url(r'^reset/done/$', auth_views.password_reset_complete, name='password_reset_c
 ```
 
 在上面的例子中Action 将匹配上文所述的[`ModelAdmin`](#django.contrib.admin.ModelAdmin "django.contrib.admin.ModelAdmin") 实例的URL 名称的最后部分。`opts` 变量可以是任何具有`app_label` 和`model_name` 属性的对象，通常由Admin 视图为当前的模型提供。
-

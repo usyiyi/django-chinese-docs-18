@@ -49,13 +49,15 @@ class MyForm(forms.Form):
 
 _class _`RegexValidator`([_regex=None_, _message=None_, _code=None_, _inverse_match=None_, _flags=0_])[[source]](../_modules/django/core/validators.html#RegexValidator)
 
-<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"><col class="field-body"></colgroup><tbody valign="top"><tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body">*   **regex** – 如果不是`None`则覆写 [`regex`](#django.core.validators.RegexValidator.regex "django.core.validators.RegexValidator.regex")。可以是一个正则表达式字符串，或者预编译的正则表达式对象。
+Parameters:
+
+*   **regex** – 如果不是`None`则覆写 [`regex`](#django.core.validators.RegexValidator.regex "django.core.validators.RegexValidator.regex")。可以是一个正则表达式字符串，或者预编译的正则表达式对象。
 *   **message** – 如果不是`None`，则覆写 [`message`](#django.core.validators.RegexValidator.message "django.core.validators.RegexValidator.message")。
 *   **code** – 如果不是`None`，则覆写[`code`](#django.core.validators.RegexValidator.code "django.core.validators.RegexValidator.code")。
 *   **inverse_match** – 如果不是`None`，则覆写[`inverse_match`](#django.core.validators.RegexValidator.inverse_match "django.core.validators.RegexValidator.inverse_match")。
 *   **flags** – 如果不是`None`，则覆写 [`flags`](#django.core.validators.RegexValidator.flags "django.core.validators.RegexValidator.flags")。这种情况下，[`regex`](#django.core.validators.RegexValidator.regex "django.core.validators.RegexValidator.regex") ，必须是正则表达式字符串，否则抛出[`TypeError`](https://docs.python.org/3/library/exceptions.html#TypeError) 异常。
 
-</td></tr></tbody></table>
+
 
 `regex`
 
@@ -85,11 +87,13 @@ New in Django 1.7\.
 
 _class _`EmailValidator`([_message=None_, _code=None_, _whitelist=None_])[[source]](../_modules/django/core/validators.html#EmailValidator)
 
-<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"><col class="field-body"></colgroup><tbody valign="top"><tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body">*   **message** – 如果不是 `None`，则覆写[`message`](#django.core.validators.EmailValidator.message "django.core.validators.EmailValidator.message")。
+Parameters:
+
+*   **message** – 如果不是 `None`，则覆写[`message`](#django.core.validators.EmailValidator.message "django.core.validators.EmailValidator.message")。
 *   **code** – 如果不是 `None`，则覆写[`code`](#django.core.validators.EmailValidator.code "django.core.validators.EmailValidator.code")。
 *   **whitelist** – 如果不是`None`，则覆写 [`whitelist`](#django.core.validators.EmailValidator.whitelist "django.core.validators.EmailValidator.whitelist")。
 
-</td></tr></tbody></table>
+
 
 `message`
 
