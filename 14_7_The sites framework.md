@@ -8,53 +8,25 @@ Django 原生带有一个可选的“sites”框架。它是一个钩子，用�
 
 Sites 框架主要依据一个简单的模型：
 
+_class_ `models.``Site`
 
-
-_class_ `models.Site`
-
-
-
-用来存储Web站点的`domain` ?和`name` 属性的模型
-
-
+用来存储Web站点的`domain`  和`name` 属性的模型
 
 `domain`
 
-
-
 与Web站点关联的域名。
-
-
-
-
-
-
 
 `name`
 
-
-
 Web 站点的名称。
-
-
-
-
-
-
-
-
 
 [`SITE_ID`](../settings.html#std:setting-SITE_ID) 设置指定与特定的设置文件关联的[`Site`](#django.contrib.sites.models.Site "django.contrib.sites.models.Site") 对象在数据库中ID。如果省略该设置，[`get_current_site()`](#django.contrib.sites.shortcuts.get_current_site "django.contrib.sites.shortcuts.get_current_site") 函数将会通过比较[`domain`](#django.contrib.sites.models.Site.domain "django.contrib.sites.models.Site.domain") 与[`request.get_host()`](../request-response.html#django.http.HttpRequest.get_host "django.http.HttpRequest.get_host") 方法中得到的主机名，来得到当前的Site。
 
 怎样使用取决于你，但是django自动的在几个方面通过一些简单的约定使用它。
 
-
-
 ## 示例
 
-为什么要使用Sites 框架？通过例子能最好的解释。
-
-
+为什么要使用Sites 框架？这点通过实例来理解的效果最好
 
 ### 关联内容到多个站点
 
@@ -63,10 +35,6 @@ Web 站点的名称。
 无脑的解决方法是要求站点发布者发布同一内容两次：一次到LJWorld.com，一次到 Lawrence.com。但这是很低效的行为，而且在数据库中必须存储同一内容很多次（多副本存储，浪费资源）。
 
 最好的解决方法很简单：两个站点用相同的文章数据库，一篇文章可以关联一个或者多个站点。用Django 模型的术语，它通过`Article` 模型的一个[`多对多字段`](../models/fields.html#django.db.models.ManyToManyField "django.db.models.ManyToManyField")表示：
-
-
-
-
 
 ```
 from django.db import models
@@ -79,10 +47,6 @@ class Article(models.Model):
 
 ```
 
-
-
-
-
 这很快很好的完成了几件事：
 
 *   它使得站点编辑者利用一个接口(Django admin)编辑多站点上的所有内容。
@@ -91,11 +55,8 @@ class Article(models.Model):
 
 *   对于两个站点，开发者可以使用相同的Django 视图代码。显示内容的视图代码需要检查，以确保请求的内容属于当前的站点。就像下面一样:
 
-
-
-
-```
-from django.contrib.sites.shortcuts import get_current_site
+    ```
+    from django.contrib.sites.shortcuts import get_current_site
 
     def article_detail(request, article_id):
         try:
@@ -104,25 +65,13 @@ from django.contrib.sites.shortcuts import get_current_site
             raise Http404("Article does not exist on this site")
         # ...
 
-```
-
-
-
-
-
-
-
-
+    ```
 
 ### 关联内容到单独的站点
 
 类似地，你可以用[`ForeignKey`](../models/fields.html#django.db.models.ForeignKey "django.db.models.ForeignKey") 关联一个模型到[`Site`](#django.contrib.sites.models.Site "django.contrib.sites.models.Site") 模型实现多对一关系。
 
 例如，一篇文章只允许在一个单独的站点，你应该像这样用模型：
-
-
-
-
 
 ```
 from django.db import models
@@ -135,23 +84,11 @@ class Article(models.Model):
 
 ```
 
-
-
-
-
 这个好处和上节描述的好处是相同的。
-
-
-
-
 
 ### 在视图中获得当前的Site
 
 你可以在Django 视图中使用Sites 框架基于正在调用的视图所在的Site 实现特定的功能。例如：
-
-
-
-
 
 ```
 from django.conf import settings
@@ -166,15 +103,7 @@ def my_view(request):
 
 ```
 
-
-
-
-
 当然，这样硬编码Site ID 比较丑陋。这种硬编码是你最需要尽快修复的。完成这件事情的更清洁的方法是检查当前站点的域名：
-
-
-
-
 
 ```
 from django.contrib.sites.shortcuts import get_current_site
@@ -190,17 +119,9 @@ def my_view(request):
 
 ```
 
-
-
-
-
 它还有一个优点是检查Sites 框架是否安装，如果没有安装将返回一个 [`RequestSite`](#django.contrib.sites.requests.RequestSite "django.contrib.sites.requests.RequestSite") 实例。
 
 如果你不能访问request 对象，你可以使用[`Site`](#django.contrib.sites.models.Site "django.contrib.sites.models.Site") 模型管理器的`get_current()` 方法。此时，你需要确保你的设置文件包含[`SITE_ID`](../settings.html#std:setting-SITE_ID) 设置。下面的示例与前面的示例等同：
-
-
-
-
 
 ```
 from django.contrib.sites.models import Site
@@ -216,14 +137,6 @@ def my_function_without_request():
 
 ```
 
-
-
-
-
-
-
-
-
 ### 显示当前的域名
 
 LJWorld.com 和Lawrence.com 都具有邮件通知功能，它让读者注册以在新闻发生时获得通知。这很简单：读者通过网页表单注册，然后立即收到一封邮件说 “感谢您的订阅”。
@@ -231,10 +144,6 @@ LJWorld.com 和Lawrence.com 都具有邮件通知功能，它让读者注册以�
 将这个注册过程的代码实现两次是低效而冗余的，所以这两个站点在后台使用相同的代码。但是每个Site 的“感谢您的订阅”的通知需要不同。通过使用[`Site`](#django.contrib.sites.models.Site "django.contrib.sites.models.Site") 对象，我们可以抽象这个通知并利用当前Site 的[`name`](#django.contrib.sites.models.Site.name "django.contrib.sites.models.Site.name") 和[`domain`](#django.contrib.sites.models.Site.domain "django.contrib.sites.models.Site.domain") 的值。
 
 下面是该表单处理视图的一个例子：
-
-
-
-
 
 ```
 from django.contrib.sites.shortcuts import get_current_site
@@ -254,17 +163,9 @@ def register_for_newsletter(request):
 
 ```
 
-
-
-
-
 在Lawrence.com 网站上，这封邮件的标题为“Thanks for subscribing to lawrence.com alerts.”。在LJWorld.com 网站上，这封邮件的标题为“Thanks for subscribing to LJWorld.com alerts.”。邮件体的行为相同。
 
 注意，更加灵活（但是更沉重）的方法是使用Django 的模板系统。假设Lawrence.com 和LJWorld.com 具有不同的模板目录（[`DIRS`](../settings.html#std:setting-TEMPLATES-DIRS)），你可以很容易地根据模板系统写出：
-
-
-
-
 
 ```
 from django.core.mail import send_mail
@@ -282,25 +183,13 @@ def register_for_newsletter(request):
 
 ```
 
-
-
-
-
 在这种情况下，你必须为LJWorld.com 和Lawrence.com 模板目录都创建`subject.txt` 和`message.txt` 模板文件。它更灵活，但是也更复杂。
 
 尽可能地发掘[`Site`](#django.contrib.sites.models.Site "django.contrib.sites.models.Site") 对象的用法以删除不需要的复杂性和冗余是个不错的主意。
 
-
-
-
-
 ### 获取当前域名的url全路径
 
 Django 的`get_absolute_url()` 可以很方便地获得对象不带域名的URL，但是某些情况下，你可能想显示完整的URL，带有`http://`和域名以及其它部分。要实现这点，你可以使用Sites 框架。一个简单的示例：
-
-
-
-
 
 ```
 >>> from django.contrib.sites.models import Site
@@ -314,16 +203,6 @@ Django 的`get_absolute_url()` 可以很方便地获得对象不带域名的URL�
 
 ```
 
-
-
-
-
-
-
-
-
-
-
 ## 启用Sites 框架
 
 按照以下步骤启用Sites 框架：
@@ -332,18 +211,10 @@ Django 的`get_absolute_url()` 可以很方便地获得对象不带域名的URL�
 
 2.  定义[`SITE_ID`](../settings.html#std:setting-SITE_ID) 设置：
 
+    ```
+    SITE_ID = 1
 
-
-
-
-```
-SITE_ID = 1
-
-```
-
-
-
-
+    ```
 
 3.  运行[`migrate`](../django-admin.html#django-admin-migrate)。
 
@@ -351,19 +222,11 @@ SITE_ID = 1
 
 为了在线上环境中启用多个Site，你应该为每个`SITE_ID` 创建一个单独的设置文件（可以从一个共同的设置文件导入，以避免重复共享的配置），然后为每个Site 指定合适的[`DJANGO_SETTINGS_MODULE`](../../topics/settings.html#envvar-DJANGO_SETTINGS_MODULE)。
 
-
-
-
-
-## Caching the current `Site`
+## 缓存当前`Site`
 
 因为当前站点储存在数据库,每一次调用 `Site.objects.get_current()`都会导致数据库查询。但是Django还是比这个聪明滴, 当前站点被放在缓存当中了, 所以后续的调用返回的都是缓存的数据而不是直接查询数据库。
 
 如果出于一些原因你想要强制用数据库查询, 你可以告诉Django清除缓存，用下面这个方法 `Site.objects.clear_cache()`:
-
-
-
-
 
 ```
 # First call; current site fetched from database.
@@ -380,37 +243,17 @@ current_site = Site.objects.get_current()
 
 ```
 
+## 的`CurrentSiteManager`
 
-
-
-
-
-
-
-
-## The `CurrentSiteManager`
-
-
-
-_class_ `managers.CurrentSiteManager`
-
-
+_class_ `managers.``CurrentSiteManager`
 
 如果 [`Site`](#django.contrib.sites.models.Site "django.contrib.sites.models.Site") 在你的应用中非常的关键， 你可以考虑用 [`CurrentSiteManager`](#django.contrib.sites.managers.CurrentSiteManager "django.contrib.sites.managers.CurrentSiteManager") 在你的模型中(s). 它是一个 model[_manager_](../../topics/db/managers.html)用来自动过滤，留下只与当前站点有关的数据查询 [`Site`](#django.contrib.sites.models.Site "django.contrib.sites.models.Site").
 
-
-
-Mandatory [`SITE_ID`](../settings.html#std:setting-SITE_ID)
+必须[`SITE_ID`](../settings.html#std:setting-SITE_ID)
 
 `CurrentSiteManager` 只有在你定义了[`SITE_ID`](../settings.html#std:setting-SITE_ID) 在setting 中才起作用。
 
-
-
-使用 [`CurrentSiteManager`](#django.contrib.sites.managers.CurrentSiteManager "django.contrib.sites.managers.CurrentSiteManager") ，你只要直接把他添加到你的model 中。For example:
-
-
-
-
+使用 [`CurrentSiteManager`](#django.contrib.sites.managers.CurrentSiteManager "django.contrib.sites.managers.CurrentSiteManager") ，你只要直接把他添加到你的model 中。例如：
 
 ```
 from django.db import models
@@ -427,17 +270,9 @@ class Photo(models.Model):
 
 ```
 
-
-
-
-
 通过这个model, `Photo.objects.all()` 将会返回所有在数据库中的 `Photo`对象，但是 `Photo.on_site.all()`只会返回 与当前site相关的`Photo`对象, 这是根据 [`SITE_ID`](../settings.html#std:setting-SITE_ID) 在setting的设置。
 
 换句话说，这两种表达方式是等价的:
-
-
-
-
 
 ```
 Photo.objects.filter(site=settings.SITE_ID)
@@ -445,15 +280,7 @@ Photo.on_site.all()
 
 ```
 
-
-
-
-
 [`CurrentSiteManager`](#django.contrib.sites.managers.CurrentSiteManager "django.contrib.sites.managers.CurrentSiteManager")是如何知道哪个`Photo`字段是 [`Site`](#django.contrib.sites.models.Site "django.contrib.sites.models.Site")的? 通常来说， [`CurrentSiteManager`](#django.contrib.sites.managers.CurrentSiteManager "django.contrib.sites.managers.CurrentSiteManager")查找一个 [`ForeignKey`](../models/fields.html#django.db.models.ForeignKey "django.db.models.ForeignKey") 它的名字叫`site` 或者是一个 [`ManyToManyField`](../models/fields.html#django.db.models.ManyToManyField "django.db.models.ManyToManyField")字段 ，叫做 `sites`来筛选出. 如果你用名字不叫`site` or `sites`的字段来表示一个与[`Site`](#django.contrib.sites.models.Site "django.contrib.sites.models.Site")对象相关联,，那么你就需要在你的model中显示得传递自定义的字段名给[`CurrentSiteManager`](#django.contrib.sites.managers.CurrentSiteManager "django.contrib.sites.managers.CurrentSiteManager")。下面的model, 它有一个字段叫做 `publish_on`, 说明了这个问题：
-
-
-
-
 
 ```
 from django.db import models
@@ -470,27 +297,15 @@ class Photo(models.Model):
 
 ```
 
-
-
-
-
 如果你尝试使用[`CurrentSiteManager`](#django.contrib.sites.managers.CurrentSiteManager "django.contrib.sites.managers.CurrentSiteManager") 并且传递了一个并不存在的字段名称给他, Django 就会引发一个 `ValueError`.
 
 最后, 注意你可能会想要保持一个正常的 (non-site-specific) `Manager` 在你的model, 虽然你使用了 [`CurrentSiteManager`](#django.contrib.sites.managers.CurrentSiteManager "django.contrib.sites.managers.CurrentSiteManager"). 就像 [_manager documentation_](../../topics/db/managers.html)当中的解释那样，如果你手动定义了一个manager,Django是不会为你自动创建 `objects = models.`Manager() manager。也请注意某些 Django组件 –即, Django admin site 和通用视图– 使用的是 _first_定义 在你model中的manager，所以如果你希望你的admin site可以连接到所有对象 (不仅仅是特定的站点对象), 那就设置 `objects = models.`Manager() 在你的 model中, 并且在你定义[`CurrentSiteManager`](#django.contrib.sites.managers.CurrentSiteManager "django.contrib.sites.managers.CurrentSiteManager")之前。
 
-
-
-
-
-## Site middleware
+## 网站中间件
 
 New in Django 1.7.
 
 如果你经常使用这个模式：
-
-
-
-
 
 ```
 from django.contrib.sites.models import Site
@@ -501,15 +316,7 @@ def my_view(request):
 
 ```
 
-
-
-
-
 这里有些方法可以防止这种重复调用。添加 [`django.contrib.sites.middleware.CurrentSiteMiddleware`](../middleware.html#django.contrib.sites.middleware.CurrentSiteMiddleware "django.contrib.sites.middleware.CurrentSiteMiddleware") 到[`MIDDLEWARE_CLASSES`](../settings.html#std:setting-MIDDLEWARE_CLASSES). 中间件设置 `site` 属性给每一次request对象, 所以你可以用 `request.site` 来获取当前site。
-
-
-
-
 
 ## Django是如何使用的站点框架
 
@@ -524,68 +331,32 @@ def my_view(request):
 *   快捷视图 (`django.contrib.contenttypes.views.shortcut`) 使用当前[`Site`](#django.contrib.sites.models.Site "django.contrib.sites.models.Site")对象的的域 计算对象的URL。
 *   在管理框架, “view on site” 链接使用当前 [`Site`](#django.contrib.sites.models.Site "django.contrib.sites.models.Site") 算出将重定向的域名.
 
-
-
-
-
 ## RequestSite objects
 
-一些 [_django.contrib_](index.html)应用有利用到 sites framework 但是它们的架构不会_require_ sites framework必须安装在你的数据库中。有些人不想, 或者不能安装site ?framework所要求的_able_在他们的数据库中。) 出于这种情况，framework 提供了一个 [`django.contrib.sites.requests.RequestSite`](#django.contrib.sites.requests.RequestSite "django.contrib.sites.requests.RequestSite")类，当你数据支持的站点框架不可用的时候做一个回退
+一些 [_django.contrib_](index.html)应用有利用到 sites framework 但是它们的架构不会_require_ sites framework必须安装在你的数据库中。有些人不想, 或者不能安装site  framework所要求的_able_在他们的数据库中。) 出于这种情况，framework 提供了一个 [`django.contrib.sites.requests.RequestSite`](#django.contrib.sites.requests.RequestSite "django.contrib.sites.requests.RequestSite")类，当你数据支持的站点框架不可用的时候做一个回退
 
+_class_ `requests.``RequestSite`
 
-
-_class_ `requests.RequestSite`
-
-
-
-A class that shares the primary interface of [`Site`](#django.contrib.sites.models.Site "django.contrib.sites.models.Site") (i.e., it has `domain` and `name` attributes) but gets its data from a Django [`HttpRequest`](../request-response.html#django.http.HttpRequest "django.http.HttpRequest") object rather than from a database.
-
-
+一个共享[`Site`](#django.contrib.sites.models.Site "django.contrib.sites.models.Site")（即，它具有`domain`和`name`属性）的主接口，但从Django [`HttpRequest`](../request-response.html#django.http.HttpRequest "django.http.HttpRequest")对象，而不是从数据库。
 
 `__init__`(_request_)
 
+将`name`和`domain`属性设置为[`get_host()`](../request-response.html#django.http.HttpRequest.get_host "django.http.HttpRequest.get_host")的值。
 
+自1.7版起已弃用：此类过去在`django.contrib.sites.models`中定义。旧的导入位置将工作，直到Django 1.9。
 
-Sets the `name` and `domain` attributes to the value of [`get_host()`](../request-response.html#django.http.HttpRequest.get_host "django.http.HttpRequest.get_host").
-
-
-
-
-
-
-
-Deprecated since version 1.7: This class used to be defined in `django.contrib.sites.models`. The old import location will work until Django 1.9.
-
-
-
-
-
-
-
-A [`RequestSite`](#django.contrib.sites.requests.RequestSite "django.contrib.sites.requests.RequestSite") object has a similar interface to a normal [`Site`](#django.contrib.sites.models.Site "django.contrib.sites.models.Site") object, except its [`__init__()`](#django.contrib.sites.requests.RequestSite.__init__ "django.contrib.sites.requests.RequestSite.__init__") method takes an [`HttpRequest`](../request-response.html#django.http.HttpRequest "django.http.HttpRequest") object. It’s able to deduce the `domain` and `name` by looking at the request’s domain. It has `save()` and `delete()` methods to match the interface of [`Site`](#django.contrib.sites.models.Site "django.contrib.sites.models.Site"), but the methods raise [`NotImplementedError`](https://docs.python.org/3/library/exceptions.html#NotImplementedError "(in Python v3.4)").
-
-
-
-
+除了其[`__init__()`](#django.contrib.sites.requests.RequestSite.__init__ "django.contrib.sites.requests.RequestSite.__init__")方法采用[`HttpRequest`](../request-response.html#django.http.HttpRequest "django.http.HttpRequest")对象，[`RequestSite`](#django.contrib.sites.requests.RequestSite "django.contrib.sites.requests.RequestSite")对象具有与正常[`Site`](#django.contrib.sites.models.Site "django.contrib.sites.models.Site")它可以通过查看请求的域来推断`domain`和`name`。它具有`save()`和`delete()`方法来匹配[`Site`](#django.contrib.sites.models.Site "django.contrib.sites.models.Site")的接口，但是方法产生[`NotImplementedError`](https://docs.python.org/3/library/exceptions.html#NotImplementedError "(in Python v3.4)") 。
 
 ## get_current_site shortcut
 
 最后,为了避免重复的回退代码，site framework 提供了一个 [`django.contrib.sites.shortcuts.get_current_site()`](#django.contrib.sites.shortcuts.get_current_site "django.contrib.sites.shortcuts.get_current_site") 功能。
 
-
-
-`shortcuts.get_current_site`(_request_)
-
-
+`shortcuts.``get_current_site`(_request_)
 
 这是函数是用来检查`django.contrib.sites` 是否安装并且返回一个基于request的[`Site`](#django.contrib.sites.models.Site "django.contrib.sites.models.Site") 对象或者一个[`RequestSite`](#django.contrib.sites.requests.RequestSite "django.contrib.sites.requests.RequestSite") 对象。
 
-
-
-Deprecated since version 1.7: This function used to be defined in `django.contrib.sites.models`. The old import location will work until Django 1.9.
-
-
+自1.7版起已弃用：此函数用于在`django.contrib.sites.models`中定义。旧的导入位置将工作，直到Django 1.9。
 
 Changed in Django 1.8:
 
-This function will now lookup the current site based on [`request.get_host()`](../request-response.html#django.http.HttpRequest.get_host "django.http.HttpRequest.get_host") if the [`SITE_ID`](../settings.html#std:setting-SITE_ID) setting is not defined.
+如果未定义[`SITE_ID`](../settings.html#std:setting-SITE_ID)设置，此函数现在将根据[`request.get_host()`](../request-response.html#django.http.HttpRequest.get_host "django.http.HttpRequest.get_host")查找当前站点。
