@@ -1010,8 +1010,7 @@ Django本身使用这个信号来重置各种数据：
 
 断言表单字段在各种输入中正确运行。
 
-&lt;colgroup&gt;&lt;col class="field-name"&gt; &lt;col class="field-body"&gt;&lt;/colgroup&gt;
-| Parameters: |
+Parameters:
 
 *   **fieldclass** - 要测试的字段的类。
 *   **valid** - 将有效输入映射到其预期清除值的字典。
@@ -1020,8 +1019,6 @@ Django本身使用这个信号来重置各种数据：
 *   **field_kwargs** - 传递给实例化字段的kwargs。
 *   **empty_value** - `empty_values`中输入的预期干净输出。
 
- |
-| --- | --- |
 
 例如，以下代码测试`EmailField`接受`a@a.com`作为有效的电子邮件地址，但拒绝具有合理错误的`aaa`信息：
 
