@@ -250,7 +250,7 @@ class FlatPageAdmin(admin.ModelAdmin):
 
 在管理界面的结果看起来像这样:
 
-![../../../_images/flatfiles_admin.png](../../../_images/flatfiles_admin.png)
+![../../../_images/flatfiles_admin.png](https://docs.djangoproject.com/en/1.8/_images/flatfiles_admin.png)
 
 如果`fields`和[`fieldsets`](#django.contrib.admin.ModelAdmin.fields "django.contrib.admin.ModelAdmin.fields") 选项都不存在, Django将会默认显示每一个不是 `AutoField` 并且 `editable=True`的字段, 在单一的字段集，和在模块中定义的字段有相同的顺序。
 
@@ -629,7 +629,7 @@ Changed in Django 1.7:
 
 `list_filter` 设置激活激活Admin 修改列表页面右侧栏中的过滤器，如下面的屏幕快照所示︰
 
-![../../../_images/users_changelist.png](../../../_images/users_changelist.png)
+![../../../_images/users_changelist.png](https://docs.djangoproject.com/en/1.8/_images/users_changelist.png)
 
 `list_filter` 应该是一个列表或元组，其每个元素应该是下面类型中的一种：
 
@@ -859,7 +859,7 @@ class ArticleAdmin(admin.ModelAdmin):
 
 如果该字段是一个`ForeignKey`，`raw_id_fields` `Input` Widget 应该包含一个外键，或者如果字段是一个`ManyToManyField` 则应该是一个逗号分隔的值的列表。 `raw_id_fields` Widget 在字段旁边显示一个放大镜按钮，允许用户搜索并选择一个值︰
 
-![../../../_images/raw_id_fields.png](../../../_images/raw_id_fields.png)
+![../../../_images/raw_id_fields.png](https://docs.djangoproject.com/en/1.8/_images/raw_id_fields.png)
 
 `ModelAdmin.``readonly_fields`
 

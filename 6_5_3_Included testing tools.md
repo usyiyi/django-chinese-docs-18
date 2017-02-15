@@ -434,7 +434,7 @@ class SimpleTest(unittest.TestCase):
 
 正常的Python单元测试类扩展了[`unittest.`](https://docs.python.org/3/library/unittest.html#unittest.TestCase "(in Python v3.4)")测试用例。Django提供了这个基类的一些扩展：
 
-[![Hierarchy of Django unit testing classes (TestCase subclasses)](../../_images/django_unittest_classes_hierarchy.svg)](../../_images/django_unittest_classes_hierarchy.svg)
+[![Hierarchy of Django unit testing classes (TestCase subclasses)](https://docs.djangoproject.com/en/1.8/_images/django_unittest_classes_hierarchy.svg)](https://docs.djangoproject.com/en/1.8/_images/django_unittest_classes_hierarchy.svg)
 
 Django单元测试类的层次结构
 
@@ -981,7 +981,7 @@ Changed in Django 1.7:
 
 Django本身使用这个信号来重置各种数据：
 
-<colgroup><col width="43%"> <col width="57%"></colgroup> 
+<colgroup><col width="43%"> <col width="57%"></colgroup>
 | Overridden settings | Data reset |
 | --- | --- |
 | USE_TZ, TIME_ZONE | Databases timezone |
@@ -1011,7 +1011,7 @@ Django本身使用这个信号来重置各种数据：
 断言表单字段在各种输入中正确运行。
 
 &lt;colgroup&gt;&lt;col class="field-name"&gt; &lt;col class="field-body"&gt;&lt;/colgroup&gt;
-| Parameters: | 
+| Parameters: |
 
 *   **fieldclass** - 要测试的字段的类。
 *   **valid** - 将有效输入映射到其预期清除值的字典。
@@ -1321,4 +1321,3 @@ Changed in Django 1.7:
 Changed in Django 1.8:
 
 `skipUnlessDBFeature`可以接受多个要素字符串。
-
