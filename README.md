@@ -13,3 +13,9 @@
 + [EPUB下载](https://www.gitbook.com/download/epub/book/wizardforcel/django-chinese-docs-18)
 + [MOBI下载](https://www.gitbook.com/download/mobi/book/wizardforcel/django-chinese-docs-18)
 + [代码仓库](https://github.com/wizardforcel/django-chinese-docs-18)
+
+## 赞助我们
+
+![](img/usyiyi_qr_alipay.png)
+
+![](img/usyiyi_qr_wechat.png)
